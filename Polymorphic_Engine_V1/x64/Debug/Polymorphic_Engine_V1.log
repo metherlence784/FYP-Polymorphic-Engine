@@ -1,7 +1,4 @@
-﻿  Generate moc_predefs.h
-  Uic'ing mainwindow.ui...
-  Moc'ing mainwindow.h...
-  main.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Polymorphic_Engine_V1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Polymorphic_Engine_V1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   mainwindow.cpp
-  moc_mainwindow.cpp
-  Polymorphic_Engine_V1.vcxproj -> C:\Users\jtf25\Desktop\FYP\Polymorphic\FYP-Polymorphic-Engine\Polymorphic_Engine_v1\debug\Polymorphic_Engine_V1.exe
+  Polymorphic_Engine_V1.vcxproj -> D:\GitHub\FYP-Polymorphic-Engine\Polymorphic_Engine_V1\debug\Polymorphic_Engine_V1.exe
