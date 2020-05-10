@@ -1,0 +1,10 @@
+﻿  Generate moc_predefs.h
+  Uic'ing mainwindow.ui...
+  Moc'ing exit_application_controller.h...
+  Moc'ing mainwindow.h...
+  exit_application_controller.cpp
+  main.cpp
+  mainwindow.cpp
+  moc_exit_application_controller.cpp
+  moc_mainwindow.cpp
+  Polymorphic_Engine_V1.vcxproj -> D:\GitHub\FYP-Polymorphic-Engine\Polymorphic_Engine_V1\debug\Polymorphic_Engine_V1.exe

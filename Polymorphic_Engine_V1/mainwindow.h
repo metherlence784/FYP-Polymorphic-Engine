@@ -12,10 +12,18 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    Ui::MainWindow *ui;
+    //constructor
     MainWindow(QWidget *parent = nullptr);
+
+    //destructor
     ~MainWindow();
+    static MainWindow* getMWptr();
+
+private slots:
+    void on_Exit_Menu_Item_triggered();
 
 private:
-    Ui::MainWindow *ui;
+    static MainWindow *MWptr;
 };
 #endif // MAINWINDOW_H
