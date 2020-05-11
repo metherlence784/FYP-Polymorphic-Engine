@@ -11,16 +11,14 @@ class Exit_Application_Controller : public QObject
 {
     Q_OBJECT
 public:
-    //constructor
-    Exit_Application_Controller();
 
-    //destructor
-    ~Exit_Application_Controller();
+    Exit_Application_Controller();//constructor
+    ~Exit_Application_Controller();//destructor
 
     void exit_application();
 
 private:
-    MainWindow *cur_wind;
+    MainWindow *cur_wind;// variable pointer for mainwindow class to access ui
 };
 
 #endif // EXIT_APPLICATION_CONTROLLER_H

@@ -18,12 +18,21 @@ public:
 
     //destructor
     ~MainWindow();
+
+    //accesor
     static MainWindow* getMWptr();
+    QString get_cur_filename();
+
+    //mutator
+    void set_cur_filename(QString str);
 
 private slots:
     void on_Exit_Menu_Item_triggered();
 
+    void on_actionNew_File_triggered();
+
 private:
     static MainWindow *MWptr;
+    QString cur_file_path;
 };
 #endif // MAINWINDOW_H

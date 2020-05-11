@@ -16,9 +16,9 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,7 +35,7 @@ public:
     QTabWidget *tabWidget;
     QWidget *tab;
     QLabel *label;
-    QPlainTextEdit *Code_Input_Textbox;
+    QTextEdit *Code_Input_Textbox;
     QWidget *tab_2;
     QMenuBar *menubar;
     QMenu *menuFile;
@@ -61,15 +61,17 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 651, 631));
+        tabWidget->setGeometry(QRect(0, 0, 651, 661));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
+        tab->setEnabled(true);
         label = new QLabel(tab);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 10, 101, 16));
-        Code_Input_Textbox = new QPlainTextEdit(tab);
+        Code_Input_Textbox = new QTextEdit(tab);
         Code_Input_Textbox->setObjectName(QString::fromUtf8("Code_Input_Textbox"));
-        Code_Input_Textbox->setGeometry(QRect(20, 40, 461, 541));
+        Code_Input_Textbox->setEnabled(false);
+        Code_Input_Textbox->setGeometry(QRect(10, 30, 421, 571));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
@@ -77,7 +79,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 676, 26));
+        menubar->setGeometry(QRect(0, 0, 676, 21));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         MainWindow->setMenuBar(menubar);
@@ -111,9 +113,8 @@ public:
         actionSave_As->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
         Exit_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3 here", nullptr));
-        Code_Input_Textbox->setPlaceholderText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 

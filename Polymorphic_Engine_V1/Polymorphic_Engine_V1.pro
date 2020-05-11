@@ -16,12 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    create_new_file_controller.cpp \
     exit_application_controller.cpp \
+    file_saver.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    create_new_file_controller.h \
     exit_application_controller.h \
+    file_saver.h \
     mainwindow.h
 
 FORMS += \

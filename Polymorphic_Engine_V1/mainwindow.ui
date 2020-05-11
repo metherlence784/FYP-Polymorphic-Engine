@@ -20,13 +20,16 @@
       <x>0</x>
       <y>0</y>
       <width>651</width>
-      <height>631</height>
+      <height>661</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <attribute name="title">
       <string>C0d3z</string>
      </attribute>
@@ -43,25 +46,23 @@
        <string>C0d3 here</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="Code_Input_Textbox">
+     <widget class="QTextEdit" name="Code_Input_Textbox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>461</width>
-        <height>541</height>
+        <x>10</x>
+        <y>30</y>
+        <width>421</width>
+        <height>571</height>
        </rect>
-      </property>
-      <property name="plainText">
-      </property>
-      <property name="placeholderText">
-       <string/>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Analysis</string>
      </attribute>
     </widget>
    </widget>
@@ -72,7 +73,7 @@
      <x>0</x>
      <y>0</y>
      <width>676</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

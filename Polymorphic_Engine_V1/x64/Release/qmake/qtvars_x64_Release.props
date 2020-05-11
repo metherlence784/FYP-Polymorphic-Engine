@@ -5,7 +5,7 @@
 <Qt_LIBS_>C:\Qt\5.14.2\msvc2017_64\lib\Qt5Widgets.lib;C:\Qt\5.14.2\msvc2017_64\lib\Qt5Gui.lib;C:\Qt\5.14.2\msvc2017_64\lib\Qt5Core.lib;C:\Qt\5.14.2\msvc2017_64\lib\qtmain.lib;shell32.lib</Qt_LIBS_>
 <Qt_LIBPATH_>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib</Qt_LIBPATH_>
 <Qt_INCLUDEPATH_
-      >$(Qt_INCLUDEPATH_);Release;D:\GitHub\FYP-Polymorphic-Engine\Polymorphic_Engine_V1</Qt_INCLUDEPATH_>
+      >$(Qt_INCLUDEPATH_);Release;C:\Users\jtf25\Desktop\FYP\Polymorphic\FYP-Polymorphic-Engine\Polymorphic_Engine_V1</Qt_INCLUDEPATH_>
     <QtBkup_QtInstall
       >msvc2017_64</QtBkup_QtInstall>
     <QtBkup_QtModules
