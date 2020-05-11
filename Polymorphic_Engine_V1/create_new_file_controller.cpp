@@ -35,7 +35,7 @@ void Create_New_File_Controller::create_new_file()
 
     if(file_path == QString("system error"))
     {
-        QMessageBox::warning(cur_wind, "Warning","Unable save file due to unknown error");
+
     }
     else if (file_path == QString("Invalid Characters"))
     {
