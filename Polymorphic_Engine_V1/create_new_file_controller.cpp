@@ -12,7 +12,7 @@ Create_New_File_Controller::Create_New_File_Controller()
 Create_New_File_Controller::~Create_New_File_Controller()
 {
     this->cur_wind = nullptr;
-       delete this->cur_wind;
+    delete this->cur_wind;
 }
 //accesor
 MainWindow * Create_New_File_Controller::get_cur_wind()
@@ -31,7 +31,7 @@ void Create_New_File_Controller::set_cur_wind(MainWindow *cur)
 void Create_New_File_Controller::create_new_file()
 {
     File_Saver saving(get_cur_wind());
-    QString file_path = saving.save_file();
+    QString file_path = saving.new_file();
 
     if(file_path == QString("system error"))
     {
@@ -51,7 +51,15 @@ void Create_New_File_Controller::create_new_file()
     }
     else
     {
-        cur_wind->ui->Code_Input_Textbox->setPlainText("");
+
+        cur_wind->ui->Code_Input_Textbox->setPlainText("");//empties text box
+
+        //enables the UI items after the user creates or opens his first file
         cur_wind->ui->Code_Input_Textbox->setEnabled(true);
+        cur_wind->ui->Save_Menu_Item->setEnabled(true);
+        cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
+
+        cur_wind->set_cur_filename(file_path);//saves the file path in the ui
+
     }
 }

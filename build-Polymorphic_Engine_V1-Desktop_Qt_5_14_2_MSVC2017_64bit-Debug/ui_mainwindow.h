@@ -26,10 +26,10 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QAction *actionNew_File;
-    QAction *actionOpen_File;
-    QAction *actionSave;
-    QAction *actionSave_As;
+    QAction *New_File_Menu_Item;
+    QAction *Open_File_Menu_Item;
+    QAction *Save_Menu_Item;
+    QAction *Save_As_Menu_Item;
     QAction *Exit_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
@@ -38,7 +38,7 @@ public:
     QTextEdit *Code_Input_Textbox;
     QWidget *tab_2;
     QMenuBar *menubar;
-    QMenu *menuFile;
+    QMenu *File_Menu_Header;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -46,14 +46,16 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(676, 711);
-        actionNew_File = new QAction(MainWindow);
-        actionNew_File->setObjectName(QString::fromUtf8("actionNew_File"));
-        actionOpen_File = new QAction(MainWindow);
-        actionOpen_File->setObjectName(QString::fromUtf8("actionOpen_File"));
-        actionSave = new QAction(MainWindow);
-        actionSave->setObjectName(QString::fromUtf8("actionSave"));
-        actionSave_As = new QAction(MainWindow);
-        actionSave_As->setObjectName(QString::fromUtf8("actionSave_As"));
+        New_File_Menu_Item = new QAction(MainWindow);
+        New_File_Menu_Item->setObjectName(QString::fromUtf8("New_File_Menu_Item"));
+        Open_File_Menu_Item = new QAction(MainWindow);
+        Open_File_Menu_Item->setObjectName(QString::fromUtf8("Open_File_Menu_Item"));
+        Save_Menu_Item = new QAction(MainWindow);
+        Save_Menu_Item->setObjectName(QString::fromUtf8("Save_Menu_Item"));
+        Save_Menu_Item->setEnabled(false);
+        Save_As_Menu_Item = new QAction(MainWindow);
+        Save_As_Menu_Item->setObjectName(QString::fromUtf8("Save_As_Menu_Item"));
+        Save_As_Menu_Item->setEnabled(false);
         Exit_Menu_Item = new QAction(MainWindow);
         Exit_Menu_Item->setObjectName(QString::fromUtf8("Exit_Menu_Item"));
         Exit_Menu_Item->setCheckable(false);
@@ -80,21 +82,21 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 676, 21));
-        menuFile = new QMenu(menubar);
-        menuFile->setObjectName(QString::fromUtf8("menuFile"));
+        File_Menu_Header = new QMenu(menubar);
+        File_Menu_Header->setObjectName(QString::fromUtf8("File_Menu_Header"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
-        menubar->addAction(menuFile->menuAction());
-        menuFile->addAction(actionNew_File);
-        menuFile->addAction(actionOpen_File);
-        menuFile->addSeparator();
-        menuFile->addAction(actionSave);
-        menuFile->addAction(actionSave_As);
-        menuFile->addSeparator();
-        menuFile->addAction(Exit_Menu_Item);
+        menubar->addAction(File_Menu_Header->menuAction());
+        File_Menu_Header->addAction(New_File_Menu_Item);
+        File_Menu_Header->addAction(Open_File_Menu_Item);
+        File_Menu_Header->addSeparator();
+        File_Menu_Header->addAction(Save_Menu_Item);
+        File_Menu_Header->addAction(Save_As_Menu_Item);
+        File_Menu_Header->addSeparator();
+        File_Menu_Header->addAction(Exit_Menu_Item);
 
         retranslateUi(MainWindow);
 
@@ -106,16 +108,19 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        actionNew_File->setText(QCoreApplication::translate("MainWindow", "New File", nullptr));
-        actionOpen_File->setText(QCoreApplication::translate("MainWindow", "Open File", nullptr));
-        actionSave->setText(QCoreApplication::translate("MainWindow", "Save ", nullptr));
-        actionSave_As->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Polymorphic Engine", nullptr));
+        New_File_Menu_Item->setText(QCoreApplication::translate("MainWindow", "New File", nullptr));
+        Open_File_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Open File", nullptr));
+        Save_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Save ", nullptr));
+#if QT_CONFIG(shortcut)
+        Save_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
+        Save_As_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
         Exit_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3 here", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
-        menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
+        File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 
 };

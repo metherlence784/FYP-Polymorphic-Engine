@@ -18,15 +18,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     create_new_file_controller.cpp \
     exit_application_controller.cpp \
+    file_reader.cpp \
     file_saver.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    open_existing_file_controller.cpp \
+    save_as_new_file_controller.cpp \
+    save_current_file_controller.cpp
 
 HEADERS += \
     create_new_file_controller.h \
     exit_application_controller.h \
+    file_reader.h \
     file_saver.h \
-    mainwindow.h
+    mainwindow.h \
+    open_existing_file_controller.h \
+    save_as_new_file_controller.h \
+    save_current_file_controller.h
 
 FORMS += \
     mainwindow.ui

@@ -16,6 +16,12 @@ public:
     ~Exit_Application_Controller();//destructor
 
     void exit_application();
+    void exit_application(QCloseEvent *event);
+
+
+    MainWindow *get_cur_wind();//accessor
+
+    void set_cur_wind(MainWindow *cur);//mutator
 
 private:
     MainWindow *cur_wind;// variable pointer for mainwindow class to access ui

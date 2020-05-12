@@ -13,6 +13,8 @@
 #include <iostream>
 
 #include "create_new_file_controller.h"
+#include "save_as_new_file_controller.h"
+#include "save_current_file_controller.h"
 
 class File_Saver : public QObject
 {
@@ -22,8 +24,9 @@ public:
      File_Saver(MainWindow *mw_ptr);//Constructor
      ~File_Saver();//Desctructor
 
-     QString save_file();
-     void save_file_as(QString file_path);
+     QString new_file();
+     QString save_file_as();
+     void save_file(QString filepath);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
