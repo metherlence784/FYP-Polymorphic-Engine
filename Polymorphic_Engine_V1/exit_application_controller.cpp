@@ -1,18 +1,19 @@
 #include "exit_application_controller.h"
 #include "file_reader.h"
+#include "write_code_in_c_cpp_controller.h"
 
 
 //constructor
 Exit_Application_Controller::Exit_Application_Controller()
 {
-   this->cur_wind = MainWindow::getMWptr();
+    this->cur_wind = MainWindow::getMWptr();
 }
 
 //destructor
 Exit_Application_Controller::~Exit_Application_Controller()
 {
-   this->cur_wind = nullptr;
-   delete this->cur_wind;
+    this->cur_wind = nullptr;
+    delete this->cur_wind;
 }
 
 //accesor
@@ -30,9 +31,12 @@ void Exit_Application_Controller::set_cur_wind(MainWindow *cur)
 //exit function
 void Exit_Application_Controller::exit_application()
 {
+
     File_Reader reader(get_cur_wind());
     QString file_text = reader.file_check(cur_wind->get_cur_filename());
-    QString current_text = cur_wind->ui->Code_Input_Textbox->toPlainText();
+
+    Write_Code_In_C_CPP_Controller writer;
+    QString current_text = writer.get_text();
     if(cur_wind->get_cur_filename().isEmpty())
     {
         std::cout << "The user opened the application and straight away closed it" ;
@@ -48,7 +52,7 @@ void Exit_Application_Controller::exit_application()
     {
         //never save, give pop up
         std::cout << "Content is up to date" ;
-         QApplication::quit();
+        QApplication::quit();
 
     }
     else if (file_text != current_text)
@@ -70,11 +74,14 @@ void Exit_Application_Controller::exit_application()
     }
 
 }
+
 void Exit_Application_Controller::exit_application(QCloseEvent *event)
 {
     File_Reader reader(get_cur_wind());
     QString file_text = reader.file_check(cur_wind->get_cur_filename());
-    QString current_text = cur_wind->ui->Code_Input_Textbox->toPlainText();
+
+    Write_Code_In_C_CPP_Controller writer;
+    QString current_text = writer.get_text();
     if(cur_wind->get_cur_filename().isEmpty())
     {
         std::cout << "The user opened the application and straight away closed it" ;

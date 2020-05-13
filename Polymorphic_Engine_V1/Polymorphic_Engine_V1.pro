@@ -24,7 +24,8 @@ SOURCES += \
     mainwindow.cpp \
     open_existing_file_controller.cpp \
     save_as_new_file_controller.cpp \
-    save_current_file_controller.cpp
+    save_current_file_controller.cpp \
+    write_code_in_c_cpp_controller.cpp
 
 HEADERS += \
     create_new_file_controller.h \
@@ -34,7 +35,8 @@ HEADERS += \
     mainwindow.h \
     open_existing_file_controller.h \
     save_as_new_file_controller.h \
-    save_current_file_controller.h
+    save_current_file_controller.h \
+    write_code_in_c_cpp_controller.h
 
 FORMS += \
     mainwindow.ui

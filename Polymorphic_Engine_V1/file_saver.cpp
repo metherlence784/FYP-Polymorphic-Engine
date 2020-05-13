@@ -1,5 +1,8 @@
 #include "file_saver.h"
 
+#include <iostream>
+
+//constructor
 File_Saver::File_Saver()
 {
     this->cur_wind = nullptr;
@@ -10,12 +13,12 @@ File_Saver::File_Saver(MainWindow *mw_ptr)
     this->cur_wind = mw_ptr;
 }
 
+//destructor
 File_Saver::~File_Saver()
 {
     this->cur_wind = nullptr;
-   delete this->cur_wind;
+    delete this->cur_wind;
 }
-
 
 QString File_Saver::new_file()
 {
@@ -24,10 +27,10 @@ QString File_Saver::new_file()
     QString file_path = QString();
 
     file_path = QFileDialog::getSaveFileName(cur_wind,"Save your file",QDir::currentPath()
-                                                 ,filters,&default_filter); // this opens the file directory window
+                                             ,filters,&default_filter); // this opens the file directory window
 
-    cur_wind->set_cur_filename(file_path);//set file name
 
+    std::cout << "new_file() " << file_path.toStdString() << std::endl;
     QFile file(file_path);
     if(!file.open(QFile::WriteOnly|QFile::Text))
     {
@@ -82,18 +85,15 @@ QString File_Saver::new_file()
     return file_path;
 }
 
-
-
-QString File_Saver::save_file_as()
+QString File_Saver::save_file_as(QString text)
 {
     QString filters("C++ file (*.cpp);;C file (*.c)");
     QString default_filter("C++ file (*.cpp)");
     QString file_path = QString();
 
     file_path = QFileDialog::getSaveFileName(cur_wind,"Save your file",QDir::currentPath()
-                                                 ,filters,&default_filter); // this opens the file directory window
+                                             ,filters,&default_filter); // this opens the file directory window
 
-    cur_wind->set_cur_filename(file_path);//set file name
 
     QFile file(file_path);
     if(!file.open(QFile::WriteOnly|QFile::Text))
@@ -102,8 +102,8 @@ QString File_Saver::save_file_as()
 
         return QString("system error");
     }
+
     QTextStream out(&file);
-    QString text = QString("");
     out << text;
     file.close();
 
@@ -129,11 +129,12 @@ QString File_Saver::save_file_as()
 
         if(test.compare("cpp") == 0)
         {
-
+            //if it is cpp, it is valid
 
         }
         else if(test.compare("c") == 0)
         {
+            // if it is c it is valid
 
         }
         else
@@ -150,22 +151,21 @@ QString File_Saver::save_file_as()
 
 }
 
-void File_Saver::save_file(QString filepath)
+void File_Saver::save_file(QString filepath, QString text)
 {
-   QFile file(filepath);
-   if(file.open(QFile::WriteOnly|QFile::Text))
-   {
-       // any error involving reading of files i.e. system errors
-       QTextStream out(&file);
-       QString text = cur_wind->ui->Code_Input_Textbox->toPlainText();
-       out << text;
-       file.close();
-   }
-   else
-   {
-       //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
-       std::cout << "Problem with default save function" << std::endl;
-   }
+    QFile file(filepath);
+    if(file.open(QFile::WriteOnly|QFile::Text))//this means file stream is opened successfully
+    {
+        QTextStream out(&file);
+        out << text;
+        file.close();
+    }
+    else
+    {
+        // any error involving reading of files i.e. system errors
+        //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
+        std::cout << "Problem with default save function" << std::endl;
+    }
 
 
 }

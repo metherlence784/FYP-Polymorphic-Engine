@@ -20,9 +20,9 @@ class File_Reader : public QObject
 {
     Q_OBJECT
 public:
-     File_Reader();
-      File_Reader(MainWindow *mw_ptr);//Constructor
-     ~File_Reader();
+    File_Reader();
+    File_Reader(MainWindow *mw_ptr);//Constructor
+    ~File_Reader();
 
     QStringList open_file();
     QString file_check(QString file_path);

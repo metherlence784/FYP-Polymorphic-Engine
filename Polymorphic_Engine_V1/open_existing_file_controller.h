@@ -19,12 +19,14 @@ class Open_Existing_File_Controller : public QObject
 {
     Q_OBJECT
 public:
-    Open_Existing_File_Controller();
-    ~Open_Existing_File_Controller();
+    Open_Existing_File_Controller();//constructor
+    ~Open_Existing_File_Controller();//destructor
 
-    MainWindow *get_cur_wind();//accessor
+    //accessor
+    MainWindow *get_cur_wind();
 
-    void set_cur_wind(MainWindow *cur);//mutator
+    //mutator
+    void set_cur_wind(MainWindow *cur);
 
     void open_existing_file();
 

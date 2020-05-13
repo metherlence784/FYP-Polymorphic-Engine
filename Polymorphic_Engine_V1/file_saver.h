@@ -20,13 +20,13 @@ class File_Saver : public QObject
 {
     Q_OBJECT
 public:
-     File_Saver();
-     File_Saver(MainWindow *mw_ptr);//Constructor
-     ~File_Saver();//Desctructor
+    File_Saver();//Constructor
+    File_Saver(MainWindow *mw_ptr);//Constructor
+    ~File_Saver();//Desctructor
 
-     QString new_file();
-     QString save_file_as();
-     void save_file(QString filepath);
+    QString new_file();
+    QString save_file_as(QString text);
+    void save_file(QString filepath,QString text);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

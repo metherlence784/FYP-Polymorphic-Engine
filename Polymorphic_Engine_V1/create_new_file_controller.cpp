@@ -1,4 +1,5 @@
 #include "create_new_file_controller.h"
+#include <write_code_in_c_cpp_controller.h>
 #include "file_saver.h"
 
 
@@ -14,6 +15,7 @@ Create_New_File_Controller::~Create_New_File_Controller()
     this->cur_wind = nullptr;
     delete this->cur_wind;
 }
+
 //accesor
 MainWindow * Create_New_File_Controller::get_cur_wind()
 {
@@ -25,7 +27,6 @@ void Create_New_File_Controller::set_cur_wind(MainWindow *cur)
 {
     this->cur_wind = cur;
 }
-
 
 //methods below
 void Create_New_File_Controller::create_new_file()
@@ -51,15 +52,14 @@ void Create_New_File_Controller::create_new_file()
     }
     else
     {
+         //enables the UI items after the user creates or opens his first file
+        this->cur_wind->ui->Save_Menu_Item->setEnabled(true);
+        this->cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
 
-        cur_wind->ui->Code_Input_Textbox->setPlainText("");//empties text box
+        this->cur_wind->set_cur_filename(file_path);//saves the file path in the ui
 
-        //enables the UI items after the user creates or opens his first file
-        cur_wind->ui->Code_Input_Textbox->setEnabled(true);
-        cur_wind->ui->Save_Menu_Item->setEnabled(true);
-        cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
-
-        cur_wind->set_cur_filename(file_path);//saves the file path in the ui
-
+        Write_Code_In_C_CPP_Controller writer;
+        writer.set_text("");//clears the text box in the ui
+        writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
     }
 }

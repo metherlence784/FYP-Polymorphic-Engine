@@ -1,11 +1,14 @@
 #include "open_existing_file_controller.h"
+#include "write_code_in_c_cpp_controller.h"
 #include "file_reader.h"
 
+//constructor
 Open_Existing_File_Controller::Open_Existing_File_Controller()
 {
     this->cur_wind = MainWindow::getMWptr();
 }
 
+//destructor
 Open_Existing_File_Controller::~Open_Existing_File_Controller()
 {
     this->cur_wind = nullptr;
@@ -38,14 +41,16 @@ void Open_Existing_File_Controller::open_existing_file()
     }
     else
     {
-
         cur_wind->set_cur_filename(list.at(0)); // sets the current filepath for the application
-        cur_wind->ui->Code_Input_Textbox->setText(list.at(1)); // sets the code text box to the file content
 
         //enables the UI items after the user creates or opens his first file
-        cur_wind->ui->Code_Input_Textbox->setEnabled(true);
         cur_wind->ui->Save_Menu_Item->setEnabled(true);
         cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
+
+        Write_Code_In_C_CPP_Controller writer;
+        writer.set_text(list.at(1));//clears the text box in the ui
+        writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
+
     }
 
 }

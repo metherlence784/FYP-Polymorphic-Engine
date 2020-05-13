@@ -1,4 +1,5 @@
 #include "save_as_new_file_controller.h"
+#include "write_code_in_c_cpp_controller.h"
 #include "file_saver.h"
 
 //constructor
@@ -29,11 +30,13 @@ void Save_As_New_File_Controller::set_cur_wind(MainWindow *cur)
 void Save_As_New_File_Controller::save_as_new_file()
 {
     File_Saver saving(get_cur_wind());
-    QString file_path = saving.save_file_as();
+
+    Write_Code_In_C_CPP_Controller writer;//uses the writer object to access the text from the UI
+    QString file_path = saving.save_file_as(writer.get_text());
 
     if(file_path == QString("system error"))
     {
-
+        //error handling if theres file reading system related problems
     }
     else if (file_path == QString("Invalid Characters"))
     {
@@ -49,8 +52,6 @@ void Save_As_New_File_Controller::save_as_new_file()
     }
     else
     {
-        cur_wind->set_cur_filename(file_path);
-
-
+        this->cur_wind->set_cur_filename(file_path);
     }
 }

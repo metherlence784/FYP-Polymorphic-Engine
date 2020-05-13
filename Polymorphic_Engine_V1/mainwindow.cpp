@@ -31,16 +31,31 @@ MainWindow* MainWindow::getMWptr()
 {
     return MWptr;
 }
+
 QString MainWindow::get_cur_filename()
 {
     return this->cur_file_path;
 }
 
+QString MainWindow::get_text_code_input_textbox()
+{
+    return this->ui->Code_Input_Textbox->toPlainText();
+}
 
 //mutator below
 void MainWindow::set_cur_filename(QString str)
 {
     this->cur_file_path = str;
+}
+
+void MainWindow::set_enabled_code_input_textbox(bool set)
+{
+    this->ui->Code_Input_Textbox->setEnabled(set);
+}
+
+void MainWindow::set_text_code_input_textbox(QString txt)
+{
+    this->ui->Code_Input_Textbox->setText(txt);
 }
 
 //button triggers below here
@@ -49,7 +64,6 @@ void MainWindow::on_Exit_Menu_Item_triggered()
     Exit_Application_Controller *my_exit = new Exit_Application_Controller();
     my_exit->exit_application();
 }
-
 
 void MainWindow::on_New_File_Menu_Item_triggered()
 {

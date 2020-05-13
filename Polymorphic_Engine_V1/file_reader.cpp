@@ -1,10 +1,9 @@
 #include "file_reader.h"
 
-
-
+//constructor
 File_Reader::File_Reader()
 {
- this->cur_wind = nullptr;
+    this->cur_wind = nullptr;
 }
 
 File_Reader::File_Reader(MainWindow *mw_ptr)
@@ -12,10 +11,11 @@ File_Reader::File_Reader(MainWindow *mw_ptr)
     this->cur_wind = mw_ptr;
 }
 
+//destructor
 File_Reader::~File_Reader()
 {
     this->cur_wind = nullptr;
-   delete this->cur_wind;
+    delete this->cur_wind;
 }
 
 QStringList File_Reader::open_file()
@@ -51,7 +51,6 @@ QStringList File_Reader::open_file()
 
     return list;
 }
-
 
 QString File_Reader::file_check(QString file_path)
 {
