@@ -43,7 +43,7 @@ QString File_Saver::new_file()
     file.close();
 
     //checking for invalid characters set up
-    QRegExp rx("[@!#$%^&*<>?/|}{~:]");
+    QRegExp rx("[@!\'\"#$%^&*<>?/|}{~:]");
     std::size_t symbol = file_path.toStdString().find_last_of("/");
     std::string cur_dir = file_path.toStdString().substr(symbol+1);
     QString cur_file = QString::fromStdString(cur_dir);
@@ -99,7 +99,6 @@ QString File_Saver::save_file_as(QString text)
     if(!file.open(QFile::WriteOnly|QFile::Text))
     {
         // any error involving reading of files i.e. system errors
-
         return QString("system error");
     }
 
@@ -108,7 +107,7 @@ QString File_Saver::save_file_as(QString text)
     file.close();
 
     //checking for invalid characters set up
-    QRegExp rx("[@!#$%^&*<>?/|}{~:]");
+    QRegExp rx("[@!\'\"#$%^&*<>?/|}{~:]");
     std::size_t symbol = file_path.toStdString().find_last_of("/");
     std::string cur_dir = file_path.toStdString().substr(symbol+1);
     QString cur_file = QString::fromStdString(cur_dir);
