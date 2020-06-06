@@ -38,6 +38,10 @@ private slots://note that slots is a QT ui syntax
     void on_Save_Menu_Item_triggered();
     void on_Open_File_Menu_Item_triggered();
 
+    void on_Undo_Menu_Item_triggered();
+
+    void on_Redo_Menu_Item_triggered();
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;

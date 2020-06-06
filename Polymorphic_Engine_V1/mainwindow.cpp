@@ -5,6 +5,8 @@
 #include "save_as_new_file_controller.h"
 #include "save_current_file_controller.h"
 #include "open_existing_file_controller.h"
+#include "undo_action_controller.h"
+#include "redo_action_controller.h"
 
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
@@ -95,3 +97,15 @@ void MainWindow::closeEvent (QCloseEvent *event)
     my_exit->exit_application(event);
 }
 
+
+void MainWindow::on_Undo_Menu_Item_triggered()
+{
+    Undo_Action_Controller *my_undo = new Undo_Action_Controller();
+    my_undo -> undo_action();
+}
+
+void MainWindow::on_Redo_Menu_Item_triggered()
+{
+    Redo_Action_Controller *my_redo = new Redo_Action_Controller();
+    my_redo -> redo_action();
+}

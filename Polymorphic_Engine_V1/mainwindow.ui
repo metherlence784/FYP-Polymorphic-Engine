@@ -88,7 +88,15 @@
     <addaction name="separator"/>
     <addaction name="Exit_Menu_Item"/>
    </widget>
+   <widget class="QMenu" name="Edit_Menu_Header">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="Undo_Menu_Item"/>
+    <addaction name="Redo_Menu_Item"/>
+   </widget>
    <addaction name="File_Menu_Header"/>
+   <addaction name="Edit_Menu_Header"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="New_File_Menu_Item">
@@ -126,6 +134,16 @@
    </property>
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="Undo_Menu_Item">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="Redo_Menu_Item">
+   <property name="text">
+    <string>Redo</string>
    </property>
   </action>
  </widget>

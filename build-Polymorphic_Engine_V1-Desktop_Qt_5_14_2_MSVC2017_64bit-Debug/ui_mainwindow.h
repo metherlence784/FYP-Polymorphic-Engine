@@ -31,6 +31,8 @@ public:
     QAction *Save_Menu_Item;
     QAction *Save_As_Menu_Item;
     QAction *Exit_Menu_Item;
+    QAction *Undo_Menu_Item;
+    QAction *Redo_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *tab;
@@ -39,6 +41,7 @@ public:
     QWidget *tab_2;
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
+    QMenu *Edit_Menu_Header;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -59,6 +62,10 @@ public:
         Exit_Menu_Item = new QAction(MainWindow);
         Exit_Menu_Item->setObjectName(QString::fromUtf8("Exit_Menu_Item"));
         Exit_Menu_Item->setCheckable(false);
+        Undo_Menu_Item = new QAction(MainWindow);
+        Undo_Menu_Item->setObjectName(QString::fromUtf8("Undo_Menu_Item"));
+        Redo_Menu_Item = new QAction(MainWindow);
+        Redo_Menu_Item->setObjectName(QString::fromUtf8("Redo_Menu_Item"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
@@ -84,12 +91,15 @@ public:
         menubar->setGeometry(QRect(0, 0, 676, 21));
         File_Menu_Header = new QMenu(menubar);
         File_Menu_Header->setObjectName(QString::fromUtf8("File_Menu_Header"));
+        Edit_Menu_Header = new QMenu(menubar);
+        Edit_Menu_Header->setObjectName(QString::fromUtf8("Edit_Menu_Header"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(File_Menu_Header->menuAction());
+        menubar->addAction(Edit_Menu_Header->menuAction());
         File_Menu_Header->addAction(New_File_Menu_Item);
         File_Menu_Header->addAction(Open_File_Menu_Item);
         File_Menu_Header->addSeparator();
@@ -97,6 +107,8 @@ public:
         File_Menu_Header->addAction(Save_As_Menu_Item);
         File_Menu_Header->addSeparator();
         File_Menu_Header->addAction(Exit_Menu_Item);
+        Edit_Menu_Header->addAction(Undo_Menu_Item);
+        Edit_Menu_Header->addAction(Redo_Menu_Item);
 
         retranslateUi(MainWindow);
 
@@ -117,10 +129,13 @@ public:
 #endif // QT_CONFIG(shortcut)
         Save_As_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
         Exit_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        Undo_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Undo", nullptr));
+        Redo_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Redo", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3 here", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
+        Edit_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
     } // retranslateUi
 
 };
