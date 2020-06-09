@@ -25,6 +25,7 @@ public:
     static MainWindow* getMWptr();
     QString get_cur_filename();
     QString get_text_code_input_textbox();
+    QString get_payload_radio_button();
 
     //mutator
     void set_cur_filename(QString str);

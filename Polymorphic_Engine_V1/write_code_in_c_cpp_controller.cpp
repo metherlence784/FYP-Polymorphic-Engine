@@ -15,11 +15,6 @@ Write_Code_In_C_CPP_Controller::~Write_Code_In_C_CPP_Controller()
 }
 
 //accesor
-MainWindow * Write_Code_In_C_CPP_Controller::get_cur_wind()
-{
-    return this->cur_wind;
-}
-
 QString Write_Code_In_C_CPP_Controller::get_text()
 {
     this->text = cur_wind->get_text_code_input_textbox();

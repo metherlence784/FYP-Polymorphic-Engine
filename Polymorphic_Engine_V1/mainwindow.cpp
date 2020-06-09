@@ -44,6 +44,23 @@ QString MainWindow::get_text_code_input_textbox()
     return this->ui->Code_Input_Textbox->toPlainText();
 }
 
+QString MainWindow::get_payload_radio_button()
+{
+    //save all the radio button objects under Payload_RButton_Group parent into a List
+    QList<QRadioButton *> buttons = this->ui->Payload_RButton_Group->findChildren<QRadioButton *>();
+
+    //cycle through each with an enhanced for loop, if isChecked is true, return the object name as a QString
+    foreach(QRadioButton *r, buttons)
+    {
+        if(r->isChecked())
+        {
+            return QString(r->objectName());
+        }
+    }
+
+    return QString("Something when wrong");
+}
+
 //mutator below
 void MainWindow::set_cur_filename(QString str)
 {

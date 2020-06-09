@@ -18,7 +18,6 @@ public:
     ~Write_Code_In_C_CPP_Controller();//destructor
 
     //accessor
-    MainWindow *get_cur_wind();
     QString get_text();
 
     //mutator

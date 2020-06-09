@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    choose_payload_controller.cpp \
     create_new_file_controller.cpp \
     exit_application_controller.cpp \
     file_reader.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
     write_code_in_c_cpp_controller.cpp
 
 HEADERS += \
+    choose_payload_controller.h \
     create_new_file_controller.h \
     exit_application_controller.h \
     file_reader.h \
