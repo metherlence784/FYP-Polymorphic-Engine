@@ -16,7 +16,15 @@ public:
     Undo_Action_Controller();
     ~Undo_Action_Controller();
 
+    //accessor
+    MainWindow *get_cur_wind();
+
+    //mutator
+    void set_cur_wind(MainWindow *cur);
+
     void undo_action();
+
+
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

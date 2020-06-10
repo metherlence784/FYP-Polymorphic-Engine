@@ -14,7 +14,20 @@ Redo_Action_Controller::~Redo_Action_Controller()
     delete this->cur_wind;
 }
 
+//accesor
+MainWindow * Redo_Action_Controller::get_cur_wind()
+{
+    return this->cur_wind;
+}
+
+//mutator
+void Redo_Action_Controller::set_cur_wind(MainWindow *cur)
+{
+    this->cur_wind = cur;
+}
+
 void Redo_Action_Controller::redo_action()
 {
     this->cur_wind->ui->Code_Input_Textbox->redo();
 }
+

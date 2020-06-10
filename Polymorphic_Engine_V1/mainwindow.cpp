@@ -7,6 +7,7 @@
 #include "open_existing_file_controller.h"
 #include "undo_action_controller.h"
 #include "redo_action_controller.h"
+#include "compile_code_controller.h"
 
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
@@ -34,7 +35,7 @@ MainWindow* MainWindow::getMWptr()
     return MWptr;
 }
 
-QString MainWindow::get_cur_filename()
+QString MainWindow::get_cur_file_path()
 {
     return this->cur_file_path;
 }
@@ -42,6 +43,11 @@ QString MainWindow::get_cur_filename()
 QString MainWindow::get_text_code_input_textbox()
 {
     return this->ui->Code_Input_Textbox->toPlainText();
+}
+
+QString MainWindow::get_text_analysis_textbox()
+{
+    return this->ui->Analysis_Textbox->toPlainText();
 }
 
 QString MainWindow::get_payload_radio_button()
@@ -62,7 +68,7 @@ QString MainWindow::get_payload_radio_button()
 }
 
 //mutator below
-void MainWindow::set_cur_filename(QString str)
+void MainWindow::set_cur_file_path(QString str)
 {
     this->cur_file_path = str;
 }
@@ -72,9 +78,29 @@ void MainWindow::set_enabled_code_input_textbox(bool set)
     this->ui->Code_Input_Textbox->setEnabled(set);
 }
 
+void MainWindow::set_enabled_payload_groupbox(bool set)
+{
+    this->ui->Payload_RButton_Group->setEnabled(set);
+}
+
+void MainWindow::set_enabled_compile_button(bool set)
+{
+    this->ui->Compile_Button->setEnabled(set);
+}
+
+void MainWindow::set_enabled_analysis_textbox(bool set)
+{
+    this->ui->Analysis_Textbox->setEnabled(set);
+}
+
 void MainWindow::set_text_code_input_textbox(QString txt)
 {
     this->ui->Code_Input_Textbox->setText(txt);
+}
+
+void MainWindow::set_text_analysis_textbox(QString txt)
+{
+    this->ui->Analysis_Textbox->setText(txt);
 }
 
 //button triggers below here
@@ -125,4 +151,14 @@ void MainWindow::on_Redo_Menu_Item_triggered()
 {
     Redo_Action_Controller *my_redo = new Redo_Action_Controller();
     my_redo -> redo_action();
+}
+
+void MainWindow::on_Compile_Button_clicked()
+{
+    Compile_Code_Controller *compiler = new Compile_Code_Controller();
+    compiler->get_file_name();
+    compiler->get_file_path();
+    compiler->set_exe_name();//the exe will be filename_original.exe
+    compiler->compile_code();//the log is temp_compile.txt
+    compiler->update_analysis_textbox();//update the analysis tab
 }

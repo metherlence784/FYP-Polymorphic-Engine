@@ -26,7 +26,8 @@ public:
 
     QString new_file();
     QString save_file_as(QString text);
-    void save_file(QString filepath,QString text);
+    void save_file(QString file_path,QString text);
+
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

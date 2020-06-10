@@ -33,18 +33,19 @@ void Save_As_New_File_Controller::save_as_new_file()
 
     Write_Code_In_C_CPP_Controller writer;//uses the writer object to access the text from the UI
     QString file_path = saving.save_file_as(writer.get_text());
+    std::cout << " FILE PATH " << file_path.toStdString() << std::endl;
 
-    if(file_path == QString("system error"))
+    if(file_path == ERROR_SYSTEM_FAULT)
     {
         //error handling if theres file reading system related problems
     }
-    else if (file_path == QString("Invalid Characters"))
+    else if (file_path == ERROR_INVALID_CHARACTERS)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable save file due to invalid characters");
 
     }
-    else if (file_path == QString("Invalid file extension"))
+    else if (file_path == ERROR_INVALID_FILE_EXTENSION)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable save file due to invalid file extension");
@@ -52,6 +53,6 @@ void Save_As_New_File_Controller::save_as_new_file()
     }
     else
     {
-        this->cur_wind->set_cur_filename(file_path);
+        this->cur_wind->set_cur_file_path(file_path);
     }
 }

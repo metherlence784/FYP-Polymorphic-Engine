@@ -1,6 +1,8 @@
 #include "create_new_file_controller.h"
 #include <write_code_in_c_cpp_controller.h>
 #include "file_saver.h"
+#include "choose_payload_controller.h"
+#include "compile_code_controller.h"
 
 
 //constructor
@@ -34,17 +36,17 @@ void Create_New_File_Controller::create_new_file()
     File_Saver saving(get_cur_wind());
     QString file_path = saving.new_file();
 
-    if(file_path == QString("system error"))
+    if(file_path == ERROR_SYSTEM_FAULT)
     {
 
     }
-    else if (file_path == QString("Invalid Characters"))
+    else if (file_path == ERROR_INVALID_CHARACTERS)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable save file due to invalid characters");
 
     }
-    else if (file_path == QString("Invalid file extension"))
+    else if (file_path == ERROR_INVALID_FILE_EXTENSION)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable save file due to invalid file extension");
@@ -56,10 +58,18 @@ void Create_New_File_Controller::create_new_file()
         this->cur_wind->ui->Save_Menu_Item->setEnabled(true);
         this->cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
 
-        this->cur_wind->set_cur_filename(file_path);//saves the file path in the ui
+        this->cur_wind->set_cur_file_path(file_path);//saves the file path in the ui
 
         Write_Code_In_C_CPP_Controller writer;
         writer.set_text("");//clears the text box in the ui
         writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
+
+        Choose_Payload_Controller payloader;
+        payloader.set_enabled_payload_groupbox(true);//enables the payload radio buttons
+
+        Compile_Code_Controller compiler;
+        compiler.set_enabled_compile_button(true);
+        compiler.set_enabled_analysis_textbox(true);
+
     }
 }

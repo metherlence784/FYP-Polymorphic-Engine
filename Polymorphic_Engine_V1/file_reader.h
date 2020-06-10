@@ -12,7 +12,9 @@
 #include <QFileSystemModel>
 #include <QStringList>
 #include <QStringListIterator>
+
 #include <iostream>
+#include <stdlib.h>
 
 #include "open_existing_file_controller.h"
 
@@ -26,6 +28,7 @@ public:
 
     QStringList open_file();
     QString file_check(QString file_path);
+    QString read_compile_status(QString file_path);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

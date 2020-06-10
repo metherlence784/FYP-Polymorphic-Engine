@@ -33,27 +33,26 @@ void Exit_Application_Controller::exit_application()
 {
 
     File_Reader reader(get_cur_wind());
-    QString file_text = reader.file_check(cur_wind->get_cur_filename());
+    QString file_text = reader.file_check(cur_wind->get_cur_file_path());
 
     Write_Code_In_C_CPP_Controller writer;
     QString current_text = writer.get_text();
-    if(cur_wind->get_cur_filename().isEmpty())
+    if(cur_wind->get_cur_file_path().isEmpty())
     {
-        std::cout << "The user opened the application and straight away closed it" ;
+       // "The user opened the application and straight away closed it" ;
         QApplication::quit();
     }
-    else if(file_text == QString("error"))
+    else if(file_text == ERROR_FILE_NOT_FOUND)
     {
-        //error
+        //error 404, file not found
         QMessageBox::warning(cur_wind, "Warning",
                              "Exit error: Misplaced/Missing file\n Please save the file properly" );
     }
     else if (file_text == current_text)
     {
         //never save, give pop up
-        std::cout << "Content is up to date" ;
+        // "Content is up to date"
         QApplication::quit();
-
     }
     else if (file_text != current_text)
     {
@@ -78,16 +77,16 @@ void Exit_Application_Controller::exit_application()
 void Exit_Application_Controller::exit_application(QCloseEvent *event)
 {
     File_Reader reader(get_cur_wind());
-    QString file_text = reader.file_check(cur_wind->get_cur_filename());
+    QString file_text = reader.file_check(cur_wind->get_cur_file_path());
 
     Write_Code_In_C_CPP_Controller writer;
     QString current_text = writer.get_text();
-    if(cur_wind->get_cur_filename().isEmpty())
+    if(cur_wind->get_cur_file_path().isEmpty())
     {
         std::cout << "The user opened the application and straight away closed it" ;
         event->accept();
     }
-    else if(file_text == QString("error"))
+    else if(file_text == ERROR_FILE_NOT_FOUND)
     {
         //error
         QMessageBox::warning(cur_wind, "Warning",

@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
@@ -48,8 +49,11 @@ public:
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
     QRadioButton *radioButton_3;
+    QPushButton *Compile_Button;
+    QLabel *label_2;
     QWidget *tab_2;
     QTextEdit *Analysis_Textbox;
+    QLabel *label_3;
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
     QMenu *Edit_Menu_Header;
@@ -59,7 +63,9 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(676, 711);
+        MainWindow->resize(535, 700);
+        MainWindow->setMinimumSize(QSize(535, 700));
+        MainWindow->setMaximumSize(QSize(535, 700));
         New_File_Menu_Item = new QAction(MainWindow);
         New_File_Menu_Item->setObjectName(QString::fromUtf8("New_File_Menu_Item"));
         Open_File_Menu_Item = new QAction(MainWindow);
@@ -81,53 +87,71 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 651, 661));
+        tabWidget->setGeometry(QRect(20, 10, 505, 621));
+        tabWidget->setMinimumSize(QSize(505, 621));
+        tabWidget->setMaximumSize(QSize(521, 621));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         tab->setEnabled(true);
         label = new QLabel(tab);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(20, 10, 101, 16));
+        label->setGeometry(QRect(10, 10, 101, 20));
+        QFont font;
+        font.setPointSize(9);
+        label->setFont(font);
         Code_Input_Textbox = new QTextEdit(tab);
         Code_Input_Textbox->setObjectName(QString::fromUtf8("Code_Input_Textbox"));
         Code_Input_Textbox->setEnabled(false);
-        Code_Input_Textbox->setGeometry(QRect(10, 30, 421, 571));
+        Code_Input_Textbox->setGeometry(QRect(10, 30, 341, 531));
         verticalLayoutWidget = new QWidget(tab);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(450, 210, 160, 151));
+        verticalLayoutWidget->setGeometry(QRect(359, 80, 131, 181));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         Payload_RButton_Group = new QGroupBox(verticalLayoutWidget);
         Payload_RButton_Group->setObjectName(QString::fromUtf8("Payload_RButton_Group"));
+        Payload_RButton_Group->setEnabled(false);
         Calculator_Payload_RButton = new QRadioButton(Payload_RButton_Group);
         Calculator_Payload_RButton->setObjectName(QString::fromUtf8("Calculator_Payload_RButton"));
-        Calculator_Payload_RButton->setGeometry(QRect(0, 20, 158, 17));
+        Calculator_Payload_RButton->setGeometry(QRect(0, 20, 111, 17));
         Calculator_Payload_RButton->setChecked(true);
         radioButton = new QRadioButton(Payload_RButton_Group);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(0, 50, 158, 17));
+        radioButton->setGeometry(QRect(0, 50, 111, 17));
         radioButton_2 = new QRadioButton(Payload_RButton_Group);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
-        radioButton_2->setGeometry(QRect(0, 80, 151, 17));
+        radioButton_2->setGeometry(QRect(0, 80, 111, 17));
         radioButton_3 = new QRadioButton(Payload_RButton_Group);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
-        radioButton_3->setGeometry(QRect(0, 110, 151, 17));
+        radioButton_3->setGeometry(QRect(0, 110, 101, 17));
 
         verticalLayout->addWidget(Payload_RButton_Group);
 
+        Compile_Button = new QPushButton(tab);
+        Compile_Button->setObjectName(QString::fromUtf8("Compile_Button"));
+        Compile_Button->setEnabled(false);
+        Compile_Button->setGeometry(QRect(360, 30, 101, 31));
+        label_2 = new QLabel(tab);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(10, 600, 251, 31));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         Analysis_Textbox = new QTextEdit(tab_2);
         Analysis_Textbox->setObjectName(QString::fromUtf8("Analysis_Textbox"));
         Analysis_Textbox->setEnabled(false);
-        Analysis_Textbox->setGeometry(QRect(10, 30, 421, 571));
+        Analysis_Textbox->setGeometry(QRect(10, 130, 351, 431));
+        Analysis_Textbox->setMinimumSize(QSize(351, 431));
+        Analysis_Textbox->setReadOnly(true);
         tabWidget->addTab(tab_2, QString());
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(30, 630, 241, 21));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 676, 21));
+        menubar->setGeometry(QRect(0, 0, 535, 21));
         File_Menu_Header = new QMenu(menubar);
         File_Menu_Header->setObjectName(QString::fromUtf8("File_Menu_Header"));
         Edit_Menu_Header = new QMenu(menubar);
@@ -176,14 +200,17 @@ public:
 #if QT_CONFIG(shortcut)
         Redo_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Y", nullptr));
 #endif // QT_CONFIG(shortcut)
-        label->setText(QCoreApplication::translate("MainWindow", "C0d3 here", nullptr));
-        Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Choose your payload", nullptr));
-        Calculator_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Spawn Calculator", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
+        Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));
+        Calculator_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Pop Calc.exe", nullptr));
         radioButton->setText(QCoreApplication::translate("MainWindow", "Payload X", nullptr));
         radioButton_2->setText(QCoreApplication::translate("MainWindow", "Payload Y", nullptr));
         radioButton_3->setText(QCoreApplication::translate("MainWindow", "Payload Z", nullptr));
+        Compile_Button->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Program Created By : Yoges And Friends", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         Edit_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
     } // retranslateUi

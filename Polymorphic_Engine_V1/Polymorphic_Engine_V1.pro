@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     choose_payload_controller.cpp \
+    compile_code_controller.cpp \
     create_new_file_controller.cpp \
     exit_application_controller.cpp \
     file_reader.cpp \
@@ -32,7 +33,9 @@ SOURCES += \
 
 HEADERS += \
     choose_payload_controller.h \
+    compile_code_controller.h \
     create_new_file_controller.h \
+    error.h \
     exit_application_controller.h \
     file_reader.h \
     file_saver.h \

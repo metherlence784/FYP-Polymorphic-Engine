@@ -29,7 +29,7 @@ QStringList File_Reader::open_file()
                                              ,filters,&default_filter); // this opens the file directory window
 
 
-    cur_wind->set_cur_filename(file_path);//set file name
+    cur_wind->set_cur_file_path(file_path);//set file name
     list << file_path;
 
 
@@ -44,8 +44,8 @@ QStringList File_Reader::open_file()
     else
     {
         //problem with opening of file
-        list.replace(0,QString("error"));
-        std::cout << "Problem with opening file inside file reader" << std::endl;
+        list.replace(0,ERROR_SYSTEM_FAULT);
+        // "Problem with opening file inside file reader";
         list << file.errorString();
     }
 
@@ -55,7 +55,7 @@ QStringList File_Reader::open_file()
 QString File_Reader::file_check(QString file_path)
 {
 
-    QString file_text = QString("error"); // incase cannot open, by default it is set to "error"
+    QString file_text = ERROR_FILE_NOT_FOUND; // incase cannot open, by default it is set to "error"
 
     QFile file(file_path);
     if(file.open(QIODevice::ReadOnly|QFile::Text))
@@ -72,6 +72,27 @@ QString File_Reader::file_check(QString file_path)
         return file_text;
     }
 
+}
+
+QString File_Reader::read_compile_status(QString file_path)
+{
+    QFile file(file_path);
+    QString text = ERROR_INVALID_FILE;
+
+    if(file.open(QIODevice::ReadOnly|QFile::Text))
+    {
+        QTextStream in(&file);
+        text = in.readAll();
+        file.close();
+
+        QString to_delete = QString("del \"") + file_path + QString("\"");
+        to_delete.replace("/","\\"); // replaces ever occurence of / with \, for some @#$% reason, the file path dosent work with /
+
+        system(to_delete.toStdString().c_str());
+        return text;
+    }
+
+    return text;
 }
 
 

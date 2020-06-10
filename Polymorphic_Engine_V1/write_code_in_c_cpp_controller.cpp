@@ -21,6 +21,11 @@ QString Write_Code_In_C_CPP_Controller::get_text()
     return this->text;
 }
 
+MainWindow * Write_Code_In_C_CPP_Controller::get_cur_wind()
+{
+    return this->cur_wind;
+}
+
 //mutator
 void Write_Code_In_C_CPP_Controller::set_cur_wind(MainWindow *cur)
 {

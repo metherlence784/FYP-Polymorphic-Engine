@@ -19,6 +19,7 @@ public:
 
     //accessor
     QString get_text();
+    MainWindow *get_cur_wind();
 
     //mutator
     void set_cur_wind(MainWindow *cur);

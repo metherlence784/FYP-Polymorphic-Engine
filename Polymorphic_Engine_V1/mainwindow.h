@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QCloseEvent>
 
+#include "error.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -23,14 +25,19 @@ public:
 
     //accesor
     static MainWindow* getMWptr();
-    QString get_cur_filename();
+    QString get_cur_file_path();
     QString get_text_code_input_textbox();
+    QString get_text_analysis_textbox();
     QString get_payload_radio_button();
 
     //mutator
-    void set_cur_filename(QString str);
+    void set_cur_file_path(QString str);
     void set_enabled_code_input_textbox(bool set);
+    void set_enabled_payload_groupbox(bool set);
+    void set_enabled_compile_button(bool set);
+    void set_enabled_analysis_textbox(bool set);
     void set_text_code_input_textbox(QString txt);
+    void set_text_analysis_textbox(QString txt);
 
 private slots://note that slots is a QT ui syntax
     void on_Exit_Menu_Item_triggered();
@@ -42,6 +49,8 @@ private slots://note that slots is a QT ui syntax
     void on_Undo_Menu_Item_triggered();
 
     void on_Redo_Menu_Item_triggered();
+
+    void on_Compile_Button_clicked();
 
 private:
     static MainWindow *MWptr;

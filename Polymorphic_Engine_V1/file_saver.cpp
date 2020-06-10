@@ -35,7 +35,7 @@ QString File_Saver::new_file()
     if(!file.open(QFile::WriteOnly|QFile::Text))
     {
         // any error involving reading of files i.e. system errors
-        return QString("system error");
+        return ERROR_SYSTEM_FAULT;
     }
     QTextStream out(&file);
     QString text = QString("");
@@ -55,7 +55,7 @@ QString File_Saver::new_file()
         QFile delete_file (file_path);
         delete_file.remove();
 
-        return QString("Invalid Characters");
+        return ERROR_INVALID_CHARACTERS;
     }
     else
     {
@@ -78,7 +78,7 @@ QString File_Saver::new_file()
             QFile delete_file (file_path);
             delete_file.remove();
 
-            return QString("Invalid file extension");
+            return ERROR_INVALID_FILE_EXTENSION;
         }
     }
 
@@ -99,7 +99,7 @@ QString File_Saver::save_file_as(QString text)
     if(!file.open(QFile::WriteOnly|QFile::Text))
     {
         // any error involving reading of files i.e. system errors
-        return QString("system error");
+        return ERROR_SYSTEM_FAULT;
     }
 
     QTextStream out(&file);
@@ -119,7 +119,7 @@ QString File_Saver::save_file_as(QString text)
         QFile delete_file (file_path);
         delete_file.remove();
 
-        return QString("Invalid Characters");
+        return ERROR_INVALID_CHARACTERS;
     }
     else
     {
@@ -142,7 +142,7 @@ QString File_Saver::save_file_as(QString text)
             //delete file here
             QFile delete_file (file_path);
             delete_file.remove();
-            return QString("Invalid file extension");
+            return ERROR_INVALID_FILE_EXTENSION;
         }
     }
 
@@ -150,9 +150,9 @@ QString File_Saver::save_file_as(QString text)
 
 }
 
-void File_Saver::save_file(QString filepath, QString text)
+void File_Saver::save_file(QString file_path, QString text)
 {
-    QFile file(filepath);
+    QFile file(file_path);
     if(file.open(QFile::WriteOnly|QFile::Text))//this means file stream is opened successfully
     {
         QTextStream out(&file);
@@ -163,7 +163,7 @@ void File_Saver::save_file(QString filepath, QString text)
     {
         // any error involving reading of files i.e. system errors
         //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
-        std::cout << "Problem with default save function" << std::endl;
+        std::cout << ERROR_SYSTEM_FAULT.toStdString() << std::endl;
     }
 
 
