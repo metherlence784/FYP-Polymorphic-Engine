@@ -111,6 +111,8 @@ void Compile_Code_Controller::compile_code()
     QDateTime end = QDateTime::currentDateTime();
 
     this->elapsed_time = start.msecsTo(end);
+
+    this->cur_wind->ui->tabWidget->setCurrentIndex(1);
 }
 
 void Compile_Code_Controller::update_analysis_textbox()

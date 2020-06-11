@@ -48,9 +48,9 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="Cod3z">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -195,7 +195,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="Analysis">
      <attribute name="title">
       <string>Analysis</string>
      </attribute>

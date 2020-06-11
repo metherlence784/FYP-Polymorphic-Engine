@@ -39,7 +39,7 @@ public:
     QAction *Redo_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
-    QWidget *tab;
+    QWidget *Cod3z;
     QLabel *label;
     QTextEdit *Code_Input_Textbox;
     QWidget *verticalLayoutWidget;
@@ -51,7 +51,7 @@ public:
     QRadioButton *radioButton_3;
     QPushButton *Compile_Button;
     QLabel *label_2;
-    QWidget *tab_2;
+    QWidget *Analysis;
     QTextEdit *Analysis_Textbox;
     QLabel *label_3;
     QMenuBar *menubar;
@@ -90,20 +90,20 @@ public:
         tabWidget->setGeometry(QRect(20, 10, 505, 621));
         tabWidget->setMinimumSize(QSize(505, 621));
         tabWidget->setMaximumSize(QSize(521, 621));
-        tab = new QWidget();
-        tab->setObjectName(QString::fromUtf8("tab"));
-        tab->setEnabled(true);
-        label = new QLabel(tab);
+        Cod3z = new QWidget();
+        Cod3z->setObjectName(QString::fromUtf8("Cod3z"));
+        Cod3z->setEnabled(true);
+        label = new QLabel(Cod3z);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(10, 10, 101, 20));
         QFont font;
         font.setPointSize(9);
         label->setFont(font);
-        Code_Input_Textbox = new QTextEdit(tab);
+        Code_Input_Textbox = new QTextEdit(Cod3z);
         Code_Input_Textbox->setObjectName(QString::fromUtf8("Code_Input_Textbox"));
         Code_Input_Textbox->setEnabled(false);
         Code_Input_Textbox->setGeometry(QRect(10, 30, 341, 531));
-        verticalLayoutWidget = new QWidget(tab);
+        verticalLayoutWidget = new QWidget(Cod3z);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(359, 80, 131, 181));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
@@ -128,23 +128,23 @@ public:
 
         verticalLayout->addWidget(Payload_RButton_Group);
 
-        Compile_Button = new QPushButton(tab);
+        Compile_Button = new QPushButton(Cod3z);
         Compile_Button->setObjectName(QString::fromUtf8("Compile_Button"));
         Compile_Button->setEnabled(false);
         Compile_Button->setGeometry(QRect(360, 30, 101, 31));
-        label_2 = new QLabel(tab);
+        label_2 = new QLabel(Cod3z);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(10, 600, 251, 31));
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        Analysis_Textbox = new QTextEdit(tab_2);
+        tabWidget->addTab(Cod3z, QString());
+        Analysis = new QWidget();
+        Analysis->setObjectName(QString::fromUtf8("Analysis"));
+        Analysis_Textbox = new QTextEdit(Analysis);
         Analysis_Textbox->setObjectName(QString::fromUtf8("Analysis_Textbox"));
         Analysis_Textbox->setEnabled(false);
         Analysis_Textbox->setGeometry(QRect(10, 130, 351, 431));
         Analysis_Textbox->setMinimumSize(QSize(351, 431));
         Analysis_Textbox->setReadOnly(true);
-        tabWidget->addTab(tab_2, QString());
+        tabWidget->addTab(Analysis, QString());
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(30, 630, 241, 21));
@@ -175,7 +175,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -208,8 +208,8 @@ public:
         radioButton_3->setText(QCoreApplication::translate("MainWindow", "Payload Z", nullptr));
         Compile_Button->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Program Created By : Yoges And Friends", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Cod3z), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Analysis), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         Edit_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
