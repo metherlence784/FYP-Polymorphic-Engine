@@ -26,6 +26,9 @@ public:
      QString get_file_path();
      MainWindow *get_cur_wind();
      QString get_status();
+     QString get_temp_compile();
+     qint64 get_elapsed_time();
+
 
      //mutator
      void set_cur_wind(MainWindow *cur);
@@ -33,10 +36,11 @@ public:
      void set_enabled_compile_button(bool set);
      void set_enabled_analysis_textbox(bool set);
      void set_status(QString txt);
-     void set_text_analysis_textbox(QString txt);
+     void set_temp_compile(QString temp_compile);
+     void set_elapsed_time(qint64 elapsed_time);
 
      void compile_code();
-     void update_analysis_textbox();
+
 
  private:
      MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

@@ -29,6 +29,7 @@ SOURCES += \
     save_as_new_file_controller.cpp \
     save_current_file_controller.cpp \
     undo_action_controller.cpp \
+    view_compilation_status_controller.cpp \
     write_code_in_c_cpp_controller.cpp
 
 HEADERS += \
@@ -45,6 +46,7 @@ HEADERS += \
     save_as_new_file_controller.h \
     save_current_file_controller.h \
     undo_action_controller.h \
+    view_compilation_status_controller.h \
     write_code_in_c_cpp_controller.h
 
 FORMS += \

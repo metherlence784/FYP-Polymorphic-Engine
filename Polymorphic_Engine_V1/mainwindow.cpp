@@ -8,6 +8,7 @@
 #include "undo_action_controller.h"
 #include "redo_action_controller.h"
 #include "compile_code_controller.h"
+#include "view_compilation_status_controller.h"
 
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
@@ -160,7 +161,15 @@ void MainWindow::on_Compile_Button_clicked()
     compiler->get_file_path();
     compiler->set_exe_name();//the exe will be filename_original.exe
     compiler->compile_code();//the log is temp_compile.txt
-    compiler->update_analysis_textbox();//update the analysis tab
+
+       //to update analysis textbox
+    QString status = compiler->get_status();
+    qint64 elapsed_time = compiler->get_elapsed_time();
+    QString temp_compile = compiler->get_temp_compile();
+
+    View_Compilation_Status_Controller *viewer = new View_Compilation_Status_Controller();
+    viewer->update_analysis_textbox(status,elapsed_time,temp_compile);
+
 }
 
 void MainWindow::on_Compile_Menu_Item_triggered()
@@ -170,5 +179,12 @@ void MainWindow::on_Compile_Menu_Item_triggered()
     compiler->get_file_path();
     compiler->set_exe_name();//the exe will be filename_original.exe
     compiler->compile_code();//the log is temp_compile.txt
-    compiler->update_analysis_textbox();//update the analysis tab
+
+    //to update analysis textbox
+    QString status = compiler->get_status();
+    qint64 elapsed_time = compiler->get_elapsed_time();
+    QString temp_compile = compiler->get_temp_compile();
+
+    View_Compilation_Status_Controller *viewer = new View_Compilation_Status_Controller();
+    viewer->update_analysis_textbox(status,elapsed_time,temp_compile);
 }

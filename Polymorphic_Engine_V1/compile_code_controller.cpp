@@ -50,8 +50,18 @@ MainWindow * Compile_Code_Controller::get_cur_wind()
 
 QString Compile_Code_Controller::get_status()
 {
-    this->status = cur_wind->get_text_analysis_textbox();
+    this->status = cur_wind->get_text_analysis_textbox();//th
     return this->status;
+}
+
+QString Compile_Code_Controller::get_temp_compile()
+{
+    return this->temp_compile;
+}
+
+qint64 Compile_Code_Controller::get_elapsed_time()
+{
+    return this->elapsed_time;
 }
 
 //mutator
@@ -83,9 +93,14 @@ void Compile_Code_Controller::set_status(QString txt)
     this->status = txt;
 }
 
-void Compile_Code_Controller::set_text_analysis_textbox(QString txt)
+void Compile_Code_Controller::set_temp_compile(QString temp_compile)
 {
-    this->cur_wind->set_text_analysis_textbox(txt);
+    this->temp_compile = temp_compile;
+}
+
+void Compile_Code_Controller::set_elapsed_time(qint64 elapsed_time)
+{
+    this->elapsed_time = elapsed_time;
 }
 
 void Compile_Code_Controller::compile_code()
@@ -111,41 +126,5 @@ void Compile_Code_Controller::compile_code()
     QDateTime end = QDateTime::currentDateTime();
 
     this->elapsed_time = start.msecsTo(end);
-
-    this->cur_wind->ui->tabWidget->setCurrentIndex(1);
 }
 
-void Compile_Code_Controller::update_analysis_textbox()
-{
-    QString text_from_analysis = get_status();
-
-    QDateTime current = QDateTime::currentDateTime(); // to get the current time and day
-
-    const QString stars = QString("******************************************************\n");
-    QString format;
-
-    File_Reader reader;
-    this->status = reader.read_compile_status(this->temp_compile);
-
-    format += text_from_analysis;
-    format += stars;
-    format += QString("COMPILATION STATUS AT : ") +  current.toString() + QString("\n");
-    format += QString("ELAPSED TIME : ") + QString::number(this->elapsed_time) + QString(" ms") + QString("\n\n\n");
-
-    if(this->status == ERROR_INVALID_FILE)
-    {
-        format += this->status + QString("\n");
-    }
-    else if(this->status == QString(""))
-    {
-        format +=  QString("Sucessfully Compiled") + QString("\n");
-    }
-    else
-    {
-        format += this->status + QString("\n");
-    }
-
-    format += stars + QString("\n\n");
-    set_text_analysis_textbox(format);
-
-}
