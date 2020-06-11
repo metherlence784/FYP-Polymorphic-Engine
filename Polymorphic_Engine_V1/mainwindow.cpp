@@ -64,7 +64,7 @@ QString MainWindow::get_payload_radio_button()
         }
     }
 
-    return QString("Something when wrong");
+    return ERROR_PAYLOAD_NOT_FOUND;
 }
 
 //mutator below
