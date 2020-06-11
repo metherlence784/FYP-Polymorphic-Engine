@@ -37,6 +37,7 @@ public:
     QAction *Exit_Menu_Item;
     QAction *Undo_Menu_Item;
     QAction *Redo_Menu_Item;
+    QAction *Compile_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *Cod3z;
@@ -57,6 +58,7 @@ public:
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
     QMenu *Edit_Menu_Header;
+    QMenu *Morph_Menu_Header;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -83,6 +85,8 @@ public:
         Undo_Menu_Item->setObjectName(QString::fromUtf8("Undo_Menu_Item"));
         Redo_Menu_Item = new QAction(MainWindow);
         Redo_Menu_Item->setObjectName(QString::fromUtf8("Redo_Menu_Item"));
+        Compile_Menu_Item = new QAction(MainWindow);
+        Compile_Menu_Item->setObjectName(QString::fromUtf8("Compile_Menu_Item"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
@@ -156,6 +160,8 @@ public:
         File_Menu_Header->setObjectName(QString::fromUtf8("File_Menu_Header"));
         Edit_Menu_Header = new QMenu(menubar);
         Edit_Menu_Header->setObjectName(QString::fromUtf8("Edit_Menu_Header"));
+        Morph_Menu_Header = new QMenu(menubar);
+        Morph_Menu_Header->setObjectName(QString::fromUtf8("Morph_Menu_Header"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -163,6 +169,7 @@ public:
 
         menubar->addAction(File_Menu_Header->menuAction());
         menubar->addAction(Edit_Menu_Header->menuAction());
+        menubar->addAction(Morph_Menu_Header->menuAction());
         File_Menu_Header->addAction(New_File_Menu_Item);
         File_Menu_Header->addAction(Open_File_Menu_Item);
         File_Menu_Header->addSeparator();
@@ -172,10 +179,11 @@ public:
         File_Menu_Header->addAction(Exit_Menu_Item);
         Edit_Menu_Header->addAction(Undo_Menu_Item);
         Edit_Menu_Header->addAction(Redo_Menu_Item);
+        Morph_Menu_Header->addAction(Compile_Menu_Item);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -200,6 +208,7 @@ public:
 #if QT_CONFIG(shortcut)
         Redo_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Y", nullptr));
 #endif // QT_CONFIG(shortcut)
+        Compile_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
         Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));
         Calculator_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Pop Calc.exe", nullptr));
@@ -213,6 +222,7 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         Edit_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
+        Morph_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Morph", nullptr));
     } // retranslateUi
 
 };

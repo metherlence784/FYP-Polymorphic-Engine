@@ -1,12 +1,14 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Polymorphic_Engine_V1.vcxproj, Polymorphic_Engine_V1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Polymorphic_Engine_V1.vcxproj, Polymorphic_Engine_V1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Uic'ing mainwindow.ui...
+  Moc'ing mainwindow.h...
   choose_payload_controller.cpp
   compile_code_controller.cpp
   create_new_file_controller.cpp
   exit_application_controller.cpp
   file_reader.cpp
   file_saver.cpp
+  main.cpp
   mainwindow.cpp
   open_existing_file_controller.cpp
   redo_action_controller.cpp
@@ -20,6 +22,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCT
   moc_exit_application_controller.cpp
   moc_file_reader.cpp
   moc_file_saver.cpp
+  moc_mainwindow.cpp
   moc_open_existing_file_controller.cpp
   moc_redo_action_controller.cpp
   moc_save_as_new_file_controller.cpp

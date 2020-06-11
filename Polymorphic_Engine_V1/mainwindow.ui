@@ -48,7 +48,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Cod3z">
      <property name="enabled">
@@ -265,8 +265,15 @@
     <addaction name="Undo_Menu_Item"/>
     <addaction name="Redo_Menu_Item"/>
    </widget>
+   <widget class="QMenu" name="Morph_Menu_Header">
+    <property name="title">
+     <string>Morph</string>
+    </property>
+    <addaction name="Compile_Menu_Item"/>
+   </widget>
    <addaction name="File_Menu_Header"/>
    <addaction name="Edit_Menu_Header"/>
+   <addaction name="Morph_Menu_Header"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="New_File_Menu_Item">
@@ -320,6 +327,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="Compile_Menu_Item">
+   <property name="text">
+    <string>Compile</string>
    </property>
   </action>
  </widget>

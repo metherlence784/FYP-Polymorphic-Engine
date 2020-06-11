@@ -52,6 +52,8 @@ private slots://note that slots is a QT ui syntax
 
     void on_Compile_Button_clicked();
 
+    void on_Compile_Menu_Item_triggered();
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;

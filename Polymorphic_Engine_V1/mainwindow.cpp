@@ -162,3 +162,13 @@ void MainWindow::on_Compile_Button_clicked()
     compiler->compile_code();//the log is temp_compile.txt
     compiler->update_analysis_textbox();//update the analysis tab
 }
+
+void MainWindow::on_Compile_Menu_Item_triggered()
+{
+    Compile_Code_Controller *compiler = new Compile_Code_Controller();
+    compiler->get_file_name();
+    compiler->get_file_path();
+    compiler->set_exe_name();//the exe will be filename_original.exe
+    compiler->compile_code();//the log is temp_compile.txt
+    compiler->update_analysis_textbox();//update the analysis tab
+}
