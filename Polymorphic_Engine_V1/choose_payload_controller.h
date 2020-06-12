@@ -26,6 +26,7 @@ public:
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
+    QString chosen_payload;
 
 };
 

@@ -31,5 +31,6 @@ void Choose_Payload_Controller::set_enabled_payload_groupbox(bool set)
 
 QString Choose_Payload_Controller::get_payload()
 {
-    return this->cur_wind->get_payload_radio_button();
+    this->chosen_payload = this->cur_wind->get_payload_radio_button();
+    return this->chosen_payload;
 }
