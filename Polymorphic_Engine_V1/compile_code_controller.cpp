@@ -114,10 +114,13 @@ void Compile_Code_Controller::compile_code()
     //cmd line
     QString command("");
     command += QString("g++ -Wall -o ");
-    command += QString(dir.c_str()) + this->exe_name + QString(" ");
-    command += QString(dir.c_str()) + this->file_name + QString(" ");
+    command += QString("\""); // quotation marks so that the file path will be read correctly
+    command += QString(dir.c_str()) + this->exe_name + QString("\" ");
+    command += QString("\"");
+    command += QString(dir.c_str()) + this->file_name + QString("\" ");
     command += QString("2> ");
     command += this->temp_compile;
+    std::cout << "Command: " << command.toStdString() << std::endl;
 
     QDateTime start = QDateTime::currentDateTime();
 

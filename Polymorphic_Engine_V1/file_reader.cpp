@@ -32,23 +32,22 @@ QStringList File_Reader::open_file()
     cur_wind->set_cur_file_path(file_path);//set file name
     list << file_path;
 
-
     QFile file(file_path);
     if(file.open(QIODevice::ReadOnly|QFile::Text))
     {
         QTextStream in(&file);
         QString text = in.readAll();
         list << text;
-        file.close();
     }
     else
     {
         //problem with opening of file
-        list.replace(0,ERROR_SYSTEM_FAULT);
+        list.replace(0,ERROR_NO_FILE_NAME_SPECIFIED);
         // "Problem with opening file inside file reader";
         list << file.errorString();
     }
 
+    file.close();
     return list;
 }
 

@@ -36,29 +36,43 @@ void Open_Existing_File_Controller::open_existing_file()
 
     if(list.at(0) == ERROR_SYSTEM_FAULT)
     {
-        // this is if in file_reader, an error has occured because the user tried to open an undefined
-        // file type, example if user tries to open a shortcut, as it is not handled by qt filter
-        QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid file type: " + list.at(1));
+        // this is if in file_reader, an error has occured that cannot be identified
+        QMessageBox::warning(cur_wind, "Warning", ERROR_SYSTEM_FAULT);
+    }
+    else if(list.at(0) == ERROR_NO_FILE_NAME_SPECIFIED)
+    {
+        //this is if the user clicks cancel when opening new file
     }
     else
     {
-        cur_wind->set_cur_file_path(list.at(0)); // sets the current filepath for the application
+        std::size_t symbol = list.at(0).toStdString().find_last_of(".");
+        std::string extension_check = list.at(0).toStdString().substr(symbol+1);
 
-        //enables the UI items after the user creates or opens his first file
-        cur_wind->ui->Save_Menu_Item->setEnabled(true);
-        cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
+        if(extension_check.compare("c")== 0 || extension_check.compare("cpp")== 0)
+        {
+            cur_wind->set_cur_file_path(list.at(0)); // sets the current filepath for the application
 
-        Write_Code_In_C_CPP_Controller writer;
-        writer.set_text(list.at(1));//clears the text box in the ui
-        writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
+            //enables the UI items after the user creates or opens his first file
+            cur_wind->ui->Save_Menu_Item->setEnabled(true);
+            cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
 
-        Choose_Payload_Controller payloader;
-        payloader.set_enabled_payload_groupbox(true);//enables the payload radio buttons
+            Write_Code_In_C_CPP_Controller writer;
+            writer.set_text(list.at(1));//clears the text box in the ui
+            writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
 
-        Compile_Code_Controller compiler;
-        compiler.set_enabled_compile_button(true);
-        compiler.set_enabled_analysis_textbox(true);
+            Choose_Payload_Controller payloader;
+            payloader.set_enabled_payload_groupbox(true);//enables the payload radio buttons
+
+            Compile_Code_Controller compiler;
+            compiler.set_enabled_compile_button(true);
+            compiler.set_enabled_analysis_textbox(true);
+        }
+        else
+        {
+            //the user tried to open a file with an invalid file extension, i.e. not .c or .cpp
+            QMessageBox::warning(cur_wind, "Warning", ERROR_INVALID_FILE_EXTENSION);
+        }
+
     }
 
 }

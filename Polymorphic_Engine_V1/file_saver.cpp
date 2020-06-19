@@ -29,8 +29,6 @@ QString File_Saver::new_file()
     file_path = QFileDialog::getSaveFileName(cur_wind,"Save your file",QDir::currentPath()
                                              ,filters,&default_filter); // this opens the file directory window
 
-
-    std::cout << "new_file() " << file_path.toStdString() << std::endl;
     QFile file(file_path);
     if(!file.open(QFile::WriteOnly|QFile::Text))
     {
@@ -43,10 +41,10 @@ QString File_Saver::new_file()
     file.close();
 
     //checking for invalid characters set up
-    QRegExp rx("[@!\'\"#$%^&*<>?/|}{~:]");
+    QRegExp rx("[@!\'\"#$%^&<>?/|}{~:]");
     std::size_t symbol = file_path.toStdString().find_last_of("/");
-    std::string cur_dir = file_path.toStdString().substr(symbol+1);
-    QString cur_file = QString::fromStdString(cur_dir);
+    std::string to_load_file = file_path.toStdString().substr(symbol+1);
+    QString cur_file = QString::fromStdString(to_load_file);
 
     if(cur_file.contains(rx) == true) // if file name contains invalid characters
     {
@@ -107,7 +105,7 @@ QString File_Saver::save_file_as(QString text)
     file.close();
 
     //checking for invalid characters set up
-    QRegExp rx("[@!\'\"#$%^&*<>?/|}{~:]");
+    QRegExp rx("[@!\'\"#$%^&<>?/|}{~:]");
     std::size_t symbol = file_path.toStdString().find_last_of("/");
     std::string cur_dir = file_path.toStdString().substr(symbol+1);
     QString cur_file = QString::fromStdString(cur_dir);
@@ -129,16 +127,13 @@ QString File_Saver::save_file_as(QString text)
         if(test.compare("cpp") == 0)
         {
             //if it is cpp, it is valid
-
         }
         else if(test.compare("c") == 0)
         {
             // if it is c it is valid
-
         }
         else
         {
-
             //delete file here
             QFile delete_file (file_path);
             delete_file.remove();
@@ -165,7 +160,5 @@ void File_Saver::save_file(QString file_path, QString text)
         //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
         std::cout << ERROR_SYSTEM_FAULT.toStdString() << std::endl;
     }
-
-
 }
 
