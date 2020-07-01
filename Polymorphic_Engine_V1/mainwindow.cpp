@@ -9,6 +9,13 @@
 #include "redo_action_controller.h"
 #include "compile_code_controller.h"
 #include "view_compilation_status_controller.h"
+#include "morph_executable_controller.h"
+
+
+#include <stdio.h>
+#include <keystone.h>
+
+#define CODE "INC ecx; DEC edx"
 
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
@@ -20,7 +27,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     MWptr = this;
-    cur_file_path = "";
+    this->cur_file_path = "";
+    this->exe_file_path = "";
+
 }
 
 //destructor
@@ -39,6 +48,11 @@ MainWindow* MainWindow::getMWptr()
 QString MainWindow::get_cur_file_path()
 {
     return this->cur_file_path;
+}
+
+QString MainWindow::get_exe_file_path()
+{
+    return this->exe_file_path;
 }
 
 QString MainWindow::get_text_code_input_textbox()
@@ -69,9 +83,14 @@ QString MainWindow::get_payload_radio_button()
 }
 
 //mutator below
-void MainWindow::set_cur_file_path(QString str)
+void MainWindow::set_cur_file_path(QString file_path)
 {
-    this->cur_file_path = str;
+    this->cur_file_path = file_path;
+}
+
+void MainWindow::set_exe_file_path(QString exe_file_path)
+{
+    this->exe_file_path = exe_file_path;
 }
 
 void MainWindow::set_enabled_code_input_textbox(bool set)
@@ -161,6 +180,7 @@ void MainWindow::on_Compile_Button_clicked()
     compiler->get_file_path();
     compiler->set_exe_name();//the exe will be filename_original.exe
     compiler->compile_code();//the log is temp_compile.txt
+    set_exe_file_path(compiler->get_exe_file_path());
 
        //to update analysis textbox
     QString status = compiler->get_status();
@@ -179,6 +199,7 @@ void MainWindow::on_Compile_Menu_Item_triggered()
     compiler->get_file_path();
     compiler->set_exe_name();//the exe will be filename_original.exe
     compiler->compile_code();//the log is temp_compile.txt
+    set_exe_file_path(compiler->get_exe_file_path());
 
     //to update analysis textbox
     QString status = compiler->get_status();
@@ -187,4 +208,10 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 
     View_Compilation_Status_Controller *viewer = new View_Compilation_Status_Controller();
     viewer->update_analysis_textbox(status,elapsed_time,temp_compile);
+}
+
+void MainWindow::on_actionMorph_triggered()
+{
+    Morph_Executable_Controller *morpher = new Morph_Executable_Controller();
+    QString status = morpher->morph_exe_no_encryption(this->exe_file_path);
 }

@@ -64,6 +64,11 @@ qint64 Compile_Code_Controller::get_elapsed_time()
     return this->elapsed_time;
 }
 
+QString Compile_Code_Controller::get_exe_file_path()
+{
+    return this->exe_file_path;
+}
+
 //mutator
 void Compile_Code_Controller::set_cur_wind(MainWindow *cur)
 {
@@ -76,6 +81,11 @@ void Compile_Code_Controller::set_exe_name()
     std::string file_name = this->file_name.toStdString().substr(0,symbol);// gets everything after the last occurence of the "." symbol
     file_name += "_original.exe";
     this->exe_name = QString(file_name.c_str());
+}
+
+void Compile_Code_Controller::set_exe_file_path(QString exe_file_path)
+{
+    this->exe_file_path = exe_file_path;
 }
 
 void Compile_Code_Controller::set_enabled_compile_button(bool set)
@@ -121,6 +131,9 @@ void Compile_Code_Controller::compile_code()
     command += QString("2> ");
     command += this->temp_compile;
     std::cout << "Command: " << command.toStdString() << std::endl;
+
+    //saving exe file path
+   set_exe_file_path ( QString(dir.c_str()) + this->exe_name);
 
     QDateTime start = QDateTime::currentDateTime();
 

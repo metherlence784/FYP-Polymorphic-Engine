@@ -1,4 +1,5 @@
 #include "file_reader.h"
+#include "PE32.h"
 
 //constructor
 File_Reader::File_Reader()
@@ -92,6 +93,39 @@ QString File_Reader::read_compile_status(QString file_path)
     }
 
     return text;
+}
+
+QString File_Reader::read_file_into_vector(QString exe_file_path,std::vector<char>& buffer)
+{
+    // Create the fstream
+    QFile file(exe_file_path);
+    QString text = ERROR_INVALID_EXECUTABLE;
+    QString status = QString("");
+
+    if(file.open(QIODevice::ReadOnly))
+    {
+        char data;
+
+        while(!file.atEnd())
+        {
+            file.read(&data,sizeof(BYTE));
+
+            buffer.emplace_back(data);
+
+        }
+
+
+        status = SUCCESS_VALID_EXECUTABLE;
+
+    }
+    else
+    {
+        status = ERROR_INVALID_EXECUTABLE;
+
+    }
+
+    file.close();
+    return status;
 }
 
 

@@ -194,6 +194,22 @@
        <string>Program Created By : Yoges And Friends</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="Morph_Button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>270</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>M0rph</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="Analysis">
      <attribute name="title">
@@ -270,6 +286,7 @@
      <string>Morph</string>
     </property>
     <addaction name="Compile_Menu_Item"/>
+    <addaction name="actionMorph"/>
    </widget>
    <addaction name="File_Menu_Header"/>
    <addaction name="Edit_Menu_Header"/>
@@ -332,6 +349,11 @@
   <action name="Compile_Menu_Item">
    <property name="text">
     <string>Compile</string>
+   </property>
+  </action>
+  <action name="actionMorph">
+   <property name="text">
+    <string>Morph</string>
    </property>
   </action>
  </widget>

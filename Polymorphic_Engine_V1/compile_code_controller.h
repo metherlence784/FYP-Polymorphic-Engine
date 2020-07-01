@@ -28,11 +28,13 @@ public:
      QString get_status();
      QString get_temp_compile();
      qint64 get_elapsed_time();
+     QString get_exe_file_path();
 
 
      //mutator
      void set_cur_wind(MainWindow *cur);
      void set_exe_name();
+     void set_exe_file_path(QString exe_file_path);
      void set_enabled_compile_button(bool set);
      void set_enabled_analysis_textbox(bool set);
      void set_status(QString txt);
@@ -47,6 +49,7 @@ public:
      QString file_name;
      QString file_path;
      QString exe_name;
+     QString exe_file_path;
      QString status;
      QString temp_compile;
      qint64 elapsed_time;

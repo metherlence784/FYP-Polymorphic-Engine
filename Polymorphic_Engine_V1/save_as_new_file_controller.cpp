@@ -42,13 +42,13 @@ void Save_As_New_File_Controller::save_as_new_file()
     else if (file_path == ERROR_INVALID_CHARACTERS)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Unable save file due to invalid characters");
+                             "Unable to save file due to invalid characters");
 
     }
     else if (file_path == ERROR_INVALID_FILE_EXTENSION)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Unable save file due to invalid file extension");
+                             "Unable to save file due to invalid file extension");
 
     }
     else

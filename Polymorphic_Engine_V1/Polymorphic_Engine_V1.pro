@@ -24,6 +24,7 @@ SOURCES += \
     file_saver.cpp \
     main.cpp \
     mainwindow.cpp \
+    morph_executable_controller.cpp \
     open_existing_file_controller.cpp \
     redo_action_controller.cpp \
     save_as_new_file_controller.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
     write_code_in_c_cpp_controller.cpp
 
 HEADERS += \
+    PE32.h \
     choose_payload_controller.h \
     compile_code_controller.h \
     create_new_file_controller.h \
@@ -41,6 +43,7 @@ HEADERS += \
     file_reader.h \
     file_saver.h \
     mainwindow.h \
+    morph_executable_controller.h \
     open_existing_file_controller.h \
     redo_action_controller.h \
     save_as_new_file_controller.h \
@@ -56,3 +59,9 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../source/repos/keystone-0.9.1/build/llvm/lib/ -lkeystone
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../source/repos/keystone-0.9.1/build/llvm/lib/ -lkeystone
+
+INCLUDEPATH += $$PWD/../../../../../source/repos/keystone-0.9.1/include/keystone
+DEPENDPATH += $$PWD/../../../../../source/repos/keystone-0.9.1/include/keystone
