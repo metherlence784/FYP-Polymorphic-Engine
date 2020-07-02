@@ -48,6 +48,7 @@ HEADERS += \
     redo_action_controller.h \
     save_as_new_file_controller.h \
     save_current_file_controller.h \
+    template_functions.h \
     undo_action_controller.h \
     view_compilation_status_controller.h \
     write_code_in_c_cpp_controller.h
