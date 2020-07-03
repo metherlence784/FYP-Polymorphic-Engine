@@ -27,6 +27,7 @@ public:
     QString new_file();
     QString save_file_as(QString text);
     void save_file(QString file_path,QString text);
+    void write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer);
 
 
 private:

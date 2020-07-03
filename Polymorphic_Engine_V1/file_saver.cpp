@@ -1,5 +1,6 @@
 #include "file_saver.h"
 
+#include <fstream>
 #include <iostream>
 
 //constructor
@@ -160,5 +161,22 @@ void File_Saver::save_file(QString file_path, QString text)
         //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
         std::cout << ERROR_SYSTEM_FAULT.toStdString() << std::endl;
     }
+}
+
+void File_Saver::write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer)
+{
+    QFile file(morphed_exe_file_path);
+    if(file.open(QFile::WriteOnly))//this means file stream is opened successfully
+    {
+        QDataStream out(&file);
+        out.writeRawData(&buffer[0],buffer.size());
+    }
+    else
+    {
+        // any error involving reading of files i.e. system errors
+        //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
+        std::cout << ERROR_SYSTEM_FAULT.toStdString() << std::endl;
+    }
+    file.close();
 }
 

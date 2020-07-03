@@ -1,11 +1,19 @@
 ﻿  morph_executable_controller.cpp
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(265): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(481): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
-  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(481): note: consider using '%zu' in the format string
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(494): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
-  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(494): note: consider using '%zu' in the format string
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(494): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 2 has type 'size_t'
-  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(494): note: consider using '%zu' in the format string
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(510): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(245): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(299): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(319): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(581): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(581): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(593): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(593): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(593): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 2 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(593): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(607): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(618): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(653): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(692): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(701): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(737): warning C4018: '<': signed/unsigned mismatch
      Creating library release\\Polymorphic_Engine_V1.lib and object release\\Polymorphic_Engine_V1.exp
+qtmain.lib(qtmain_win.obj) : warning LNK4099: PDB 'qtmain.pdb' was not found with 'qtmain.lib(qtmain_win.obj)' or at 'C:\Users\jtf25\Desktop\FYP\Polymorphic\FYP-Polymorphic-Engine\Polymorphic_Engine_V1\release\qtmain.pdb'; linking object as if no debug info
   Polymorphic_Engine_V1.vcxproj -> C:\Users\jtf25\Desktop\FYP\Polymorphic\FYP-Polymorphic-Engine\Polymorphic_Engine_V1\release\Polymorphic_Engine_V1.exe
