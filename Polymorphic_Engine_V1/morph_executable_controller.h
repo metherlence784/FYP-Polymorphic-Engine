@@ -41,6 +41,7 @@ public:
      void set_enabled_analysis_textbox(bool set);
 
      QString morph_exe_no_encryption(QString exe_file_path);
+     QString morph_exe_with_encryption(QString exe_file_path);
      void set_morphed_exe_file_path(QString exe_file_path);
      void set_morphed_exe_name(QString exe_file_path, std::string modifier);
 
@@ -92,6 +93,7 @@ private:
     unsigned int num_of_stosd;
     std::vector<unsigned char> payload_vec;
     unsigned int buffer_cursor;
+    DWORD start_of_payload_section_offset;
 
     QString read_file_into_vector(QString exe_file_path);
     PIMAGE_DOS_HEADER get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor);
@@ -130,6 +132,8 @@ private:
                                              unsigned int jump_to_payload_byte_length,
                                              DWORD starting_of_text_section_offset_on_load,
                                              std::vector<char> &buffer);
+    void store_edi(std::string &store_payload_entry_point_in_edi_asm,
+                   DWORD entry_point_of_text_section);
     void get_stosd_instruction_asm(std::string &patching_entry_bytes_asm,
                                    std::string text_section_memorized_entry_bytes,
                                    unsigned int num_of_stosd);

