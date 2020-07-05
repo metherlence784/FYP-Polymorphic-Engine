@@ -213,5 +213,5 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 void MainWindow::on_actionMorph_triggered()
 {
     Morph_Executable_Controller *morpher = new Morph_Executable_Controller();
-    QString status = morpher->morph_exe_no_encryption(this->exe_file_path);
+    QString status = morpher->morph_exe_with_encryption(this->exe_file_path);
 }

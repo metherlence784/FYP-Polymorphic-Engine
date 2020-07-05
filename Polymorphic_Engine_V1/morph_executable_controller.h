@@ -17,6 +17,7 @@
 #include <sstream>
 #include <iomanip>
 #include <intrin.h>
+#include <cmath>
 
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
@@ -94,6 +95,8 @@ private:
     std::vector<unsigned char> payload_vec;
     unsigned int buffer_cursor;
     DWORD start_of_payload_section_offset;
+    char random_key;
+    unsigned int length_to_decrypt;
 
     QString read_file_into_vector(QString exe_file_path);
     PIMAGE_DOS_HEADER get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor);
@@ -147,7 +150,25 @@ private:
     void rewrite_bytes_to_buffer(std::vector<char> &buffer, char *section_buffer_ptr,
                                  unsigned int offset, unsigned int byte_size);
     void write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer);
+    char generate_random_key();
+    void add_bytes_into_vec(std::vector<unsigned char> &bytes_after_decryption_instructions_vec,
+                            std::vector<unsigned char> machine_code_vec);
+
+    void get_decryption_asm(std::string &decrypt_asm,
+                            DWORD start_of_payload_section_offset,
+                            unsigned int length_of_random_key,
+                            std::vector<unsigned char> &machine_code_vec,
+                            size_t &machine_code_num_of_bytes,
+                            unsigned int size_of_bytes_after_decryption_instructions_vec);
+
+    void encrypt_bytes_after_decryption_instruction_vec(std::vector<unsigned char> &bytes_after_decryption_instructions_vec,
+                                                        char random_key);
+
+    void add_random_key_to_payload_section_buffer_ptr(char *&payload_section_buffer_ptr, char random_key );
+	void calculate_jne_short_backwards(std::vector<unsigned char> &machine_code_vec, unsigned int length_of_jne,
+										size_t &machine_code_num_of_bytes);
 
 };
+
 
 #endif // MORPH_EXECUTABLE_CONTROLLER_H
