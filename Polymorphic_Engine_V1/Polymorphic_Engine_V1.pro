@@ -19,6 +19,7 @@ SOURCES += \
     choose_payload_controller.cpp \
     compile_code_controller.cpp \
     create_new_file_controller.cpp \
+    disassembly.cpp \
     exit_application_controller.cpp \
     file_reader.cpp \
     file_saver.cpp \
@@ -35,9 +36,11 @@ SOURCES += \
 
 HEADERS += \
     PE32.h \
+    asm_mnemonics.h \
     choose_payload_controller.h \
     compile_code_controller.h \
     create_new_file_controller.h \
+    disassembly.h \
     error.h \
     exit_application_controller.h \
     file_reader.h \
@@ -45,6 +48,7 @@ HEADERS += \
     mainwindow.h \
     morph_executable_controller.h \
     open_existing_file_controller.h \
+    payloads.h \
     redo_action_controller.h \
     save_as_new_file_controller.h \
     save_current_file_controller.h \
@@ -66,3 +70,12 @@ else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../source/r
 
 INCLUDEPATH += $$PWD/../../../../../source/repos/keystone-0.9.1/include/keystone
 DEPENDPATH += $$PWD/../../../../../source/repos/keystone-0.9.1/include/keystone
+
+
+
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../capstone-4.0.2/msvc/x64/release/ -lcapstone
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../capstone-4.0.2/msvc/x64/debug/ -lcapstone
+
+INCLUDEPATH += $$PWD/../../../capstone-4.0.2/include/capstone
+DEPENDPATH += $$PWD/../../../capstone-4.0.2/include/capstone

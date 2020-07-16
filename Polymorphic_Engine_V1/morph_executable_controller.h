@@ -6,8 +6,9 @@
 #include <QFile>
 
 #include "PE32.h"
+#include "payloads.h"
 #include "template_functions.h"
-#include <fstream>
+#include <capstone.h>
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
@@ -16,8 +17,15 @@
 #include <string>
 #include <sstream>
 #include <iomanip>
-#include <intrin.h>
 #include <cmath>
+#include <stdio.h>
+
+
+
+#include <disassembly.h>
+
+#include <regex> // for testing
+
 
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
@@ -27,6 +35,8 @@ class Morph_Executable_Controller : public QObject
 {
     Q_OBJECT
 public:
+    const int INSERTION_PROBABILITY = 15;
+
      Morph_Executable_Controller();
      ~Morph_Executable_Controller();
 
@@ -43,9 +53,13 @@ public:
 
      QString morph_exe_no_encryption(QString exe_file_path);
      QString morph_exe_with_encryption(QString exe_file_path);
+     QString morph_exe_with_encryption_junk_alt_instructions(QString exe_file_path);
      void set_morphed_exe_file_path(QString exe_file_path);
      void set_morphed_exe_name(QString exe_file_path, std::string modifier);
 
+     //for alternate instructions
+        //std::vector<Disassembly> capstone;
+        //std::vector<relative_jump_struct> jmp_instruct_vec; // here i will store relative jmp instructions
 
 
 private:
@@ -55,7 +69,7 @@ private:
     QString morphed_exe_file_path;
 
     //list of payloads
-    const std::vector<QString> PAYLOADS_VEC = {"Calculator_Payload_RButton"};
+    const std::vector<QString> LIST_OF_PAYLOADS_VEC = {"Calculator_Payload_RButton"};
 
     //pe file stuff
     const std::string TEXT_SECTION_NAME = ".text";
@@ -97,6 +111,7 @@ private:
     DWORD start_of_payload_section_offset;
     char random_key;
     unsigned int length_to_decrypt;
+    std::vector<Disassembly> dis_asm_vec;
 
     QString read_file_into_vector(QString exe_file_path);
     PIMAGE_DOS_HEADER get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor);
@@ -123,6 +138,7 @@ private:
                                      unsigned int &payload_virtual_size,
                                      DWORD SECTIONCHARACTERISTICSTOSET);
     void print_section_headers(std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec);
+
     QString asm_to_machine_code(std::string asm_code, std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes);
     char * get_section_data_from_buffer(std::vector <char> &buffer, unsigned int file_offset, unsigned int size_of_section);
     void error_warning_message_box(QString status);
@@ -167,6 +183,87 @@ private:
     void add_random_key_to_payload_section_buffer_ptr(char *&payload_section_buffer_ptr, char random_key );
 	void calculate_jne_short_backwards(std::vector<unsigned char> &machine_code_vec, unsigned int length_of_jne,
 										size_t &machine_code_num_of_bytes);
+    //QString machine_code_to_asm(std::vector<unsigned char> temp, std::vector<std::string> &dis_asm_vec);
+    QString machine_code_to_asm(std::vector<unsigned char> payload_vec, std::vector<Disassembly> &dis_asm_vec);
+
+    //============================================= for alternate instructions ==================================
+    void modify_payload_vec_with_alternative_instructions(std::vector<unsigned char> &payload_vec,
+                                                          std::vector<Disassembly> &dis_asm_vec);
+    void check_for_relative_jumps(std::vector<Disassembly> &dis_asm_vec);
+    void check_not_in_jump(std::vector<Disassembly> &dis_asm_vec, int index);
+    void alternative_inc_or_dec_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                            std::vector<unsigned char> &machine_code_vec,
+                                            size_t &machine_code_num_of_bytes);
+    void gen_new_machine_code(Disassembly &instruction,
+                              std::string new_instruction,
+                              std::vector<unsigned char> &machine_code_vec,
+                              size_t &machine_code_num_of_bytes);
+    std::string convert_decimal_to_hexa(int num);
+    bool check_instruction_is_ptr(std::string ops);
+    std::string generate_alternative_sub_instructions(std::string original_instruction,
+                                                      std::string right_op,
+                                                      std::string left_op,
+                                                      bool right_op_is_reg,
+                                                      unsigned int &right_op_hex);
+    void alternative_sub_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<unsigned char> &machine_code_vec,
+                                     size_t &machine_code_num_of_bytes);
+    std::string generate_alternative_add_instructions(std::string original_instruction,
+                                                      std::string right_op,
+                                                      std::string left_op,
+                                                      bool right_op_is_reg,
+                                                      unsigned int &right_op_hex);
+    void alternative_add_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<unsigned char> &machine_code_vec,
+                                     size_t &machine_code_num_of_bytes);
+    void alternative_xor_clear_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                           std::vector<unsigned char> &machine_code_vec,
+                                           size_t &machine_code_num_of_bytes);
+    void alternative_xor_general_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                             std::vector<unsigned char> &machine_code_vec,
+                                             size_t &machine_code_num_of_bytes);
+    void alternative_and_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<unsigned char> &machine_code_vec,
+                                     size_t &machine_code_num_of_bytes);
+    void alternative_push_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<unsigned char> &machine_code_vec,
+                                     size_t &machine_code_num_of_bytes);
+    void alternative_pop_instruction(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<unsigned char> &machine_code_vec,
+                                     size_t &machine_code_num_of_bytes);
+
+
+    //============================================ for junk instructions ====================================
+    void add_junk_instructions(std::vector<unsigned char> &payload_vec,
+                                    std::vector<Disassembly> &dis_asm_vec,
+                                    std::vector<unsigned char> &machine_code_vec,
+                                    size_t &machine_code_num_of_bytes,
+                                    std::vector<uint64_t> &address_of_insertions_vec,
+                                    std::vector<Disassembly> &jump_instructions_vec);
+    bool to_insert_or_not(int chance);//chance to insert
+    bool check_is_jump_instruction(int id);
+    QString	junk_code_generator(std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes);
+    void print_dis_asm_vec(std::vector<Disassembly> &dis_asm_vec); //printing disassembled vector
+    void randomize_and_store_insertions(std::vector<uint64_t> &address_of_insertions_vec,
+                                        std::vector<Disassembly> &jump_instructions_vec,
+                                        std::vector<Disassembly> dis_asm_vec);
+    void init_tracker_vec(std::vector<Disassembly> &tracker_vec, std::vector<Disassembly> jump_instructions_vec);
+    void calculate_and_adjust_offsets_within_jump_range(std::vector<uint64_t> &address_of_insertions_vec,
+                                                        std::vector<Disassembly> &jump_instructions_vec,
+                                                        std::vector<Disassembly> tracker_vec,
+                                                        size_t &machine_code_num_of_bytes);
+    void adjust_offsets_within_jump_range(uint64_t &address_of_insertion,
+                                          Disassembly &jump_instruction,
+                                          Disassembly &tracker_instruction,
+                                          size_t &machine_code_num_of_bytes);
+    unsigned char calculate_signed_bit(char original_relative_offset);
+    void modify_jumps_in_dis_asm_vec(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<Disassembly> &jump_instructions_vec);
+    void modify_payload_vec_with_junk_instructions(std::vector<uint64_t> &address_of_insertions_vec,
+                                                    std::vector<Disassembly> &dis_asm_vec,
+                                                    std::vector<unsigned char> &machine_code_vec,
+                                                    std::vector<unsigned char> &payload_vec);
+
 
 };
 
