@@ -17,11 +17,11 @@ void View_Compilation_Status_Controller::set_text_analysis_textbox(QString txt)
     this->cur_wind->set_text_analysis_textbox(txt);
 }
 
-void View_Compilation_Status_Controller::update_analysis_textbox(QString status, qint64 elapsed_time, QString txt_file)
+void View_Compilation_Status_Controller::update_analysis_textbox_and_enable_morph(QString analysis_textbox_status, qint64 elapsed_time, QString txt_file)
 {
     this->cur_wind->ui->tabWidget->setCurrentIndex(1);
 
-        QString previous_text_from_analysis = status;
+        QString previous_text_from_analysis = analysis_textbox_status;
 
         QDateTime current = QDateTime::currentDateTime(); // to get the current time and day
 
@@ -43,6 +43,8 @@ void View_Compilation_Status_Controller::update_analysis_textbox(QString status,
         else if(current_status == QString(""))
         {
             format +=  QString("Sucessfully Compiled") + QString("\n");
+            this->cur_wind->ui->Morph_Button->setEnabled(true);
+            this->cur_wind->ui->Morph_Menu_Item->setEnabled(true);
         }
         else
         {

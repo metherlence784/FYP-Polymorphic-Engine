@@ -1518,6 +1518,8 @@ release\moc_morph_executable_controller.cpp: ..\Polymorphic_Engine_V1\morph_exec
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\payloads.h \
 		..\Polymorphic_Engine_V1\template_functions.h \
@@ -4286,6 +4288,8 @@ release\morph_executable_controller.obj: ..\Polymorphic_Engine_V1\morph_executab
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\payloads.h \
 		..\Polymorphic_Engine_V1\template_functions.h \

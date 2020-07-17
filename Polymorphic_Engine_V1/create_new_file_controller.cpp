@@ -69,6 +69,7 @@ void Create_New_File_Controller::create_new_file()
 
         Compile_Code_Controller compiler;
         compiler.set_enabled_compile_button(true);
+        compiler.set_enabled_compile_menu_item(true);
         compiler.set_enabled_analysis_textbox(true);
 
     }

@@ -56,7 +56,11 @@ private slots://note that slots is a QT ui syntax
 
     void on_Compile_Menu_Item_triggered();
 
-    void on_actionMorph_triggered();
+
+
+    void on_Morph_Menu_Item_triggered();
+
+    void on_Morph_Button_clicked();
 
 private:
     static MainWindow *MWptr;

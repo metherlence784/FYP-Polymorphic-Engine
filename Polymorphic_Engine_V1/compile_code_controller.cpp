@@ -11,7 +11,7 @@ Compile_Code_Controller::Compile_Code_Controller()
     this->file_name = QString("");
     this->file_path = QString("");
     this->exe_name = QString("");
-    this->status = QString("");
+    this->analysis_textbox_status = QString("");
     this->temp_compile = QString("");
 
 
@@ -48,10 +48,10 @@ MainWindow * Compile_Code_Controller::get_cur_wind()
     return this->cur_wind;
 }
 
-QString Compile_Code_Controller::get_status()
+QString Compile_Code_Controller::get_analysis_textbox_status()
 {
-    this->status = cur_wind->get_text_analysis_textbox();//th
-    return this->status;
+    this->analysis_textbox_status = cur_wind->get_text_analysis_textbox();//th
+    return this->analysis_textbox_status;
 }
 
 QString Compile_Code_Controller::get_temp_compile()
@@ -93,6 +93,11 @@ void Compile_Code_Controller::set_enabled_compile_button(bool set)
     this->cur_wind->set_enabled_compile_button(set);
 }
 
+void Compile_Code_Controller::set_enabled_compile_menu_item(bool set)
+{
+    this->cur_wind->ui->Compile_Menu_Item->setEnabled(set);
+}
+
 void Compile_Code_Controller::set_enabled_analysis_textbox(bool set)
 {
     this->cur_wind->set_enabled_analysis_textbox(set);
@@ -100,7 +105,7 @@ void Compile_Code_Controller::set_enabled_analysis_textbox(bool set)
 
 void Compile_Code_Controller::set_status(QString txt)
 {
-    this->status = txt;
+    this->analysis_textbox_status = txt;
 }
 
 void Compile_Code_Controller::set_temp_compile(QString temp_compile)

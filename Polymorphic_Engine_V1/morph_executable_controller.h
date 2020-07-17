@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QFile>
+#include <QDateTime>
 
 #include "PE32.h"
 #include "payloads.h"
@@ -19,12 +20,12 @@
 #include <iomanip>
 #include <cmath>
 #include <stdio.h>
-
+#include <regex>
 
 
 #include <disassembly.h>
 
-#include <regex> // for testing
+
 
 
 #include "ui_mainwindow.h"
@@ -44,12 +45,17 @@ public:
      QString get_file_name();
      QString get_file_path();
      MainWindow *get_cur_wind();
+     qint64 get_elapsed_time();
+     QString get_analysis_textbox_status();
+
 
      //mutator
      void set_cur_wind(MainWindow *cur);
      void set_exe_name();
      void set_enabled_compile_button(bool set);
      void set_enabled_analysis_textbox(bool set);
+     void set_elapsed_time(qint64 elapsed_time);
+     void set_analysis_textbox_status(QString status);
 
      QString morph_exe_no_encryption(QString exe_file_path);
      QString morph_exe_with_encryption(QString exe_file_path);
@@ -57,10 +63,10 @@ public:
      void set_morphed_exe_file_path(QString exe_file_path);
      void set_morphed_exe_name(QString exe_file_path, std::string modifier);
 
-     //for alternate instructions
-        //std::vector<Disassembly> capstone;
-        //std::vector<relative_jump_struct> jmp_instruct_vec; // here i will store relative jmp instructions
 
+     void update_analysis_textbox(QString analysis_textbox_status,
+                                  qint64 elapsed_time,
+                                  QString morph_status);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
@@ -112,6 +118,8 @@ private:
     char random_key;
     unsigned int length_to_decrypt;
     std::vector<Disassembly> dis_asm_vec;
+    QString morph_status;
+    qint64 elapsed_time;
 
     QString read_file_into_vector(QString exe_file_path);
     PIMAGE_DOS_HEADER get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor);
@@ -141,7 +149,7 @@ private:
 
     QString asm_to_machine_code(std::string asm_code, std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes);
     char * get_section_data_from_buffer(std::vector <char> &buffer, unsigned int file_offset, unsigned int size_of_section);
-    void error_warning_message_box(QString status);
+    void error_warning_message_box(QString morph_status);
     void editing_text_section_ptr(char* &text_section_buffer_ptr,
                                   unsigned int jump_to_payload_byte_length,
                                   DWORD text_section_buffer_offset,

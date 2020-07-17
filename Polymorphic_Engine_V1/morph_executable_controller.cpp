@@ -42,6 +42,7 @@ Morph_Executable_Controller::Morph_Executable_Controller()
     this->start_of_payload_section_offset = 0;
     this->random_key = 0;
     this->length_to_decrypt = 0;
+    this->morph_status = QString("");
 
 }
 
@@ -607,15 +608,15 @@ void Morph_Executable_Controller::add_random_key_to_payload_section_buffer_ptr(c
 
 QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned char> payload_vec, std::vector<Disassembly> &dis_asm_vec)
 {
-    QString status = QString("");
+    QString morph_status = QString("");
     csh handle;
     cs_insn *insn;
     size_t count;
 
     if (cs_open(CS_ARCH_X86, CS_MODE_32, &handle) != CS_ERR_OK)
     {
-        status = ERROR_OPENING_CAPSTONE;
-        return status;
+        morph_status = ERROR_OPENING_CAPSTONE;
+        return morph_status;
     }
 
     //the 0x1000 here is the address, we should replace this
@@ -647,12 +648,12 @@ QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned ch
     }
     else
     {
-        status = ERROR_DISASSEMBLY_FAILED_CAPSTONE;
+        morph_status = ERROR_DISASSEMBLY_FAILED_CAPSTONE;
     }
 
     cs_close(&handle);
 
-    return status;
+    return morph_status;
 }
 
 
@@ -727,14 +728,14 @@ bool Morph_Executable_Controller::check_is_jump_instruction(int id)
 QString Morph_Executable_Controller::junk_code_generator(std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes)
 {
     //CHANGE TO QSTRING LATER
-    QString status = QString("");
+    QString morph_status = QString("");
 
     //need array of junk instructions
     //currently just one
     std::string junk_instructions = "push eax; nop; nop; nop; nop; nop; pop eax;";
     machine_code_vec.clear();
-    status = asm_to_machine_code(junk_instructions, machine_code_vec, machine_code_num_of_bytes);
-    return status;
+    morph_status = asm_to_machine_code(junk_instructions, machine_code_vec, machine_code_num_of_bytes);
+    return morph_status;
 }
 
 void Morph_Executable_Controller::print_dis_asm_vec(std::vector<Disassembly> &dis_asm_vec)
@@ -971,18 +972,18 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
                                                                 std::vector<uint64_t> &address_of_insertions_vec,
                                                                 std::vector<Disassembly> &jump_instructions_vec)
 {
-    QString status = QString("");
+    QString morph_status = QString("");
 
     //first need to disassemble the payload shellcode to asm instructions
-    status = machine_code_to_asm(payload_vec, dis_asm_vec);
-    error_warning_message_box(status);
+    morph_status = machine_code_to_asm(payload_vec, dis_asm_vec);
+    error_warning_message_box(morph_status);
 
     //checking can erase later
     //print_dis_asm_vec(dis_asm_vec);
 
     //get the junk code stored inside machine code vec
-    status = junk_code_generator(machine_code_vec, machine_code_num_of_bytes);
-    error_warning_message_box(status);
+    morph_status = junk_code_generator(machine_code_vec, machine_code_num_of_bytes);
+    error_warning_message_box(morph_status);
 
     //randomize chances of adding junk code
     //need to store which address it is being inserted at
@@ -1009,8 +1010,8 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
 
     std::cout << std::endl << std::endl;
     dis_asm_vec.clear();
-    status = machine_code_to_asm(payload_vec, dis_asm_vec);
-    error_warning_message_box(status);
+    morph_status = machine_code_to_asm(payload_vec, dis_asm_vec);
+    error_warning_message_box(morph_status);
 
     //print_dis_asm_vec(dis_asm_vec);
     std::cout << std::endl << std::endl;
@@ -1193,11 +1194,11 @@ void Morph_Executable_Controller::gen_new_machine_code(Disassembly &instruction,
 
         //now to get the new bytes for the machine code
         machine_code_vec.clear();
-        QString status = asm_to_machine_code(instruction.get_full_instruction(),
+        QString morph_status = asm_to_machine_code(instruction.get_full_instruction(),
                                              machine_code_vec,
                                              machine_code_num_of_bytes);
 
-        error_warning_message_box(status);
+        error_warning_message_box(morph_status);
 
         std::vector<unsigned char> bytes_vec;
 
@@ -1777,49 +1778,49 @@ void Morph_Executable_Controller::alternative_pop_instruction(std::vector<Disass
 }
 // =========================================== END OF ALT INSTRUCTIONS =============================
 
-void Morph_Executable_Controller::error_warning_message_box(QString status)
+void Morph_Executable_Controller::error_warning_message_box(QString morph_status)
 {
-    if (status == ERROR_INVALID_EXECUTABLE)
+    if (morph_status == ERROR_INVALID_EXECUTABLE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Invalid exe file: " + this->exe_file_path);
     }
-    else if (status == ERROR_INVALID_DOS_SIGNATURE)
+    else if (morph_status == ERROR_INVALID_DOS_SIGNATURE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Invalid DOS Signature");
     }
-    else if (status == ERROR_INVALID_PE_SIGNATURE)
+    else if (morph_status == ERROR_INVALID_PE_SIGNATURE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Invalid PE Signature");
     }
-    else if (status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
+    else if (morph_status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "No matching section header name for \".text\"");
     }
-    else if (status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
+    else if (morph_status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "No matching section header name for \".payload\"");
     }
-    else if(status == ERROR_OPENING_KEYSTONE)
+    else if(morph_status == ERROR_OPENING_KEYSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Error opening keystone");
     }
-    else if (status == ERROR_ASSEMBLY_FAILED_KEYSTONE)
+    else if (morph_status == ERROR_ASSEMBLY_FAILED_KEYSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Failed to assemble in keystone");
     }
-    else if (status == ERROR_OPENING_CAPSTONE)
+    else if (morph_status == ERROR_OPENING_CAPSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Error opening capstone");
     }
-    else if (status == ERROR_DISASSEMBLY_FAILED_CAPSTONE)
+    else if (morph_status == ERROR_DISASSEMBLY_FAILED_CAPSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Failed to disassemble in capstone");
@@ -1829,18 +1830,18 @@ void Morph_Executable_Controller::error_warning_message_box(QString status)
 QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_path)
 {
     //srand(time(NULL));
-    QString status = "";
+    QString morph_status = "";
     //reading bytes of a exe file
-    status = read_file_into_vector(exe_file_path);
-    error_warning_message_box(status);
+    morph_status = read_file_into_vector(exe_file_path);
+    error_warning_message_box(morph_status);
 
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
     this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    status = validate_image_dos_signature(dos_header_pointer);
-    error_warning_message_box(status);
+    morph_status = validate_image_dos_signature(dos_header_pointer);
+    error_warning_message_box(morph_status);
 
 
     // getting image_NT_header_cursor and setting exe_header_file_offset
@@ -1855,8 +1856,8 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
 
     //validate the file PE signature must be equal to some dog shit
-    status = validate_PE_signature(image_NT_header_ptr);
-    error_warning_message_box(status);
+    morph_status = validate_PE_signature(image_NT_header_ptr);
+    error_warning_message_box(morph_status);
 
 
     printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
@@ -1886,8 +1887,8 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
                                        image_NT_header_ptr, section_header_cursor);
 
     //getting the index of the .text section inside the image_section_header_vec
-    status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
-    error_warning_message_box(status);
+    morph_status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
+    error_warning_message_box(morph_status);
 
     //getting the raw data offset of the .text section via image_section_header_vec
     //note that the above function saved the index of the .text section
@@ -1909,9 +1910,9 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
 
     //getting the index of the .payload section inside the image_section_header_vec
-    status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
+    morph_status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
                                               image_NT_header_ptr,index_of_payload_section);
-    error_warning_message_box(status);
+    error_warning_message_box(morph_status);
 
     //storing the whole .payload section inside the payload_section_header_ptr
     this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
@@ -1991,8 +1992,8 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     this->machine_code_vec.clear(); //clear vector to input new machine code
 
     //and converting assembly syntax into machine code
-    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
-    error_warning_message_box(status);
+    morph_status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
+    error_warning_message_box(morph_status);
 
     //storing the byte length of the section pivot gadget
     this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
@@ -2148,18 +2149,18 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_path)
 {
     //srand(time(NULL));
-    QString status = "";
+    QString morph_status = "";
     //reading bytes of a exe file
-    status = read_file_into_vector(exe_file_path);
-    error_warning_message_box(status);
+    morph_status = read_file_into_vector(exe_file_path);
+    error_warning_message_box(morph_status);
 
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
     this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    status = validate_image_dos_signature(dos_header_pointer);
-    error_warning_message_box(status);
+    morph_status = validate_image_dos_signature(dos_header_pointer);
+    error_warning_message_box(morph_status);
 
 
     // getting image_NT_header_cursor and setting exe_header_file_offset
@@ -2174,8 +2175,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
 
     //validate the file PE signature must be equal to some dog shit
-    status = validate_PE_signature(image_NT_header_ptr);
-    error_warning_message_box(status);
+    morph_status = validate_PE_signature(image_NT_header_ptr);
+    error_warning_message_box(morph_status);
 
 
     printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
@@ -2205,8 +2206,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
                                        image_NT_header_ptr, section_header_cursor);
 
     //getting the index of the .text section inside the image_section_header_vec
-    status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
-    error_warning_message_box(status);
+    morph_status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
+    error_warning_message_box(morph_status);
 
     //getting the raw data offset of the .text section via image_section_header_vec
     //note that the above function saved the index of the .text section
@@ -2228,9 +2229,9 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
 
 
     //getting the index of the .payload section inside the image_section_header_vec
-    status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
+    morph_status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
                                               image_NT_header_ptr,index_of_payload_section);
-    error_warning_message_box(status);
+    error_warning_message_box(morph_status);
 
     //storing the whole .payload section inside the payload_section_header_ptr
     this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
@@ -2245,7 +2246,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
             set_morphed_exe_name(exe_file_path,"_calc");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
-            status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
 
             break;
 
@@ -2254,7 +2255,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     }
 
 
-    error_warning_message_box(status);
+    error_warning_message_box(morph_status);
 
     //setting the full file path
     set_morphed_exe_file_path(exe_file_path);
@@ -2329,8 +2330,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     this->machine_code_vec.clear(); //clear vector to input new machine code
 
     //and converting assembly syntax into machine code
-    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
-    error_warning_message_box(status);
+    morph_status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
+    error_warning_message_box(morph_status);
 
     //storing the byte length of the section pivot gadget
     this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
@@ -2518,19 +2519,22 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
 
 QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instructions(QString exe_file_path)
 {
+
+    QDateTime start = QDateTime::currentDateTime(); // the moment this function is called
+
     srand(time(NULL));
-    QString status = "";
+
     //reading bytes of a exe file
-    status = read_file_into_vector(exe_file_path);
-    error_warning_message_box(status);
+    this->morph_status = read_file_into_vector(exe_file_path);
+    error_warning_message_box(this->morph_status);
 
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
     this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    status = validate_image_dos_signature(dos_header_pointer);
-    error_warning_message_box(status);
+    this->morph_status = validate_image_dos_signature(dos_header_pointer);
+    error_warning_message_box(this->morph_status);
 
 
     // getting image_NT_header_cursor and setting exe_header_file_offset
@@ -2542,11 +2546,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
 
     // get the image_NT_header_ptr
     // the offset is at e_lfanew which is stored in image_NT_header_file_cursor
-    this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,image_NT_header_file_cursor);
+    this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,this->image_NT_header_file_cursor);
 
     //validate the file PE signature must be equal to some dog shit
-    status = validate_PE_signature(image_NT_header_ptr);
-    error_warning_message_box(status);
+    this->morph_status = validate_PE_signature(this->image_NT_header_ptr);
+    error_warning_message_box(this->morph_status);
 
 
     printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
@@ -2569,15 +2573,15 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
 
     // This cursor will be used to cycle through each section in the pe file
     // need to add exe file offset + the size of an IMAGE_NT_HEADERS32 struct to get to the first section
-    unsigned int section_header_cursor = exe_header_file_offset + sizeof(IMAGE_NT_HEADERS32);
+    unsigned int section_header_cursor = this->exe_header_file_offset + sizeof(IMAGE_NT_HEADERS32);
 
     //storing all image section headers inside a vector
-    store_image_section_headers_in_vec(buffer, image_section_header_vec,
-                                       image_NT_header_ptr, section_header_cursor);
+    store_image_section_headers_in_vec(this->buffer, this->image_section_header_vec,
+                                       this->image_NT_header_ptr, section_header_cursor);
 
     //getting the index of the .text section inside the image_section_header_vec
-    status = get_section_header_index_by_name(TEXT_SECTION_NAME, image_section_header_vec,image_NT_header_ptr,index_of_text_section);
-    error_warning_message_box(status);
+    this->morph_status = get_section_header_index_by_name(TEXT_SECTION_NAME, this->image_section_header_vec,this->image_NT_header_ptr,index_of_text_section);
+    error_warning_message_box(this->morph_status);
 
     //getting the raw data offset of the .text section via image_section_header_vec
     //note that the above function saved the index of the .text section
@@ -2599,12 +2603,12 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
 
 
     //getting the index of the .payload section inside the image_section_header_vec
-    status = get_section_header_index_by_name(payload_section_name, image_section_header_vec,
-                                              image_NT_header_ptr,index_of_payload_section);
-    error_warning_message_box(status);
+    this->morph_status = get_section_header_index_by_name(payload_section_name, this->image_section_header_vec,
+                                              this->image_NT_header_ptr,index_of_payload_section);
+    error_warning_message_box(this->morph_status);
 
     //storing the whole .payload section inside the payload_section_header_ptr
-    this->payload_section_header_ptr = image_section_header_vec[index_of_payload_section];
+    this->payload_section_header_ptr = this->image_section_header_vec[index_of_payload_section];
 
     //gets the index corresponding to the radio button
     int chosen_payload_index = get_payload_radio_button();
@@ -2623,7 +2627,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
             break;
     }
 
-    error_warning_message_box(status);
+    error_warning_message_box(this->morph_status);
 
     //adding junk instructions
     std::vector<uint64_t> address_of_insertions_vec;
@@ -2743,8 +2747,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     this->machine_code_vec.clear(); //clear vector to input new machine code
 
     //and converting assembly syntax into machine code
-    status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
-    error_warning_message_box(status);
+    this->morph_status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
+    error_warning_message_box(this->morph_status);
 
     //storing the byte length of the section pivot gadget
     this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
@@ -2919,13 +2923,73 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     // print_section_headers(image_section_header_vec);
     //writing to file
     write_exe_file(this->morphed_exe_file_path, this->buffer);
+    QDateTime end = QDateTime::currentDateTime();
+    this->elapsed_time = start.msecsTo(end);
+
+
     //free memory
     delete[] payload_section_buffer_original;
     payload_section_buffer_ptr = nullptr;
     delete payload_section_buffer_ptr;
 
-    std::cout << std::endl;
+    if(this->morph_status.contains("ERROR") == false)
+    {
+        this->morph_status = SUCCESS_MORPHED_EXECUTABLE;
+    }
 
-    return SUCCESS_MORPHED_EXECUTABLE;
+
+    return this->morph_status;
 }
+
+qint64 Morph_Executable_Controller::get_elapsed_time()
+{
+    return this->elapsed_time;
+}
+
+void Morph_Executable_Controller::set_elapsed_time(qint64 elapsed_time)
+{
+    this->elapsed_time = elapsed_time;
+}
+
+QString Morph_Executable_Controller::get_analysis_textbox_status()
+{
+    return cur_wind->get_text_analysis_textbox();
+}
+
+void Morph_Executable_Controller::set_analysis_textbox_status(QString status)
+{
+    this->cur_wind->set_text_analysis_textbox(status);
+}
+
+void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textbox_status,
+                                                          qint64 elapsed_time,
+                                                          QString morph_status)
+{
+    this->cur_wind->ui->tabWidget->setCurrentIndex(1);
+
+        QString previous_text_from_analysis = analysis_textbox_status;
+
+        QDateTime current = QDateTime::currentDateTime(); // to get the current time and day
+
+        const QString stars = QString("******************************************************\n");
+        QString format;
+
+        format += previous_text_from_analysis;
+        format += stars;
+        format += QString("MORPHED STATUS AT : ") +  current.toString() + QString("\n");
+        format += QString("ELAPSED TIME : ") + QString::number(elapsed_time) + QString(" ms") + QString("\n\n\n");
+
+        if(morph_status == SUCCESS_MORPHED_EXECUTABLE)
+        {
+            format +=  QString("Sucessfully Morphed") + QString("\n");
+        }
+        else
+        {
+            format += morph_status + QString("\n");
+        }
+
+        format += stars + QString("\n\n");
+        set_analysis_textbox_status(format);
+}
+
 

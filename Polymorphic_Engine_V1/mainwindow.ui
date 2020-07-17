@@ -286,7 +286,7 @@
      <string>Morph</string>
     </property>
     <addaction name="Compile_Menu_Item"/>
-    <addaction name="actionMorph"/>
+    <addaction name="Morph_Menu_Item"/>
    </widget>
    <addaction name="File_Menu_Header"/>
    <addaction name="Edit_Menu_Header"/>
@@ -347,11 +347,17 @@
    </property>
   </action>
   <action name="Compile_Menu_Item">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Compile</string>
    </property>
   </action>
-  <action name="actionMorph">
+  <action name="Morph_Menu_Item">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Morph</string>
    </property>

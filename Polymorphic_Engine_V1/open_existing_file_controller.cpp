@@ -56,6 +56,7 @@ void Open_Existing_File_Controller::open_existing_file()
             cur_wind->ui->Save_Menu_Item->setEnabled(true);
             cur_wind->ui->Save_As_Menu_Item->setEnabled(true);
 
+
             Write_Code_In_C_CPP_Controller writer;
             writer.set_text(list.at(1));//clears the text box in the ui
             writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
@@ -65,6 +66,7 @@ void Open_Existing_File_Controller::open_existing_file()
 
             Compile_Code_Controller compiler;
             compiler.set_enabled_compile_button(true);
+            compiler.set_enabled_compile_menu_item(true);
             compiler.set_enabled_analysis_textbox(true);
         }
         else

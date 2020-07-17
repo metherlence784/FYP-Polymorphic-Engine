@@ -28,7 +28,7 @@ public:
     void set_text_analysis_textbox(QString txt);
 
 
-    void update_analysis_textbox(QString status, qint64 elapsed_time, QString txt_file);
+    void update_analysis_textbox_and_enable_morph(QString analysis_textbox_status, qint64 elapsed_time, QString txt_file);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

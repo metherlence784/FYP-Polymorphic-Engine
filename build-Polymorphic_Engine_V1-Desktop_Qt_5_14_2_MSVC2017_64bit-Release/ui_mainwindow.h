@@ -38,7 +38,7 @@ public:
     QAction *Undo_Menu_Item;
     QAction *Redo_Menu_Item;
     QAction *Compile_Menu_Item;
-    QAction *actionMorph;
+    QAction *Morph_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *Cod3z;
@@ -89,8 +89,10 @@ public:
         Redo_Menu_Item->setObjectName(QString::fromUtf8("Redo_Menu_Item"));
         Compile_Menu_Item = new QAction(MainWindow);
         Compile_Menu_Item->setObjectName(QString::fromUtf8("Compile_Menu_Item"));
-        actionMorph = new QAction(MainWindow);
-        actionMorph->setObjectName(QString::fromUtf8("actionMorph"));
+        Compile_Menu_Item->setEnabled(false);
+        Morph_Menu_Item = new QAction(MainWindow);
+        Morph_Menu_Item->setObjectName(QString::fromUtf8("Morph_Menu_Item"));
+        Morph_Menu_Item->setEnabled(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
@@ -188,7 +190,7 @@ public:
         Edit_Menu_Header->addAction(Undo_Menu_Item);
         Edit_Menu_Header->addAction(Redo_Menu_Item);
         Morph_Menu_Header->addAction(Compile_Menu_Item);
-        Morph_Menu_Header->addAction(actionMorph);
+        Morph_Menu_Header->addAction(Morph_Menu_Item);
 
         retranslateUi(MainWindow);
 
@@ -218,7 +220,7 @@ public:
         Redo_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Y", nullptr));
 #endif // QT_CONFIG(shortcut)
         Compile_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
-        actionMorph->setText(QCoreApplication::translate("MainWindow", "Morph", nullptr));
+        Morph_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Morph", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
         Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));
         Calculator_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Pop Calc.exe", nullptr));

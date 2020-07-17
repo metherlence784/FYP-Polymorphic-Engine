@@ -25,7 +25,7 @@ public:
      QString get_file_name();
      QString get_file_path();
      MainWindow *get_cur_wind();
-     QString get_status();
+     QString get_analysis_textbox_status();
      QString get_temp_compile();
      qint64 get_elapsed_time();
      QString get_exe_file_path();
@@ -36,6 +36,7 @@ public:
      void set_exe_name();
      void set_exe_file_path(QString exe_file_path);
      void set_enabled_compile_button(bool set);
+     void set_enabled_compile_menu_item(bool set);
      void set_enabled_analysis_textbox(bool set);
      void set_status(QString txt);
      void set_temp_compile(QString temp_compile);
@@ -50,7 +51,7 @@ public:
      QString file_path;
      QString exe_name;
      QString exe_file_path;
-     QString status;
+     QString analysis_textbox_status;
      QString temp_compile;
      qint64 elapsed_time;
 

@@ -183,12 +183,12 @@ void MainWindow::on_Compile_Button_clicked()
     set_exe_file_path(compiler->get_exe_file_path());
 
        //to update analysis textbox
-    QString status = compiler->get_status();
+    QString analysis_textbox_status = compiler->get_analysis_textbox_status();
     qint64 elapsed_time = compiler->get_elapsed_time();
     QString temp_compile = compiler->get_temp_compile();
 
     View_Compilation_Status_Controller *viewer = new View_Compilation_Status_Controller();
-    viewer->update_analysis_textbox(status,elapsed_time,temp_compile);
+    viewer->update_analysis_textbox_and_enable_morph(analysis_textbox_status,elapsed_time,temp_compile);
 
 }
 
@@ -202,16 +202,33 @@ void MainWindow::on_Compile_Menu_Item_triggered()
     set_exe_file_path(compiler->get_exe_file_path());
 
     //to update analysis textbox
-    QString status = compiler->get_status();
+    QString status = compiler->get_analysis_textbox_status();
     qint64 elapsed_time = compiler->get_elapsed_time();
     QString temp_compile = compiler->get_temp_compile();
 
     View_Compilation_Status_Controller *viewer = new View_Compilation_Status_Controller();
-    viewer->update_analysis_textbox(status,elapsed_time,temp_compile);
+    viewer->update_analysis_textbox_and_enable_morph(status,elapsed_time,temp_compile);
 }
 
-void MainWindow::on_actionMorph_triggered()
+
+
+void MainWindow::on_Morph_Menu_Item_triggered()
 {
     Morph_Executable_Controller *morpher = new Morph_Executable_Controller();
-    QString status = morpher->morph_exe_with_encryption_junk_alt_instructions(this->exe_file_path);
+    QString morph_status = morpher->morph_exe_with_encryption_junk_alt_instructions(this->exe_file_path);
+
+    qint64 elapsed_time = morpher->get_elapsed_time();
+    QString analysis_textbox_status = morpher->get_analysis_textbox_status();
+    morpher->update_analysis_textbox(analysis_textbox_status,elapsed_time,morph_status);
+}
+
+void MainWindow::on_Morph_Button_clicked()
+{
+
+    Morph_Executable_Controller *morpher = new Morph_Executable_Controller();
+    QString morph_status = morpher->morph_exe_with_encryption_junk_alt_instructions(this->exe_file_path);
+
+    qint64 elapsed_time = morpher->get_elapsed_time();
+    QString analysis_textbox_status = morpher->get_analysis_textbox_status();
+    morpher->update_analysis_textbox(analysis_textbox_status,elapsed_time,morph_status);
 }
