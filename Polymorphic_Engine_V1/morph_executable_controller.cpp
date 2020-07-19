@@ -10,7 +10,7 @@ Morph_Executable_Controller::Morph_Executable_Controller()
     this->buffer = std::vector<char>();
     this->exe_file_path = QString("");
     this->morphed_exe_name = QString("");
-    this->dos_header_pointer = nullptr;
+    this->dos_header_ptr = nullptr;
     this->image_NT_header_ptr = nullptr;
     this->image_NT_header_file_cursor = 0;
     this->image_dos_header_file_cursor = 0;
@@ -50,8 +50,8 @@ Morph_Executable_Controller::Morph_Executable_Controller()
 Morph_Executable_Controller::~Morph_Executable_Controller()
 {
 
-    this->dos_header_pointer = nullptr;
-    delete this->dos_header_pointer;
+    this->dos_header_ptr = nullptr;
+    delete this->dos_header_ptr;
 
     this->image_NT_header_ptr = nullptr;
     delete this->image_NT_header_ptr;
@@ -985,6 +985,8 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
     morph_status = junk_code_generator(machine_code_vec, machine_code_num_of_bytes);
     error_warning_message_box(morph_status);
 
+
+
     //randomize chances of adding junk code
     //need to store which address it is being inserted at
     //also need to store which of the original disassembled code is a jump instructions
@@ -1800,11 +1802,6 @@ void Morph_Executable_Controller::error_warning_message_box(QString morph_status
         QMessageBox::warning(cur_wind, "Warning",
                              "No matching section header name for \".text\"");
     }
-    else if (morph_status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
-    {
-        QMessageBox::warning(cur_wind, "Warning",
-                             "No matching section header name for \".payload\"");
-    }
     else if(morph_status == ERROR_OPENING_KEYSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
@@ -1837,10 +1834,10 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
-    this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
+    this->dos_header_ptr = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    morph_status = validate_image_dos_signature(dos_header_pointer);
+    morph_status = validate_image_dos_signature(dos_header_ptr);
     error_warning_message_box(morph_status);
 
 
@@ -1848,7 +1845,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     // Here we are assuming that buffer has the same bytes as the original file
     // so we need to get the exe_header_file_offset
     // which is the value of the e_lfanew attribute in dos_header_pointer
-    this->image_NT_header_file_cursor = this->dos_header_pointer->e_lfanew;
+    this->image_NT_header_file_cursor = this->dos_header_ptr->e_lfanew;
     this->exe_header_file_offset = this->image_NT_header_file_cursor;
 
     // get the image_NT_header_ptr
@@ -1901,7 +1898,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     this->size_of_text_section = this->text_section_header_ptr->SizeOfRawData;
 
     //setting the characteristics to read/write/execute
-    this->text_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
+    this->text_section_header_ptr->Characteristics = SECTION_CHARACTERISTICS_TO_SET;
 
     //setting the payload section name from payload_section_name (randomized earlier),
     //which is at the end of the image_section_header_vec
@@ -1966,7 +1963,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
                                 this->payload_raw_data_size,
                                 this->payload_virtual_address,
                                 this->payload_virtual_size,
-                                this->SECTIONCHARACTERISTICSTOSET);
+                                this->SECTION_CHARACTERISTICS_TO_SET);
 
     //setting the new size of the pe file
     //via image_NT_header_ptr by adding on the payload_virtual_size
@@ -2089,7 +2086,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
 
     //===================================================================================
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_ptr,
                             this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
     //replacing back the edited image_NT_header_ptr into the buffer
     //number of sections was increased by 1
@@ -2156,10 +2153,10 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
 
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
-    this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
+    this->dos_header_ptr = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    morph_status = validate_image_dos_signature(dos_header_pointer);
+    morph_status = validate_image_dos_signature(dos_header_ptr);
     error_warning_message_box(morph_status);
 
 
@@ -2167,7 +2164,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     // Here we are assuming that buffer has the same bytes as the original file
     // so we need to get the exe_header_file_offset
     // which is the value of the e_lfanew attribute in dos_header_pointer
-    this->image_NT_header_file_cursor = this->dos_header_pointer->e_lfanew;
+    this->image_NT_header_file_cursor = this->dos_header_ptr->e_lfanew;
     this->exe_header_file_offset = this->image_NT_header_file_cursor;
 
     // get the image_NT_header_ptr
@@ -2220,7 +2217,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     this->size_of_text_section = this->text_section_header_ptr->SizeOfRawData;
 
     //setting the characteristics to read/write/execute
-    this->text_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
+    this->text_section_header_ptr->Characteristics = SECTION_CHARACTERISTICS_TO_SET;
 
     //setting the payload section name from payload_section_name (randomized earlier),
     //which is at the end of the image_section_header_vec
@@ -2294,7 +2291,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
                                 this->payload_raw_data_size,
                                 this->payload_virtual_address,
                                 this->payload_virtual_size,
-                                this->SECTIONCHARACTERISTICSTOSET);
+                                this->SECTION_CHARACTERISTICS_TO_SET);
 
     //setting the new size of the pe file
     //via image_NT_header_ptr by adding on the payload_virtual_size
@@ -2459,7 +2456,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
 
     //===================================================================================
 
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_ptr,
                             this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
     //replacing back the edited image_NT_header_ptr into the buffer
     //number of sections was increased by 1
@@ -2528,30 +2525,45 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     this->morph_status = read_file_into_vector(exe_file_path);
     error_warning_message_box(this->morph_status);
 
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
+
     //get image dos header pointer
     //image_dos_header_file_cursor is at offset 0 as this pe header is located at the first offset of the exe
-    this->dos_header_pointer = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
+    this->dos_header_ptr = get_ptr_image_dos_header(this->buffer,this->image_dos_header_file_cursor);
 
     //validate the image dos header must be equals to MZ(ASCII)
-    this->morph_status = validate_image_dos_signature(dos_header_pointer);
+    this->morph_status = validate_image_dos_signature(dos_header_ptr);
     error_warning_message_box(this->morph_status);
+
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
+
 
 
     // getting image_NT_header_cursor and setting exe_header_file_offset
     // Here we are assuming that buffer has the same bytes as the original file
     // so we need to get the exe_header_file_offset
     // which is the value of the e_lfanew attribute in dos_header_pointer
-    this->image_NT_header_file_cursor = this->dos_header_pointer->e_lfanew;
+    this->image_NT_header_file_cursor = this->dos_header_ptr->e_lfanew;
     this->exe_header_file_offset = this->image_NT_header_file_cursor;
 
     // get the image_NT_header_ptr
     // the offset is at e_lfanew which is stored in image_NT_header_file_cursor
     this->image_NT_header_ptr = get_ptr_image_NT_header(this->buffer,this->image_NT_header_file_cursor);
 
-    //validate the file PE signature must be equal to some dog shit
+    //validate the file PE signature must be equal to 0x00004550
     this->morph_status = validate_PE_signature(this->image_NT_header_ptr);
     error_warning_message_box(this->morph_status);
 
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
 
     printf("Before: Number of Sections : 0x%x\n", this->image_NT_header_ptr->FileHeader.NumberOfSections);
     //increasing the number of sections to allocate memory for payload
@@ -2583,6 +2595,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     this->morph_status = get_section_header_index_by_name(TEXT_SECTION_NAME, this->image_section_header_vec,this->image_NT_header_ptr,index_of_text_section);
     error_warning_message_box(this->morph_status);
 
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
+
     //getting the raw data offset of the .text section via image_section_header_vec
     //note that the above function saved the index of the .text section
     this->text_section_raw_data_offset = this->image_section_header_vec[this->index_of_text_section]->PointerToRawData;
@@ -2594,7 +2611,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     this->size_of_text_section = this->text_section_header_ptr->SizeOfRawData;
 
     //setting the characteristics to read/write/execute
-    this->text_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
+    this->text_section_header_ptr->Characteristics = SECTION_CHARACTERISTICS_TO_SET;
 
     //setting the payload section name from payload_section_name (randomized earlier),
     //which is at the end of the image_section_header_vec
@@ -2606,6 +2623,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     this->morph_status = get_section_header_index_by_name(payload_section_name, this->image_section_header_vec,
                                               this->image_NT_header_ptr,index_of_payload_section);
     error_warning_message_box(this->morph_status);
+
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
 
     //storing the whole .payload section inside the payload_section_header_ptr
     this->payload_section_header_ptr = this->image_section_header_vec[index_of_payload_section];
@@ -2628,6 +2650,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     }
 
     error_warning_message_box(this->morph_status);
+
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
 
     //adding junk instructions
     std::vector<uint64_t> address_of_insertions_vec;
@@ -2711,7 +2738,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                                 this->payload_raw_data_size,
                                 this->payload_virtual_address,
                                 this->payload_virtual_size,
-                                this->SECTIONCHARACTERISTICSTOSET);
+                                this->SECTION_CHARACTERISTICS_TO_SET);
 
     //setting the new size of the pe file
     //via image_NT_header_ptr by adding on the payload_virtual_size
@@ -2749,6 +2776,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     //and converting assembly syntax into machine code
     this->morph_status = asm_to_machine_code(jump_to_payload_asm,this->machine_code_vec,this->machine_code_num_of_bytes);
     error_warning_message_box(this->morph_status);
+
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
 
     //storing the byte length of the section pivot gadget
     this->jump_to_payload_byte_length = this->machine_code_num_of_bytes;
@@ -2876,7 +2908,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
 
     //===================================================================================
 
-    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_pointer,
+    rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_ptr,
                             this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
     //replacing back the edited image_NT_header_ptr into the buffer
     //number of sections was increased by 1
@@ -2920,23 +2952,22 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                             this->buffer_cursor,this->size_of_text_section);
 
 
-    // print_section_headers(image_section_header_vec);
+
+
     //writing to file
-    write_exe_file(this->morphed_exe_file_path, this->buffer);
+    if(this->morph_status.contains("ERROR") == false)
+    {
+        this->morph_status = SUCCESS_MORPHED_EXECUTABLE;
+        write_exe_file(this->morphed_exe_file_path, this->buffer);
+    }
+
     QDateTime end = QDateTime::currentDateTime();
     this->elapsed_time = start.msecsTo(end);
-
 
     //free memory
     delete[] payload_section_buffer_original;
     payload_section_buffer_ptr = nullptr;
     delete payload_section_buffer_ptr;
-
-    if(this->morph_status.contains("ERROR") == false)
-    {
-        this->morph_status = SUCCESS_MORPHED_EXECUTABLE;
-    }
-
 
     return this->morph_status;
 }
@@ -2985,6 +3016,7 @@ void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textb
         }
         else
         {
+            format += QString("Morphing Failed: ");
             format += morph_status + QString("\n");
         }
 

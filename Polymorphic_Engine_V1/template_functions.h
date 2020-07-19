@@ -16,5 +16,4 @@ std::string convert_num_to_hex(T i)
 }
 
 
-
 #endif // TEMPLATE_FUNCTIONS_H

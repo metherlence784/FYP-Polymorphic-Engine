@@ -79,13 +79,13 @@ private:
 
     //pe file stuff
     const std::string TEXT_SECTION_NAME = ".text";
-    const DWORD SECTIONCHARACTERISTICSTOSET = 0xE0000020; //for read/write/execute
+    const DWORD SECTION_CHARACTERISTICS_TO_SET = 0xE0000020; //for read/write/execute
 
     std::vector<char> buffer;
     std::vector<PIMAGE_SECTION_HEADER> image_section_header_vec;
     PIMAGE_SECTION_HEADER text_section_header_ptr;
     PIMAGE_SECTION_HEADER payload_section_header_ptr;
-    PIMAGE_DOS_HEADER dos_header_pointer;
+    PIMAGE_DOS_HEADER dos_header_ptr;
     PIMAGE_NT_HEADERS32 image_NT_header_ptr;
     unsigned int image_dos_header_file_cursor;
     unsigned int image_NT_header_file_cursor;
@@ -123,7 +123,7 @@ private:
 
     QString read_file_into_vector(QString exe_file_path);
     PIMAGE_DOS_HEADER get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor);
-    QString validate_image_dos_signature(PIMAGE_DOS_HEADER &dos_header_pointer);
+    QString validate_image_dos_signature(PIMAGE_DOS_HEADER &dos_header_ptr);
     PIMAGE_NT_HEADERS32 get_ptr_image_NT_header(std::vector<char> &buffer, unsigned int image_NT_header_file_cursor);
     QString validate_PE_signature(PIMAGE_NT_HEADERS32 &image_NT_header_ptr);
     std::string randomize_payload_section_name();
@@ -144,7 +144,7 @@ private:
                                      unsigned int &payload_raw_data_size,
                                      unsigned int &payload_virtual_address,
                                      unsigned int &payload_virtual_size,
-                                     DWORD SECTIONCHARACTERISTICSTOSET);
+                                     DWORD SECTION_CHARACTERISTICS_TO_SET);
     void print_section_headers(std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec);
 
     QString asm_to_machine_code(std::string asm_code, std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes);
