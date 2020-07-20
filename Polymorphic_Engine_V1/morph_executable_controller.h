@@ -26,8 +26,6 @@
 #include <disassembly.h>
 
 
-
-
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 
@@ -44,6 +42,9 @@ public:
      //accessor
      QString get_file_name();
      QString get_file_path();
+     QString get_original_exe_name();
+     QString get_morphed_exe_name();
+     QString get_morphed_exe_file_path();
      MainWindow *get_cur_wind();
      qint64 get_elapsed_time();
      QString get_analysis_textbox_status();
@@ -51,18 +52,17 @@ public:
 
      //mutator
      void set_cur_wind(MainWindow *cur);
-     void set_exe_name();
+     void set_original_exe_name(QString original_exe_filepath);
      void set_enabled_compile_button(bool set);
      void set_enabled_analysis_textbox(bool set);
      void set_elapsed_time(qint64 elapsed_time);
      void set_analysis_textbox_status(QString status);
 
-     QString morph_exe_no_encryption(QString exe_file_path);
-     QString morph_exe_with_encryption(QString exe_file_path);
-     QString morph_exe_with_encryption_junk_alt_instructions(QString exe_file_path);
-     void set_morphed_exe_file_path(QString exe_file_path);
-     void set_morphed_exe_name(QString exe_file_path, std::string modifier);
-
+     QString morph_exe_no_encryption(QString original_exe_file_path);
+     QString morph_exe_with_encryption(QString original_exe_file_path);
+     QString morph_exe_with_encryption_junk_alt_instructions(QString original_exe_file_path);
+     void set_morphed_exe_file_path(QString original_exe_file_path);
+     void set_morphed_exe_name(QString original_exe_file_path, std::string modifier);
 
      void update_analysis_textbox(QString analysis_textbox_status,
                                   qint64 elapsed_time,
@@ -70,7 +70,8 @@ public:
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
-    QString exe_file_path;
+    QString original_exe_name;
+    QString original_exe_file_path;
     QString morphed_exe_name;
     QString morphed_exe_file_path;
 
@@ -121,7 +122,7 @@ private:
     QString morph_status;
     qint64 elapsed_time;
 
-    QString read_file_into_vector(QString exe_file_path);
+    QString read_file_into_vector(QString original_exe_file_path);
     PIMAGE_DOS_HEADER get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor);
     QString validate_image_dos_signature(PIMAGE_DOS_HEADER &dos_header_ptr);
     PIMAGE_NT_HEADERS32 get_ptr_image_NT_header(std::vector<char> &buffer, unsigned int image_NT_header_file_cursor);

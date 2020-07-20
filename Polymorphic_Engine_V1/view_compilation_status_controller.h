@@ -22,16 +22,20 @@ public:
 
     //accessor
     MainWindow *get_cur_wind();
+    QString get_compilation_status();
+
 
     //mutator
     void set_cur_wind(MainWindow *cur);
     void set_text_analysis_textbox(QString txt);
+    void set_compilation_status(QString compilation_status);
 
 
     void update_analysis_textbox_and_enable_morph(QString analysis_textbox_status, qint64 elapsed_time, QString txt_file);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
+    QString compilation_status;
 
 };
 

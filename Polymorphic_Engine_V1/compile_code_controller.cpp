@@ -69,6 +69,10 @@ QString Compile_Code_Controller::get_exe_file_path()
     return this->exe_file_path;
 }
 
+QString Compile_Code_Controller::get_exe_name()
+{
+    return this->exe_name;
+}
 //mutator
 void Compile_Code_Controller::set_cur_wind(MainWindow *cur)
 {

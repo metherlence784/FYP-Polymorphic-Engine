@@ -1,12 +1,12 @@
 ﻿  Uic'ing mainwindow.ui...
   Moc'ing compile_code_controller.h...
+  Moc'ing file_reader.h...
   Moc'ing mainwindow.h...
   Moc'ing morph_executable_controller.h...
-  Moc'ing view_compilation_status_controller.h...
+  Moc'ing run_executable_controller.h...
   choose_payload_controller.cpp
   compile_code_controller.cpp
   create_new_file_controller.cpp
-  disassembly.cpp
   exit_application_controller.cpp
   file_reader.cpp
   file_saver.cpp
@@ -15,63 +15,60 @@
   morph_executable_controller.cpp
   open_existing_file_controller.cpp
   redo_action_controller.cpp
-  save_as_new_file_controller.cpp
+  run_executable_controller.cpp
 c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\file_saver.cpp(172): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(281): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
-  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(281): note: consider using '%zu' in the format string
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(293): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
-  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(293): note: consider using '%zu' in the format string
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(293): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 2 has type 'size_t'
-  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(293): note: consider using '%zu' in the format string
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(307): warning C4018: '<': signed/unsigned mismatch
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(318): warning C4018: '<': signed/unsigned mismatch
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(353): warning C4018: '<': signed/unsigned mismatch
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(393): warning C4018: '<': signed/unsigned mismatch
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(402): warning C4018: '<': signed/unsigned mismatch
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(438): warning C4018: '<': signed/unsigned mismatch
-  save_current_file_controller.cpp
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(520): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(557): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(841): warning C4267: '+=': conversion from 'size_t' to 'short', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(887): warning C4267: '+=': conversion from 'size_t' to 'short', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(905): warning C4267: '-=': conversion from 'size_t' to '_Ty', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(282): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(282): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(294): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(294): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(294): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 2 has type 'size_t'
+  c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(294): note: consider using '%zu' in the format string
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(308): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(319): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(354): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(394): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(403): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(439): warning C4018: '<': signed/unsigned mismatch
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(539): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(576): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(860): warning C4267: '+=': conversion from 'size_t' to 'short', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(906): warning C4267: '+=': conversion from 'size_t' to 'short', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(924): warning C4267: '-=': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=unsigned char
           ]
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2015): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2049): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2083): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2103): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2353): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2420): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=unsigned long
+          ]
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2457): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2467): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2473): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2805): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2872): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=unsigned long
+          ]
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2909): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2919): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2925): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  save_as_new_file_controller.cpp
+  save_current_file_controller.cpp
   undo_action_controller.cpp
   view_compilation_status_controller.cpp
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(1999): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2033): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2067): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2087): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2337): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2404): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-          with
-          [
-              T=unsigned long
-          ]
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2441): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2451): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2457): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2754): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2821): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-          with
-          [
-              T=unsigned long
-          ]
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2858): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2868): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine_v1\morph_executable_controller.cpp(2874): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
   write_code_in_c_cpp_controller.cpp
   moc_choose_payload_controller.cpp
-  moc_compile_code_controller.cpp
   moc_create_new_file_controller.cpp
   moc_exit_application_controller.cpp
-  moc_file_reader.cpp
   moc_file_saver.cpp
-  moc_mainwindow.cpp
-  moc_morph_executable_controller.cpp
   moc_open_existing_file_controller.cpp
   moc_redo_action_controller.cpp
   moc_save_as_new_file_controller.cpp
@@ -79,6 +76,11 @@ c:\users\jtf25\desktop\fyp\polymorphic\fyp-polymorphic-engine\polymorphic_engine
   moc_undo_action_controller.cpp
   moc_view_compilation_status_controller.cpp
   moc_write_code_in_c_cpp_controller.cpp
+  moc_compile_code_controller.cpp
+  moc_file_reader.cpp
+  moc_mainwindow.cpp
+  moc_morph_executable_controller.cpp
+  moc_run_executable_controller.cpp
   capstone.lib(cs.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
      Creating library release\\Polymorphic_Engine_V1.lib and object release\\Polymorphic_Engine_V1.exp
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library

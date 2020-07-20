@@ -12,9 +12,29 @@ View_Compilation_Status_Controller::~View_Compilation_Status_Controller()
     delete this->cur_wind;
 }
 
+QString View_Compilation_Status_Controller::get_compilation_status()
+{
+    return this->compilation_status;
+}
+
+MainWindow *View_Compilation_Status_Controller::get_cur_wind()
+{
+    return this->cur_wind;
+}
+
 void View_Compilation_Status_Controller::set_text_analysis_textbox(QString txt)
 {
     this->cur_wind->set_text_analysis_textbox(txt);
+}
+
+void View_Compilation_Status_Controller::set_cur_wind(MainWindow *cur)
+{
+    this->cur_wind = cur;
+}
+
+void View_Compilation_Status_Controller::set_compilation_status(QString compilation_status)
+{
+    this->compilation_status = compilation_status;
 }
 
 void View_Compilation_Status_Controller::update_analysis_textbox_and_enable_morph(QString analysis_textbox_status, qint64 elapsed_time, QString txt_file)
@@ -29,26 +49,27 @@ void View_Compilation_Status_Controller::update_analysis_textbox_and_enable_morp
         QString format;
 
         File_Reader reader;
-        QString current_status = reader.read_compile_status(txt_file);
+        this->compilation_status = reader.read_compile_status(txt_file);
 
         format += previous_text_from_analysis;
         format += stars;
         format += QString("COMPILATION STATUS AT : ") +  current.toString() + QString("\n");
         format += QString("ELAPSED TIME : ") + QString::number(elapsed_time) + QString(" ms") + QString("\n\n\n");
 
-        if(current_status == ERROR_INVALID_FILE)
+        if(this->compilation_status == ERROR_INVALID_FILE)
         {
-            format += current_status + QString("\n");
+            format += this->compilation_status + QString("\n");
         }
-        else if(current_status == QString(""))
+        else if(this->compilation_status == QString(""))
         {
+            this->compilation_status = SUCCESS_COMPILED_CODE;
             format +=  QString("Sucessfully Compiled") + QString("\n");
             this->cur_wind->ui->Morph_Button->setEnabled(true);
             this->cur_wind->ui->Morph_Menu_Item->setEnabled(true);
         }
         else
         {
-            format += current_status + QString("\n");
+            format += this->compilation_status + QString("\n");
         }
 
         format += stars + QString("\n\n");

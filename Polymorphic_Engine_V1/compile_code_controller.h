@@ -29,6 +29,7 @@ public:
      QString get_temp_compile();
      qint64 get_elapsed_time();
      QString get_exe_file_path();
+     QString get_exe_name();
 
 
      //mutator

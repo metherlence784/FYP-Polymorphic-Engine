@@ -56,6 +56,10 @@ public:
     QPushButton *Morph_Button;
     QWidget *Analysis;
     QTextEdit *Analysis_Textbox;
+    QLabel *Original_Executable_Label;
+    QLabel *Morphed_Executable_Label;
+    QPushButton *Run_Original_Button;
+    QPushButton *Run_Morphed_Button;
     QLabel *label_3;
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
@@ -157,7 +161,28 @@ public:
         Analysis_Textbox->setEnabled(false);
         Analysis_Textbox->setGeometry(QRect(10, 130, 351, 431));
         Analysis_Textbox->setMinimumSize(QSize(351, 431));
+        Analysis_Textbox->setFrameShadow(QFrame::Raised);
         Analysis_Textbox->setReadOnly(true);
+        Original_Executable_Label = new QLabel(Analysis);
+        Original_Executable_Label->setObjectName(QString::fromUtf8("Original_Executable_Label"));
+        Original_Executable_Label->setEnabled(true);
+        Original_Executable_Label->setGeometry(QRect(10, 30, 351, 21));
+        Original_Executable_Label->setAutoFillBackground(true);
+        Original_Executable_Label->setFrameShape(QFrame::Box);
+        Original_Executable_Label->setFrameShadow(QFrame::Sunken);
+        Morphed_Executable_Label = new QLabel(Analysis);
+        Morphed_Executable_Label->setObjectName(QString::fromUtf8("Morphed_Executable_Label"));
+        Morphed_Executable_Label->setEnabled(true);
+        Morphed_Executable_Label->setGeometry(QRect(10, 80, 351, 21));
+        Morphed_Executable_Label->setAutoFillBackground(true);
+        Morphed_Executable_Label->setFrameShape(QFrame::Box);
+        Morphed_Executable_Label->setFrameShadow(QFrame::Sunken);
+        Run_Original_Button = new QPushButton(Analysis);
+        Run_Original_Button->setObjectName(QString::fromUtf8("Run_Original_Button"));
+        Run_Original_Button->setGeometry(QRect(370, 30, 75, 23));
+        Run_Morphed_Button = new QPushButton(Analysis);
+        Run_Morphed_Button->setObjectName(QString::fromUtf8("Run_Morphed_Button"));
+        Run_Morphed_Button->setGeometry(QRect(370, 80, 75, 23));
         tabWidget->addTab(Analysis, QString());
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -194,7 +219,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -231,6 +256,10 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Program Created By : Yoges And Friends", nullptr));
         Morph_Button->setText(QCoreApplication::translate("MainWindow", "M0rph", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Cod3z), QCoreApplication::translate("MainWindow", "C0d3z", nullptr));
+        Original_Executable_Label->setText(QString());
+        Morphed_Executable_Label->setText(QString());
+        Run_Original_Button->setText(QCoreApplication::translate("MainWindow", "Run Original", nullptr));
+        Run_Morphed_Button->setText(QCoreApplication::translate("MainWindow", "Run Morphed", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Analysis), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

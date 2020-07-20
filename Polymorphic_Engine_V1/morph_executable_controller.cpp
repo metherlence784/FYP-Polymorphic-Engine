@@ -8,7 +8,8 @@ Morph_Executable_Controller::Morph_Executable_Controller()
 {
     this->cur_wind = MainWindow::getMWptr();
     this->buffer = std::vector<char>();
-    this->exe_file_path = QString("");
+    this->original_exe_name = QString("");
+    this->original_exe_file_path = QString("");
     this->morphed_exe_name = QString("");
     this->dos_header_ptr = nullptr;
     this->image_NT_header_ptr = nullptr;
@@ -81,7 +82,7 @@ Morph_Executable_Controller::~Morph_Executable_Controller()
 //morphing section supporting/utility functions
 QString Morph_Executable_Controller::read_file_into_vector(QString exe_file_path)
 {
-    this->exe_file_path = exe_file_path;
+    this->original_exe_file_path = exe_file_path;
     File_Reader reader;
     return reader.read_file_into_vector(exe_file_path,this->buffer);
 }
@@ -441,6 +442,28 @@ void Morph_Executable_Controller::rewrite_bytes_to_buffer(std::vector<char> &buf
     }
 }
 
+void Morph_Executable_Controller::set_original_exe_name(QString original_exe_name)
+{
+
+    this->original_exe_name = original_exe_name;
+
+}
+
+QString Morph_Executable_Controller::get_morphed_exe_name()
+{
+    return this->morphed_exe_name;
+}
+
+QString Morph_Executable_Controller::get_original_exe_name()
+{
+    return this->original_exe_name;
+}
+
+QString Morph_Executable_Controller::get_morphed_exe_file_path()
+{
+    return this->morphed_exe_file_path;
+}
+
 void Morph_Executable_Controller::set_morphed_exe_file_path(QString exe_file_path)
 {
 
@@ -453,6 +476,7 @@ void Morph_Executable_Controller::set_morphed_exe_file_path(QString exe_file_pat
 void Morph_Executable_Controller::set_morphed_exe_name(QString exe_file_path,std::string modifier)
 {
     std::string original_exe_name = exe_file_path.toStdString().substr(exe_file_path.toStdString().find_last_of("/")+1,exe_file_path.length());
+    set_original_exe_name(QString(original_exe_name.c_str()));
 
     std::size_t symbol = original_exe_name.find_last_of(".");
     std::string exe_name_no_extension = original_exe_name.substr(0,symbol);
@@ -1785,7 +1809,7 @@ void Morph_Executable_Controller::error_warning_message_box(QString morph_status
     if (morph_status == ERROR_INVALID_EXECUTABLE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid exe file: " + this->exe_file_path);
+                             "Invalid exe file: " + this->original_exe_file_path);
     }
     else if (morph_status == ERROR_INVALID_DOS_SIGNATURE)
     {

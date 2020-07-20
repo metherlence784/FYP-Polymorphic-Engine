@@ -28,6 +28,7 @@ SOURCES += \
     morph_executable_controller.cpp \
     open_existing_file_controller.cpp \
     redo_action_controller.cpp \
+    run_executable_controller.cpp \
     save_as_new_file_controller.cpp \
     save_current_file_controller.cpp \
     undo_action_controller.cpp \
@@ -50,6 +51,7 @@ HEADERS += \
     open_existing_file_controller.h \
     payloads.h \
     redo_action_controller.h \
+    run_executable_controller.h \
     save_as_new_file_controller.h \
     save_current_file_controller.h \
     template_functions.h \
