@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     choose_payload_controller.cpp \
+    clear_output_log_controller.cpp \
     compile_code_controller.cpp \
     create_new_file_controller.cpp \
     disassembly.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
     save_as_new_file_controller.cpp \
     save_current_file_controller.cpp \
     undo_action_controller.cpp \
+    view_about_information_controller.cpp \
     view_compilation_status_controller.cpp \
     write_code_in_c_cpp_controller.cpp
 
@@ -39,6 +41,7 @@ HEADERS += \
     PE32.h \
     asm_mnemonics.h \
     choose_payload_controller.h \
+    clear_output_log_controller.h \
     compile_code_controller.h \
     create_new_file_controller.h \
     disassembly.h \
@@ -56,6 +59,7 @@ HEADERS += \
     save_current_file_controller.h \
     template_functions.h \
     undo_action_controller.h \
+    view_about_information_controller.h \
     view_compilation_status_controller.h \
     write_code_in_c_cpp_controller.h
 

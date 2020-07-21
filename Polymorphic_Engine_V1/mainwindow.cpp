@@ -11,6 +11,8 @@
 #include "view_compilation_status_controller.h"
 #include "morph_executable_controller.h"
 #include "run_executable_controller.h"
+#include "clear_output_log_controller.h"
+#include "view_about_information_controller.h"
 
 
 #include <stdio.h>
@@ -327,4 +329,16 @@ void MainWindow::on_Run_Morphed_Button_clicked()
 {
     Run_Executable_Controller *runner = new Run_Executable_Controller();
     runner->run_morphed_executable(this->morphed_exe_file_path);
+}
+
+void MainWindow::on_Clear_Output_Log_Button_clicked()
+{
+    Clear_Output_Log_Controller *clearer = new Clear_Output_Log_Controller();
+    clearer->clear_output_log();
+}
+
+void MainWindow::on_About_Menu_Item_triggered()
+{
+    View_About_Information_Controller *abouter = new View_About_Information_Controller();
+    abouter->view_about_us();
 }

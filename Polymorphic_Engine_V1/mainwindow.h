@@ -76,6 +76,10 @@ private slots://note that slots is a QT ui syntax
 
     void on_Run_Morphed_Button_clicked();
 
+    void on_Clear_Output_Log_Button_clicked();
+
+    void on_About_Menu_Item_triggered();
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;

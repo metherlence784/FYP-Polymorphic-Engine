@@ -39,6 +39,7 @@ public:
     QAction *Redo_Menu_Item;
     QAction *Compile_Menu_Item;
     QAction *Morph_Menu_Item;
+    QAction *About_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *Cod3z;
@@ -60,11 +61,13 @@ public:
     QLabel *Morphed_Executable_Label;
     QPushButton *Run_Original_Button;
     QPushButton *Run_Morphed_Button;
+    QPushButton *Clear_Output_Log_Button;
     QLabel *label_3;
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
     QMenu *Edit_Menu_Header;
     QMenu *Morph_Menu_Header;
+    QMenu *About_Menu_Header;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -97,6 +100,8 @@ public:
         Morph_Menu_Item = new QAction(MainWindow);
         Morph_Menu_Item->setObjectName(QString::fromUtf8("Morph_Menu_Item"));
         Morph_Menu_Item->setEnabled(false);
+        About_Menu_Item = new QAction(MainWindow);
+        About_Menu_Item->setObjectName(QString::fromUtf8("About_Menu_Item"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
@@ -183,6 +188,9 @@ public:
         Run_Morphed_Button = new QPushButton(Analysis);
         Run_Morphed_Button->setObjectName(QString::fromUtf8("Run_Morphed_Button"));
         Run_Morphed_Button->setGeometry(QRect(370, 80, 75, 23));
+        Clear_Output_Log_Button = new QPushButton(Analysis);
+        Clear_Output_Log_Button->setObjectName(QString::fromUtf8("Clear_Output_Log_Button"));
+        Clear_Output_Log_Button->setGeometry(QRect(370, 540, 75, 23));
         tabWidget->addTab(Analysis, QString());
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -197,6 +205,8 @@ public:
         Edit_Menu_Header->setObjectName(QString::fromUtf8("Edit_Menu_Header"));
         Morph_Menu_Header = new QMenu(menubar);
         Morph_Menu_Header->setObjectName(QString::fromUtf8("Morph_Menu_Header"));
+        About_Menu_Header = new QMenu(menubar);
+        About_Menu_Header->setObjectName(QString::fromUtf8("About_Menu_Header"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -205,6 +215,7 @@ public:
         menubar->addAction(File_Menu_Header->menuAction());
         menubar->addAction(Edit_Menu_Header->menuAction());
         menubar->addAction(Morph_Menu_Header->menuAction());
+        menubar->addAction(About_Menu_Header->menuAction());
         File_Menu_Header->addAction(New_File_Menu_Item);
         File_Menu_Header->addAction(Open_File_Menu_Item);
         File_Menu_Header->addSeparator();
@@ -216,10 +227,11 @@ public:
         Edit_Menu_Header->addAction(Redo_Menu_Item);
         Morph_Menu_Header->addAction(Compile_Menu_Item);
         Morph_Menu_Header->addAction(Morph_Menu_Item);
+        About_Menu_Header->addAction(About_Menu_Item);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -246,6 +258,7 @@ public:
 #endif // QT_CONFIG(shortcut)
         Compile_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
         Morph_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Morph", nullptr));
+        About_Menu_Item->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
         Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));
         Calculator_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Pop Calc.exe", nullptr));
@@ -260,11 +273,13 @@ public:
         Morphed_Executable_Label->setText(QString());
         Run_Original_Button->setText(QCoreApplication::translate("MainWindow", "Run Original", nullptr));
         Run_Morphed_Button->setText(QCoreApplication::translate("MainWindow", "Run Morphed", nullptr));
+        Clear_Output_Log_Button->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Analysis), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         Edit_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         Morph_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "Morph", nullptr));
+        About_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));
     } // retranslateUi
 
 };

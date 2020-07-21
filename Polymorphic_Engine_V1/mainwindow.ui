@@ -48,7 +48,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Cod3z">
      <property name="enabled">
@@ -316,6 +316,19 @@
        <string>Run Morphed</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="Clear_Output_Log_Button">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>540</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -367,9 +380,16 @@
     <addaction name="Compile_Menu_Item"/>
     <addaction name="Morph_Menu_Item"/>
    </widget>
+   <widget class="QMenu" name="About_Menu_Header">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="About_Menu_Item"/>
+   </widget>
    <addaction name="File_Menu_Header"/>
    <addaction name="Edit_Menu_Header"/>
    <addaction name="Morph_Menu_Header"/>
+   <addaction name="About_Menu_Header"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="New_File_Menu_Item">
@@ -439,6 +459,11 @@
    </property>
    <property name="text">
     <string>Morph</string>
+   </property>
+  </action>
+  <action name="About_Menu_Item">
+   <property name="text">
+    <string>About Us</string>
    </property>
   </action>
  </widget>

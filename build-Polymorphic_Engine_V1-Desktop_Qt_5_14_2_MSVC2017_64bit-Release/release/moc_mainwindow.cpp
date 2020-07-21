@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[15];
-    char stringdata0[391];
+    QByteArrayData data[17];
+    char stringdata0[455];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,7 +46,9 @@ QT_MOC_LITERAL(10, 246, 30), // "on_Compile_Menu_Item_triggered"
 QT_MOC_LITERAL(11, 277, 28), // "on_Morph_Menu_Item_triggered"
 QT_MOC_LITERAL(12, 306, 23), // "on_Morph_Button_clicked"
 QT_MOC_LITERAL(13, 330, 30), // "on_Run_Original_Button_clicked"
-QT_MOC_LITERAL(14, 361, 29) // "on_Run_Morphed_Button_clicked"
+QT_MOC_LITERAL(14, 361, 29), // "on_Run_Morphed_Button_clicked"
+QT_MOC_LITERAL(15, 391, 34), // "on_Clear_Output_Log_Button_cl..."
+QT_MOC_LITERAL(16, 426, 28) // "on_About_Menu_Item_triggered"
 
     },
     "MainWindow\0on_Exit_Menu_Item_triggered\0"
@@ -61,7 +63,9 @@ QT_MOC_LITERAL(14, 361, 29) // "on_Run_Morphed_Button_clicked"
     "on_Morph_Menu_Item_triggered\0"
     "on_Morph_Button_clicked\0"
     "on_Run_Original_Button_clicked\0"
-    "on_Run_Morphed_Button_clicked"
+    "on_Run_Morphed_Button_clicked\0"
+    "on_Clear_Output_Log_Button_clicked\0"
+    "on_About_Menu_Item_triggered"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +75,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,21 +83,25 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   79,    2, 0x08 /* Private */,
-       3,    0,   80,    2, 0x08 /* Private */,
-       4,    0,   81,    2, 0x08 /* Private */,
-       5,    0,   82,    2, 0x08 /* Private */,
-       6,    0,   83,    2, 0x08 /* Private */,
-       7,    0,   84,    2, 0x08 /* Private */,
-       8,    0,   85,    2, 0x08 /* Private */,
-       9,    0,   86,    2, 0x08 /* Private */,
-      10,    0,   87,    2, 0x08 /* Private */,
-      11,    0,   88,    2, 0x08 /* Private */,
-      12,    0,   89,    2, 0x08 /* Private */,
-      13,    0,   90,    2, 0x08 /* Private */,
-      14,    0,   91,    2, 0x08 /* Private */,
+       1,    0,   89,    2, 0x08 /* Private */,
+       3,    0,   90,    2, 0x08 /* Private */,
+       4,    0,   91,    2, 0x08 /* Private */,
+       5,    0,   92,    2, 0x08 /* Private */,
+       6,    0,   93,    2, 0x08 /* Private */,
+       7,    0,   94,    2, 0x08 /* Private */,
+       8,    0,   95,    2, 0x08 /* Private */,
+       9,    0,   96,    2, 0x08 /* Private */,
+      10,    0,   97,    2, 0x08 /* Private */,
+      11,    0,   98,    2, 0x08 /* Private */,
+      12,    0,   99,    2, 0x08 /* Private */,
+      13,    0,  100,    2, 0x08 /* Private */,
+      14,    0,  101,    2, 0x08 /* Private */,
+      15,    0,  102,    2, 0x08 /* Private */,
+      16,    0,  103,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -130,6 +138,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 10: _t->on_Morph_Button_clicked(); break;
         case 11: _t->on_Run_Original_Button_clicked(); break;
         case 12: _t->on_Run_Morphed_Button_clicked(); break;
+        case 13: _t->on_Clear_Output_Log_Button_clicked(); break;
+        case 14: _t->on_About_Menu_Item_triggered(); break;
         default: ;
         }
     }
@@ -165,13 +175,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 15)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 13;
+        _id -= 15;
     }
     return _id;
 }
