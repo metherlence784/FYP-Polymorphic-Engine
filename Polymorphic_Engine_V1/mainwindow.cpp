@@ -13,6 +13,8 @@
 #include "run_executable_controller.h"
 #include "clear_output_log_controller.h"
 #include "view_about_information_controller.h"
+#include "view_executable_sizes_controller.h"
+#include "view_executable_signatures_controller.h"
 
 
 #include <stdio.h>
@@ -302,6 +304,7 @@ void MainWindow::on_Morph_Button_clicked()
 
     Morph_Executable_Controller *morpher = new Morph_Executable_Controller();
     QString morph_status = morpher->morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);
+    //QString morph_status = morpher->morph_exe_with_encryption(this->original_exe_file_path);
 
     QString morphed_exe_name = morpher->get_morphed_exe_name();
     QString morphed_exe_file_path = morpher->get_morphed_exe_file_path();
@@ -341,4 +344,18 @@ void MainWindow::on_About_Menu_Item_triggered()
 {
     View_About_Information_Controller *abouter = new View_About_Information_Controller();
     abouter->view_about_us();
+}
+
+void MainWindow::on_View_Executable_Size_Button_clicked()
+{
+    View_Executable_Sizes_Controller *sizer = new View_Executable_Sizes_Controller();
+    sizer->set_executable_sizes_in_analysis_textbox(this->original_exe_file_path,this->original_exe_name
+                                                    ,this->morphed_exe_file_path,this->morphed_exe_name);
+}
+
+void MainWindow::on_View_Executable_Signature_Button_clicked()
+{
+    View_Executable_Signatures_Controller *signer = new View_Executable_Signatures_Controller();
+    signer->set_executable_signature_in_analysis_textbox(this->original_exe_file_path,this->original_exe_name
+                                                         ,this->morphed_exe_file_path,this->morphed_exe_name);
 }

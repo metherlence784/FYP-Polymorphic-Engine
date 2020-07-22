@@ -62,6 +62,8 @@ public:
     QPushButton *Run_Original_Button;
     QPushButton *Run_Morphed_Button;
     QPushButton *Clear_Output_Log_Button;
+    QPushButton *View_Executable_Size_Button;
+    QPushButton *View_Executable_Signature_Button;
     QLabel *label_3;
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
@@ -184,13 +186,19 @@ public:
         Morphed_Executable_Label->setFrameShadow(QFrame::Sunken);
         Run_Original_Button = new QPushButton(Analysis);
         Run_Original_Button->setObjectName(QString::fromUtf8("Run_Original_Button"));
-        Run_Original_Button->setGeometry(QRect(370, 30, 75, 23));
+        Run_Original_Button->setGeometry(QRect(370, 30, 81, 23));
         Run_Morphed_Button = new QPushButton(Analysis);
         Run_Morphed_Button->setObjectName(QString::fromUtf8("Run_Morphed_Button"));
-        Run_Morphed_Button->setGeometry(QRect(370, 80, 75, 23));
+        Run_Morphed_Button->setGeometry(QRect(370, 80, 81, 23));
         Clear_Output_Log_Button = new QPushButton(Analysis);
         Clear_Output_Log_Button->setObjectName(QString::fromUtf8("Clear_Output_Log_Button"));
-        Clear_Output_Log_Button->setGeometry(QRect(370, 540, 75, 23));
+        Clear_Output_Log_Button->setGeometry(QRect(370, 540, 81, 23));
+        View_Executable_Size_Button = new QPushButton(Analysis);
+        View_Executable_Size_Button->setObjectName(QString::fromUtf8("View_Executable_Size_Button"));
+        View_Executable_Size_Button->setGeometry(QRect(370, 130, 81, 23));
+        View_Executable_Signature_Button = new QPushButton(Analysis);
+        View_Executable_Signature_Button->setObjectName(QString::fromUtf8("View_Executable_Signature_Button"));
+        View_Executable_Signature_Button->setGeometry(QRect(370, 160, 81, 23));
         tabWidget->addTab(Analysis, QString());
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -231,7 +239,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -274,6 +282,8 @@ public:
         Run_Original_Button->setText(QCoreApplication::translate("MainWindow", "Run Original", nullptr));
         Run_Morphed_Button->setText(QCoreApplication::translate("MainWindow", "Run Morphed", nullptr));
         Clear_Output_Log_Button->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
+        View_Executable_Size_Button->setText(QCoreApplication::translate("MainWindow", "View Size", nullptr));
+        View_Executable_Signature_Button->setText(QCoreApplication::translate("MainWindow", "View Signature", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Analysis), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

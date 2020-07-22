@@ -99,7 +99,6 @@ QString File_Reader::read_file_into_vector(QString exe_file_path,std::vector<cha
 {
     // Create the fstream
     QFile file(exe_file_path);
-    QString text = ERROR_INVALID_EXECUTABLE;
     QString status = QString("");
 
     if(file.open(QIODevice::ReadOnly))
@@ -113,20 +112,23 @@ QString File_Reader::read_file_into_vector(QString exe_file_path,std::vector<cha
             buffer.emplace_back(data);
 
         }
-
-
         status = SUCCESS_VALID_EXECUTABLE;
 
     }
     else
     {
-        status = ERROR_INVALID_EXECUTABLE;
-
+        status = ERROR_FILE_NOT_FOUND;
     }
 
     file.close();
     return status;
 }
 
+
+qint64 File_Reader::get_executable_size(QString exe_file_path)
+{
+	QFileInfo info (exe_file_path);
+    return info.size(); //if filepath not found, will return 0
+}
 
 

@@ -13,6 +13,7 @@
 #include <QFileSystemModel>
 #include <QStringList>
 #include <QStringListIterator>
+#include <QFileInfo>
 
 #include <iostream>
 #include <stdlib.h>
@@ -34,6 +35,8 @@ public:
     QString file_check(QString file_path);
     QString read_compile_status(QString file_path);
     QString read_file_into_vector(QString exe_file_path,std::vector<char>& buffer);
+	
+	qint64 get_executable_size(QString exe_file_path);
 
 
 private:

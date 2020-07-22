@@ -34,7 +34,7 @@ class Morph_Executable_Controller : public QObject
 {
     Q_OBJECT
 public:
-    const int INSERTION_PROBABILITY = 15;
+    const int INSERTION_PROBABILITY = 10;
 
      Morph_Executable_Controller();
      ~Morph_Executable_Controller();
@@ -249,8 +249,15 @@ private:
                                     size_t &machine_code_num_of_bytes,
                                     std::vector<uint64_t> &address_of_insertions_vec,
                                     std::vector<Disassembly> &jump_instructions_vec);
+
+    void add_conditional_jumps_instructions(std::vector<Disassembly> &dis_asm_vec,
+                                     std::vector<unsigned char> &machine_code_vec,
+                                     size_t &machine_code_num_of_bytes);
+
+
     bool to_insert_or_not(int chance);//chance to insert
     bool check_is_jump_instruction(int id);
+    std::string	generate_conditional_jumps_instructions();
     QString	junk_code_generator(std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes);
     void print_dis_asm_vec(std::vector<Disassembly> &dis_asm_vec); //printing disassembled vector
     void randomize_and_store_insertions(std::vector<uint64_t> &address_of_insertions_vec,

@@ -556,7 +556,6 @@ void Morph_Executable_Controller::get_decryption_asm(std::string &decrypt_asm,
         decrypt_second_half += "cmp ebx, " +
                 convert_byte_to_string(size_of_bytes_after_decryption_instructions_vec) +
                 ";"; // this is the length of the total encrypted bytes, compares the counter with this, if it reaches, will stop "looping"
-
     }
     else // if it is bigger than 255, i.e. 0xFF
     {
@@ -749,14 +748,20 @@ bool Morph_Executable_Controller::check_is_jump_instruction(int id)
     return false;
 }
 
+std::string Morph_Executable_Controller::generate_conditional_jumps_instructions()
+{
+    std::string conditional_jump_instruction = "push ecx; mov ecx, 0x0; inc ecx; cmp ecx, 0xffffff; jne 0x6; pop ecx;";
+
+    return conditional_jump_instruction;
+}
+
 QString Morph_Executable_Controller::junk_code_generator(std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes)
 {
-    //CHANGE TO QSTRING LATER
     QString morph_status = QString("");
 
     //need array of junk instructions
     //currently just one
-    std::string junk_instructions = "push eax; nop; nop; nop; nop; nop; pop eax;";
+    std::string junk_instructions = "push eax;nop;pop eax;";
     machine_code_vec.clear();
     morph_status = asm_to_machine_code(junk_instructions, machine_code_vec, machine_code_num_of_bytes);
     return morph_status;
@@ -987,7 +992,29 @@ void Morph_Executable_Controller::modify_jumps_in_dis_asm_vec(std::vector<Disass
     }
 }
 
+void Morph_Executable_Controller::add_conditional_jumps_instructions(std::vector<Disassembly> &dis_asm_vec,
+                                                                     std::vector<unsigned char> &machine_code_vec,
+                                                                     size_t &machine_code_num_of_bytes)
 
+{
+
+    for(int i = 0; i < dis_asm_vec.size(); i++)
+    {
+        if( dis_asm_vec[i].get_not_in_jump() == true &&
+                dis_asm_vec[i].get_modified_status() == false)
+        {
+            int chance = rand() % 100;//used for variance
+            if(to_insert_or_not(chance) == true)
+            {
+                //generate conditional jump instructions
+                std::string new_instruction = generate_conditional_jumps_instructions() +
+                                              dis_asm_vec[i].get_full_instruction() + ";";
+
+                gen_new_machine_code(dis_asm_vec[i],new_instruction,machine_code_vec,machine_code_num_of_bytes);
+            }
+        }
+    }
+}
 
 void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned char> &payload_vec,
                                                                 std::vector<Disassembly> &dis_asm_vec,
@@ -1806,10 +1833,10 @@ void Morph_Executable_Controller::alternative_pop_instruction(std::vector<Disass
 
 void Morph_Executable_Controller::error_warning_message_box(QString morph_status)
 {
-    if (morph_status == ERROR_INVALID_EXECUTABLE)
+    if (morph_status == ERROR_FILE_NOT_FOUND)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid exe file: " + this->original_exe_file_path);
+                             "Exe file not found: " + this->original_exe_file_path);
     }
     else if (morph_status == ERROR_INVALID_DOS_SIGNATURE)
     {
@@ -2683,6 +2710,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     //adding junk instructions
     std::vector<uint64_t> address_of_insertions_vec;
     std::vector<Disassembly> jump_instructions_vec;
+
     add_junk_instructions(this->payload_vec,
                           this->dis_asm_vec,
                           this->machine_code_vec,
@@ -2691,9 +2719,13 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                           jump_instructions_vec);
 
 
-
     //adding alt instructions
     check_for_relative_jumps(this->dis_asm_vec);
+
+    add_conditional_jumps_instructions(this->dis_asm_vec,
+                                       this->machine_code_vec,
+                                       this->machine_code_num_of_bytes);
+
     alternative_inc_or_dec_instruction(this->dis_asm_vec,
                            this->machine_code_vec,
                            this->machine_code_num_of_bytes);
@@ -2720,6 +2752,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                                 this->machine_code_num_of_bytes);
 
     modify_payload_vec_with_alternative_instructions(this->payload_vec,this->dis_asm_vec);
+
+    this->dis_asm_vec.clear();
+    this->morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+
+    error_warning_message_box(this->morph_status);
 
     print_dis_asm_vec(dis_asm_vec);
 

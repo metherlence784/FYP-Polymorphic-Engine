@@ -1,9 +1,7 @@
 #include "clear_output_log_controller.h"
 #include "file_reader.h"
 
-#include <QCryptographicHash>
-#include <QByteArray>
-#include <QDebug>
+#include <QFileInfo>
 
 //constructor
 Clear_Output_Log_Controller::Clear_Output_Log_Controller()
@@ -34,13 +32,5 @@ void Clear_Output_Log_Controller::clear_output_log()
 {
     this->cur_wind->set_text_analysis_textbox(QString(""));
 
-    std::vector<char> buffer;
-    File_Reader *reader = new File_Reader();
-    reader->read_file_into_vector(QString("C:/Users/jtf25/Pictures/memes/Test/abc_original.exe"),buffer);
-    QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Md5);
-    hash->addData(buffer.data(),buffer.size());
-    QByteArray my_byte = hash->result();
-
-    qDebug(my_byte.toHex());
 
 }

@@ -48,7 +48,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Cod3z">
      <property name="enabled">
@@ -295,7 +295,7 @@
        <rect>
         <x>370</x>
         <y>30</y>
-        <width>75</width>
+        <width>81</width>
         <height>23</height>
        </rect>
       </property>
@@ -308,7 +308,7 @@
        <rect>
         <x>370</x>
         <y>80</y>
-        <width>75</width>
+        <width>81</width>
         <height>23</height>
        </rect>
       </property>
@@ -321,12 +321,38 @@
        <rect>
         <x>370</x>
         <y>540</y>
-        <width>75</width>
+        <width>81</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
        <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="View_Executable_Size_Button">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>130</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Size</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="View_Executable_Signature_Button">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>160</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Signature</string>
       </property>
      </widget>
     </widget>

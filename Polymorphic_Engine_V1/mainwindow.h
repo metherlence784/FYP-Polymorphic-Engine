@@ -80,6 +80,10 @@ private slots://note that slots is a QT ui syntax
 
     void on_About_Menu_Item_triggered();
 
+    void on_View_Executable_Size_Button_clicked();
+
+    void on_View_Executable_Signature_Button_clicked();
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;
