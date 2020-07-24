@@ -44,39 +44,56 @@ Morph_Executable_Controller::Morph_Executable_Controller()
     this->random_key = 0;
     this->length_to_decrypt = 0;
     this->morph_status = QString("");
-
+    this->disassembly_log = QString("");
 }
 
 //destructor
 Morph_Executable_Controller::~Morph_Executable_Controller()
 {
 
+    std::cout << "START OF MORPH DESTRUCTOR" << std::endl;
+
     this->dos_header_ptr = nullptr;
     delete this->dos_header_ptr;
+
+    std::cout << "D 1" << std::endl;
 
     this->image_NT_header_ptr = nullptr;
     delete this->image_NT_header_ptr;
 
+    std::cout << "D 2" << std::endl;
+
     this->text_section_header_ptr = nullptr;
     delete this->text_section_header_ptr;
-
+    std::cout << "D 3" << std::endl;
     this->payload_section_header_ptr = nullptr;
     delete this->payload_section_header_ptr;
 
-    delete[] this->text_section_buffer_ptr;
-
-    delete[] this->text_section_buffer_original;
-
+    std::cout << "D 4" << std::endl;
+    this->text_section_buffer_ptr = nullptr;
+    delete this->text_section_buffer_ptr;
+    std::cout << "D 5" << std::endl;
+    this->text_section_buffer_original = nullptr;
+    delete this->text_section_buffer_original;
+    std::cout << "D 6" << std::endl;
     for(int i = 0; i < this->image_section_header_vec.size(); i++)
     {
         delete this->image_section_header_vec[i];
     }
+    std::cout << "D 7" << std::endl;
 
     this->image_section_header_vec.clear();
-
+    std::cout << "D 8" << std::endl;
     this->cur_wind = nullptr;
     delete this->cur_wind;
 
+    std::cout << "END OF MORPH DESTRUCTOR" << std::endl;
+
+}
+
+QString Morph_Executable_Controller::get_disassembly_log()
+{
+    return this->disassembly_log;
 }
 
 //morphing section supporting/utility functions
@@ -631,7 +648,7 @@ void Morph_Executable_Controller::add_random_key_to_payload_section_buffer_ptr(c
 
 QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned char> payload_vec, std::vector<Disassembly> &dis_asm_vec)
 {
-    QString morph_status = QString("");
+    QString morph_status = SUCCESS_MACHINE_CODE_TO_ASSEMBLY_CAPSTONE;
     csh handle;
     cs_insn *insn;
     size_t count;
@@ -650,12 +667,6 @@ QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned ch
         size_t j;
         for (j = 0; j < count; j++)
         {
-            std::stringstream ss;
-            //            printf("0x%" PRIx64 ":\t%s\t\t%s\n", insn[j].address, insn[j].mnemonic,
-            //                insn[j].op_str);
-            /*ss << std::left << std::setw(4) << "id = " << std::left << std::setw(10) << insn[j].id << " 0x" << std::hex << insn[j].address << ":\t" << insn[j].mnemonic
-                << "\t" << insn[j].op_str;
-            dis_asm_vec.emplace_back(ss.str());*/
             int id = insn[j].id;
             int address = insn[j].address;
             std::string mnemonic = insn[j].mnemonic;
@@ -667,13 +678,14 @@ QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned ch
 
         }
 
-        cs_free(insn, count);
+
     }
     else
     {
         morph_status = ERROR_DISASSEMBLY_FAILED_CAPSTONE;
     }
 
+    cs_free(insn, count);
     cs_close(&handle);
 
     return morph_status;
@@ -1833,6 +1845,7 @@ void Morph_Executable_Controller::alternative_pop_instruction(std::vector<Disass
 
 void Morph_Executable_Controller::error_warning_message_box(QString morph_status)
 {
+
     if (morph_status == ERROR_FILE_NOT_FOUND)
     {
         QMessageBox::warning(cur_wind, "Warning",
@@ -2700,12 +2713,17 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
             break;
     }
 
-    error_warning_message_box(this->morph_status);
+    std::vector<Disassembly> temp_dis_asm_vec;
+    this->morph_status = machine_code_to_asm(this->payload_vec,temp_dis_asm_vec);
 
+    error_warning_message_box(this->morph_status);
     if(this->morph_status.contains("ERROR") == true)
     {
         return this->morph_status;
     }
+
+    this->disassembly_log += concat_disassembly(temp_dis_asm_vec,this->morphed_exe_name + QString(" : ORIGINAL PAYLOAD"));
+
 
     //adding junk instructions
     std::vector<uint64_t> address_of_insertions_vec;
@@ -2757,14 +2775,22 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     this->morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
 
     error_warning_message_box(this->morph_status);
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
 
-    print_dis_asm_vec(dis_asm_vec);
+    this->disassembly_log += concat_disassembly(this->dis_asm_vec,this->morphed_exe_name + QString(" : PAYLOAD AFTER MORPHING"));
+
+
+    //print_dis_asm_vec(dis_asm_vec);
 
     //=========================================================================================
 
     //setting the full file path
     set_morphed_exe_file_path(exe_file_path);
 
+    this->payload_num_of_bytes = 0x400;
     //calculate the file alignment factor to align the section
     calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
 
@@ -2865,7 +2891,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
 
 
     //stores the payload into a variable char* and the ptr is to do calculation
-    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
+	char *payload_section_buffer_original = new char[this->payload_raw_data_size]{ 0 };
     char *payload_section_buffer_ptr = payload_section_buffer_original;
 
 
@@ -2939,7 +2965,6 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     //encrypting contents of the vector, by xor with the random key
     encrypt_bytes_after_decryption_instruction_vec(bytes_after_decryption_instructions_vec,this->random_key);
 
-
     // ================== START HERE FOR DECRYPTION SCHEME ================================
     std::cout << "CMP EAX, instruction: " << bytes_after_decryption_instructions_vec.size() << std::endl;
     std::string decrypt_asm = "";
@@ -2950,6 +2975,13 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                        this->machine_code_num_of_bytes,
                        bytes_after_decryption_instructions_vec.size());
 
+    std::vector<unsigned char> decryption_vec;
+
+    for(int i = 0; i < machine_code_vec.size(); i++)
+    {
+        decryption_vec.emplace_back(machine_code_vec[i]);
+    }
+
     //putting a random key into the beginning of the payload section
     add_random_key_to_payload_section_buffer_ptr(payload_section_buffer_ptr, this->random_key);
 
@@ -2957,8 +2989,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     //adding in the decryption routine into payload_section_buffer_ptr
     //(this->machine_code_vec.data()) contains the decryption routine
     populate_section_ptr(payload_section_buffer_ptr,
-                         reinterpret_cast<char*>(this->machine_code_vec.data()),
-                         this->machine_code_num_of_bytes);
+                         reinterpret_cast<char*>(decryption_vec.data()),
+                         decryption_vec.size());
 
 
     //putting in the jump back to text section into payload_section_buffer_ptr
@@ -3013,7 +3045,10 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                             this->buffer_cursor,this->size_of_text_section);
 
 
-
+    //free memory
+    delete[] payload_section_buffer_original;
+    payload_section_buffer_ptr = nullptr;
+    delete payload_section_buffer_ptr;
 
     //writing to file
     if(this->morph_status.contains("ERROR") == false)
@@ -3025,10 +3060,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     QDateTime end = QDateTime::currentDateTime();
     this->elapsed_time = start.msecsTo(end);
 
-    //free memory
-    delete[] payload_section_buffer_original;
-    payload_section_buffer_ptr = nullptr;
-    delete payload_section_buffer_ptr;
+
 
     return this->morph_status;
 }
@@ -3085,4 +3117,28 @@ void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textb
         set_analysis_textbox_status(format);
 }
 
+QString Morph_Executable_Controller::concat_disassembly(std::vector<Disassembly> &dis_asm_vec, QString line_header)
+{
+    const QString line = QString("====================================================================================================================");
+
+    int length_of_line = line.size();
+    int length_of_line_header = line_header.size();
+    int temp =   length_of_line - length_of_line_header;
+    temp /= 2;
+
+    std::stringstream result;
+    result << line.toStdString() << std::endl;
+    result << std::left << std::setw(temp) << "" << line_header.toStdString() << std::endl;
+    result << line.toStdString() << std::endl;
+
+    for(int i = 0; i < dis_asm_vec.size(); i++)
+    {
+        std::stringstream ss;
+        ss << dis_asm_vec[i] << std::endl;
+        result << ss.str();
+    }
+    result << line.toStdString() << std::endl << std::endl << std::endl;
+
+    return QString(result.str().c_str());
+}
 

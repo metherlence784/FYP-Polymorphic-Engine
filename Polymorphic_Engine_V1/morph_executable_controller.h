@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include <QFile>
 #include <QDateTime>
+
 
 #include "PE32.h"
 #include "payloads.h"
@@ -68,12 +68,15 @@ public:
                                   qint64 elapsed_time,
                                   QString morph_status);
 
+     QString get_disassembly_log();
+
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
     QString original_exe_name;
     QString original_exe_file_path;
     QString morphed_exe_name;
     QString morphed_exe_file_path;
+    QString disassembly_log;
 
     //list of payloads
     const std::vector<QString> LIST_OF_PAYLOADS_VEC = {"Calculator_Payload_RButton"};
@@ -279,6 +282,7 @@ private:
                                                     std::vector<Disassembly> &dis_asm_vec,
                                                     std::vector<unsigned char> &machine_code_vec,
                                                     std::vector<unsigned char> &payload_vec);
+    QString concat_disassembly(std::vector<Disassembly> &dis_asm_vec, QString line_header);
 
 
 };

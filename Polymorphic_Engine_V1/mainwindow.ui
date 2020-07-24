@@ -48,7 +48,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Cod3z">
      <property name="enabled">
@@ -291,11 +291,14 @@
       </property>
      </widget>
      <widget class="QPushButton" name="Run_Original_Button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>370</x>
         <y>30</y>
-        <width>81</width>
+        <width>91</width>
         <height>23</height>
        </rect>
       </property>
@@ -304,11 +307,14 @@
       </property>
      </widget>
      <widget class="QPushButton" name="Run_Morphed_Button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>370</x>
         <y>80</y>
-        <width>81</width>
+        <width>91</width>
         <height>23</height>
        </rect>
       </property>
@@ -330,11 +336,14 @@
       </property>
      </widget>
      <widget class="QPushButton" name="View_Executable_Size_Button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>370</x>
         <y>130</y>
-        <width>81</width>
+        <width>91</width>
         <height>23</height>
        </rect>
       </property>
@@ -343,16 +352,35 @@
       </property>
      </widget>
      <widget class="QPushButton" name="View_Executable_Signature_Button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>370</x>
         <y>160</y>
-        <width>81</width>
+        <width>91</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
        <string>View Signature</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="View_Disassembly_Button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>190</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Disassembly</string>
       </property>
      </widget>
     </widget>
@@ -422,10 +450,16 @@
    <property name="text">
     <string>New File</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="Open_File_Menu_Item">
    <property name="text">
     <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="Save_Menu_Item">
@@ -478,6 +512,9 @@
    <property name="text">
     <string>Compile</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
   </action>
   <action name="Morph_Menu_Item">
    <property name="enabled">
@@ -485,6 +522,9 @@
    </property>
    <property name="text">
     <string>Morph</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
    </property>
   </action>
   <action name="About_Menu_Item">

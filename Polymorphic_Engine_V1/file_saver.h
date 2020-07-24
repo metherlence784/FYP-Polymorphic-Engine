@@ -29,7 +29,6 @@ public:
     void save_file(QString file_path,QString text);
     void write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer);
 
-
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui
 

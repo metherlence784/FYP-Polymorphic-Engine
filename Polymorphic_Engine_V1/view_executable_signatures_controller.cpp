@@ -63,9 +63,9 @@ void View_Executable_Signatures_Controller::set_executable_signature_in_analysis
 
     analysis_text_box_text += QString("COMPARING EXECUTABLE SIGNATURES\n\n");
 
-    analysis_text_box_text += format_text(original_hash,original_exe_name,original_status);
+    analysis_text_box_text += format_text( original_hash,QString("Original ==> ") +original_exe_name,original_status);
 
-    analysis_text_box_text += format_text(morphed_hash,morphed_exe_name,morphed_status) + QString("\n");
+    analysis_text_box_text += format_text(morphed_hash,QString("Morphed ==> ") +morphed_exe_name,morphed_status) + QString("\n");
 
     analysis_text_box_text += compare_hashes(original_hash,morphed_hash) + QString("\n\n");
 
@@ -106,9 +106,17 @@ QString View_Executable_Signatures_Controller::format_text(QString hash, QString
     }
     else
     {
-        result += ERROR_FILE_NOT_FOUND + QString(" : ");
+        result += exe_name + QString(" ") + ERROR_FILE_NOT_FOUND + QString(" : ");
         result += hash + QString("\n");
     }
 
     return result;
+}
+
+void View_Executable_Signatures_Controller::set_enabled_view_executable_signature_button(QString compilation_status)
+{
+    if(compilation_status.contains("ERROR") == false)
+    {
+        this->cur_wind->set_enabled_view_executable_signature_button(true);
+    }
 }

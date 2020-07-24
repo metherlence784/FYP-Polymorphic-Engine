@@ -52,6 +52,9 @@ QStringList File_Reader::open_file()
     return list;
 }
 
+
+
+
 QString File_Reader::file_check(QString file_path)
 {
 
@@ -69,6 +72,7 @@ QString File_Reader::file_check(QString file_path)
     else
     {
         // error handling goes here
+        file.close();
         return file_text;
     }
 
@@ -91,7 +95,7 @@ QString File_Reader::read_compile_status(QString file_path)
         system(to_delete.toStdString().c_str());
         return text;
     }
-
+    file.close();
     return text;
 }
 

@@ -40,15 +40,21 @@ public:
     void set_enabled_payload_groupbox(bool set);
     void set_enabled_compile_button(bool set);
     void set_enabled_analysis_textbox(bool set);
+    void set_enabled_run_original_button(bool set);
+    void set_enabled_run_morphed_button(bool set);
+    void set_enabled_view_executable_signature_button(bool set);
+    void set_enabled_view_executable_size_button(bool set);
+    void set_enabled_view_disassembly_button(bool set);
     void set_text_code_input_textbox(QString txt);
     void set_text_analysis_textbox(QString txt);
     void set_original_exe_file_path(QString original_exe_file_path);
     void set_morphed_exe_file_path(QString morphed_exe_file_path);
     void set_original_exe_name(QString original_exe_name);
     void set_morphed_exe_name(QString morphed_exe_name);
-
+    void set_disassembly_log(QString disassembly_log);
     void set_original_executable_label(QString original_exe_name);
     void set_morphed_executable_label(QString morphed_exe_name);
+
 
 
 private slots://note that slots is a QT ui syntax
@@ -84,6 +90,8 @@ private slots://note that slots is a QT ui syntax
 
     void on_View_Executable_Signature_Button_clicked();
 
+    void on_View_Disassembly_Button_clicked();
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;
@@ -91,6 +99,7 @@ private:
     QString morphed_exe_file_path;
     QString original_exe_name;
     QString morphed_exe_name;
+    QString disassembly_log;
 
     void closeEvent (QCloseEvent *event);//this is to overload the top right X button of the window
 };

@@ -69,6 +69,22 @@ void Run_Executable_Controller::set_morphed_exe_file_path(QString morphed_exe_fi
     this->morphed_exe_file_path = morphed_exe_file_path;
 }
 
+void Run_Executable_Controller::set_enabled_run_original_button(QString compilation_status)
+{
+    if(compilation_status.contains("ERROR") == false)
+    {
+        this->cur_wind->set_enabled_run_original_button(true);
+    }
+}
+
+void Run_Executable_Controller::set_enabled_run_morphed_button(QString morph_status)
+{
+    if(morph_status.contains("ERROR") == false)
+    {
+        this->cur_wind->set_enabled_run_morphed_button(true);
+    }
+}
+
 void Run_Executable_Controller::set_original_executable_label(QString original_status)
 {
     if(original_status.contains("ERROR") == false)

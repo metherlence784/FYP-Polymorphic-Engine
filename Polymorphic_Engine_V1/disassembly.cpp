@@ -267,8 +267,8 @@ std::ostream &operator<<(std::ostream &os, Disassembly &d)
 
     ss.flags(flag);
 
-    ss << std::left << std::setw(6) << d.get_mnemonic() << std::left << std::setw(40) << d.get_ops() << "\t";
-    ss << "Bytes:{ ";
+    ss << std::left << std::setw(6) << d.get_mnemonic() << std::left << std::setw(45) << d.get_ops() << "\t";
+    ss << "Bytes: ";
 
     std::vector<unsigned char> temp = d.get_bytes_vec();
     for (int i = 0; i < temp.size(); i++)
@@ -285,9 +285,7 @@ std::ostream &operator<<(std::ostream &os, Disassembly &d)
 
     ss.flags(flag);
 
-    ss << "}" <<  std::right << std::setw(10) <<"Offset: {" << d.convert_byte_to_string((char)d.get_twos_complement_offset())
-                                                        << ", " << (int)d.get_twos_complement_offset() << "}"
-        "]";
+    ss << " ";
 
     os << ss.str();
 

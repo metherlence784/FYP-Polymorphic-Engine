@@ -36,6 +36,7 @@ public:
      QString hash_buffer_MD5(std::vector<char> buffer, QString status);
      QString format_text(QString hash, QString exe_name, QString status);
      QString compare_hashes(QString original_hash, QString morphed_hash);
+     void set_enabled_view_executable_signature_button(QString compilation_status);
 
  private:
 

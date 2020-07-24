@@ -27,11 +27,12 @@ public:
 	void set_text_analysis_textbox(QString txt);
 
 
+    void set_enabled_view_executable_size_button(QString compilation_status);
     void set_executable_sizes_in_analysis_textbox(QString original_exe_file_path,
                                     QString original_exe_name,
                                     QString morphed_exe_file_path,
                                     QString morphed_exe_name);
-    QString convert_kb_to_mb(qint64 exe_size);
+    QString convert_b_to_kb(qint64 exe_size);
     bool check_if_file_exist(qint64 exe_size);
     QString format_text(QString exe_name, qint64 exe_size);
 

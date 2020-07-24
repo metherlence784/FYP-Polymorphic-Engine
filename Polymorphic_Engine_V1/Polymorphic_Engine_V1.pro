@@ -35,13 +35,13 @@ SOURCES += \
     undo_action_controller.cpp \
     view_about_information_controller.cpp \
     view_compilation_status_controller.cpp \
+    view_disassembly_controller.cpp \
     view_executable_signatures_controller.cpp \
     view_executable_sizes_controller.cpp \
     write_code_in_c_cpp_controller.cpp
 
 HEADERS += \
     PE32.h \
-    asm_mnemonics.h \
     choose_payload_controller.h \
     clear_output_log_controller.h \
     compile_code_controller.h \
@@ -63,6 +63,7 @@ HEADERS += \
     undo_action_controller.h \
     view_about_information_controller.h \
     view_compilation_status_controller.h \
+    view_disassembly_controller.h \
     view_executable_signatures_controller.h \
     view_executable_sizes_controller.h \
     write_code_in_c_cpp_controller.h

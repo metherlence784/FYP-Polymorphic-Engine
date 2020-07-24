@@ -153,7 +153,7 @@ void File_Saver::save_file(QString file_path, QString text)
     {
         QTextStream out(&file);
         out << text;
-        file.close();
+
     }
     else
     {
@@ -161,6 +161,7 @@ void File_Saver::save_file(QString file_path, QString text)
         //this would mean there is a problem with saving the file hence this should be for error handling - jeremiah
         std::cout << ERROR_SYSTEM_FAULT.toStdString() << std::endl;
     }
+    file.close();
 }
 
 void File_Saver::write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer)

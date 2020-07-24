@@ -64,6 +64,7 @@ public:
     QPushButton *Clear_Output_Log_Button;
     QPushButton *View_Executable_Size_Button;
     QPushButton *View_Executable_Signature_Button;
+    QPushButton *View_Disassembly_Button;
     QLabel *label_3;
     QMenuBar *menubar;
     QMenu *File_Menu_Header;
@@ -186,19 +187,27 @@ public:
         Morphed_Executable_Label->setFrameShadow(QFrame::Sunken);
         Run_Original_Button = new QPushButton(Analysis);
         Run_Original_Button->setObjectName(QString::fromUtf8("Run_Original_Button"));
-        Run_Original_Button->setGeometry(QRect(370, 30, 81, 23));
+        Run_Original_Button->setEnabled(false);
+        Run_Original_Button->setGeometry(QRect(370, 30, 91, 23));
         Run_Morphed_Button = new QPushButton(Analysis);
         Run_Morphed_Button->setObjectName(QString::fromUtf8("Run_Morphed_Button"));
-        Run_Morphed_Button->setGeometry(QRect(370, 80, 81, 23));
+        Run_Morphed_Button->setEnabled(false);
+        Run_Morphed_Button->setGeometry(QRect(370, 80, 91, 23));
         Clear_Output_Log_Button = new QPushButton(Analysis);
         Clear_Output_Log_Button->setObjectName(QString::fromUtf8("Clear_Output_Log_Button"));
         Clear_Output_Log_Button->setGeometry(QRect(370, 540, 81, 23));
         View_Executable_Size_Button = new QPushButton(Analysis);
         View_Executable_Size_Button->setObjectName(QString::fromUtf8("View_Executable_Size_Button"));
-        View_Executable_Size_Button->setGeometry(QRect(370, 130, 81, 23));
+        View_Executable_Size_Button->setEnabled(false);
+        View_Executable_Size_Button->setGeometry(QRect(370, 130, 91, 23));
         View_Executable_Signature_Button = new QPushButton(Analysis);
         View_Executable_Signature_Button->setObjectName(QString::fromUtf8("View_Executable_Signature_Button"));
-        View_Executable_Signature_Button->setGeometry(QRect(370, 160, 81, 23));
+        View_Executable_Signature_Button->setEnabled(false);
+        View_Executable_Signature_Button->setGeometry(QRect(370, 160, 91, 23));
+        View_Disassembly_Button = new QPushButton(Analysis);
+        View_Disassembly_Button->setObjectName(QString::fromUtf8("View_Disassembly_Button"));
+        View_Disassembly_Button->setEnabled(false);
+        View_Disassembly_Button->setGeometry(QRect(370, 190, 91, 23));
         tabWidget->addTab(Analysis, QString());
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -239,7 +248,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -249,7 +258,13 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Polymorphic Engine", nullptr));
         New_File_Menu_Item->setText(QCoreApplication::translate("MainWindow", "New File", nullptr));
+#if QT_CONFIG(shortcut)
+        New_File_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+N", nullptr));
+#endif // QT_CONFIG(shortcut)
         Open_File_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Open File", nullptr));
+#if QT_CONFIG(shortcut)
+        Open_File_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
+#endif // QT_CONFIG(shortcut)
         Save_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Save ", nullptr));
 #if QT_CONFIG(shortcut)
         Save_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
@@ -265,7 +280,13 @@ public:
         Redo_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Y", nullptr));
 #endif // QT_CONFIG(shortcut)
         Compile_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
+#if QT_CONFIG(shortcut)
+        Compile_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+K", nullptr));
+#endif // QT_CONFIG(shortcut)
         Morph_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Morph", nullptr));
+#if QT_CONFIG(shortcut)
+        Morph_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+M", nullptr));
+#endif // QT_CONFIG(shortcut)
         About_Menu_Item->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
         Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));
@@ -284,6 +305,7 @@ public:
         Clear_Output_Log_Button->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         View_Executable_Size_Button->setText(QCoreApplication::translate("MainWindow", "View Size", nullptr));
         View_Executable_Signature_Button->setText(QCoreApplication::translate("MainWindow", "View Signature", nullptr));
+        View_Disassembly_Button->setText(QCoreApplication::translate("MainWindow", "View Disassembly", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Analysis), QCoreApplication::translate("MainWindow", "Analysis", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Program Created By : CHIMERA", nullptr));
         File_Menu_Header->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
