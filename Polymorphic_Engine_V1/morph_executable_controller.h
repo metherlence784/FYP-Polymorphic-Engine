@@ -24,6 +24,9 @@
 
 #include <disassembly.h>
 
+#include "file_reader.h"
+#include "file_saver.h"
+
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 
@@ -77,7 +80,9 @@ private:
     QString disassembly_log;
 
     //list of payloads
-    const std::vector<QString> LIST_OF_PAYLOADS_VEC = {"Calculator_Payload_RButton"};
+    const std::vector<QString> LIST_OF_PAYLOADS_VEC = {"Calculator_Payload_RButton",
+                                                       "Fatality_Payload_RButton",
+                                                      "Message_Box_Payload_RButton"};
 
     //pe file stuff
     const std::string TEXT_SECTION_NAME = ".text";

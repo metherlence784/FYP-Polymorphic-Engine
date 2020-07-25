@@ -6,6 +6,8 @@
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 
+#include "file_reader.h"
+#include "write_code_in_c_cpp_controller.h"
 
 class Exit_Application_Controller : public QObject
 {

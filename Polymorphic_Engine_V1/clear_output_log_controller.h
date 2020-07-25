@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QObject>
 
+#include "file_reader.h"
+
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 

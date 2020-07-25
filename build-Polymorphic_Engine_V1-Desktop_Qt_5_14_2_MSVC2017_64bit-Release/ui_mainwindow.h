@@ -49,8 +49,8 @@ public:
     QVBoxLayout *verticalLayout;
     QGroupBox *Payload_RButton_Group;
     QRadioButton *Calculator_Payload_RButton;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
+    QRadioButton *Fatality_Payload_RButton;
+    QRadioButton *Message_Box_Payload_RButton;
     QRadioButton *radioButton_3;
     QPushButton *Compile_Button;
     QLabel *label_2;
@@ -136,17 +136,17 @@ public:
         Payload_RButton_Group->setEnabled(false);
         Calculator_Payload_RButton = new QRadioButton(Payload_RButton_Group);
         Calculator_Payload_RButton->setObjectName(QString::fromUtf8("Calculator_Payload_RButton"));
-        Calculator_Payload_RButton->setGeometry(QRect(0, 20, 111, 17));
+        Calculator_Payload_RButton->setGeometry(QRect(0, 20, 121, 17));
         Calculator_Payload_RButton->setChecked(true);
-        radioButton = new QRadioButton(Payload_RButton_Group);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(0, 50, 111, 17));
-        radioButton_2 = new QRadioButton(Payload_RButton_Group);
-        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
-        radioButton_2->setGeometry(QRect(0, 80, 111, 17));
+        Fatality_Payload_RButton = new QRadioButton(Payload_RButton_Group);
+        Fatality_Payload_RButton->setObjectName(QString::fromUtf8("Fatality_Payload_RButton"));
+        Fatality_Payload_RButton->setGeometry(QRect(0, 50, 121, 17));
+        Message_Box_Payload_RButton = new QRadioButton(Payload_RButton_Group);
+        Message_Box_Payload_RButton->setObjectName(QString::fromUtf8("Message_Box_Payload_RButton"));
+        Message_Box_Payload_RButton->setGeometry(QRect(0, 80, 121, 17));
         radioButton_3 = new QRadioButton(Payload_RButton_Group);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
-        radioButton_3->setGeometry(QRect(0, 110, 101, 17));
+        radioButton_3->setGeometry(QRect(0, 110, 121, 17));
 
         verticalLayout->addWidget(Payload_RButton_Group);
 
@@ -291,8 +291,8 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
         Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));
         Calculator_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Pop Calc.exe", nullptr));
-        radioButton->setText(QCoreApplication::translate("MainWindow", "Payload X", nullptr));
-        radioButton_2->setText(QCoreApplication::translate("MainWindow", "Payload Y", nullptr));
+        Fatality_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Crash Your Program!", nullptr));
+        Message_Box_Payload_RButton->setText(QCoreApplication::translate("MainWindow", "Hello Message Box", nullptr));
         radioButton_3->setText(QCoreApplication::translate("MainWindow", "Payload Z", nullptr));
         Compile_Button->setText(QCoreApplication::translate("MainWindow", "Compile", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Program Created By : Yoges And Friends", nullptr));

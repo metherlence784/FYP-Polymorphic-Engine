@@ -26,10 +26,13 @@ void Choose_Payload_Controller::set_cur_wind(MainWindow *cur)
 }
 
 //mutator
-void Choose_Payload_Controller::set_enabled_payload_groupbox(bool set)
+void Choose_Payload_Controller::set_enabled_payload_groupbox(QString compilation_status)
 {
 	//enable the payload radio buttons
-    this->cur_wind->set_enabled_payload_groupbox(set);
+    if(compilation_status.contains("ERROR") == false)
+    {
+        this->cur_wind->set_enabled_payload_groupbox(true);
+    }
 }
 
 QString Choose_Payload_Controller::get_payload()

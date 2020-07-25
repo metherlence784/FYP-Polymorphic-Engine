@@ -3,14 +3,16 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include <QFile>
 #include <QFileDialog>
-#include <QTextStream>
 #include <QMessageBox>
 #include <QStringList>
 #include <QStringListIterator>
 #include <iostream>
 
+#include "write_code_in_c_cpp_controller.h"
+#include "file_reader.h"
+#include "choose_payload_controller.h"
+#include "compile_code_controller.h"
 
 #include "ui_mainwindow.h"
 #include "mainwindow.h"

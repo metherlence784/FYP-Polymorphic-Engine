@@ -1,7 +1,4 @@
 #include "exit_application_controller.h"
-#include "file_reader.h"
-#include "write_code_in_c_cpp_controller.h"
-
 
 //constructor
 Exit_Application_Controller::Exit_Application_Controller()
@@ -32,7 +29,7 @@ void Exit_Application_Controller::set_cur_wind(MainWindow *cur)
 void Exit_Application_Controller::exit_application()
 {
 	//first checking if current progress is saved
-    File_Reader reader(get_cur_wind());
+    File_Reader reader;
     QString file_text = reader.file_check(cur_wind->get_cur_file_path());
 
     Write_Code_In_C_CPP_Controller writer;
@@ -77,7 +74,7 @@ void Exit_Application_Controller::exit_application()
 void Exit_Application_Controller::exit_application(QCloseEvent *event)
 {
 	//first checking if current progress is saved
-    File_Reader reader(get_cur_wind());
+    File_Reader reader;
     QString file_text = reader.file_check(cur_wind->get_cur_file_path());
 
     Write_Code_In_C_CPP_Controller writer;

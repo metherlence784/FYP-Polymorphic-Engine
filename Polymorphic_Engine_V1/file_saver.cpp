@@ -1,12 +1,10 @@
 #include "file_saver.h"
 
-#include <fstream>
-#include <iostream>
 
 //constructor
 File_Saver::File_Saver()
 {
-    this->cur_wind = nullptr;
+    this->cur_wind = MainWindow::getMWptr();
 }
 
 //destructor
@@ -17,9 +15,15 @@ File_Saver::~File_Saver()
 }
 
 //accessor
-File_Saver::File_Saver(MainWindow *mw_ptr)
+MainWindow* File_Saver::get_cur_wind()
 {
-    this->cur_wind = mw_ptr;
+    return this->cur_wind;
+}
+
+//mutator
+void File_Saver::set_cur_wind(MainWindow* cur_wind)
+{
+    this->cur_wind = cur_wind;
 }
 
 //saving a new file
@@ -30,7 +34,7 @@ QString File_Saver::new_file()
     QString file_path = QString();
 	
 	//use dialog to save file
-    file_path = QFileDialog::getSaveFileName(cur_wind,"Save your file",QDir::currentPath()
+    file_path = QFileDialog::getSaveFileName(get_cur_wind(),"Save your file",QDir::currentPath()
                                              ,filters,&default_filter); // this opens the file directory window
 
     QFile file(file_path);
@@ -93,7 +97,7 @@ QString File_Saver::save_file_as(QString text)
     QString default_filter("C++ file (*.cpp)");
     QString file_path = QString();
 
-    file_path = QFileDialog::getSaveFileName(cur_wind,"Save your file",QDir::currentPath()
+    file_path = QFileDialog::getSaveFileName(get_cur_wind(),"Save your file",QDir::currentPath()
                                              ,filters,&default_filter); // this opens the file directory window
 
 

@@ -1,9 +1,4 @@
 #include "create_new_file_controller.h"
-#include <write_code_in_c_cpp_controller.h>
-#include "file_saver.h"
-#include "choose_payload_controller.h"
-#include "compile_code_controller.h"
-
 
 //constructor
 Create_New_File_Controller::Create_New_File_Controller()
@@ -30,10 +25,9 @@ void Create_New_File_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
-
 void Create_New_File_Controller::create_new_file()
 {
-    File_Saver saving(get_cur_wind());
+    File_Saver saving;
     QString file_path = saving.new_file();//save a new file using file_saver
 
     if(file_path == ERROR_SYSTEM_FAULT)
@@ -63,9 +57,6 @@ void Create_New_File_Controller::create_new_file()
         Write_Code_In_C_CPP_Controller writer;
         writer.set_text("");//clears the text box in the ui
         writer.set_enabled_code_input_textbox(true);//enables code input textbox in the ui
-
-        Choose_Payload_Controller payloader;
-        payloader.set_enabled_payload_groupbox(true);//enables the payload radio buttons
 
 		//enable compilation related UI
         Compile_Code_Controller compiler;

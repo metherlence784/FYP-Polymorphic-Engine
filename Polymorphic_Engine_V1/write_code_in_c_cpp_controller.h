@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include <QTextStream>
 
 #include <iostream>
 

@@ -1,6 +1,5 @@
 #include "save_as_new_file_controller.h"
-#include "write_code_in_c_cpp_controller.h"
-#include "file_saver.h"
+
 
 //constructor
 Save_As_New_File_Controller::Save_As_New_File_Controller()
@@ -30,7 +29,7 @@ void Save_As_New_File_Controller::set_cur_wind(MainWindow *cur)
 //saving as new file
 void Save_As_New_File_Controller::save_as_new_file()
 {
-    File_Saver saving(get_cur_wind());
+    File_Saver saving;
 
     Write_Code_In_C_CPP_Controller writer;//uses the writer object to access the text from the UI
     QString file_path = saving.save_file_as(writer.get_text());

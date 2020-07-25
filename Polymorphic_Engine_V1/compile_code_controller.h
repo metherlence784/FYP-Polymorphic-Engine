@@ -3,12 +3,15 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include <QTextStream>
 #include <QDateTime>
 #include <QStandardPaths>
 
 #include <iostream>
 #include <stdlib.h>
+
+#include "write_code_in_c_cpp_controller.h"
+#include "save_current_file_controller.h"
+#include "file_reader.h"
 
 #include "ui_mainwindow.h"
 #include "mainwindow.h"

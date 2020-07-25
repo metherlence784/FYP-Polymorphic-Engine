@@ -17,7 +17,7 @@
 #include "view_executable_signatures_controller.h"
 #include "view_disassembly_controller.h"
 
-#include <stdio.h>
+
 
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
@@ -268,7 +268,10 @@ void MainWindow::on_Compile_Button_clicked()
     viewer.update_analysis_textbox_and_enable_morph(analysis_textbox_status,elapsed_time,temp_compile);
 
     QString compilation_status = viewer.get_compilation_status();
-	
+
+    Choose_Payload_Controller payloader;
+    payloader.set_enabled_payload_groupbox(compilation_status);//enables the payload radio buttons
+
 	//enable the run original button
     Run_Executable_Controller runner;
     runner.set_original_exe_name(original_exe_name);
@@ -309,6 +312,9 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 
     QString compilation_status = viewer.get_compilation_status();
 	
+    Choose_Payload_Controller payloader;
+    payloader.set_enabled_payload_groupbox(compilation_status);//enables the payload radio buttons
+
 	//enable the run original button
     Run_Executable_Controller runner;
     runner.set_original_exe_name(original_exe_name);

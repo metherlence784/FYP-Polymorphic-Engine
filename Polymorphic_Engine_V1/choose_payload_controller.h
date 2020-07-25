@@ -22,7 +22,7 @@ public:
 
      //mutator
      void set_cur_wind(MainWindow *cur);
-     void set_enabled_payload_groupbox(bool set);
+     void set_enabled_payload_groupbox(QString compilation_status);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

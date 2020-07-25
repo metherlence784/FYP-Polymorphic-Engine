@@ -1,11 +1,11 @@
 #include "file_reader.h"
-#include "PE32.h"
 
 //constructor
 File_Reader::File_Reader()
 {
-    this->cur_wind = nullptr;
+    this->cur_wind = MainWindow::getMWptr();
 }
+
 //destructor
 File_Reader::~File_Reader()
 {
@@ -14,9 +14,15 @@ File_Reader::~File_Reader()
 }
 
 //accessor
-File_Reader::File_Reader(MainWindow *mw_ptr)
+MainWindow* File_Reader::get_cur_wind()
 {
-    this->cur_wind = mw_ptr;
+    return this->cur_wind;
+}
+
+//mutator
+void File_Reader::set_cur_wind(MainWindow *cur_wind)
+{
+    this->cur_wind = cur_wind;
 }
 
 //opening a file

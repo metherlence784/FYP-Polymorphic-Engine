@@ -111,7 +111,7 @@
            <rect>
             <x>0</x>
             <y>20</y>
-            <width>111</width>
+            <width>121</width>
             <height>17</height>
            </rect>
           </property>
@@ -122,30 +122,30 @@
            <bool>true</bool>
           </property>
          </widget>
-         <widget class="QRadioButton" name="radioButton">
+         <widget class="QRadioButton" name="Fatality_Payload_RButton">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>50</y>
-            <width>111</width>
+            <width>121</width>
             <height>17</height>
            </rect>
           </property>
           <property name="text">
-           <string>Payload X</string>
+           <string>Crash Your Program!</string>
           </property>
          </widget>
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="Message_Box_Payload_RButton">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>80</y>
-            <width>111</width>
+            <width>121</width>
             <height>17</height>
            </rect>
           </property>
           <property name="text">
-           <string>Payload Y</string>
+           <string>Hello Message Box</string>
           </property>
          </widget>
          <widget class="QRadioButton" name="radioButton_3">
@@ -153,7 +153,7 @@
            <rect>
             <x>0</x>
             <y>110</y>
-            <width>101</width>
+            <width>121</width>
             <height>17</height>
            </rect>
           </property>

@@ -419,49 +419,7 @@ debug\moc_choose_payload_controller.cpp: ..\Polymorphic_Engine_V1\choose_payload
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -579,49 +537,7 @@ debug\moc_clear_output_log_controller.cpp: ..\Polymorphic_Engine_V1\clear_output
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -744,49 +660,7 @@ debug\moc_compile_code_controller.cpp: ..\Polymorphic_Engine_V1\compile_code_con
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -913,49 +787,7 @@ debug\moc_create_new_file_controller.cpp: ..\Polymorphic_Engine_V1\create_new_fi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -1073,49 +905,7 @@ debug\moc_exit_application_controller.cpp: ..\Polymorphic_Engine_V1\exit_applica
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -1257,49 +1047,7 @@ debug\moc_file_reader.cpp: ..\Polymorphic_Engine_V1\file_reader.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -1438,49 +1186,7 @@ debug\moc_file_saver.cpp: ..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
 		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -1744,49 +1450,7 @@ debug\moc_morph_executable_controller.cpp: ..\Polymorphic_Engine_V1\morph_execut
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\systemz.h \
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\x86.h \
 		..\Polymorphic_Engine_V1\disassembly.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -1915,49 +1579,7 @@ debug\moc_open_existing_file_controller.cpp: ..\Polymorphic_Engine_V1\open_exist
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -2075,49 +1697,7 @@ debug\moc_redo_action_controller.cpp: ..\Polymorphic_Engine_V1\redo_action_contr
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -2239,49 +1819,7 @@ debug\moc_run_executable_controller.cpp: ..\Polymorphic_Engine_V1\run_executable
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QProcess \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -2408,49 +1946,7 @@ debug\moc_save_as_new_file_controller.cpp: ..\Polymorphic_Engine_V1\save_as_new_
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -2577,49 +2073,7 @@ debug\moc_save_current_file_controller.cpp: ..\Polymorphic_Engine_V1\save_curren
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -2737,49 +2191,7 @@ debug\moc_undo_action_controller.cpp: ..\Polymorphic_Engine_V1\undo_action_contr
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -2900,49 +2312,7 @@ debug\moc_view_about_information_controller.cpp: ..\Polymorphic_Engine_V1\view_a
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -3065,49 +2435,7 @@ debug\moc_view_compilation_status_controller.cpp: ..\Polymorphic_Engine_V1\view_
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -3228,49 +2556,7 @@ debug\moc_view_disassembly_controller.cpp: ..\Polymorphic_Engine_V1\view_disasse
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QDesktopServices \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -3421,49 +2707,7 @@ debug\moc_view_executable_signatures_controller.cpp: ..\Polymorphic_Engine_V1\vi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QCryptographicHash \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QByteArray \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -3607,49 +2851,7 @@ debug\moc_view_executable_sizes_controller.cpp: ..\Polymorphic_Engine_V1\view_ex
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -3794,49 +2996,7 @@ debug\moc_write_code_in_c_cpp_controller.cpp: ..\Polymorphic_Engine_V1\write_cod
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -3977,49 +3137,7 @@ debug\choose_payload_controller.obj: ..\Polymorphic_Engine_V1\choose_payload_con
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -4134,49 +3252,7 @@ debug\clear_output_log_controller.obj: ..\Polymorphic_Engine_V1\clear_output_log
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -4322,49 +3398,7 @@ debug\compile_code_controller.obj: ..\Polymorphic_Engine_V1\compile_code_control
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -4515,49 +3549,7 @@ debug\create_new_file_controller.obj: ..\Polymorphic_Engine_V1\create_new_file_c
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -4695,49 +3687,7 @@ debug\exit_application_controller.obj: ..\Polymorphic_Engine_V1\exit_application
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -4903,49 +3853,7 @@ debug\file_reader.obj: ..\Polymorphic_Engine_V1\file_reader.cpp ..\Polymorphic_E
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -5082,49 +3990,7 @@ debug\file_saver.obj: ..\Polymorphic_Engine_V1\file_saver.cpp ..\Polymorphic_Eng
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
 		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -5362,49 +4228,7 @@ debug\mainwindow.obj: ..\Polymorphic_Engine_V1\mainwindow.cpp ..\Polymorphic_Eng
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\exit_application_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
 		..\Polymorphic_Engine_V1\create_new_file_controller.h \
@@ -5624,49 +4448,7 @@ debug\morph_executable_controller.obj: ..\Polymorphic_Engine_V1\morph_executable
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\systemz.h \
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\x86.h \
 		..\Polymorphic_Engine_V1\disassembly.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -5821,49 +4603,7 @@ debug\open_existing_file_controller.obj: ..\Polymorphic_Engine_V1\open_existing_
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -5999,49 +4739,7 @@ debug\redo_action_controller.obj: ..\Polymorphic_Engine_V1\redo_action_controlle
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -6160,49 +4858,7 @@ debug\run_executable_controller.obj: ..\Polymorphic_Engine_V1\run_executable_con
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QProcess \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -6326,49 +4982,7 @@ debug\save_as_new_file_controller.obj: ..\Polymorphic_Engine_V1\save_as_new_file
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -6506,49 +5120,7 @@ debug\save_current_file_controller.obj: ..\Polymorphic_Engine_V1\save_current_fi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -6677,49 +5249,7 @@ debug\undo_action_controller.obj: ..\Polymorphic_Engine_V1\undo_action_controlle
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -6837,49 +5367,7 @@ debug\view_about_information_controller.obj: ..\Polymorphic_Engine_V1\view_about
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -6999,49 +5487,7 @@ debug\view_compilation_status_controller.obj: ..\Polymorphic_Engine_V1\view_comp
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -7184,49 +5630,7 @@ debug\view_disassembly_controller.obj: ..\Polymorphic_Engine_V1\view_disassembly
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QDesktopServices \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -7374,49 +5778,7 @@ debug\view_executable_signatures_controller.obj: ..\Polymorphic_Engine_V1\view_e
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QCryptographicHash \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QByteArray \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -7557,49 +5919,7 @@ debug\view_executable_sizes_controller.obj: ..\Polymorphic_Engine_V1\view_execut
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \
@@ -7741,49 +6061,7 @@ debug\write_code_in_c_cpp_controller.obj: ..\Polymorphic_Engine_V1\write_code_in
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
-		..\Polymorphic_Engine_V1\ui_mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\Polymorphic_Engine_V1\error.h \

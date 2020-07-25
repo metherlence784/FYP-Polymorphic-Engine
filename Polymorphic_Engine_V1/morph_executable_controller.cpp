@@ -1,6 +1,5 @@
 #include "morph_executable_controller.h"
-#include "file_reader.h"
-#include "file_saver.h"
+
 
 
 //constructor
@@ -1982,6 +1981,18 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             break;
 
+        case 1:
+            set_morphed_exe_name(exe_file_path,"_FATALITY_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(FATALITY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,FATALITY_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 2:
+            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
         default:
             break;
     }
@@ -2300,7 +2311,20 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
 
+        case 1:
+            set_morphed_exe_name(exe_file_path,"_FATALITY_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(FATALITY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,FATALITY_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 2:
+            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         default:
@@ -2698,6 +2722,19 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
             set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 1:
+            set_morphed_exe_name(exe_file_path,"_FATALITY_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(FATALITY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,FATALITY_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 2:
+            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
+            std::cout << "case2" << std::endl;
             break;
 
         default:

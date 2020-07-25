@@ -1,8 +1,4 @@
 #include "compile_code_controller.h"
-#include "write_code_in_c_cpp_controller.h"
-#include "save_current_file_controller.h"
-#include "file_reader.h"
-
 
 //constructor
 Compile_Code_Controller::Compile_Code_Controller()
@@ -13,8 +9,6 @@ Compile_Code_Controller::Compile_Code_Controller()
     this->exe_name = QString("");
     this->analysis_textbox_status = QString("");
     this->temp_compile = QString("");
-
-
 }
 
 //destructor

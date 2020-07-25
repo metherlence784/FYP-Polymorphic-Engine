@@ -5,6 +5,7 @@
 #include <QCloseEvent>
 
 #include "error.h"
+#include <stdio.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

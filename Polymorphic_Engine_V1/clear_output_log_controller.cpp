@@ -1,7 +1,5 @@
 #include "clear_output_log_controller.h"
-#include "file_reader.h"
 
-#include <QFileInfo>
 
 //constructor
 Clear_Output_Log_Controller::Clear_Output_Log_Controller()

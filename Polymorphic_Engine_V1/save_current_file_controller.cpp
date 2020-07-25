@@ -1,6 +1,4 @@
 #include "save_current_file_controller.h"
-#include "write_code_in_c_cpp_controller.h"
-#include "file_saver.h"
 
 //constructor
 Save_Current_File_Controller::Save_Current_File_Controller()
@@ -33,9 +31,9 @@ void Save_Current_File_Controller::save()
     QString filepath = cur_wind->get_cur_file_path();//uses the filepath saved in the main ui object
     Write_Code_In_C_CPP_Controller writer;
 
-    File_Saver save(get_cur_wind());
+    File_Saver saver;
     std::cout<< filepath.toStdString() + "\n";
-    save.save_file(filepath, writer.get_text());//uses the file saver to save the file
+    saver.save_file(filepath, writer.get_text());//uses the file saver to save the file
 }
 
 

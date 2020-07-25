@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include <QDebug>
 #include <QFile>
 #include <QFileDialog>
 #include <QTextStream>
@@ -20,15 +19,17 @@
 #include <sstream>
 #include <iomanip>
 
-#include "open_existing_file_controller.h"
 #include "template_functions.h"
+#include "PE32.h"
+
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 class File_Reader : public QObject
 {
     Q_OBJECT
 public:
     File_Reader();
-    File_Reader(MainWindow *mw_ptr);//Constructor
     ~File_Reader();
 
     QStringList open_file();
@@ -38,6 +39,11 @@ public:
 	
 	qint64 get_executable_size(QString exe_file_path);
 
+    //accessor
+    MainWindow* get_cur_wind();
+
+    //mutator
+    void set_cur_wind(MainWindow* cur_wind);
 
 private:
     MainWindow *cur_wind; // variable pointer for mainwindow class to access ui

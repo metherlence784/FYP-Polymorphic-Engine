@@ -4,10 +4,8 @@
 #include <QMainWindow>
 #include <QObject>
 
-
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
-
 
 class Undo_Action_Controller : public QObject
 {

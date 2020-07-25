@@ -3,12 +3,11 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include <QFile>
-#include <QFileDialog>
-#include <QTextStream>
-#include <QMessageBox>
 
 #include <iostream>
+
+#include "write_code_in_c_cpp_controller.h"
+#include "file_saver.h"
 
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
