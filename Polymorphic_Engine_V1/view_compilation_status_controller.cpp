@@ -1,17 +1,20 @@
 #include "view_compilation_status_controller.h"
 #include "file_reader.h"
 
+//constructor
 View_Compilation_Status_Controller::View_Compilation_Status_Controller()
 {
     this->cur_wind = MainWindow::getMWptr();
 }
 
+//desstructor
 View_Compilation_Status_Controller::~View_Compilation_Status_Controller()
 {
     this->cur_wind = nullptr;
     delete this->cur_wind;
 }
 
+//accessors
 QString View_Compilation_Status_Controller::get_compilation_status()
 {
     return this->compilation_status;
@@ -22,6 +25,7 @@ MainWindow *View_Compilation_Status_Controller::get_cur_wind()
     return this->cur_wind;
 }
 
+//mutators
 void View_Compilation_Status_Controller::set_text_analysis_textbox(QString txt)
 {
     this->cur_wind->set_text_analysis_textbox(txt);
@@ -39,7 +43,7 @@ void View_Compilation_Status_Controller::set_compilation_status(QString compilat
 
 void View_Compilation_Status_Controller::update_analysis_textbox_and_enable_morph(QString analysis_textbox_status, qint64 elapsed_time, QString txt_file)
 {
-    this->cur_wind->ui->tabWidget->setCurrentIndex(1);
+    this->cur_wind->ui->tabWidget->setCurrentIndex(1);//switch to analysis tab
 
         QString previous_text_from_analysis = analysis_textbox_status;
 

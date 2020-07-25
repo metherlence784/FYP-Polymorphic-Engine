@@ -25,7 +25,6 @@ QString View_Disassembly_Controller::get_file_text()
     return this->file_text;
 }
 
-
 //mutator
 void View_Disassembly_Controller::set_cur_wind(MainWindow *cur)
 {
@@ -39,7 +38,7 @@ void View_Disassembly_Controller::set_file_text(QString file_text)
 
 void View_Disassembly_Controller::set_enabled_view_disassembly_button(QString morph_status)
 {
-    if(morph_status.contains("ERROR") == false)
+    if(morph_status.contains("ERROR") == false)//if not error then enable
     {
         this->cur_wind->set_enabled_view_disassembly_button(true);
     }
@@ -47,6 +46,7 @@ void View_Disassembly_Controller::set_enabled_view_disassembly_button(QString mo
 
 void View_Disassembly_Controller::write_disassembly(QString file_path, QString disassembly)
 {
+	//get current directory
     std::string file_directory = file_path.toStdString();
     file_directory = file_directory.substr(0,file_directory.find_last_of("/") + 1);
 
@@ -61,21 +61,17 @@ void View_Disassembly_Controller::write_disassembly(QString file_path, QString d
     File_Saver saver;
     saver.save_file(file_path,this->file_text);
 
-    //file_path contains the whole directory with file i.e. C:/Users/jtf25/Pictures/memes/Test/Disassembly_log.txt
-    QDesktopServices::openUrl(QUrl(file_path, QUrl::TolerantMode));
-
+    QDesktopServices::openUrl(QUrl(file_path, QUrl::TolerantMode));//pop up txt file for the disassembly
 }
-
 
 void View_Disassembly_Controller::get_text_from_disassembly_log(QString file_path)
 {
     File_Reader reader;
     set_file_text(reader.file_check(file_path));
 
-    if(this->file_text.contains("ERROR") == true)
+    if(this->file_text.contains("ERROR") == true)//if not error then set
     {
         set_file_text(QString(""));
-
     }
 }
 

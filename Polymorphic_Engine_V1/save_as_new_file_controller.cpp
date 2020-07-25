@@ -27,6 +27,7 @@ void Save_As_New_File_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
+//saving as new file
 void Save_As_New_File_Controller::save_as_new_file()
 {
     File_Saver saving(get_cur_wind());
@@ -49,7 +50,6 @@ void Save_As_New_File_Controller::save_as_new_file()
     {
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable to save file due to invalid file extension");
-
     }
     else
     {

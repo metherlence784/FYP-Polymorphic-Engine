@@ -9,11 +9,6 @@ File_Saver::File_Saver()
     this->cur_wind = nullptr;
 }
 
-File_Saver::File_Saver(MainWindow *mw_ptr)
-{
-    this->cur_wind = mw_ptr;
-}
-
 //destructor
 File_Saver::~File_Saver()
 {
@@ -21,12 +16,20 @@ File_Saver::~File_Saver()
     delete this->cur_wind;
 }
 
+//accessor
+File_Saver::File_Saver(MainWindow *mw_ptr)
+{
+    this->cur_wind = mw_ptr;
+}
+
+//saving a new file
 QString File_Saver::new_file()
 {
-    QString filters("C++ file (*.cpp);;C file (*.c)");
+    QString filters("C++ file (*.cpp);;C file (*.c)");//msut be saved in .c or .cpp
     QString default_filter("C++ file (*.cpp)");
     QString file_path = QString();
-
+	
+	//use dialog to save file
     file_path = QFileDialog::getSaveFileName(cur_wind,"Save your file",QDir::currentPath()
                                              ,filters,&default_filter); // this opens the file directory window
 
@@ -36,20 +39,20 @@ QString File_Saver::new_file()
         // any error involving reading of files i.e. system errors
         return ERROR_SYSTEM_FAULT;
     }
+	
     QTextStream out(&file);
     QString text = QString("");
-    out << text;
+    out << text;//store empty string to file for safety
     file.close();
 
     //checking for invalid characters set up
-    QRegExp rx("[@!\'\"#$%^&<>?/|}{~:]");
-    std::size_t symbol = file_path.toStdString().find_last_of("/");
+    QRegExp rx("[@!\'\"#$%^&<>?/|}{~:]"); //file name cannot contain these chars
+    std::size_t symbol = file_path.toStdString().find_last_of("/");//finding the file name using substring
     std::string to_load_file = file_path.toStdString().substr(symbol+1);
     QString cur_file = QString::fromStdString(to_load_file);
 
     if(cur_file.contains(rx) == true) // if file name contains invalid characters
     {
-
         //delete file here
         QFile delete_file (file_path);
         delete_file.remove();
@@ -62,17 +65,15 @@ QString File_Saver::new_file()
         std::string test = cur_file.toStdString().substr(cur_file.toStdString().find_last_of(".")+1);
 
         if(test.compare("cpp") == 0)
-        {
-
-
+        {	
+			//if .cpp do nothing
         }
         else if(test.compare("c") == 0)
         {
-
+			//if .c do nothing
         }
         else
         {
-
             //delete file here
             QFile delete_file (file_path);
             delete_file.remove();
@@ -84,8 +85,10 @@ QString File_Saver::new_file()
     return file_path;
 }
 
+//saving file as
 QString File_Saver::save_file_as(QString text)
 {
+	//similar to the above function but user can rename the file
     QString filters("C++ file (*.cpp);;C file (*.c)");
     QString default_filter("C++ file (*.cpp)");
     QString file_path = QString();
@@ -113,7 +116,6 @@ QString File_Saver::save_file_as(QString text)
 
     if(cur_file.contains(rx) == true) // if file name contains invalid characters
     {
-
         //delete file here
         QFile delete_file (file_path);
         delete_file.remove();
@@ -143,9 +145,9 @@ QString File_Saver::save_file_as(QString text)
     }
 
     return file_path;
-
 }
 
+//for quick save
 void File_Saver::save_file(QString file_path, QString text)
 {
     QFile file(file_path);
@@ -153,7 +155,6 @@ void File_Saver::save_file(QString file_path, QString text)
     {
         QTextStream out(&file);
         out << text;
-
     }
     else
     {
@@ -164,13 +165,14 @@ void File_Saver::save_file(QString file_path, QString text)
     file.close();
 }
 
+//writing a exe file
 void File_Saver::write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer)
 {
     QFile file(morphed_exe_file_path);
     if(file.open(QFile::WriteOnly))//this means file stream is opened successfully
     {
         QDataStream out(&file);
-        out.writeRawData(&buffer[0],buffer.size());
+        out.writeRawData(&buffer[0],buffer.size());//put the whoel buffer into the exe file
     }
     else
     {

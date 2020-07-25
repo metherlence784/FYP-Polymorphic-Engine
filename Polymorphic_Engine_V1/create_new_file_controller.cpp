@@ -30,27 +30,27 @@ void Create_New_File_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
-//methods below
+
 void Create_New_File_Controller::create_new_file()
 {
     File_Saver saving(get_cur_wind());
-    QString file_path = saving.new_file();
+    QString file_path = saving.new_file();//save a new file using file_saver
 
     if(file_path == ERROR_SYSTEM_FAULT)
     {
-
+		//if error do nothing
     }
     else if (file_path == ERROR_INVALID_CHARACTERS)
     {
+		//pop up message box
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable save file due to invalid characters");
-
     }
     else if (file_path == ERROR_INVALID_FILE_EXTENSION)
     {
+		//pop up message box
         QMessageBox::warning(cur_wind, "Warning",
                              "Unable save file due to invalid file extension");
-
     }
     else
     {
@@ -67,10 +67,10 @@ void Create_New_File_Controller::create_new_file()
         Choose_Payload_Controller payloader;
         payloader.set_enabled_payload_groupbox(true);//enables the payload radio buttons
 
+		//enable compilation related UI
         Compile_Code_Controller compiler;
         compiler.set_enabled_compile_button(true);
         compiler.set_enabled_compile_menu_item(true);
         compiler.set_enabled_analysis_textbox(true);
-
     }
 }

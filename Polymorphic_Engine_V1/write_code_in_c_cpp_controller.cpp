@@ -32,6 +32,7 @@ void Write_Code_In_C_CPP_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
+//set the text into the input text box
 void Write_Code_In_C_CPP_Controller::set_text(QString txt)
 {
     this->text = txt;

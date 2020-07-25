@@ -26,6 +26,7 @@ void Redo_Action_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
+//redo action
 void Redo_Action_Controller::redo_action()
 {
     this->cur_wind->ui->Code_Input_Textbox->redo();

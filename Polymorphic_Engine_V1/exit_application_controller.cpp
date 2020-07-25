@@ -31,7 +31,7 @@ void Exit_Application_Controller::set_cur_wind(MainWindow *cur)
 //exit function
 void Exit_Application_Controller::exit_application()
 {
-
+	//first checking if current progress is saved
     File_Reader reader(get_cur_wind());
     QString file_text = reader.file_check(cur_wind->get_cur_file_path());
 
@@ -61,7 +61,7 @@ void Exit_Application_Controller::exit_application()
         reply = QMessageBox::question(cur_wind, "Exit",
                                       "You have unsaved progress!\nAre you sure you want to quit?",
                                       QMessageBox::Yes|QMessageBox::No);
-        if (reply == QMessageBox::Yes)
+        if (reply == QMessageBox::Yes)//button to click yes or cancel
         {
             std::cout << "Yes was clicked";
             QApplication::quit();
@@ -71,11 +71,12 @@ void Exit_Application_Controller::exit_application()
             std::cout << "Yes was *not* clicked";
         }
     }
-
 }
 
+//same as above function but this is meant for the X button of the window
 void Exit_Application_Controller::exit_application(QCloseEvent *event)
 {
+	//first checking if current progress is saved
     File_Reader reader(get_cur_wind());
     QString file_text = reader.file_check(cur_wind->get_cur_file_path());
 

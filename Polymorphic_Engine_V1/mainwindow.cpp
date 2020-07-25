@@ -17,11 +17,7 @@
 #include "view_executable_signatures_controller.h"
 #include "view_disassembly_controller.h"
 
-
 #include <stdio.h>
-#include <keystone.h>
-
-#define CODE "INC ecx; DEC edx"
 
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
@@ -35,7 +31,6 @@ MainWindow::MainWindow(QWidget *parent)
     MWptr = this;
     this->cur_file_path = "";
     this->original_exe_file_path = "";
-
 }
 
 //destructor
@@ -184,8 +179,6 @@ void MainWindow::set_text_analysis_textbox(QString txt)
     this->ui->Analysis_Textbox->setText(txt);
 }
 
-
-
 void MainWindow::set_original_executable_label(QString original_exe_name)
 {
     this->ui->Original_Executable_Label->setText(original_exe_name);
@@ -204,58 +197,55 @@ void MainWindow::set_disassembly_log(QString disassembly_log)
 //button triggers below here
 void MainWindow::on_Exit_Menu_Item_triggered()
 {
-    Exit_Application_Controller my_exit;
-    my_exit.exit_application();
+    Exit_Application_Controller exiter;
+    exiter.exit_application();
 }
 
 void MainWindow::on_New_File_Menu_Item_triggered()
 {
-    Create_New_File_Controller my_new;
-    my_new.create_new_file();
+    Create_New_File_Controller newer;
+    newer.create_new_file();
 }
 
 void MainWindow::on_Save_As_Menu_Item_triggered()
 {
-    Save_As_New_File_Controller my_save_as;
-    my_save_as.save_as_new_file();
+    Save_As_New_File_Controller saver;
+    saver.save_as_new_file();
 }
 
 void MainWindow::on_Save_Menu_Item_triggered()
 {
-    Save_Current_File_Controller my_save;
-    my_save.save();
+    Save_Current_File_Controller saver;
+    saver.save();
 }
 
 void MainWindow::on_Open_File_Menu_Item_triggered()
 {
-//    Open_Existing_File_Controller *my_open = new Open_Existing_File_Controller();
-//    my_open->open_existing_file();
-    Open_Existing_File_Controller test;
-    test.open_existing_file();
+    Open_Existing_File_Controller opener;
+    opener.open_existing_file();
 }
 
 void MainWindow::closeEvent (QCloseEvent *event)
 {
-    Exit_Application_Controller my_exit;
-    my_exit.exit_application(event);
+    Exit_Application_Controller exiter;
+    exiter.exit_application(event);
 }
 
 
 void MainWindow::on_Undo_Menu_Item_triggered()
 {
-    Undo_Action_Controller my_undo;
-    my_undo.undo_action();
+    Undo_Action_Controller undoer;
+    undoer.undo_action();
 }
 
 void MainWindow::on_Redo_Menu_Item_triggered()
 {
-    Redo_Action_Controller my_redo;
-    my_redo.redo_action();
+    Redo_Action_Controller redoer;
+    redoer.redo_action();
 }
 
 void MainWindow::on_Compile_Button_clicked()
 {
-
     Compile_Code_Controller compiler;
     compiler.get_file_name();
     compiler.get_file_path();
@@ -264,11 +254,12 @@ void MainWindow::on_Compile_Button_clicked()
 
     QString original_exe_file_path = compiler.get_exe_file_path();
     QString original_exe_name = compiler.get_exe_name();
-
+	
+	//setting the variables
     set_original_exe_file_path(original_exe_file_path);
     set_original_exe_name(original_exe_name);
 
-       //to update analysis textbox
+    //to update analysis textbox
     QString analysis_textbox_status = compiler.get_analysis_textbox_status();
     qint64 elapsed_time = compiler.get_elapsed_time();
     QString temp_compile = compiler.get_temp_compile();
@@ -277,23 +268,24 @@ void MainWindow::on_Compile_Button_clicked()
     viewer.update_analysis_textbox_and_enable_morph(analysis_textbox_status,elapsed_time,temp_compile);
 
     QString compilation_status = viewer.get_compilation_status();
-
+	
+	//enable the run original button
     Run_Executable_Controller runner;
     runner.set_original_exe_name(original_exe_name);
     runner.set_original_executable_label(compilation_status);
     runner.set_enabled_run_original_button(compilation_status);
-
+	
+	//enable the view signature button
     View_Executable_Signatures_Controller signer;
     signer.set_enabled_view_executable_signature_button(compilation_status);
-
+	
+	//enabled the view sized button
     View_Executable_Sizes_Controller sizer;
     sizer.set_enabled_view_executable_size_button(compilation_status);
-
 }
 
 void MainWindow::on_Compile_Menu_Item_triggered()
 {
-
     Compile_Code_Controller compiler;
     compiler.get_file_name();
     compiler.get_file_path();
@@ -302,11 +294,12 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 
     QString original_exe_file_path = compiler.get_exe_file_path();
     QString original_exe_name = compiler.get_exe_name();
-
+	
+	//setting the variables
     set_original_exe_file_path(original_exe_file_path);
     set_original_exe_name(original_exe_name);
 
-       //to update analysis textbox
+    //to update analysis textbox
     QString analysis_textbox_status = compiler.get_analysis_textbox_status();
     qint64 elapsed_time = compiler.get_elapsed_time();
     QString temp_compile = compiler.get_temp_compile();
@@ -315,72 +308,78 @@ void MainWindow::on_Compile_Menu_Item_triggered()
     viewer.update_analysis_textbox_and_enable_morph(analysis_textbox_status,elapsed_time,temp_compile);
 
     QString compilation_status = viewer.get_compilation_status();
-
+	
+	//enable the run original button
     Run_Executable_Controller runner;
     runner.set_original_exe_name(original_exe_name);
     runner.set_original_executable_label(compilation_status);
     runner.set_enabled_run_original_button(compilation_status);
-
+	
+	//enable the view signature button
     View_Executable_Signatures_Controller signer;
     signer.set_enabled_view_executable_signature_button(compilation_status);
-
+	
+	//enabled the view sized button
     View_Executable_Sizes_Controller sizer;
     sizer.set_enabled_view_executable_size_button(compilation_status);
-
-
 }
 
 void MainWindow::on_Morph_Menu_Item_triggered()
 {
-
     Morph_Executable_Controller morpher;
-    QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);
+    QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);//morphing
 
     QString morphed_exe_name = morpher.get_morphed_exe_name();
     QString morphed_exe_file_path = morpher.get_morphed_exe_file_path();
-    QString disassembly_log = morpher.get_disassembly_log();
-
+    QString disassembly_log = morpher.get_disassembly_log();//getting the disassebly of the payload
+	
+	//setting variables
     set_morphed_exe_name(morphed_exe_name);
     set_morphed_exe_file_path(morphed_exe_file_path);
     set_disassembly_log(disassembly_log);
-
+	
+	//setting the anaylsis textbox
     qint64 elapsed_time = morpher.get_elapsed_time();
     QString analysis_textbox_status = get_text_analysis_textbox();
     morpher.update_analysis_textbox(analysis_textbox_status,elapsed_time,morph_status);
-
+	
+	//enable the run morphed button
     Run_Executable_Controller runner;
     runner.set_morphed_exe_name(morphed_exe_name);
     runner.set_morphed_executable_label(morph_status);
     runner.set_enabled_run_morphed_button(morph_status);
-
+	
+	//enabled the view disassebly button
     View_Disassembly_Controller disassembler;
     disassembler.set_enabled_view_disassembly_button(morph_status);
-
 }
 
 void MainWindow::on_Morph_Button_clicked()
 {
-
     Morph_Executable_Controller morpher;
-    QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);
+    QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);//morphing
 
     QString morphed_exe_name = morpher.get_morphed_exe_name();
     QString morphed_exe_file_path = morpher.get_morphed_exe_file_path();
-    QString disassembly_log = morpher.get_disassembly_log();
-
+    QString disassembly_log = morpher.get_disassembly_log();//getting the disassebly of the payload
+	
+	//setting variables
     set_morphed_exe_name(morphed_exe_name);
     set_morphed_exe_file_path(morphed_exe_file_path);
     set_disassembly_log(disassembly_log);
-
+	
+	//setting the anaylsis textbox
     qint64 elapsed_time = morpher.get_elapsed_time();
     QString analysis_textbox_status = get_text_analysis_textbox();
     morpher.update_analysis_textbox(analysis_textbox_status,elapsed_time,morph_status);
-
+	
+	//enable the run morphed button
     Run_Executable_Controller runner;
     runner.set_morphed_exe_name(morphed_exe_name);
     runner.set_morphed_executable_label(morph_status);
     runner.set_enabled_run_morphed_button(morph_status);
-
+	
+	//enabled the view disassebly button
     View_Disassembly_Controller disassembler;
     disassembler.set_enabled_view_disassembly_button(morph_status);
 }
@@ -427,5 +426,4 @@ void MainWindow::on_View_Disassembly_Button_clicked()
 {
     View_Disassembly_Controller disassembler;
     disassembler.write_disassembly(this->cur_file_path,this->disassembly_log);
-
 }

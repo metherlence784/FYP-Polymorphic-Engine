@@ -28,9 +28,8 @@ void Clear_Output_Log_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
+//clear the analysis text box
 void Clear_Output_Log_Controller::clear_output_log()
 {
     this->cur_wind->set_text_analysis_textbox(QString(""));
-
-
 }

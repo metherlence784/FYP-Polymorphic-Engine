@@ -1,5 +1,6 @@
 #include "disassembly.h"
 
+//constructor
 Disassembly::Disassembly()
 {
     this->id = 0;
@@ -13,6 +14,7 @@ Disassembly::Disassembly()
     this->has_been_modified = false;
 }
 
+//desttructor
 Disassembly::~Disassembly()
 {
 
@@ -30,6 +32,7 @@ Disassembly::Disassembly(int id, int address, std::string mnemonic, std::string 
     this->not_in_jump = true;
     this->has_been_modified = false;
 
+	//putting the array into a vector
     for (int i = 0; i < size; i++)
     {
         this->bytes_vec.emplace_back(byte_array[i]);
@@ -97,6 +100,7 @@ Disassembly::Disassembly(int id, int address, std::string mnemonic, std::string 
     }
 }
 
+//accessotrs
 int Disassembly::get_id()
 {
     return this->id;
@@ -137,17 +141,19 @@ int Disassembly::get_twos_complement_offset()
     return this->twos_complement_offset;
 }
 
-
+//check if its not within a jump instruction
 bool Disassembly::get_not_in_jump()
 {
     return this->not_in_jump;
 }
 
+//check if it has been modified
 bool Disassembly::get_modified_status()
 {
     return this->has_been_modified;
 }
 
+//mutators
 void Disassembly::set_id(int id)
 {
     this->id = id;
@@ -188,7 +194,6 @@ void Disassembly::set_twos_complement_offset(int twos_complement_offset)
     this->twos_complement_offset = twos_complement_offset;
 }
 
-
 void Disassembly::set_not_in_jump(bool not_in_jump)
 {
     this->not_in_jump = not_in_jump;
@@ -200,14 +205,12 @@ void Disassembly::set_modified_true()
 
 }
 
-
 //calculate the twos complement offset
 int Disassembly::calculate_twos_complement_offset_char(signed char offset)
 {
     bool is_negative = false;
     int result = offset;
     unsigned char temp = 0;
-
 
     if (((offset & 0x80) >> 7) == 1) //to get the most left significant bit //masking 8th bit
     {
@@ -257,7 +260,7 @@ unsigned int Disassembly::convert_string_to_hex(std::string hexstr)
     return hex_val;
 }
 
-//just to print the class for checkign purposes
+//overload the cout operator so its easier to print
 std::ostream &operator<<(std::ostream &os, Disassembly &d)
 {
     std::stringstream ss;
@@ -283,8 +286,7 @@ std::ostream &operator<<(std::ostream &os, Disassembly &d)
         }
     }
 
-    ss.flags(flag);
-
+    ss.flags(flag);//resetting flags to take out hexadecimal
     ss << " ";
 
     os << ss.str();

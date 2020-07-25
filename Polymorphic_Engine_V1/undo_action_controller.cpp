@@ -25,6 +25,7 @@ void Undo_Action_Controller::set_cur_wind(MainWindow *cur)
     this->cur_wind = cur;
 }
 
+//undo action
 void Undo_Action_Controller::undo_action()
 {
     this->cur_wind->ui->Code_Input_Textbox->undo();

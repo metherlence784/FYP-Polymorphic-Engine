@@ -6,12 +6,6 @@ File_Reader::File_Reader()
 {
     this->cur_wind = nullptr;
 }
-
-File_Reader::File_Reader(MainWindow *mw_ptr)
-{
-    this->cur_wind = mw_ptr;
-}
-
 //destructor
 File_Reader::~File_Reader()
 {
@@ -19,21 +13,28 @@ File_Reader::~File_Reader()
     delete this->cur_wind;
 }
 
+//accessor
+File_Reader::File_Reader(MainWindow *mw_ptr)
+{
+    this->cur_wind = mw_ptr;
+}
+
+//opening a file
 QStringList File_Reader::open_file()
 {
-    QString filters("C++ file (*.cpp);;C file (*.c)");
+    QString filters("C++ file (*.cpp);;C file (*.c)");//file must be .c or .cpp
     QString default_filter("C++ file (*.cpp)");
-    QString file_path = QString();
+    QString file_path = QString("");
     QStringList list;
-
+	
+	//use dialog box to open file
     file_path = QFileDialog::getOpenFileName(cur_wind,"Select file to open",QDir::currentPath()
                                              ,filters,&default_filter); // this opens the file directory window
-
-
+											 
     cur_wind->set_cur_file_path(file_path);//set file name
     list << file_path;
 
-    QFile file(file_path);
+    QFile file(file_path);//opening the file chosen
     if(file.open(QIODevice::ReadOnly|QFile::Text))
     {
         QTextStream in(&file);
@@ -52,12 +53,9 @@ QStringList File_Reader::open_file()
     return list;
 }
 
-
-
-
+//ccheckign if the file is saved
 QString File_Reader::file_check(QString file_path)
 {
-
     QString file_text = ERROR_FILE_NOT_FOUND; // incase cannot open, by default it is set to "error"
 
     QFile file(file_path);
@@ -65,19 +63,15 @@ QString File_Reader::file_check(QString file_path)
     {
         QTextStream in(&file);
         QString text = in.readAll();
-        file_text = text;
-        file.close();
-        return file_text;
-    }
-    else
-    {
-        // error handling goes here
-        file.close();
-        return file_text;
+        file_text = text;//text from file must be equal to the one in the coding text box
+
     }
 
+	file.close();
+	return file_text;
 }
 
+//reading the compilation status
 QString File_Reader::read_compile_status(QString file_path)
 {
     QFile file(file_path);
@@ -86,15 +80,16 @@ QString File_Reader::read_compile_status(QString file_path)
     if(file.open(QIODevice::ReadOnly|QFile::Text))
     {
         QTextStream in(&file);
-        text = in.readAll();
+        text = in.readAll();//read file from the temp folder
         file.close();
 
         QString to_delete = QString("del \"") + file_path + QString("\"");
         to_delete.replace("/","\\"); // replaces ever occurence of / with \, for some @#$% reason, the file path dosent work with /
-
+		
+		//delete temp text file
         system(to_delete.toStdString().c_str());
-        return text;
     }
+	
     file.close();
     return text;
 }
@@ -111,13 +106,10 @@ QString File_Reader::read_file_into_vector(QString exe_file_path,std::vector<cha
 
         while(!file.atEnd())
         {
-            file.read(&data,sizeof(BYTE));
-
+            file.read(&data,sizeof(BYTE));//reading each byte and putting it into a buffer
             buffer.emplace_back(data);
-
         }
         status = SUCCESS_VALID_EXECUTABLE;
-
     }
     else
     {
@@ -128,11 +120,8 @@ QString File_Reader::read_file_into_vector(QString exe_file_path,std::vector<cha
     return status;
 }
 
-
 qint64 File_Reader::get_executable_size(QString exe_file_path)
 {
 	QFileInfo info (exe_file_path);
     return info.size(); //if filepath not found, will return 0
 }
-
-

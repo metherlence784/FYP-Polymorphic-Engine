@@ -1,10 +1,12 @@
 #include "view_executable_signatures_controller.h"
 
+//constructor
 View_Executable_Signatures_Controller::View_Executable_Signatures_Controller()
 {
     this->cur_wind = MainWindow::getMWptr();
 }
 
+//destructor
 View_Executable_Signatures_Controller::~View_Executable_Signatures_Controller()
 {
     this->cur_wind = nullptr;
@@ -35,23 +37,26 @@ void View_Executable_Signatures_Controller::set_text_analysis_textbox(QString tx
 
 bool View_Executable_Signatures_Controller::check_if_file_exist(QString status)
 {
-    if(status.contains("SUCCESS") == true)
+    if(status.contains("SUCCESS") == true)//if success then return
     {
         return true;
     }
     return false;
 }
 
+//put the hashes in the anaylsis txt box
 void View_Executable_Signatures_Controller::set_executable_signature_in_analysis_textbox(QString original_exe_file_path, QString original_exe_name, QString morphed_exe_file_path, QString morphed_exe_name)
 {
     File_Reader reader;
-
+	
+	//store both exe into buffers
     std::vector<char> original_buffer;
     std::vector<char> morphed_buffer;
 
     QString original_status = reader.read_file_into_vector(original_exe_file_path,original_buffer);
     QString morphed_status = reader.read_file_into_vector(morphed_exe_file_path,morphed_buffer);
-
+	
+	//hash the contents of buffers
     QString original_hash = hash_buffer_MD5(original_buffer,original_status);
     QString morphed_hash = hash_buffer_MD5(morphed_buffer,morphed_status);
 
@@ -79,13 +84,14 @@ QString View_Executable_Signatures_Controller::hash_buffer_MD5(std::vector<char>
 
     if(check_if_file_exist(status) == true)
     {
-        QCryptographicHash hasher(QCryptographicHash::Md5);
+        QCryptographicHash hasher(QCryptographicHash::Md5);//using md5 hash 
         hasher.addData(buffer.data(),buffer.size());
         result = hasher.result().toHex();
     }
     return result;
 }
 
+//just to show if hashes are the same or not
 QString View_Executable_Signatures_Controller::compare_hashes(QString original_hash, QString morphed_hash)
 {
     if(original_hash == morphed_hash)

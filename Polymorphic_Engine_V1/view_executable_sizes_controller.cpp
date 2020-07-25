@@ -24,8 +24,6 @@ QString View_Executable_Sizes_Controller::get_text_analysis_textbox()
     return this->cur_wind->get_text_analysis_textbox();
 }
 
-
-
 //mutator
 void View_Executable_Sizes_Controller::set_cur_wind(MainWindow *cur)
 {
@@ -53,7 +51,8 @@ void View_Executable_Sizes_Controller::set_executable_sizes_in_analysis_textbox(
                                                                   QString morphed_exe_name)
 {
     File_Reader reader;
-
+	
+	//get the exe sizes
     qint64 original_exe_size = reader.get_executable_size(original_exe_file_path);
     qint64 morphed_exe_size = reader.get_executable_size(morphed_exe_file_path);
 

@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <sstream>
 
+//converting number to hex
 template<typename T>
 std::string convert_num_to_hex(T i)
 {

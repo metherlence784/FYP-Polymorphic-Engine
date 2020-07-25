@@ -1,7 +1,6 @@
 #include "view_about_information_controller.h"
 
-//https://sgsean8.wixsite.com/polygine
-
+//constructor
 View_About_Information_Controller::View_About_Information_Controller()
 {
     this->cur_wind = MainWindow::getMWptr();
@@ -15,7 +14,6 @@ View_About_Information_Controller::View_About_Information_Controller()
     this->about_us += QString("Polymorphic Engine version 1.0<br><br>");
     this->about_us += QString("For more information about the polymorphic engine, click ");
     this->about_us += QString("<a href=\'https://sgsean8.wixsite.com/polygine/\'>here</a>");
-
 }
 
 //destructor
@@ -39,7 +37,7 @@ void View_About_Information_Controller::set_cur_wind(MainWindow *cur)
 
 void View_About_Information_Controller::view_about_us()
 {
-   QMessageBox about_box;
+   QMessageBox about_box; //pop up a window to display the text
    about_box.setTextFormat(Qt::RichText);   //this is what makes the links clickable
    about_box.setWindowTitle("About us");
    about_box.setText(this->about_us);

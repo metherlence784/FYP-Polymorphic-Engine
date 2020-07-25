@@ -71,7 +71,7 @@ void Run_Executable_Controller::set_morphed_exe_file_path(QString morphed_exe_fi
 
 void Run_Executable_Controller::set_enabled_run_original_button(QString compilation_status)
 {
-    if(compilation_status.contains("ERROR") == false)
+    if(compilation_status.contains("ERROR") == false)//if not and error, enable
     {
         this->cur_wind->set_enabled_run_original_button(true);
     }
@@ -79,7 +79,7 @@ void Run_Executable_Controller::set_enabled_run_original_button(QString compilat
 
 void Run_Executable_Controller::set_enabled_run_morphed_button(QString morph_status)
 {
-    if(morph_status.contains("ERROR") == false)
+    if(morph_status.contains("ERROR") == false)//if not and error, enable
     {
         this->cur_wind->set_enabled_run_morphed_button(true);
     }
@@ -87,7 +87,7 @@ void Run_Executable_Controller::set_enabled_run_morphed_button(QString morph_sta
 
 void Run_Executable_Controller::set_original_executable_label(QString original_status)
 {
-    if(original_status.contains("ERROR") == false)
+    if(original_status.contains("ERROR") == false)//if not and error, enable
     {
         this->cur_wind->set_original_executable_label(this->original_exe_name);
     }
@@ -95,7 +95,7 @@ void Run_Executable_Controller::set_original_executable_label(QString original_s
 
 void Run_Executable_Controller::set_morphed_executable_label(QString morphed_status)
 {
-    if(morphed_status.contains("ERROR") == false)
+    if(morphed_status.contains("ERROR") == false)//if not and error, enable
     {
         this->cur_wind->set_morphed_executable_label(this->morphed_exe_name);
     }
@@ -103,6 +103,7 @@ void Run_Executable_Controller::set_morphed_executable_label(QString morphed_sta
 
 void Run_Executable_Controller::run_original_executable(QString original_exe_file_path)
 {
+	//use cmd line to run the file
     std::string command = "start cmd.exe /k cmd /c \"" + original_exe_file_path.toStdString() +  "\"";
     std::cout << command << std::endl;
     system(command.c_str());
@@ -110,6 +111,7 @@ void Run_Executable_Controller::run_original_executable(QString original_exe_fil
 
 void Run_Executable_Controller::run_morphed_executable(QString morphed_exe_file_path)
 {
+	//use cmd line to run the file
     std::string command = "start cmd.exe /k cmd /c \"" + morphed_exe_file_path.toStdString() +  "\"";
     std::cout << command << std::endl;
     system(command.c_str());

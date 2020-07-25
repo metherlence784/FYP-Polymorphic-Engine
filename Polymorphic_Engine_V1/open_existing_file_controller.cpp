@@ -74,8 +74,6 @@ void Open_Existing_File_Controller::open_existing_file()
             //the user tried to open a file with an invalid file extension, i.e. not .c or .cpp
             QMessageBox::warning(cur_wind, "Warning", ERROR_INVALID_FILE_EXTENSION);
         }
-
     }
-
 }
 

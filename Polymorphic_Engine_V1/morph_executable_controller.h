@@ -22,9 +22,7 @@
 #include <stdio.h>
 #include <regex>
 
-
 #include <disassembly.h>
-
 
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
@@ -135,7 +133,7 @@ private:
     void store_image_section_headers_in_vec(std::vector<char> &buffer, std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec,
                                             PIMAGE_NT_HEADERS32& image_NT_header_ptr, unsigned int section_header_cursor);
     QString get_section_header_index_by_name(const std::string section_name, std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec,
-                                         PIMAGE_NT_HEADERS32 &image_NT_header_ptr,int &index_of_text_section);
+                                         PIMAGE_NT_HEADERS32 &image_NT_header_ptr,int &index_of_section);
     void set_new_section_name(PIMAGE_SECTION_HEADER &payload_section,const std::string payload_section_name);
     int get_payload_radio_button();
     void calculate_file_alignment_factor (unsigned int &payload_num_of_bytes,
