@@ -47,6 +47,7 @@ Disassembly::Disassembly(int id, int address, std::string mnemonic, std::string 
         case 0xeb:
         case 0xFF:
         case 0xEA:
+        case 0xE2:
         case 0x70:
         case 0x71:
         case 0x72:

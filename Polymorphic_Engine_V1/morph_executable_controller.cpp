@@ -741,7 +741,7 @@ bool Morph_Executable_Controller::to_insert_or_not(int chance)
 bool Morph_Executable_Controller::check_is_jump_instruction(int id)
 {
     //id of all jump instructions according to capstone
-    if (id >= 253 && id <= 270)
+    if ((id >= 253 && id <= 270) || id == 339)
     {
         return true;
     }
@@ -793,23 +793,27 @@ void Morph_Executable_Controller::randomize_and_store_insertions(std::vector<uin
     {
         if (to_insert_or_not(rand() % 100) == true) //if wanna insert
         {
-            std::string mnemonic = dis_asm_vec[i].get_mnemonic(); //get the mnemonic
+//            std::string mnemonic = dis_asm_vec[i].get_mnemonic(); //get the mnemonic
 
-            if (mnemonic.compare("call") == 0) //if mnemonic is "call"
+//            if (mnemonic.compare("call") == 0) //if mnemonic is "call"
+//            {
+//                std::string ops = dis_asm_vec[i].get_ops();
+//                for (int j = 0; j < 8; j++)
+//                {
+//                    if (ops.find(register_array[j]) != std::string::npos)//if the operand is a register then store, otherwise dont
+//                    {
+//                        address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
+//                        break;
+//                    }
+//                }
+//            }
+//            else
+//            {
+//                address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
+//            }
+            if (check_is_jump_instruction(dis_asm_vec[i].get_id()) == true) //checking if the it is a jmp instruction
             {
-                std::string ops = dis_asm_vec[i].get_ops();
-                for (int j = 0; j < 8; j++)
-                {
-                    if (ops.find(register_array[j]) != std::string::npos)//if the operand is a register then store, otherwise dont
-                    {
-                        address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
-                        break;
-                    }
-                }
-            }
-            else if (mnemonic.compare("loop") == 0)//if mnemonic call is loop
-            {
-                std::cout << dis_asm_vec[i].get_full_instruction() << " TESTING A" << std::endl;
+                jump_instructions_vec.emplace_back(dis_asm_vec[i]);
             }
             else
             {
@@ -1794,7 +1798,7 @@ void Morph_Executable_Controller::alternative_push_instruction(std::vector<Disas
                     }
                 }
 
-                if(ops_is_reg == true)
+                if(ops_is_reg == true && check_instruction_is_ptr(ops) == false)
                 {
                     int chance = rand() % 100;//used for variance
                     if(to_insert_or_not(chance)==true)
