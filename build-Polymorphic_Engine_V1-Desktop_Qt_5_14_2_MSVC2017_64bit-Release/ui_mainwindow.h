@@ -80,7 +80,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(600, 700);
+        MainWindow->resize(599, 700);
         MainWindow->setMinimumSize(QSize(535, 700));
         MainWindow->setMaximumSize(QSize(600, 700));
         QFont font;
@@ -180,6 +180,7 @@ public:
         Payload_Info_Textbox->setEnabled(true);
         Payload_Info_Textbox->setGeometry(QRect(390, 240, 161, 91));
         QFont font2;
+        font2.setPointSize(11);
         font2.setBold(true);
         font2.setWeight(75);
         Payload_Info_Textbox->setFont(font2);
@@ -235,11 +236,17 @@ public:
         tabWidget->addTab(Analysis, QString());
         Trademark = new QLabel(centralwidget);
         Trademark->setObjectName(QString::fromUtf8("Trademark"));
-        Trademark->setGeometry(QRect(30, 630, 241, 21));
+        Trademark->setGeometry(QRect(20, 623, 261, 31));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Imprint MT Shadow"));
+        font3.setPointSize(11);
+        font3.setBold(false);
+        font3.setWeight(50);
+        Trademark->setFont(font3);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 600, 26));
+        menubar->setGeometry(QRect(0, 0, 599, 26));
         menubar->setFont(font);
         File_Menu_Header = new QMenu(menubar);
         File_Menu_Header->setObjectName(QString::fromUtf8("File_Menu_Header"));
