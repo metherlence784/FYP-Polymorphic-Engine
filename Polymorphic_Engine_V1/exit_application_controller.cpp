@@ -43,7 +43,7 @@ void Exit_Application_Controller::exit_application()
     {
         //error 404, file not found
         QMessageBox::warning(cur_wind, "Warning",
-                             "Exit error: Misplaced/Missing file\n Please save the file properly" );
+                             "<font size = 4>Exit error: Misplaced/Missing file\n Please save the file properly</font>" );
     }
     else if (file_text == current_text)
     {
@@ -56,7 +56,7 @@ void Exit_Application_Controller::exit_application()
         //it dosent match, aka user needs to save
         QMessageBox::StandardButton reply;
         reply = QMessageBox::question(cur_wind, "Exit",
-                                      "You have unsaved progress!\nAre you sure you want to quit?",
+                                      "<font size = 4>You have unsaved progress!\nAre you sure you want to quit?</font>",
                                       QMessageBox::Yes|QMessageBox::No);
         if (reply == QMessageBox::Yes)//button to click yes or cancel
         {
@@ -88,7 +88,7 @@ void Exit_Application_Controller::exit_application(QCloseEvent *event)
     {
         //error
         QMessageBox::warning(cur_wind, "Warning",
-                             "Exit error: Misplaced/Missing file\n Please save the file properly" );
+                             "<font size = 4>Exit error: Misplaced/Missing file\n Please save the file properly</font>" );
         event->ignore();
     }
     else if (file_text == current_text)
@@ -103,7 +103,7 @@ void Exit_Application_Controller::exit_application(QCloseEvent *event)
         //it dosent match, aka user needs to save
         QMessageBox::StandardButton reply;
         reply = QMessageBox::question(cur_wind, "Exit",
-                                      "You have unsaved progress!\nAre you sure you want to quit?",
+                                      "<font size = 4>You have unsaved progress!\nAre you sure you want to quit?</font>",
                                       QMessageBox::Yes|QMessageBox::No);
         if (reply == QMessageBox::Yes)
         {

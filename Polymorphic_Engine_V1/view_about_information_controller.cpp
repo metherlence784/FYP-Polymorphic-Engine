@@ -39,6 +39,7 @@ void View_About_Information_Controller::view_about_us()
 {
    QMessageBox about_box; //pop up a window to display the text
    about_box.setTextFormat(Qt::RichText);   //this is what makes the links clickable
+   about_box.setStyleSheet("font: 16px");
    about_box.setWindowTitle("About us");
    about_box.setText(this->about_us);
    about_box.setStandardButtons(QMessageBox::Ok);

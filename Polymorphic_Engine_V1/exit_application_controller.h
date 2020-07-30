@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
+#include <QMessageBox>
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 

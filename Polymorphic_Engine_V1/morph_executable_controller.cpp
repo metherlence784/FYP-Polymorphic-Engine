@@ -1855,42 +1855,42 @@ void Morph_Executable_Controller::error_warning_message_box(QString morph_status
     if (morph_status == ERROR_FILE_NOT_FOUND)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Exe file not found: " + this->original_exe_file_path);
+                             "<font size = 4>Exe file not found: " + this->original_exe_file_path + "</font>");
     }
     else if (morph_status == ERROR_INVALID_DOS_SIGNATURE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid DOS Signature");
+                             "<font size = 4>Invalid DOS Signature</font>");
     }
     else if (morph_status == ERROR_INVALID_PE_SIGNATURE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Invalid PE Signature");
+                             "<font size = 4>Invalid PE Signature</font>");
     }
     else if (morph_status == ERROR_NO_MATCHING_SECTION_HEADER_NAME)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "No matching section header name for \".text\"");
+                             "<font size = 4>No matching section header name for \".text\" </font>");
     }
     else if(morph_status == ERROR_OPENING_KEYSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Error opening keystone");
+                             "<font size = 4>Error opening keystone</font>");
     }
     else if (morph_status == ERROR_ASSEMBLY_FAILED_KEYSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Failed to assemble in keystone");
+                             "<font size = 4>Failed to assemble in keystone</font>");
     }
     else if (morph_status == ERROR_OPENING_CAPSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Error opening capstone");
+                             "<font size = 4>Error opening capstone</font>");
     }
     else if (morph_status == ERROR_DISASSEMBLY_FAILED_CAPSTONE)
     {
         QMessageBox::warning(cur_wind, "Warning",
-                             "Failed to disassemble in capstone");
+                             "<font size = 4>Failed to disassemble in capstone</font>");
     }
 }
 

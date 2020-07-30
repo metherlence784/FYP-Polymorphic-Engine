@@ -33,7 +33,7 @@ void Open_Existing_File_Controller::open_existing_file()
     if(list.at(0) == ERROR_SYSTEM_FAULT)
     {
         // this is if in file_reader, an error has occured that cannot be identified
-        QMessageBox::warning(cur_wind, "Warning", ERROR_SYSTEM_FAULT);
+        QMessageBox::warning(cur_wind, "Warning", "<font size = 4>"+ERROR_SYSTEM_FAULT+"</font>");
     }
     else if(list.at(0) == ERROR_NO_FILE_NAME_SPECIFIED)
     {
@@ -64,7 +64,7 @@ void Open_Existing_File_Controller::open_existing_file()
         else
         {
             //the user tried to open a file with an invalid file extension, i.e. not .c or .cpp
-            QMessageBox::warning(cur_wind, "Warning", ERROR_INVALID_FILE_EXTENSION);
+            QMessageBox::warning(cur_wind, "Warning", "<font size = 4>"+ERROR_INVALID_FILE_EXTENSION+"</font>");
         }
     }
 }
