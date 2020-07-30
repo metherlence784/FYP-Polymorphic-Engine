@@ -49,7 +49,7 @@ void View_Compilation_Status_Controller::update_analysis_textbox_and_enable_morp
 
         QDateTime current = QDateTime::currentDateTime(); // to get the current time and day
 
-        const QString stars = QString("******************************************************\n");
+        const QString stars = QString("*************************************\n");
         QString format;
 
         File_Reader reader;

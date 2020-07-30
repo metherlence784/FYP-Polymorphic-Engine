@@ -19,6 +19,7 @@
 
 
 
+
 //set pointer to null first
 MainWindow* MainWindow::MWptr = nullptr;
 
@@ -30,7 +31,17 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     MWptr = this;
     this->cur_file_path = "";
-    this->original_exe_file_path = "";
+    this->original_exe_file_path = "";    
+
+    this->payload_group.addButton(this->ui->Calculator_Payload_RButton,0);
+    this->payload_group.addButton(this->ui->CMD_Payload_RButton,1);
+    this->payload_group.addButton(this->ui->Message_Box_Payload_RButton,2);
+    this->payload_group.addButton(this->ui->Fatality_Payload_RButton,3);
+    this->payload_group.addButton(this->ui->System_Info_Payload_RButton,4);
+    this->payload_group.addButton(this->ui->Download_Putty_Payload_RButton,5);
+    this->payload_group.addButton(this->ui->New_Admin_Payload_RButton,6);
+
+    this->payload_group.setExclusive(true);
 }
 
 //destructor
@@ -81,21 +92,23 @@ QString MainWindow::get_text_analysis_textbox()
     return this->ui->Analysis_Textbox->toPlainText();
 }
 
-QString MainWindow::get_payload_radio_button()
+int MainWindow::get_payload_radio_button()
 {
-    //save all the radio button objects under Payload_RButton_Group parent into a List
-    QList<QRadioButton *> buttons = this->ui->Payload_RButton_Group->findChildren<QRadioButton *>();
+//    //save all the radio button objects under Payload_RButton_Group parent into a List
+//    QList<QRadioButton *> buttons = this->ui->Payload_RButton_Group->findChildren<QRadioButton *>();
 
-    //cycle through each with an enhanced for loop, if isChecked is true, return the object name as a QString
-    foreach(QRadioButton *r, buttons)
-    {
-        if(r->isChecked())
-        {
-            return QString(r->objectName());
-        }
-    }
+//    //cycle through each with an enhanced for loop, if isChecked is true, return the object name as a QString
+//    foreach(QRadioButton *r, buttons)
+//    {
+//        if(r->isChecked())
+//        {
+//            this->ui->Payload_Info_Textbox->setText(QString::number(this->payload_group.checkedId()));
+//            return ;
+//        }
+//    }
+    return this->payload_group.checkedId();
 
-    return ERROR_PAYLOAD_NOT_FOUND;
+
 }
 
 //mutator below
@@ -194,6 +207,12 @@ void MainWindow::set_disassembly_log(QString disassembly_log)
     this->disassembly_log = disassembly_log;
 }
 
+void MainWindow::set_text_and_color_payload_info_textbox(QString text, QColor color)
+{
+    this->ui->Payload_Info_Textbox->setTextColor(color);
+    this->ui->Payload_Info_Textbox->setText(text);
+}
+
 //button triggers below here
 void MainWindow::on_Exit_Menu_Item_triggered()
 {
@@ -271,6 +290,7 @@ void MainWindow::on_Compile_Button_clicked()
 
     Choose_Payload_Controller payloader;
     payloader.set_enabled_payload_groupbox(compilation_status);//enables the payload radio buttons
+    payloader.set_initial_payload_info(compilation_status);//sets the initial calc.exe info
 
 	//enable the run original button
     Run_Executable_Controller runner;
@@ -314,6 +334,7 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 	
     Choose_Payload_Controller payloader;
     payloader.set_enabled_payload_groupbox(compilation_status);//enables the payload radio buttons
+    payloader.set_initial_payload_info(compilation_status);//sets the initial calc.exe info
 
 	//enable the run original button
     Run_Executable_Controller runner;
@@ -334,6 +355,7 @@ void MainWindow::on_Morph_Menu_Item_triggered()
 {
     Morph_Executable_Controller morpher;
     QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);//morphing
+    //QString morph_status = morpher.morph_exe_with_encryption(this->original_exe_file_path);//morphing
 
     QString morphed_exe_name = morpher.get_morphed_exe_name();
     QString morphed_exe_file_path = morpher.get_morphed_exe_file_path();
@@ -432,4 +454,75 @@ void MainWindow::on_View_Disassembly_Button_clicked()
 {
     View_Disassembly_Controller disassembler;
     disassembler.write_disassembly(this->cur_file_path,this->disassembly_log);
+}
+
+
+void MainWindow::on_CMD_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
+}
+
+void MainWindow::on_Calculator_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
+}
+
+void MainWindow::on_Download_Putty_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
+}
+
+void MainWindow::on_Fatality_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
+}
+
+void MainWindow::on_Message_Box_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
+}
+
+void MainWindow::on_New_Admin_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
+}
+
+void MainWindow::on_System_Info_Payload_RButton_toggled(bool checked)
+{
+    if(checked == true)
+    {
+        int id = this->payload_group.checkedId();
+        Choose_Payload_Controller payloader;
+        payloader.set_text_and_color_payload_info_textbox(id);
+    }
 }

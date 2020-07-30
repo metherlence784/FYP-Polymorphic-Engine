@@ -56,7 +56,7 @@ void View_Executable_Sizes_Controller::set_executable_sizes_in_analysis_textbox(
     qint64 original_exe_size = reader.get_executable_size(original_exe_file_path);
     qint64 morphed_exe_size = reader.get_executable_size(morphed_exe_file_path);
 
-    const QString stars = QString("******************************************************\n");
+    const QString stars = QString("*************************************\n");
 
     QString analysis_text_box_text = get_text_analysis_textbox();
 
@@ -72,7 +72,7 @@ void View_Executable_Sizes_Controller::set_executable_sizes_in_analysis_textbox(
     analysis_text_box_text += QString("Difference in size: ") + convert_b_to_kb(difference)
             + QString("\n\n");
 
-    analysis_text_box_text += stars;
+    analysis_text_box_text += stars + QString("\n\n");
     set_text_analysis_textbox(analysis_text_box_text);
 }
 

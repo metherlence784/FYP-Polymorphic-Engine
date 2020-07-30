@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>535</width>
+    <width>600</width>
     <height>700</height>
    </rect>
   </property>
@@ -18,9 +18,14 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>535</width>
+    <width>600</width>
     <height>700</height>
    </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Polymorphic Engine</string>
@@ -31,19 +36,13 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>505</width>
+      <width>561</width>
       <height>621</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>505</width>
-      <height>621</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>521</width>
       <height>621</height>
      </size>
     </property>
@@ -57,7 +56,7 @@
      <attribute name="title">
       <string>C0d3z</string>
      </attribute>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="Code_Input_Textbox_Label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -83,18 +82,26 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>341</width>
+        <width>361</width>
         <height>531</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string/>
       </property>
      </widget>
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>359</x>
-        <y>80</y>
-        <width>131</width>
-        <height>181</height>
+        <x>390</x>
+        <y>70</y>
+        <width>161</width>
+        <height>171</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -111,8 +118,8 @@
            <rect>
             <x>0</x>
             <y>20</y>
-            <width>121</width>
-            <height>17</height>
+            <width>161</width>
+            <height>21</height>
            </rect>
           </property>
           <property name="text">
@@ -126,39 +133,86 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>50</y>
-            <width>121</width>
-            <height>17</height>
+            <y>80</y>
+            <width>161</width>
+            <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
           <property name="text">
-           <string>Crash Your Program!</string>
+           <string>Crash Program!</string>
           </property>
          </widget>
          <widget class="QRadioButton" name="Message_Box_Payload_RButton">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>80</y>
-            <width>121</width>
-            <height>17</height>
+            <y>60</y>
+            <width>161</width>
+            <height>21</height>
            </rect>
           </property>
           <property name="text">
-           <string>Hello Message Box</string>
+           <string>Message Box O_o!</string>
           </property>
          </widget>
-         <widget class="QRadioButton" name="radioButton_3">
+         <widget class="QRadioButton" name="System_Info_Payload_RButton">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>110</y>
-            <width>121</width>
-            <height>17</height>
+            <y>100</y>
+            <width>161</width>
+            <height>21</height>
            </rect>
           </property>
           <property name="text">
-           <string>Payload Z</string>
+           <string>System Info</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="CMD_Payload_RButton">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>40</y>
+            <width>161</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Pop cmd.exe</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="Download_Putty_Payload_RButton">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>120</y>
+            <width>161</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Download Putty.exe</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="New_Admin_Payload_RButton">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>140</y>
+            <width>161</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Admin I@amR00T$</string>
           </property>
          </widget>
         </widget>
@@ -171,7 +225,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>390</x>
         <y>30</y>
         <width>101</width>
         <height>31</height>
@@ -181,33 +235,45 @@
        <string>Compile</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>600</y>
-        <width>251</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Program Created By : Yoges And Friends</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="Morph_Button">
       <property name="enabled">
        <bool>false</bool>
       </property>
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>270</y>
+        <x>390</x>
+        <y>340</y>
         <width>101</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
        <string>M0rph</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="Payload_Info_Textbox">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>240</y>
+        <width>161</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -223,7 +289,7 @@
        <rect>
         <x>10</x>
         <y>130</y>
-        <width>351</width>
+        <width>361</width>
         <height>431</height>
        </rect>
       </property>
@@ -232,6 +298,11 @@
         <width>351</width>
         <height>431</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
@@ -248,7 +319,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>351</width>
+        <width>361</width>
         <height>21</height>
        </rect>
       </property>
@@ -273,7 +344,7 @@
        <rect>
         <x>10</x>
         <y>80</y>
-        <width>351</width>
+        <width>361</width>
         <height>21</height>
        </rect>
       </property>
@@ -296,9 +367,9 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>390</x>
         <y>30</y>
-        <width>91</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -312,9 +383,9 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>390</x>
         <y>80</y>
-        <width>91</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -325,9 +396,9 @@
      <widget class="QPushButton" name="Clear_Output_Log_Button">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>390</x>
         <y>540</y>
-        <width>81</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -341,9 +412,9 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>390</x>
         <y>130</y>
-        <width>91</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -357,9 +428,9 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>390</x>
         <y>160</y>
-        <width>91</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -373,9 +444,9 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>390</x>
         <y>190</y>
-        <width>91</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -385,7 +456,7 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="Trademark">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -404,11 +475,16 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>535</width>
+     <width>600</width>
      <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="File_Menu_Header">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>File</string>
     </property>
@@ -421,6 +497,11 @@
     <addaction name="Exit_Menu_Item"/>
    </widget>
    <widget class="QMenu" name="Edit_Menu_Header">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>Edit</string>
     </property>
@@ -428,6 +509,11 @@
     <addaction name="Redo_Menu_Item"/>
    </widget>
    <widget class="QMenu" name="Morph_Menu_Header">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>Morph</string>
     </property>
