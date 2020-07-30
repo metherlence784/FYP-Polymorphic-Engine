@@ -241,7 +241,8 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 600, 21));
+        menubar->setGeometry(QRect(0, 0, 600, 26));
+        menubar->setFont(font);
         File_Menu_Header = new QMenu(menubar);
         File_Menu_Header->setObjectName(QString::fromUtf8("File_Menu_Header"));
         File_Menu_Header->setFont(font);
@@ -253,6 +254,7 @@ public:
         Morph_Menu_Header->setFont(font);
         About_Menu_Header = new QMenu(menubar);
         About_Menu_Header->setObjectName(QString::fromUtf8("About_Menu_Header"));
+        About_Menu_Header->setFont(font);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
