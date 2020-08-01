@@ -71,7 +71,7 @@ void Run_Executable_Controller::set_morphed_exe_file_path(QString morphed_exe_fi
 
 void Run_Executable_Controller::set_enabled_run_original_button(QString compilation_status)
 {
-    if(compilation_status.contains("ERROR") == false)//if not and error, enable
+    if(compilation_status == SUCCESS_COMPILED_CODE)//if not and error, enable
     {
         this->cur_wind->set_enabled_run_original_button(true);
     }
@@ -85,9 +85,10 @@ void Run_Executable_Controller::set_enabled_run_morphed_button(QString morph_sta
     }
 }
 
-void Run_Executable_Controller::set_original_executable_label(QString original_status)
+void Run_Executable_Controller::set_original_executable_label(QString compilation_status)
 {
-    if(original_status.contains("ERROR") == false)//if not and error, enable
+    std::cout << "THE COMPILE STATUS IS: " << compilation_status.toStdString() << std::endl;
+    if(compilation_status == SUCCESS_COMPILED_CODE)//if not and error, enable
     {
         this->cur_wind->set_original_executable_label(this->original_exe_name);
     }

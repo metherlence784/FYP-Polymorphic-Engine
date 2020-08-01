@@ -2138,10 +2138,14 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     asm_to_machine_code(store_payload_entry_point_in_edi_asm,
                         this->machine_code_vec,this->machine_code_num_of_bytes);
 
-    populate_section_ptr(payload_section_buffer_ptr,
-                                reinterpret_cast<char*>(this->machine_code_vec.data()),
-                                this->machine_code_num_of_bytes);
+    //to store bytes for payload section
+    std::vector<unsigned char> payload_section_vec;
 
+    //putting in a store edi inside the payload_section_vec
+    for(int i = 0; i < machine_code_vec.size() ; i++)
+    {
+        payload_section_vec.emplace_back(machine_code_vec[i]);
+    }
 
     //here we memorize the original bytes of the text section
     //this will be used in the payload section to patch back the overwritten text section bytes
@@ -2169,17 +2173,18 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     asm_to_machine_code(patching_entry_bytes_asm,this->machine_code_vec,
                         this->machine_code_num_of_bytes);
 
-
-    //writing the machine code into payload_section_buffer_ptr
+    //writing the machine code into payload_section_vec
     //this will be used later to write back to the buffer
-    populate_section_ptr(payload_section_buffer_ptr,
-                                reinterpret_cast<char*>(this->machine_code_vec.data()),
-                                this->machine_code_num_of_bytes);
+    for(int i = 0; i < machine_code_vec.size() ; i++)
+    {
+        payload_section_vec.emplace_back(machine_code_vec[i]);
+    }
 
-    //putting in the payload into payload_section_buffer_ptr
-    populate_section_ptr(payload_section_buffer_ptr,
-                         reinterpret_cast<char*>(this->payload_vec.data()),
-                         this->payload_num_of_bytes);
+    //putting in the payload into payload_section_vec
+    for(int i = 0; i < payload_vec.size() ; i++)
+    {
+        payload_section_vec.emplace_back(payload_vec[i]);
+    }
 
     //getting the asm instructions to jump back to the text section
     std::string jump_back_to_text_section_asm = "";
@@ -2191,10 +2196,15 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     asm_to_machine_code(jump_back_to_text_section_asm,this->machine_code_vec,
                         this->machine_code_num_of_bytes);
 
-    //putting in the jump back to text section into payload_section_buffer_ptr
+    //putting in the jump back to text section into payload_section_vec
+    for(int i = 0; i < machine_code_vec.size() ; i++)
+    {
+        payload_section_vec.emplace_back(machine_code_vec[i]);
+    }
+
     populate_section_ptr(payload_section_buffer_ptr,
-                         reinterpret_cast<char*>(this->machine_code_vec.data()),
-                         this->machine_code_num_of_bytes);
+                         reinterpret_cast<char*>(payload_section_vec.data()),
+                         payload_section_vec.size());
 
 
 

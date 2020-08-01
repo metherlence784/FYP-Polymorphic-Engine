@@ -34,7 +34,7 @@ public:
 
     void set_enabled_run_original_button(QString compilation_status);
     void set_enabled_run_morphed_button(QString morph_status);
-    void set_original_executable_label(QString original_status);
+    void set_original_executable_label(QString compilation_status);
     void set_morphed_executable_label(QString morphed_status);
 
     void run_original_executable(QString original_exe_file_path);

@@ -356,28 +356,29 @@ void MainWindow::on_Morph_Menu_Item_triggered()
     Morph_Executable_Controller morpher;
     QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);//morphing
     //QString morph_status = morpher.morph_exe_with_encryption(this->original_exe_file_path);//morphing
+    //QString morph_status = morpher.morph_exe_no_encryption(this->original_exe_file_path);//morphing
 
     QString morphed_exe_name = morpher.get_morphed_exe_name();
     QString morphed_exe_file_path = morpher.get_morphed_exe_file_path();
     QString disassembly_log = morpher.get_disassembly_log();//getting the disassebly of the payload
 	
-	//setting variables
+    //setting variables
     set_morphed_exe_name(morphed_exe_name);
     set_morphed_exe_file_path(morphed_exe_file_path);
     set_disassembly_log(disassembly_log);
 	
-	//setting the anaylsis textbox
+    //setting the anaylsis textbox
     qint64 elapsed_time = morpher.get_elapsed_time();
     QString analysis_textbox_status = get_text_analysis_textbox();
     morpher.update_analysis_textbox(analysis_textbox_status,elapsed_time,morph_status);
 	
-	//enable the run morphed button
+    //enable the run morphed button
     Run_Executable_Controller runner;
     runner.set_morphed_exe_name(morphed_exe_name);
     runner.set_morphed_executable_label(morph_status);
     runner.set_enabled_run_morphed_button(morph_status);
 	
-	//enabled the view disassebly button
+    //enabled the view disassebly button
     View_Disassembly_Controller disassembler;
     disassembler.set_enabled_view_disassembly_button(morph_status);
 }
@@ -386,6 +387,8 @@ void MainWindow::on_Morph_Button_clicked()
 {
     Morph_Executable_Controller morpher;
     QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);//morphing
+    //QString morph_status = morpher.morph_exe_with_encryption(this->original_exe_file_path);//morphing
+    //QString morph_status = morpher.morph_exe_no_encryption(this->original_exe_file_path);//morphing
 
     QString morphed_exe_name = morpher.get_morphed_exe_name();
     QString morphed_exe_file_path = morpher.get_morphed_exe_file_path();
