@@ -1996,43 +1996,43 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
     switch(chosen_payload_index)
     {
         case 0:
-            set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 1:
-            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(CMD_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CMD_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 2:
-            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 3:
-            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(CRASH_PROGRAM_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CRASH_PROGRAM_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 4:
-            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(SYSTEM_INFO_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,SYSTEM_INFO_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 5:
-            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(DOWNLOAD_PUTTY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,DOWNLOAD_PUTTY_SHELLCODE,this->payload_num_of_bytes);
             break;
 
         case 6:
-            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE_NO_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(NEW_ADMIN_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,NEW_ADMIN_SHELLCODE,this->payload_num_of_bytes);
             break;
@@ -2363,49 +2363,49 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     switch(chosen_payload_index)
     {
         case 0:
-            set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_CALC_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(CALC_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CALC_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 1:
-            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_CMD_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(CMD_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CMD_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 2:
-            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_MESSAGE_BOX_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(MESSAGE_BOX_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,MESSAGE_BOX_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 3:
-            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_CRASH_PROGRAM_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(CRASH_PROGRAM_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,CRASH_PROGRAM_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 4:
-            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_SYSTEM_INFO_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(SYSTEM_INFO_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,SYSTEM_INFO_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 5:
-            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_DOWNLOAD_PUTTY_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(DOWNLOAD_PUTTY_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,DOWNLOAD_PUTTY_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);
             break;
 
         case 6:
-            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE");
+            set_morphed_exe_name(exe_file_path,"_NEW_ADMIN_SHELLCODE_WITH_ENCRYPTION");
             this->payload_num_of_bytes = sizeof(NEW_ADMIN_SHELLCODE) - 1; //the -1 is to get rid of terminating character
             populate_payload_vec(this->payload_vec,NEW_ADMIN_SHELLCODE,this->payload_num_of_bytes);
             morph_status = machine_code_to_asm(this->payload_vec,this->dis_asm_vec);

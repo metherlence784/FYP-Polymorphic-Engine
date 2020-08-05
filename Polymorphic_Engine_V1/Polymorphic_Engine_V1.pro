@@ -90,3 +90,5 @@ else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../capstone-4.0.2
 
 INCLUDEPATH += $$PWD/../../../capstone-4.0.2/include/capstone
 DEPENDPATH += $$PWD/../../../capstone-4.0.2/include/capstone
+
+RC_ICONS = chimera_logo.ico

@@ -353,8 +353,10 @@ void MainWindow::on_Compile_Menu_Item_triggered()
 
 void MainWindow::on_Morph_Menu_Item_triggered()
 {
+
     Morph_Executable_Controller morpher;
     QString morph_status = morpher.morph_exe_with_encryption_junk_alt_instructions(this->original_exe_file_path);//morphing
+
     //QString morph_status = morpher.morph_exe_with_encryption(this->original_exe_file_path);//morphing
     //QString morph_status = morpher.morph_exe_no_encryption(this->original_exe_file_path);//morphing
 

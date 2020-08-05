@@ -19,7 +19,7 @@ CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStri
 INCPATH       = -I..\Polymorphic_Engine_V1 -I. -IC:\Users\jtf25\source\repos\keystone-0.9.1\include\keystone -I..\..\..\capstone-4.0.2\include\capstone -IC:\Qt\5.14.2\msvc2017_64\include -IC:\Qt\5.14.2\msvc2017_64\include\QtWidgets -IC:\Qt\5.14.2\msvc2017_64\include\QtGui -IC:\Qt\5.14.2\msvc2017_64\include\QtANGLE -IC:\Qt\5.14.2\msvc2017_64\include\QtCore -Idebug -I. -I/include -IC:\Qt\5.14.2\msvc2017_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
-LIBS          = /LIBPATH:C:\Users\jtf25\source\repos\keystone-0.9.1\build\llvm\lib C:\Users\jtf25\source\repos\keystone-0.9.1\build\llvm\lib\keystone.lib /LIBPATH:C:\Users\jtf25\Desktop\FYP\capstone-4.0.2\msvc\x64\debug capstone.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Widgetsd.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Guid.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Cored.lib  C:\Qt\5.14.2\msvc2017_64\lib\qtmaind.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.7.25-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib 
+LIBS          = /LIBPATH:C:\Users\jtf25\source\repos\keystone-0.9.1\build\llvm\lib C:\Users\jtf25\source\repos\keystone-0.9.1\build\llvm\lib\keystone.lib /LIBPATH:C:\Users\jtf25\Desktop\FYP\capstone-4.0.2\msvc\x64\debug capstone.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Widgetsd.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Guid.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Cored.lib debug\Polymorphic_Engine_V1_resource.res  C:\Qt\5.14.2\msvc2017_64\lib\qtmaind.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.7.25-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib 
 QMAKE         = C:\Qt\5.14.2\msvc2017_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -40,7 +40,7 @@ IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = debug\Polymorphic_Engine_V1_resource.res
 SED           = $(QMAKE) -install sed
 MOVE          = move
 
@@ -260,12 +260,15 @@ DESTDIR_TARGET = debug\Polymorphic_Engine_V1.exe
 first: all
 all: Makefile.Debug  debug\Polymorphic_Engine_V1.exe
 
-debug\Polymorphic_Engine_V1.exe: C:\Qt\5.14.2\msvc2017_64\lib\Qt5Widgetsd.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Guid.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Cored.lib C:\Qt\5.14.2\msvc2017_64\lib\qtmaind.lib ui_mainwindow.h $(OBJECTS) 
+debug\Polymorphic_Engine_V1.exe: C:\Qt\5.14.2\msvc2017_64\lib\Qt5Widgetsd.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Guid.lib C:\Qt\5.14.2\msvc2017_64\lib\Qt5Cored.lib C:\Qt\5.14.2\msvc2017_64\lib\qtmaind.lib ui_mainwindow.h $(OBJECTS) debug\Polymorphic_Engine_V1_resource.res
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
 debug\choose_payload_controller.obj debug\clear_output_log_controller.obj debug\compile_code_controller.obj debug\create_new_file_controller.obj debug\disassembly.obj debug\exit_application_controller.obj debug\file_reader.obj debug\file_saver.obj debug\main.obj debug\mainwindow.obj debug\morph_executable_controller.obj debug\open_existing_file_controller.obj debug\redo_action_controller.obj debug\run_executable_controller.obj debug\save_as_new_file_controller.obj debug\save_current_file_controller.obj debug\undo_action_controller.obj debug\view_about_information_controller.obj debug\view_compilation_status_controller.obj debug\view_disassembly_controller.obj debug\view_executable_signatures_controller.obj debug\view_executable_sizes_controller.obj debug\write_code_in_c_cpp_controller.obj debug\moc_choose_payload_controller.obj debug\moc_clear_output_log_controller.obj debug\moc_compile_code_controller.obj debug\moc_create_new_file_controller.obj
 debug\moc_exit_application_controller.obj debug\moc_file_reader.obj debug\moc_file_saver.obj debug\moc_mainwindow.obj debug\moc_morph_executable_controller.obj debug\moc_open_existing_file_controller.obj debug\moc_redo_action_controller.obj debug\moc_run_executable_controller.obj debug\moc_save_as_new_file_controller.obj debug\moc_save_current_file_controller.obj debug\moc_undo_action_controller.obj debug\moc_view_about_information_controller.obj debug\moc_view_compilation_status_controller.obj debug\moc_view_disassembly_controller.obj debug\moc_view_executable_signatures_controller.obj debug\moc_view_executable_sizes_controller.obj debug\moc_write_code_in_c_cpp_controller.obj
 $(LIBS)
 <<
+
+debug\Polymorphic_Engine_V1_resource.res: Polymorphic_Engine_V1_resource.rc
+	rc /NOLOGO -D_DEBUG $(DEFINES) -fo debug\Polymorphic_Engine_V1_resource.res Polymorphic_Engine_V1_resource.rc
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Debug ..\Polymorphic_Engine_V1\Polymorphic_Engine_V1.pro -spec win32-msvc "CONFIG+=qtquickcompiler"
@@ -278,6 +281,7 @@ dist:
 clean: compiler_clean 
 	-$(DEL_FILE) debug\choose_payload_controller.obj debug\clear_output_log_controller.obj debug\compile_code_controller.obj debug\create_new_file_controller.obj debug\disassembly.obj debug\exit_application_controller.obj debug\file_reader.obj debug\file_saver.obj debug\main.obj debug\mainwindow.obj debug\morph_executable_controller.obj debug\open_existing_file_controller.obj debug\redo_action_controller.obj debug\run_executable_controller.obj debug\save_as_new_file_controller.obj debug\save_current_file_controller.obj debug\undo_action_controller.obj debug\view_about_information_controller.obj debug\view_compilation_status_controller.obj debug\view_disassembly_controller.obj debug\view_executable_signatures_controller.obj debug\view_executable_sizes_controller.obj debug\write_code_in_c_cpp_controller.obj debug\moc_choose_payload_controller.obj debug\moc_clear_output_log_controller.obj debug\moc_compile_code_controller.obj debug\moc_create_new_file_controller.obj debug\moc_exit_application_controller.obj debug\moc_file_reader.obj debug\moc_file_saver.obj debug\moc_mainwindow.obj debug\moc_morph_executable_controller.obj debug\moc_open_existing_file_controller.obj debug\moc_redo_action_controller.obj debug\moc_run_executable_controller.obj debug\moc_save_as_new_file_controller.obj debug\moc_save_current_file_controller.obj debug\moc_undo_action_controller.obj debug\moc_view_about_information_controller.obj debug\moc_view_compilation_status_controller.obj debug\moc_view_disassembly_controller.obj debug\moc_view_executable_signatures_controller.obj debug\moc_view_executable_sizes_controller.obj debug\moc_write_code_in_c_cpp_controller.obj
 	-$(DEL_FILE) debug\Polymorphic_Engine_V1.vc.pdb debug\Polymorphic_Engine_V1.ilk debug\Polymorphic_Engine_V1.idb
+	-$(DEL_FILE) debug\Polymorphic_Engine_V1_resource.res
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash debug\Polymorphic_Engine_V1.pdb
