@@ -121,7 +121,7 @@ QString View_Executable_Signatures_Controller::format_text(QString hash, QString
 
 void View_Executable_Signatures_Controller::set_enabled_view_executable_signature_button(QString compilation_status)
 {
-    if(compilation_status.contains("ERROR") == false)
+    if(compilation_status.contains("SUCCESS") == true)
     {
         this->cur_wind->set_enabled_view_executable_signature_button(true);
     }

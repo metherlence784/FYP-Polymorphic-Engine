@@ -37,7 +37,7 @@ void View_Executable_Sizes_Controller::set_text_analysis_textbox(QString txt)
 
 void View_Executable_Sizes_Controller::set_enabled_view_executable_size_button(QString compilation_status)
 {
-    if(compilation_status.contains("ERROR") == false)
+    if(compilation_status.contains("SUCCESS") == true)
     {
         this->cur_wind->set_enabled_view_executable_size_button(true);
     }
