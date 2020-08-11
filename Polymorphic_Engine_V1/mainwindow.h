@@ -111,6 +111,8 @@ private slots://note that slots is a QT ui syntax
 
     void on_System_Info_Payload_RButton_toggled(bool checked);
 
+    void on_Help_Menu_Item_triggered();
+
 private:
     static MainWindow *MWptr;
     QString cur_file_path;

@@ -40,6 +40,7 @@ public:
     QAction *Compile_Menu_Item;
     QAction *Morph_Menu_Item;
     QAction *About_Menu_Item;
+    QAction *Help_Menu_Item;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *Cod3z;
@@ -111,6 +112,8 @@ public:
         Morph_Menu_Item->setEnabled(false);
         About_Menu_Item = new QAction(MainWindow);
         About_Menu_Item->setObjectName(QString::fromUtf8("About_Menu_Item"));
+        Help_Menu_Item = new QAction(MainWindow);
+        Help_Menu_Item->setObjectName(QString::fromUtf8("Help_Menu_Item"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
@@ -281,6 +284,7 @@ public:
         Morph_Menu_Header->addAction(Compile_Menu_Item);
         Morph_Menu_Header->addAction(Morph_Menu_Item);
         About_Menu_Header->addAction(About_Menu_Item);
+        About_Menu_Header->addAction(Help_Menu_Item);
 
         retranslateUi(MainWindow);
 
@@ -324,6 +328,7 @@ public:
         Morph_Menu_Item->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+M", nullptr));
 #endif // QT_CONFIG(shortcut)
         About_Menu_Item->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
+        Help_Menu_Item->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
         Code_Input_Textbox_Label->setText(QCoreApplication::translate("MainWindow", "C0d3z here", nullptr));
         Code_Input_Textbox->setPlaceholderText(QString());
         Payload_RButton_Group->setTitle(QCoreApplication::translate("MainWindow", "Payloadz", nullptr));

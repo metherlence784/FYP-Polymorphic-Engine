@@ -38,6 +38,7 @@ SOURCES += \
     view_disassembly_controller.cpp \
     view_executable_signatures_controller.cpp \
     view_executable_sizes_controller.cpp \
+    view_help_information_controller.cpp \
     write_code_in_c_cpp_controller.cpp
 
 HEADERS += \
@@ -66,6 +67,7 @@ HEADERS += \
     view_disassembly_controller.h \
     view_executable_signatures_controller.h \
     view_executable_sizes_controller.h \
+    view_help_information_controller.h \
     write_code_in_c_cpp_controller.h
 
 FORMS += \

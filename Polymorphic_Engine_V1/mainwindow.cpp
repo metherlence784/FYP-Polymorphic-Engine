@@ -16,6 +16,7 @@
 #include "view_executable_sizes_controller.h"
 #include "view_executable_signatures_controller.h"
 #include "view_disassembly_controller.h"
+#include "view_help_information_controller.h"
 
 
 
@@ -529,4 +530,10 @@ void MainWindow::on_System_Info_Payload_RButton_toggled(bool checked)
         Choose_Payload_Controller payloader;
         payloader.set_text_and_color_payload_info_textbox(id);
     }
+}
+
+void MainWindow::on_Help_Menu_Item_triggered()
+{
+    View_Help_Information_Controller helper;
+    helper.help();
 }

@@ -544,6 +544,7 @@
      <string>About</string>
     </property>
     <addaction name="About_Menu_Item"/>
+    <addaction name="Help_Menu_Item"/>
    </widget>
    <addaction name="File_Menu_Header"/>
    <addaction name="Edit_Menu_Header"/>
@@ -635,6 +636,11 @@
   <action name="About_Menu_Item">
    <property name="text">
     <string>About Us</string>
+   </property>
+  </action>
+  <action name="Help_Menu_Item">
+   <property name="text">
+    <string>Help</string>
    </property>
   </action>
  </widget>
