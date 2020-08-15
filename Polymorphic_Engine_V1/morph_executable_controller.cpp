@@ -101,6 +101,7 @@ PIMAGE_DOS_HEADER Morph_Executable_Controller::get_ptr_image_dos_header(std::vec
 		//loop will take all the bytes needed specifically for an image dos header
         extracted_dos_header[i] = buffer[image_dos_header_file_cursor + i];
     }
+
     return (PIMAGE_DOS_HEADER)extracted_dos_header;
 }
 
@@ -125,6 +126,7 @@ PIMAGE_NT_HEADERS32 Morph_Executable_Controller::get_ptr_image_NT_header(std::ve
 		//loop will take all the bytes needed specifically for an image nt headers 32
         extracted_NT_header[i] = buffer[image_NT_header_file_cursor + i];
     }
+
     return (PIMAGE_NT_HEADERS32)extracted_NT_header;
 }
 
@@ -251,7 +253,7 @@ void Morph_Executable_Controller::init_payload_section_header(PIMAGE_SECTION_HEA
     payload_section_header_ptr->Characteristics = SECTIONCHARACTERISTICSTOSET;
 }
 
-//for debuggig purposes
+//for debugging purposes
 void Morph_Executable_Controller::print_section_headers(std::vector<PIMAGE_SECTION_HEADER> &image_section_header_vec)
 {
     std::cout << "PRINTING IMAGE SECTION HEADERS" << std::endl;
@@ -793,24 +795,6 @@ void Morph_Executable_Controller::randomize_and_store_insertions(std::vector<uin
     {
         if (to_insert_or_not(rand() % 100) == true) //if wanna insert
         {
-//            std::string mnemonic = dis_asm_vec[i].get_mnemonic(); //get the mnemonic
-
-//            if (mnemonic.compare("call") == 0) //if mnemonic is "call"
-//            {
-//                std::string ops = dis_asm_vec[i].get_ops();
-//                for (int j = 0; j < 8; j++)
-//                {
-//                    if (ops.find(register_array[j]) != std::string::npos)//if the operand is a register then store, otherwise dont
-//                    {
-//                        address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
-//                        break;
-//                    }
-//                }
-//            }
-//            else
-//            {
-//                address_of_insertions_vec.emplace_back(dis_asm_vec[i].get_address());
-//            }
             if (check_is_jump_instruction(dis_asm_vec[i].get_id()) == true) //checking if the it is a jmp instruction
             {
                 jump_instructions_vec.emplace_back(dis_asm_vec[i]);
@@ -935,8 +919,7 @@ void Morph_Executable_Controller::adjust_offsets_within_jump_range(uint64_t &add
 
             if (temp > 0x7f)
             {
-                std::cout << "OH NO IT IS NO LONGER A NEAR JUMP. PLEASE ALSO IMLEMENT THIS EDGE CASE " << std::endl;
-                //exit(-1);
+                std::cout << "OH NO IT IS NO LONGER A NEAR JUMP. PLEASE ALSO IMPLEMENT THIS EDGE CASE " << std::endl;
             }
 
             bytes_vec[1] -= machine_code_num_of_bytes;
@@ -1042,9 +1025,6 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
     morph_status = machine_code_to_asm(payload_vec, dis_asm_vec);
     error_warning_message_box(morph_status);
 
-    //checking can erase later
-    //print_dis_asm_vec(dis_asm_vec);
-
     //get the junk code stored inside machine code vec
     morph_status = junk_code_generator(machine_code_vec, machine_code_num_of_bytes);
     error_warning_message_box(morph_status);
@@ -1077,7 +1057,6 @@ void Morph_Executable_Controller::add_junk_instructions(std::vector<unsigned cha
     morph_status = machine_code_to_asm(payload_vec, dis_asm_vec);
     error_warning_message_box(morph_status);
 
-    //print_dis_asm_vec(dis_asm_vec);
     std::cout << std::endl << std::endl;
 
     for (int i = 0; i < payload_vec.size(); i++)
@@ -1096,7 +1075,6 @@ void Morph_Executable_Controller::modify_payload_vec_with_junk_instructions(std:
 
 {
     payload_vec.clear();
-
 
     for (int i = 0; i < dis_asm_vec.size(); i++)
     {
@@ -1224,10 +1202,8 @@ void Morph_Executable_Controller::check_for_relative_jumps(std::vector<Disassemb
 //check if instructions is within a jump
 void Morph_Executable_Controller::check_not_in_jump(std::vector<Disassembly> &dis_asm_vec, int index)
 {
-
     //dont modify anything from this address to the destination address
     //note that the instruction is something like je/jne [address], hence the check here will be different
-
     //now to count from this address till the destination address
 
     unsigned int starting_address = dis_asm_vec[index].get_address();
@@ -2206,8 +2182,6 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
                          reinterpret_cast<char*>(payload_section_vec.data()),
                          payload_section_vec.size());
 
-
-
     //===================================================================================
     rewrite_bytes_to_buffer(this->buffer, (char*)this->dos_header_ptr,
                             this->buffer_cursor,sizeof(IMAGE_DOS_HEADER));
@@ -2268,7 +2242,6 @@ QString Morph_Executable_Controller::morph_exe_no_encryption(QString exe_file_pa
 
 QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_path)
 {
-    //srand(time(NULL));
     QString morph_status = "";
     //reading bytes of a exe file
     morph_status = read_file_into_vector(exe_file_path);
@@ -2308,7 +2281,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     const std::string payload_section_name = randomize_payload_section_name();
 
 
-     //this is the entry point when the pe file is loaded to virtual memory
+    //this is the entry point when the pe file is loaded to virtual memory
     //must add image base + the address of entry point
     this->entry_point_of_text_section = this->image_NT_header_ptr->OptionalHeader.ImageBase + this->image_NT_header_ptr->OptionalHeader.AddressOfEntryPoint;
     printf("ImageBase : 0x%x\nLoaded Entry point : 0x%x\n", this->image_NT_header_ptr->OptionalHeader.ImageBase, this->entry_point_of_text_section);
@@ -2550,8 +2523,6 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
                                         this->starting_of_text_section_offset_on_load,
                                         this->buffer);
 
-
-
     //getting the stosd instructions asm, afew calculations must be done for big to little endian conversion
     std::string patching_entry_bytes_asm = "";
     get_stosd_instruction_asm(patching_entry_bytes_asm,
@@ -2606,13 +2577,11 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
     //putting a random key into the beginning of the payload section
     add_random_key_to_payload_section_buffer_ptr(payload_section_buffer_ptr, this->random_key);
 
-
     //adding in the decryption routine into payload_section_buffer_ptr
     //(this->machine_code_vec.data()) contains the decryption routine
     populate_section_ptr(payload_section_buffer_ptr,
                          reinterpret_cast<char*>(this->machine_code_vec.data()),
                          this->machine_code_num_of_bytes);
-
 
     //putting in the jump back to text section into payload_section_buffer_ptr
     populate_section_ptr(payload_section_buffer_ptr,
@@ -2666,7 +2635,7 @@ QString Morph_Executable_Controller::morph_exe_with_encryption(QString exe_file_
                             this->buffer_cursor,this->size_of_text_section);
 
 
-    // print_section_headers(image_section_header_vec);
+    //print_section_headers(image_section_header_vec);
     //writing to file
     write_exe_file(this->morphed_exe_file_path, this->buffer);
     //free memory

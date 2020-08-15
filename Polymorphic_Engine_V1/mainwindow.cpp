@@ -95,21 +95,7 @@ QString MainWindow::get_text_analysis_textbox()
 
 int MainWindow::get_payload_radio_button()
 {
-//    //save all the radio button objects under Payload_RButton_Group parent into a List
-//    QList<QRadioButton *> buttons = this->ui->Payload_RButton_Group->findChildren<QRadioButton *>();
-
-//    //cycle through each with an enhanced for loop, if isChecked is true, return the object name as a QString
-//    foreach(QRadioButton *r, buttons)
-//    {
-//        if(r->isChecked())
-//        {
-//            this->ui->Payload_Info_Textbox->setText(QString::number(this->payload_group.checkedId()));
-//            return ;
-//        }
-//    }
     return this->payload_group.checkedId();
-
-
 }
 
 //mutator below

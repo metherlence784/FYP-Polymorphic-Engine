@@ -101,7 +101,7 @@ Disassembly::Disassembly(int id, int address, std::string mnemonic, std::string 
     }
 }
 
-//accessotrs
+//accessors
 int Disassembly::get_id()
 {
     return this->id;
